@@ -1,0 +1,56 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --color-primary-red: #E30613;
+  --color-accent-orange: #FF5A00;
+  --color-cinema-black: #0A0A0A;
+  --color-cinema-gray: #121212;
+  --color-cinema-card: #18181C;
+}
+
+/* Base custom definitions */
+html {
+  scroll-behavior: smooth;
+  background-color: #0A0A0A;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+}
+
+/* Custom Netflix-style scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E30613;
+}
+
+/* Text selections matching the mood */
+::selection {
+  background-color: #E30613;
+  color: #FFFFFF;
+}
+
+/* Immersive background vigneties helpful for video focus */
+.cinema-gradient-overlay {
+  background: linear-gradient(to top, #0A0A0A 0%, rgba(10, 10, 10, 0.4) 60%, rgba(10, 10, 10, 0.8) 100%);
+}
+
+.card-hover-shadow:hover {
+  box-shadow: 0 10px 30px -10px rgba(227, 6, 19, 0.4);
+}
+
