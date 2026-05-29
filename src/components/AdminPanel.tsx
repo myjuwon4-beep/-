@@ -7,6 +7,7 @@ import React, { useState, useEffect } from "react";
 import { ShieldAlert, Plus, Edit, Trash2, X, RotateCcw, Save, Grid, ExternalLink, HelpCircle, LockOpen, Briefcase, FileText, Cpu } from "lucide-react";
 import { PortfolioItem, SiteTexts, CareerItem, SkillCategory } from "../types";
 import { initialPortfolioItems, saveStoredPortfolioItems, saveStoredSiteTexts, defaultSiteTexts, initialCareerItems, saveStoredCareerItems, initialSkills, saveStoredSkills } from "../data";
+import { compressImage } from "../lib/imageCompressor";
 
 interface AdminPanelProps {
   onSettingsUpdate: () => void;
@@ -127,27 +128,31 @@ export default function AdminPanel({
     const loadedImages: string[] = [];
     let processedCount = 0;
 
+    triggerToast("이미지를 압축하고 최적화하는 중입니다...");
+
     fileList.forEach((file: File) => {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        if (event.target?.result) {
-          loadedImages.push(event.target.result as string);
-        }
-        processedCount++;
-        if (processedCount === fileList.length) {
-          setActiveFormItem((prev) => {
-            if (!prev) return null;
-            const updatedImages = prev.images ? [...prev.images, ...loadedImages] : loadedImages;
-            return {
-              ...prev,
-              images: updatedImages,
-              imageUrl: updatedImages[0] || prev.imageUrl || "",
-            };
-          });
-          triggerToast(`${loadedImages.length}장의 사진이 업로드되었습니다.`);
-        }
-      };
-      reader.readAsDataURL(file);
+      compressImage(file, 900, 900, 0.75)
+        .then((compressedBase64) => {
+          loadedImages.push(compressedBase64);
+        })
+        .catch((err) => {
+          console.error(err);
+        })
+        .finally(() => {
+          processedCount++;
+          if (processedCount === fileList.length) {
+            setActiveFormItem((prev) => {
+              if (!prev) return null;
+              const updatedImages = prev.images ? [...prev.images, ...loadedImages] : loadedImages;
+              return {
+                ...prev,
+                images: updatedImages,
+                imageUrl: updatedImages[0] || prev.imageUrl || "",
+              };
+            });
+            triggerToast(`${loadedImages.length}장의 사진이 성공적으로 압축되어 정상 업로드되었습니다.`);
+          }
+        });
     });
   };
 
@@ -228,34 +233,40 @@ export default function AdminPanel({
     const files = e.target.files;
     if (!files || files.length === 0) return;
     const file = files[0];
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      if (event.target?.result) {
+    
+    triggerToast("프로필 이미지를 압축 가공하는 중입니다...");
+    compressImage(file, 800, 800, 0.75)
+      .then((compressedBase64) => {
         setEditableSiteTexts((prev) => ({
           ...prev,
-          aboutImage: event.target?.result as string
+          aboutImage: compressedBase64
         }));
-        triggerToast("컴퓨터의 프로필 이미지가 정상적으로 등록되었습니다! 하단의 저장 완료를 누르면 사이트에 최종 적용됩니다.");
-      }
-    };
-    reader.readAsDataURL(file);
+        triggerToast("프로필 이미지가 가볍게 압축 탑재되었습니다! 저장을 완료해 주십시오.");
+      })
+      .catch((err) => {
+        console.error(err);
+        triggerToast("이미지 압축에 실패했습니다. 올바른 이미지 파일인지 확인하십시오.");
+      });
   };
 
   const handleIDPhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (!files || files.length === 0) return;
     const file = files[0];
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      if (event.target?.result) {
+    
+    triggerToast("증명사진을 전용 사이즈로 비트매핑 압축 중입니다...");
+    compressImage(file, 400, 500, 0.75)
+      .then((compressedBase64) => {
         setEditableSiteTexts((prev) => ({
           ...prev,
-          profileImage: event.target?.result as string
+          profileImage: compressedBase64
         }));
-        triggerToast("이름 옆 증명사진이 정상적으로 취득되었습니다! 하단의 최종 저장 완료를 누르시면 메인 화면에 반영됩니다.");
-      }
-    };
-    reader.readAsDataURL(file);
+        triggerToast("이력서용 증명사진 규격 압축이 완료되었습니다! 저장을 완료해 주십시오.");
+      })
+      .catch((err) => {
+        console.error(err);
+        triggerToast("이미지 압축 가공에 실패했습니다.");
+      });
   };
 
   const handleRestoreSiteTexts = () => {
