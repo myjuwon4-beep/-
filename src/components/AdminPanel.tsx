@@ -49,12 +49,12 @@ export default function AdminPanel({
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === "1111") {
+    if (password === "1109") {
       onSetIsAdmin(true);
       setErrorMsg("");
       triggerToast("관리자 로그인 성공. 포트폴리오 제어판이 열렸습니다.");
     } else {
-      setErrorMsg("비밀번호가 올바르지 않습니다. (비밀번호: 1111)");
+      setErrorMsg("비밀번호가 올바르지 않습니다.");
     }
   };
 
@@ -462,7 +462,7 @@ export default function AdminPanel({
                     id="admin-pass"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    placeholder="비밀번호(1111)를 입력하세요"
+                    placeholder="비밀번호를 입력하세요"
                     className="w-full bg-black border border-white/10 focus:border-primary-red outline-none px-4 py-3 text-center text-sm font-mono tracking-widest text-white rounded transition-colors"
                   />
                 </div>
@@ -483,7 +483,7 @@ export default function AdminPanel({
               </form>
               
               <div className="mt-6 text-[10px] text-white/30 font-mono">
-                System guidelines explicitly requested password match: <span className="text-primary-red/50">1111</span>
+                System access is regulated under secure protocol.
               </div>
             </div>
           ) : (
