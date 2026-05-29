@@ -1626,13 +1626,19 @@ function SubmittedInquiriesDisplay() {
   const [inquiries, setInquiries] = useState<any[]>([]);
 
   useEffect(() => {
-    const list = JSON.parse(localStorage.getItem("contact_inquiries") || "[]");
-    setInquiries(list);
+    try {
+      const list = JSON.parse(localStorage.getItem("contact_inquiries") || "[]");
+      setInquiries(list);
+    } catch (e) {
+      setInquiries([]);
+    }
   }, []);
 
   const handleClearInq = () => {
     if (confirm("모든 고객 수신 문의 접수 대장 기록을 가동 포트에서 영구 영구 삭제 삭제하시겠습니까?")) {
-      localStorage.removeItem("contact_inquiries");
+      try {
+        localStorage.removeItem("contact_inquiries");
+      } catch (e) {}
       setInquiries([]);
     }
   };

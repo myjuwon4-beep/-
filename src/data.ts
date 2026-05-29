@@ -311,32 +311,36 @@ export const initialSkills: SkillCategory[] = [
 // Helper to handle client-side updates instantly and persist
 export const getStoredPortfolioItems = (): PortfolioItem[] => {
   if (typeof window === "undefined") return initialPortfolioItems;
-  const stored = localStorage.getItem("portfolio_items");
-  if (!stored || stored.includes("portfolio-1") || !stored.includes("portfolio-long-1") || stored.includes("portfolio-promo-1") === false) {
-    // Force migrate to show the beautiful new real YouTube videos instantly
-    localStorage.setItem("portfolio_items", JSON.stringify(initialPortfolioItems));
-    return initialPortfolioItems;
-  }
   try {
+    const stored = localStorage.getItem("portfolio_items");
+    if (!stored || stored.includes("portfolio-1") || !stored.includes("portfolio-long-1") || stored.includes("portfolio-promo-1") === false) {
+      // Force migrate to show the beautiful new real YouTube videos instantly
+      try {
+        localStorage.setItem("portfolio_items", JSON.stringify(initialPortfolioItems));
+      } catch (inner) {}
+      return initialPortfolioItems;
+    }
     const parsed = JSON.parse(stored) as PortfolioItem[];
     let updated = false;
     const migrated = parsed.map(item => {
-      if (item.id === "portfolio-promo-1" && item.imageUrl.includes("unsplash.com")) {
+      if (item && item.id === "portfolio-promo-1" && item.imageUrl && item.imageUrl.includes("unsplash.com")) {
         item.imageUrl = "https://img.youtube.com/vi/XM2E0Eqf_8U/maxresdefault.jpg";
         updated = true;
       }
-      if (item.id === "portfolio-promo-2" && item.imageUrl.includes("unsplash.com")) {
+      if (item && item.id === "portfolio-promo-2" && item.imageUrl && item.imageUrl.includes("unsplash.com")) {
         item.imageUrl = "https://img.youtube.com/vi/cZLWRn6voS0/maxresdefault.jpg";
         updated = true;
       }
-      if (item.id === "portfolio-promo-3" && item.imageUrl.includes("unsplash.com")) {
+      if (item && item.id === "portfolio-promo-3" && item.imageUrl && item.imageUrl.includes("unsplash.com")) {
         item.imageUrl = "https://img.youtube.com/vi/Ioh8RRnDAcg/maxresdefault.jpg";
         updated = true;
       }
       return item;
     });
     if (updated) {
-      localStorage.setItem("portfolio_items", JSON.stringify(migrated));
+      try {
+        localStorage.setItem("portfolio_items", JSON.stringify(migrated));
+      } catch (inner) {}
       return migrated;
     }
     return parsed;
@@ -347,18 +351,22 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
 
 export const saveStoredPortfolioItems = (items: PortfolioItem[]) => {
   if (typeof window !== "undefined") {
-    localStorage.setItem("portfolio_items", JSON.stringify(items));
+    try {
+      localStorage.setItem("portfolio_items", JSON.stringify(items));
+    } catch (e) {}
   }
 };
 
 export const getStoredCareerItems = (): CareerItem[] => {
   if (typeof window === "undefined") return initialCareerItems;
-  const stored = localStorage.getItem("career_items");
-  if (!stored) {
-    localStorage.setItem("career_items", JSON.stringify(initialCareerItems));
-    return initialCareerItems;
-  }
   try {
+    const stored = localStorage.getItem("career_items");
+    if (!stored) {
+      try {
+        localStorage.setItem("career_items", JSON.stringify(initialCareerItems));
+      } catch (inner) {}
+      return initialCareerItems;
+    }
     return JSON.parse(stored);
   } catch (e) {
     return initialCareerItems;
@@ -367,18 +375,22 @@ export const getStoredCareerItems = (): CareerItem[] => {
 
 export const saveStoredCareerItems = (items: CareerItem[]) => {
   if (typeof window !== "undefined") {
-    localStorage.setItem("career_items", JSON.stringify(items));
+    try {
+      localStorage.setItem("career_items", JSON.stringify(items));
+    } catch (e) {}
   }
 };
 
 export const getStoredSkills = (): SkillCategory[] => {
   if (typeof window === "undefined") return initialSkills;
-  const stored = localStorage.getItem("skill_categories");
-  if (!stored) {
-    localStorage.setItem("skill_categories", JSON.stringify(initialSkills));
-    return initialSkills;
-  }
   try {
+    const stored = localStorage.getItem("skill_categories");
+    if (!stored) {
+      try {
+        localStorage.setItem("skill_categories", JSON.stringify(initialSkills));
+      } catch (inner) {}
+      return initialSkills;
+    }
     return JSON.parse(stored);
   } catch (e) {
     return initialSkills;
@@ -387,7 +399,9 @@ export const getStoredSkills = (): SkillCategory[] => {
 
 export const saveStoredSkills = (items: SkillCategory[]) => {
   if (typeof window !== "undefined") {
-    localStorage.setItem("skill_categories", JSON.stringify(items));
+    try {
+      localStorage.setItem("skill_categories", JSON.stringify(items));
+    } catch (e) {}
   }
 };
 
@@ -411,20 +425,25 @@ export const defaultSiteTexts: SiteTexts = {
 
 export const getStoredSiteTexts = (): SiteTexts => {
   if (typeof window === "undefined") return defaultSiteTexts;
-  const stored = localStorage.getItem("site_texts");
-  if (!stored) {
-    localStorage.setItem("site_texts", JSON.stringify(defaultSiteTexts));
-    return defaultSiteTexts;
-  }
   try {
+    const stored = localStorage.getItem("site_texts");
+    if (!stored) {
+      try {
+        localStorage.setItem("site_texts", JSON.stringify(defaultSiteTexts));
+      } catch (inner) {}
+      return defaultSiteTexts;
+    }
     const parsed = JSON.parse(stored);
     // Migration: If user has local storage with the old default slogan variants, migrate it automatically to the upgraded professional Korean slogan
     if (
-      parsed.heroSlogan === "기획부터 촬영, 완벽한 편집까지 브랜드 가치를 관통하는 1인 제작" ||
-      parsed.heroSlogan?.includes("장기 비즈니스 파트너십")
+      parsed &&
+      (parsed.heroSlogan === "기획부터 촬영, 완벽한 편집까지 브랜드 가치를 관통하는 1인 제작" ||
+       parsed.heroSlogan?.includes("장기 비즈니스 파트너십"))
     ) {
       parsed.heroSlogan = defaultSiteTexts.heroSlogan;
-      localStorage.setItem("site_texts", JSON.stringify(parsed));
+      try {
+        localStorage.setItem("site_texts", JSON.stringify(parsed));
+      } catch (inner) {}
     }
     return { ...defaultSiteTexts, ...parsed };
   } catch (e) {
@@ -434,6 +453,8 @@ export const getStoredSiteTexts = (): SiteTexts => {
 
 export const saveStoredSiteTexts = (texts: SiteTexts) => {
   if (typeof window !== "undefined") {
-    localStorage.setItem("site_texts", JSON.stringify(texts));
+    try {
+      localStorage.setItem("site_texts", JSON.stringify(texts));
+    } catch (e) {}
   }
 };

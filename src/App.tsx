@@ -31,9 +31,13 @@ export default function App() {
     setSiteTexts(getStoredSiteTexts());
 
     // Check if simple session auth persists for developer ease
-    const savedAuth = localStorage.getItem("admin_session_active");
-    if (savedAuth === "true") {
-      setIsAdmin(true);
+    try {
+      const savedAuth = localStorage.getItem("admin_session_active");
+      if (savedAuth === "true") {
+        setIsAdmin(true);
+      }
+    } catch (e) {
+      // Browser blocks localStorage (e.g., inside an iframe)
     }
   }, []);
 
@@ -47,16 +51,20 @@ export default function App() {
 
   const handleSetIsAdmin = (status: boolean) => {
     setIsAdmin(status);
-    if (status) {
-      localStorage.setItem("admin_session_active", "true");
-    } else {
-      localStorage.removeItem("admin_session_active");
-    }
+    try {
+      if (status) {
+        localStorage.setItem("admin_session_active", "true");
+      } else {
+        localStorage.removeItem("admin_session_active");
+      }
+    } catch (e) {}
   };
 
   const handleLogout = () => {
     setIsAdmin(false);
-    localStorage.removeItem("admin_session_active");
+    try {
+      localStorage.removeItem("admin_session_active");
+    } catch (e) {}
     alert("관리자 세션이 완전히 로그아웃 되었습니다.");
   };
 

@@ -38,14 +38,18 @@ export default function Contact() {
 
     // Simulate sending mail securely / saving locally
     setTimeout(() => {
-      // Save query to localStorage so they can see submitted inquiries as well (useful feature for portfolio review)
-      const existingInquiries = JSON.parse(localStorage.getItem("contact_inquiries") || "[]");
-      const newInquiry = {
-        ...formData,
-        id: "inq-" + Date.now(),
-        date: new Date().toLocaleDateString("ko-KR")
-      };
-      localStorage.setItem("contact_inquiries", JSON.stringify([newInquiry, ...existingInquiries]));
+      try {
+        // Save query to localStorage so they can see submitted inquiries as well (useful feature for portfolio review)
+        const existingInquiries = JSON.parse(localStorage.getItem("contact_inquiries") || "[]");
+        const newInquiry = {
+          ...formData,
+          id: "inq-" + Date.now(),
+          date: new Date().toLocaleDateString("ko-KR")
+        };
+        localStorage.setItem("contact_inquiries", JSON.stringify([newInquiry, ...existingInquiries]));
+      } catch (e) {
+        // Safe fall-through if private tab or sandbox disables storage
+      }
 
       setIsLoading(false);
       setIsSuccess(true);
