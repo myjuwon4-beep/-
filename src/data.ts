@@ -420,7 +420,7 @@ export const defaultSiteTexts: SiteTexts = {
   profilePhone: "010-4820-0441",
   profileEmail: "seoulpotato@naver.com",
   aboutImage: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=800",
-  profileImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400"
+  profileImage: ""
 };
 
 export const getStoredSiteTexts = (): SiteTexts => {

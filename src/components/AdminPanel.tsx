@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from "react";
-import { ShieldAlert, Plus, Edit, Trash2, X, RotateCcw, Save, Grid, ExternalLink, HelpCircle, LockOpen, Briefcase, FileText, Cpu } from "lucide-react";
+import { ShieldAlert, Plus, Edit, Trash2, X, RotateCcw, Save, Grid, ExternalLink, HelpCircle, LockOpen, Briefcase, FileText, Cpu, User } from "lucide-react";
 import { PortfolioItem, SiteTexts, CareerItem, SkillCategory } from "../types";
 import { initialPortfolioItems, saveStoredPortfolioItems, saveStoredSiteTexts, defaultSiteTexts, initialCareerItems, saveStoredCareerItems, initialSkills, saveStoredSkills } from "../data";
 import { compressImage } from "../lib/imageCompressor";
@@ -955,16 +955,29 @@ export default function AdminPanel({
                         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 bg-black/60 p-6 border border-white/10 rounded-xl mt-6">
                           <div className="md:col-span-4 flex flex-col items-center justify-center md:border-r border-white/15 pr-6">
                             <span className="text-xs font-semibold tracking-wide text-white/70 uppercase block mb-3 text-center">선택된 증명사진 예시</span>
-                            <div className="w-28 h-36 bg-neutral-950 border border-white/15 rounded-md overflow-hidden relative font-sans shadow-lg">
-                              <img
-                                src={editableSiteTexts.profileImage || "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400"}
-                                alt="ID Photo Preview"
-                                className="w-full h-full object-cover"
-                                referrerPolicy="no-referrer"
-                                onError={(e) => {
-                                  e.currentTarget.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400";
-                                }}
-                              />
+                            <div className="w-28 h-36 bg-neutral-950 border border-white/15 rounded-md overflow-hidden relative font-sans shadow-lg flex items-center justify-center">
+                              {editableSiteTexts.profileImage ? (
+                                <img
+                                  src={editableSiteTexts.profileImage}
+                                  alt="ID Photo Preview"
+                                  className="w-full h-full object-cover"
+                                  referrerPolicy="no-referrer"
+                                  onError={(e) => {
+                                    e.currentTarget.style.display = "none";
+                                    const parent = e.currentTarget.parentElement;
+                                    if (parent) {
+                                      const fallback = parent.querySelector(".admin-profile-fallback");
+                                      if (fallback) {
+                                        fallback.classList.remove("hidden");
+                                      }
+                                    }
+                                  }}
+                                />
+                              ) : null}
+                              <div className={`admin-profile-fallback ${editableSiteTexts.profileImage ? "hidden" : ""} absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-neutral-900 to-neutral-950 text-neutral-500 p-2 text-center`}>
+                                <User className="w-8 h-8 text-neutral-600 mb-1" />
+                                <span className="text-[7px] font-mono tracking-widest text-neutral-500 uppercase">NO PHOTO</span>
+                              </div>
                             </div>
                           </div>
                           <div className="md:col-span-8 flex flex-col justify-center gap-3">

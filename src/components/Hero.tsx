@@ -4,7 +4,7 @@
  */
 
 import React, { useRef, useEffect } from "react";
-import { Play, ArrowDown, Film, Disc } from "lucide-react";
+import { Play, ArrowDown, Film, Disc, User } from "lucide-react";
 import { DEFAULT_HERO_VIDEO, defaultSiteTexts } from "../data";
 import { SiteTexts } from "../types";
 
@@ -94,16 +94,29 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
           {/* 이력서 사진 (ID Photo) 단독 프레임 - 상단 배치 */}
           <div className="flex justify-center sm:justify-start mb-5">
             <div className="p-3 bg-cinema-black/90 border border-white/10 rounded-lg shadow-2xl flex flex-col items-center">
-              <div className="relative w-28 h-36 md:w-32 md:h-40 bg-neutral-950 border border-white/20 hover:border-primary-red/50 rounded overflow-hidden shadow-2xl transition-all duration-300">
-                <img 
-                  src={siteTexts.profileImage || "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400"} 
-                  alt="증명사진" 
-                  className="w-full h-full object-cover font-sans" 
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400";
-                  }}
-                />
+              <div className="relative w-28 h-36 md:w-32 md:h-40 bg-neutral-950 border border-white/20 hover:border-primary-red/50 rounded overflow-hidden shadow-2xl transition-all duration-300 flex items-center justify-center">
+                {siteTexts.profileImage ? (
+                  <img 
+                    src={siteTexts.profileImage} 
+                    alt="증명사진" 
+                    className="w-full h-full object-cover font-sans" 
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                      const parent = e.currentTarget.parentElement;
+                      if (parent) {
+                        const fallback = parent.querySelector(".profile-fallback");
+                        if (fallback) {
+                          fallback.classList.remove("hidden");
+                        }
+                      }
+                    }}
+                  />
+                ) : null}
+                <div className={`profile-fallback ${siteTexts.profileImage ? "hidden" : ""} absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-neutral-900 to-neutral-950 text-neutral-500 p-2 text-center`}>
+                  <User className="w-10 h-10 text-neutral-600 mb-1" />
+                  <span className="text-[8px] font-mono tracking-widest text-neutral-500 uppercase">NO PHOTO</span>
+                </div>
               </div>
             </div>
           </div>
