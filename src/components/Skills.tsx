@@ -16,10 +16,10 @@ export default function Skills({ skills = [] }: SkillsProps) {
   const displaySkills = skills && skills.length > 0 ? skills : initialSkills;
 
   const getIcon = (categoryName: string) => {
-    if (categoryName.includes("Production")) {
+    if (categoryName.includes("Production") || categoryName.includes("촬영")) {
       return <Radio size={16} className="text-primary-red" />;
     }
-    if (categoryName.includes("Post")) {
+    if (categoryName.includes("Post") || categoryName.includes("편집")) {
       return <Sliders size={16} className="text-primary-red" />;
     }
     return <Cpu size={16} className="text-primary-red" />;
@@ -37,7 +37,7 @@ export default function Skills({ skills = [] }: SkillsProps) {
         <div className="flex flex-col mb-16 md:flex-row md:items-end justify-between">
           <div>
             <span className="text-sm tracking-[0.4em] text-primary-red font-bold block mb-2 font-display">
-              03 / PROFESSIONAL CAPABILITIES
+              04 / PROFESSIONAL CAPABILITIES
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-medium tracking-tight text-white">
               SKILLS
@@ -50,7 +50,7 @@ export default function Skills({ skills = [] }: SkillsProps) {
         </div>
 
         {/* Tactical Skills Bento-Style Matrix */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" id="skills-matrix">
+        <div className={`grid grid-cols-1 ${displaySkills.length === 2 ? "md:grid-cols-2 max-w-5xl mx-auto" : "md:grid-cols-2 lg:grid-cols-3"} gap-8`} id="skills-matrix">
           
           {displaySkills.map((section, sIdx) => (
             <div

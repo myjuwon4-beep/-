@@ -12,45 +12,45 @@ export const initialPortfolioItems: PortfolioItem[] = [
   // PROMOTION (홍보) - 3 items
   {
     id: "portfolio-promo-1",
-    title: "유럽 명품 COCHET 트레일러 국내 최초 론칭 필름",
-    client: "COCHET / K-TRAILER",
-    role: "Lead PD / Cinematographer / Editor",
+    title: "대한민국 견인장치 NO.1 K트레일러 홍보",
+    client: "K-TRAILER",
+    role: "기획, 촬영, 편집 (1인제작)",
     format: "PROMOTION",
-    description: "유럽 명품 COCHET 폴딩 트레일러의 다이내믹 라이프스타일. 드론 FPV 원테이크 샷과 시네마틱 프레임으로 프리미엄 아웃도어의 미학을 완성했습니다.",
+    description: "입사 후 회사를 홍보하는 영상이 없어 견인장치 제조 업체와 함께 회사를 홍보하는 영상 제작",
     videoUrl: "https://www.youtube.com/watch?v=XM2E0Eqf_8U",
     imageUrl: "https://img.youtube.com/vi/XM2E0Eqf_8U/maxresdefault.jpg",
     previewVideoUrl: "https://player.vimeo.com/external/490898514.sd.mp4?s=c8afbdcf7ad1ea5408a688d0b679a9ccb2f6efba&profile_id=164&oauth2_token_id=57447761",
-    equipment: "Sony FX3, DJI Mavic 3 Pro, DaVinci Resolve",
+    equipment: "Sony a7m3, DJI Mini 4 Pro | Premiere Pro, After effect",
     duration: "03:45",
     date: "2025-01",
     order: 1
   },
   {
     id: "portfolio-promo-2",
-    title: "K-TRAILER 수입 SUV 견인장치 공식 브랜드 무비",
-    client: "K-TRAILER",
-    role: "Director of Photography / Sound Editor",
+    title: "한국 관광공사 유니크베뉴 | 왕의지밀 홍보 영상",
+    client: "왕의지밀",
+    role: "기획, 촬영, 편집 (1인제작)",
     format: "PROMOTION",
-    description: "플래그십 SUV 전용 완벽 시스템의 고정밀 공정 시각화. 로우키 하이컨트라스트 조명과 감각적 비트 SFX로 가치적 신뢰를 압도적으로 증명합니다.",
+    description: "한국관광공사 유니크베뉴로 선정된 '왕의지밀'를 홍보 하고 주변 관광지를 함께 홍보",
     videoUrl: "https://www.youtube.com/watch?v=cZLWRn6voS0",
     imageUrl: "https://img.youtube.com/vi/cZLWRn6voS0/maxresdefault.jpg",
     previewVideoUrl: "https://player.vimeo.com/external/459389137.sd.mp4?s=89e900593b4a53fa38eafca6f2cc9689e3a6c5eb&profile_id=165&oauth2_token_id=57447761",
-    equipment: "Sony FX3, Sirui Anamorphic, Logic Pro X, Premiere Pro",
+    equipment: "Sony a7m3, DJI Mavic 2 | Premiere Pro, After effect",
     duration: "04:15",
     date: "2024-11",
     order: 2
   },
   {
     id: "portfolio-promo-3",
-    title: "이지캠퍼 올테레인 폴딩 트레일러 기동 쇼케이스",
-    client: "EASYCAMPER / K-TRAILER",
-    role: "Visual Director / Drone Pilot / Colorist",
+    title: "한국 관광공사 국제회의시설 VR360홍보",
+    client: "한국관광공사",
+    role: "PM, 편집",
     format: "PROMOTION",
-    description: "산악 요철지부터 오프로드 주행까지 거침없는 질감 스케치. 릴스 특성에 맞춘 긴장감 넘치는 편집과 숲속 시그니처 톤으로 주행성을 강조했습니다.",
+    description: "국제 회의 시설 VR360 홍보 영상으로 각 회의 시설 및 전시관을 세세하게 보여주기 위함",
     videoUrl: "https://youtu.be/Ioh8RRnDAcg",
-    imageUrl: "https://img.youtube.com/vi/Ioh8RRnDAcg/maxresdefault.jpg",
+    imageUrl: "https://img.youtube.com/vi/Ioh8RRnDAcg/hq2.jpg",
     previewVideoUrl: "https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c054273b1851722e1de7fe50ddf7cfda&profile_id=139&oauth2_token_id=57447761",
-    equipment: "DJI Avata FPV, GoPro Hero 12, FilmConvert",
+    equipment: "인스타 360 | Premiere Pro",
     duration: "02:50",
     date: "2024-09",
     order: 3
@@ -59,124 +59,124 @@ export const initialPortfolioItems: PortfolioItem[] = [
   // YOUTUBE LONG (유튜브 롱폼) - 7 items
   {
     id: "portfolio-long-1",
-    title: "팰리세이드 페이스리프트 수입 견인장치 장착기 & 안전 견인 가이드",
-    client: "K-TRAILER (케이 트레일러)",
-    role: "Project Director / Cameraman",
+    title: "PV5 전기차 23시간 전기 테스트",
+    client: "K-TRAILER",
+    role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "실차 시공 공정부터 카라반 정렬, 수직 하중 제어까지 상세 정보 기획. 시청자들이 가장 신뢰하는 가이드로 엄청난 유입과 정비 의뢰를 이뤄냈습니다.",
+    description: "사람들이 전기차를 구입하면서 가장 궁금해 하는 부분 전기 사용량을 테스트 해서 궁금증을 풀어 주기 위함 캠핑 브이로그와 정보성을 함께 기획하여 진행",
     videoUrl: "https://www.youtube.com/watch?v=5Vhtzdd1Pyw",
     imageUrl: "",
-    equipment: "Sony FX3, Wireless GO II, Premiere Pro",
+    equipment: "오즈모 포켓3, DJI Mini 4 Pro | Premiere Pro",
     duration: "11:24",
     date: "2025-02",
     order: 4
   },
   {
     id: "portfolio-long-2",
-    title: "반드시 체크할 견인볼 규격의 진실! 50mm vs 2인치 정밀 분석",
-    client: "K-TRAILER (케이 트레일러)",
-    role: "Lead PD / Storyboard / Motion Graphics",
+    title: "신형 무쏘 차량 오프로드, 일반도로 테스트",
+    client: "K-TRAILER",
+    role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "카라반 이탈 사고 요인 분석과 유려한 HUD 오버레이 3D 모션 디자인. 메커니즘을 시각적으로 알기 쉽게 이해시켜 완벽한 정보성을 소구했습니다.",
+    description: "신형 무쏘 출고 후 일반도로 주행과 픽업트럭 특성상 오프로드 테스트까지 시청자가 궁금해 하는 부분들을 해소해 주기 위함",
     videoUrl: "https://www.youtube.com/watch?v=zILYhYno5Ps",
     imageUrl: "",
-    equipment: "Sony FX3, After Effects, DaVinci Resolve",
+    equipment: "a7c2, 오즈모 액션5, 오즈모 포켓, 고프로10, DJI Mini 4 Pro | Premiere Pro",
     duration: "13:10",
     date: "2025-01",
     order: 5
   },
   {
     id: "portfolio-long-3",
-    title: "수입 SUV 툴레 루프박스 정밀 인스톨 & 주행 풍절 소음 해결 백서",
+    title: "무쏘EV, 타스만 등 급 경사 등판 테스트",
     client: "K-TRAILER",
-    role: "Main Producer / Video Editor",
+    role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "루프 캐리어 한계치 실시간 풍하중 테스트와 해결 꿀팁 제공. 일인칭 포커싱 구도와 정밀 SFX 사운드로 전문가의 장인 기술을 몰입감 있게 담았습니다.",
+    description: "무쏘EV, 타스만, 카니발, 렉스턴 스포츠 칸 국내에서 많이 사용하고 견인장치를 많이 장착하는 차량을 이용해 카라반을 견인하고 등판 테스트 진행 구매를 고민하는 고객들에게 궁금증을 풀어주기 위함",
     videoUrl: "https://www.youtube.com/watch?v=x9j9Erj4chU",
     imageUrl: "",
-    equipment: "Sony FX3, Rode Shotgun Mic, Premiere Pro",
+    equipment: "a7c2, 오즈모 액션5, 오즈모 포켓3, 고프로10, DJI Mini 4 Pro | Premiere Pro",
     duration: "12:15",
     date: "2024-10",
     order: 6
   },
   {
     id: "portfolio-long-4",
-    title: "미국형 트레일러 제동의 핵심! 디지털 브레이크 컨트롤러 완벽 조작법",
+    title: "견인장치 선택 고민 해결해 드립니다.",
     client: "K-TRAILER",
-    role: "Project Director / Sound Designer",
+    role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "트레일러 스웨이 방지를 위한 비례식 전기 제동기 세팅. 스플릿 스크린 편집을 적용해 긴급 상황 시 작동 원리와 대안을 일목요연하게 짚어줍니다.",
+    description: "구매 고민을 하는 고객들의 고민을 털어 주기 위해 견인장치 전문 직원들이 견인장치 2가지 타입을 비교해서 배틀 형식으로 토론을 하는 콘텐츠 제작",
     videoUrl: "https://www.youtube.com/watch?v=bCnX5uOil5U",
     imageUrl: "",
-    equipment: "Sony FX3, Custom Sound Effects, DaVinci Resolve",
+    equipment: "a7m3, 핸드폰, 고프로10, | Premiere Pro",
     duration: "10:50",
     date: "2024-08",
     order: 7
   },
   {
     id: "portfolio-long-5",
-    title: "모든 캠퍼들의 로망! 툴레 어닝 & 루프탑 텐트 감성 매치업 리뷰",
+    title: "무쏘 신형 +고버랜드 캠퍼 동계 캠핑",
     client: "K-TRAILER",
-    role: "PD / Multi-Camera Operator / Grading",
+    role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "1인 단독 전개 피칭과 아궁이 감성 빗소리 수음. 풍부하고 화사한 올리브 톤 매핑을 통해 아웃도어 특유의 생동감 넘치는 질감을 명징하게 촬영했습니다.",
+    description: "신형 무쏘 차량과 픽업트럭 전용 고버랜드 캠퍼를 이용해 동계 캠핑을 하고 극 동계에도 사용 가능한 제품을 선보이기 위해 직접 체험하는 콘텐츠 제작",
     videoUrl: "https://www.youtube.com/watch?v=g489MFvrbZ0",
     imageUrl: "",
-    equipment: "Sony FX3, Mavic 3 Drone, Premiere Pro",
+    equipment: "a7c2, 오즈모 액션5, 오즈모 포켓3, DJI Mini 4 Pro | Premiere Pro",
     duration: "15:40",
     date: "2024-06",
     order: 8
   },
   {
     id: "portfolio-long-6",
-    title: "미국식 카고 트레일러 캠핑 오피스 개조! 완벽 배선 & 우레탄 단열백서",
+    title: "신형 무쏘EV 전기차의 승차감 과 견인 주행 테스트",
     client: "K-TRAILER",
-    role: "Lead PD / Storyboard Creator / Colorist",
+    role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "골조 보강, 전력 자립용 부품 라인 설계 및 세그먼트 타임랩스 기록. 극적 공간 변화를 고화질 시네마틱 속도로 담아내 정비 연계 폭증을 유도했습니다.",
+    description: "전기차로 카라반을 견인 했을 때의 주행감을 고객들에게 보여주고 구매 유도를 하기 위함",
     videoUrl: "https://www.youtube.com/watch?v=B5KUOagAOoA",
     imageUrl: "",
-    equipment: "Sony FX3, Timelapse Rig, DaVinci Resolve",
+    equipment: "a7c2, 오즈모 액션5, 오즈모 포켓3, DJI Mini 4 Pro | Premiere Pro",
     duration: "18:25",
     date: "2024-04",
     order: 9
   },
   {
     id: "portfolio-long-7",
-    title: "하이브리드 SUV 수직 하중 측정 실험 & 견인 스펙 데이터 정밀 검증",
+    title: "대구 직영점의 대표님 없는 하루 VLOG&루프탑텐트 리뷰",
     client: "K-TRAILER",
-    role: "Project Director / Cinematographer / FX Operator",
+    role: "편집",
     format: "YOUTUBE LONG",
-    description: "친환경 전기 및 HEV 차량의 후륜 서스펜션 내구 측정 다큐멘터리 리포트. 하중 센서 연계 분석 연출로 대안 솔루션을 학술적 완성도로 소구했습니다.",
+    description: "대구직영점을 알리기 위해 대구 직원들께 루프탑텐트를 직접 사용하고 리뷰하는 영상을 촬영 요청 캐릭터 이미지를 바탕으로 재미 있게 편집 구성",
     videoUrl: "https://youtu.be/0lA9uVIcWK4",
     imageUrl: "",
-    equipment: "Sony FX3, Sennheiser Mic, ProTools Suite",
+    equipment: "핸드폰 | Premiere Pro",
     duration: "14:12",
     date: "2024-03",
     order: 10
   },
 
-  // SHORTS (쇼츠 / 숏폼) - 3 items
+  // SHORTS (쇼츠 / 숏폼) - 5 items
   {
     id: "portfolio-shorts-1",
-    title: "견고하게 착! 카라반 커플러 자동 결속 1초 타격 꿀 쇼츠",
+    title: "견인장치 무사고 연결법 (유럽식 커플러)",
     client: "K-TRAILER",
-    role: "Cinematographer / Sound Design",
+    role: "편집",
     format: "SHORTS",
-    description: "커플러에 잠금 레버가 '철컥' 체결되는 고진동 타격 메커니즘을 극근접 클로즈업 샷과 사운드로 흥미진진하게 만든 90만뷰 돌풍 쇼츠.",
+    description: "기존에 다른 PD가 제작했던 영상에서 keypoint 부분을 재 편집하여 고객들의 트레일러 장착 방법을 짧고 굵게 전달 17만 조회수 달성",
     videoUrl: "https://www.youtube.com/shorts/upLsH4PXbrM",
-    imageUrl: "",
+    imageUrl: "/coupling_thumb_hq1.jpg",
     duration: "00:45",
     date: "2024-08",
     order: 11
   },
   {
     id: "portfolio-shorts-2",
-    title: "초대형 미국 픽업트럭 안전 장치 견인 완충력 실시간 모의 실증",
+    title: "리비안 EDV500 차량 소개",
     client: "K-TRAILER",
-    role: "Editor / Motion Graphic / Colorist",
+    role: "기획, 촬영, 편집 (1인제작)",
     format: "SHORTS",
-    description: "오프로드 노면 요철 통과 시 히치 커플러 충격 흡수를 다이내믹 앵글 크롭과 역동적인 배속으로 쉽고 명쾌하게 소구한 숏폼.",
+    description: "미국 아마존에서만 사용되는 목적성 차량을 소개하여 K트레일러 회사가 우리나라 연구소 차량의 연구를 위해 견인장치를 달고 있다는 홍보성 영상 제작",
     videoUrl: "https://www.youtube.com/shorts/vTMvqP2QkVU",
     imageUrl: "",
     duration: "00:38",
@@ -185,11 +185,11 @@ export const initialPortfolioItems: PortfolioItem[] = [
   },
   {
     id: "portfolio-shorts-3",
-    title: "좁은 공간도 문제없다! 카라반 직각 제어 무버 스마트 꿀팁",
+    title: "PV5 튜닝하면 차가 달라진다.",
     client: "K-TRAILER",
-    role: "Drone Pilot / Post Director",
+    role: "기획, 촬영, 편집 (1인제작)",
     format: "SHORTS",
-    description: "회전 구동을 드론 버드아이 탑뷰 앵글로 흥미진진하게 수직 촬영하여 시청자들의 이탈을 막고 유용한 정보를 초스피드로 제공한 클립.",
+    description: "신차 PV5의 부족함을 채워줄수 있는 튜닝 제품을 홍보하기 위함",
     videoUrl: "https://www.youtube.com/shorts/-kx8OpMUvvs",
     imageUrl: "",
     duration: "00:52",
@@ -200,31 +200,33 @@ export const initialPortfolioItems: PortfolioItem[] = [
   // INTERVIEW (인터뷰) - 2 items
   {
     id: "portfolio-interview-1",
-    title: "K-TRAILER 10년 마스터 명장이 말하는 대한민국 견인장치의 진실",
+    title: "무쏘EV 2만km 주행 후기 | 진텍 캐노피",
     client: "K-TRAILER",
-    role: "Lead Director / Camera Operator / Interviewer",
+    role: "기획, 촬영, 편집 (1인제작)",
     format: "INTERVIEW",
-    description: "누적 수천 대 돌파 마스터 명장의 연륜 짙은 현장 고백과 가치 설계. 수려한 스튜디오 조명 음영과 잡음 제어로 인물의 전문 신뢰도를 드높였습니다.",
+    description: "회사 사업 확장을 위해 판매하고 있는 제품과 무쏘EV 차량을 구매 고민하는 시청자들의 궁금증을 풀어 주는 주행 후기 인터뷰",
     videoUrl: "https://www.youtube.com/watch?v=LleqHF6Zmcs",
     imageUrl: "",
-    equipment: "Sony FX3, Sony A7SIII, Sennheiser MKH416 Shotgun Mic",
+    previewVideoUrl: "",
+    equipment: "a7c2, 오즈모 포켓3, DJI Mini 4 Pro | Premiere Pro",
     duration: "08:50",
     date: "2024-04",
-    order: 14
+    order: 16
   },
   {
     id: "portfolio-interview-2",
-    title: "지프 랭글러 오프로드 견인 전문가가 밝힌 필드 리얼 탐험 토크",
-    client: "JEEP CAMPER CAMPAIGN",
-    role: "Main PD / Sound Recording / Drone Cinematographer",
+    title: "자전거 덕후들이 뽑은 BEST 6 자전거 코스 | 에포스",
+    client: "THULE",
+    role: "기획, 촬영, 편집 (1인제작)",
     format: "INTERVIEW",
-    description: "우렁찬 현장 앰비언스를 온전히 믹싱하여 야생의 날것을 그대로 전수. 기어의 견고함과 자연을 개척하는 정수를 진중감 넘치게 대담 촬영했습니다.",
+    description: "자전거 라이딩 하는 유명한 장소에서 '툴레'와 협업하여 자전거를 즐기는 시청자들에게 자전거 캐리어 설치 이벤트를 진행하여 구매 유도 및 유명한 라이딩 장소를 소개해 드리는 콘텐츠 제작",
     videoUrl: "https://www.youtube.com/watch?v=g1EDO_dBD7E",
     imageUrl: "",
-    equipment: "Sony FX3, Mavic Drone, Rode Wireless, Logic Pro",
+    previewVideoUrl: "",
+    equipment: "a7c2, 오즈모액션5, 오즈모 포켓3, 고프로10, DJI Mini 4 Pro | Premiere Pro",
     duration: "11:05",
     date: "2023-11",
-    order: 15
+    order: 17
   }
 ];
 
@@ -232,10 +234,10 @@ export const initialCareerItems: CareerItem[] = [
   {
     id: "career-1",
     period: "2024 ~ 2026",
-    title: "견인장치 및 오토모티브 미디어 (K트레일러)",
+    title: "K트레일러",
     role: "인하우스 영상기획총괄 PD",
     description: [
-      "유튜브(@k_trailer) 및 이력 채널의 카라반/트레일러/수입 SUV 견인 전문 브랜디드 영상 기획, 촬영, 최적화 편집 전담",
+      "유튜브 및 인스타그램 채널의 카라반/트레일러/캠핑 레저 용품 전문 브랜디드 영상 기획, 촬영, 최적화 편집 전담",
       "캠핑 아웃도어 트렌드와 EV 친환경 차량의 한계 견력을 테스트하는 유니크 오토모티브 로드마크 콘텐츠 개발"
     ],
     achievements: [
@@ -252,8 +254,8 @@ export const initialCareerItems: CareerItem[] = [
       {
         platform: "Instagram 숏폼 채널 운영 (@ktrailer1)",
         metrics: [
-          "기초 120명 대 팔로워에서 인지 릴스 연출을 장려하여 단기간 내 1,300명으로 증가",
-          "특수 고중량 트레일러 회전법 및 체결 트릭 숏폼 콘텐츠 최고 누적 조회수 91만 회 달성"
+          "입사 후 120명 대 팔로워에서 릴스 연출을 장려하여 단기간 내 1,300명으로 증가",
+          "캠핑 시장이 죽어 가면서 모터홈에 관심을 갖는 시청자들에게 원하고 필요로하는 콘텐츠를 제작하여 최고 누적 조회수 91만 회 달성"
         ],
         link: "https://www.instagram.com/ktrailer1/",
         linkName: "@ktrailer1 인스타그램 바로가기"
@@ -263,19 +265,17 @@ export const initialCareerItems: CareerItem[] = [
   {
     id: "career-2",
     period: "2021 ~ 2024",
-    title: "인하우스 PD + 국가 정보 홍보 사업 콘텐츠 사업부",
-    role: "메인 카메라 감독 및 총 연출가",
+    title: "루씨드 드림",
+    role: "영상제작팀 팀장 및 APM(어시스턴트 PM)",
     description: [
-      "한국관광공사 주관 국제회의 고품질 테마시설(유니크베뉴)의 메인 8K 다각 및 360° VR 감각 시네마 촬영 총괄",
-      "지역 거점 한옥 명소 및 융복합 복합문화공간을 세계 시장 바이어에게 고전미와 첨단 기술로 선보이는 공간 연출 구축",
-      "관련 국가사업 미디어 지자체 입찰 프레젠테이션용 메탈릭 테크 디렉팅 리딩"
+      "한국관광공사 주관 국제회의시설(유니크베뉴)의 메인 8K 다각 및 360° VR 감각 시네마 촬영 총괄 및 홍보 영상 제작"
     ],
     achievements: [
       {
         platform: "한국관광공사 (KTO)",
         metrics: [
           "국제 바이어 유치용 고해상도 테마 VR 투어 프로덕션 리딩",
-          "메타버스 플랫폼 및 주요 글로벌 마케팅 컨퍼런스 기프트 홍보관 메인 비주얼 채택"
+          "유니크 베뉴 관광 홍보용 영상 제작"
         ]
       }
     ]
@@ -283,28 +283,35 @@ export const initialCareerItems: CareerItem[] = [
   {
     id: "career-3",
     period: "2013 ~ 2021",
-    title: "이투스 (ETOOS) 교육 미디어 스튜디오",
-    role: "인하우스 메인 영상 기획 & 촬영 책임 PD",
+    title: "이투스 (ETOOS) 교육",
+    role: "기획 영상 촬영 & 스튜디오 관리 &\n촬영 팀 관리 & 라이브",
     description: [
       "이투스 공식 유튜브 채널 기획 다큐멘터리, 수강 동기화 트렌드 및 대형 성명 쇼츠 예능 영상 제작",
       "라이브 대형 세미나 중계 및 파견직 촬영 크루(10여 명) 인력 수급/관리 및 스튜디오 실시간 운영 설계",
       "스타 강사 맞춤형 시각 이펙트 설계 가이드라인 구축 및 촬영 장비 유지보수 전반 총괄"
+    ]
+  },
+  {
+    id: "career-4",
+    period: "2012 ~ 2013",
+    title: "한국영상프로덕션",
+    role: "홍보 영상 촬영",
+    description: [
+      "수자원 공사 홍보 영상 촬영",
+      "한국도로공사 홍보 영상 촬영",
+      "남한산성 홍보 영상 촬영"
     ]
   }
 ];
 
 export const initialSkills: SkillCategory[] = [
   {
-    category: "Automotive Production",
-    skills: ["Directing", "Cinematography (Cinema Rig)", "Drone Shooting (Mavic Pro / FPV)", "Action Cam Tracking", "In-Depth Tech Interview", "Lighting Setup (High Contrast / Low Key)"]
+    category: "촬영",
+    skills: ["a7m4", "a7c2", "DJI Drone", "액션 캠", "짐벌"]
   },
   {
-    category: "Post-Production",
-    skills: ["Premiere Pro", "After Effects", "DaVinci Resolve (Color Grading)", "Audio SFX Design", "3D Motion HUD Overlay", "Virtual Tour / VR Stitching"]
-  },
-  {
-    category: "Digital Growth & Content Strategy",
-    skills: ["YouTube Channel Optimization", "Viewer Retention Analytics", "Thumbnails Styling Strategy", "Branded Film Storyboarding", "Vimeo / High-End Showcase Deployment"]
+    category: "영상편집",
+    skills: ["Premiere", "After effect", "Photoshop"]
   }
 ];
 
@@ -313,8 +320,14 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
   if (typeof window === "undefined") return initialPortfolioItems;
   try {
     const stored = localStorage.getItem("portfolio_items");
-    if (!stored || stored.includes("portfolio-1") || !stored.includes("portfolio-long-1") || stored.includes("portfolio-promo-1") === false) {
-      // Force migrate to show the beautiful new real YouTube videos instantly
+    if (
+      !stored || 
+      stored.includes("유럽 명품 COCHET 트레일러") ||
+      !stored.includes("대한민국 견인장치") ||
+      stored.includes("portfolio-shorts-4") ||
+      stored.includes("portfolio-shorts-5")
+    ) {
+      // Force migrate to show the beautiful updated titles/descriptions instantly
       try {
         localStorage.setItem("portfolio_items", JSON.stringify(initialPortfolioItems));
       } catch (inner) {}
@@ -323,17 +336,13 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
     const parsed = JSON.parse(stored) as PortfolioItem[];
     let updated = false;
     const migrated = parsed.map(item => {
-      if (item && item.id === "portfolio-promo-1" && item.imageUrl && item.imageUrl.includes("unsplash.com")) {
-        item.imageUrl = "https://img.youtube.com/vi/XM2E0Eqf_8U/maxresdefault.jpg";
-        updated = true;
-      }
-      if (item && item.id === "portfolio-promo-2" && item.imageUrl && item.imageUrl.includes("unsplash.com")) {
-        item.imageUrl = "https://img.youtube.com/vi/cZLWRn6voS0/maxresdefault.jpg";
-        updated = true;
-      }
-      if (item && item.id === "portfolio-promo-3" && item.imageUrl && item.imageUrl.includes("unsplash.com")) {
-        item.imageUrl = "https://img.youtube.com/vi/Ioh8RRnDAcg/maxresdefault.jpg";
-        updated = true;
+      const defaultItem = initialPortfolioItems.find(x => x.id === item.id);
+      if (defaultItem) {
+        // Sync thumbnail if the code definition has updated to a fresh thumbnail URL
+        if (item.imageUrl !== defaultItem.imageUrl) {
+          item.imageUrl = defaultItem.imageUrl;
+          updated = true;
+        }
       }
       return item;
     });
@@ -361,7 +370,22 @@ export const getStoredCareerItems = (): CareerItem[] => {
   if (typeof window === "undefined") return initialCareerItems;
   try {
     const stored = localStorage.getItem("career_items");
-    if (!stored) {
+    if (
+      !stored || 
+      !stored.includes("career-4") || 
+      stored.includes("이투스 (ETOOS) 교육 미디어 스튜디오") ||
+      stored.includes("기초 120명 대") ||
+      !stored.includes("캠핑 레저 용품") ||
+      stored.includes("국가 정보 홍보 사업 콘텐츠 사업부") ||
+      !stored.includes("국제회의시설(유니크베뉴)") ||
+      stored.includes("견인장치 및 오토모티브 미디어") ||
+      stored.includes("인하우스 PD + 국가 정보 홍보 사업 콘텐츠") ||
+      stored.includes("인하우스 메인 영상 기획 & 촬영 책임 PD") ||
+      stored.includes("홍보 영상 촬영 PD") ||
+      !stored.includes("루씨드 드림") ||
+      !stored.includes("스튜디오 관리 &") ||
+      !stored.includes("촬영 팀 관리")
+    ) {
       try {
         localStorage.setItem("career_items", JSON.stringify(initialCareerItems));
       } catch (inner) {}
@@ -385,7 +409,7 @@ export const getStoredSkills = (): SkillCategory[] => {
   if (typeof window === "undefined") return initialSkills;
   try {
     const stored = localStorage.getItem("skill_categories");
-    if (!stored) {
+    if (!stored || stored.includes("Automotive Production") || !stored.includes("촬영") || !stored.includes("영상편집")) {
       try {
         localStorage.setItem("skill_categories", JSON.stringify(initialSkills));
       } catch (inner) {}
@@ -409,18 +433,18 @@ export const defaultSiteTexts: SiteTexts = {
   heroTagline: "HIGH-END VIDEO PRODUCER",
   heroTitle: "VIDEO MARKETING",
   heroSubtitle: "DIRECTOR",
-  heroSlogan: "기획부터 촬영, 편집까지 브랜드 가치를 관통하는 1인 제작\n장기 근속 경력의 견고한 신뢰성과 플래그십 협업 프로젝트 리드 경력",
-  heroCompetence1: "유튜브 · 숏폼 콘텐츠 전문",
-  heroCompetence2: "기획 · 촬영 · 편집 · 브랜디드 콘텐츠 총괄 프로덕션",
+  heroSlogan: "기획부터 촬영, 편집까지 브랜드 가치를 관통하는 1인 제작\n장기 근속 경력의 신뢰성과 플래그십 팀 협업 프로젝트 리드 경력",
+  heroCompetence1: "홍보 · 유튜브 · 숏폼 영상 콘텐츠 전문",
+  heroCompetence2: "기획 · 촬영 · 편집 · 브랜디드 콘텐츠 총괄",
   aboutTagline: "\"브랜드 가치를 주행시키는 시네마 크리에이터\"",
-  aboutTitle: "안녕하세요, 비디오 마케팅 디렉터 이주원 PD 입니다.",
-  aboutDescription: "단순한 기획·촬영·편집의 도구적 대행이 아닌, 브랜드가 시장에 전달하고픈 코어 메시지를 눈을 뗄 수 없는 영상 구조로 설계하고 실행합니다.",
+  aboutTitle: "안녕하세요, 비디오 마케팅 디렉터\n이주원 PD 입니다.",
+  aboutDescription: "단순한 기획·촬영·편집의 도구적 대행이 아닌, 브랜드가 시장에 전달하고픈 코어 메시지를 \n눈을 뗄 수 없는 영상 구조로 설계하고 실행합니다.",
   profileName: "이주원",
   profileAge: "41세",
   profilePhone: "010-4820-0441",
   profileEmail: "seoulpotato@naver.com",
   aboutImage: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=800",
-  profileImage: ""
+  profileImage: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400"
 };
 
 export const getStoredSiteTexts = (): SiteTexts => {
@@ -438,9 +462,25 @@ export const getStoredSiteTexts = (): SiteTexts => {
     if (
       parsed &&
       (parsed.heroSlogan === "기획부터 촬영, 완벽한 편집까지 브랜드 가치를 관통하는 1인 제작" ||
-       parsed.heroSlogan?.includes("장기 비즈니스 파트너십"))
+       parsed.heroSlogan?.includes("장기 비즈니스 파트너십") ||
+       parsed.heroSlogan?.includes("견고한 신뢰성") ||
+       !parsed.heroCompetence1?.includes("홍보"))
     ) {
       parsed.heroSlogan = defaultSiteTexts.heroSlogan;
+      parsed.heroCompetence1 = defaultSiteTexts.heroCompetence1;
+      try {
+        localStorage.setItem("site_texts", JSON.stringify(parsed));
+      } catch (inner) {}
+    }
+    if (parsed && (parsed.heroCompetence2 === "기획 · 촬영 · 편집 · 브랜디드 콘텐츠 총괄 프로덕션" || parsed.heroCompetence2?.includes("프로덕션"))) {
+      parsed.heroCompetence2 = defaultSiteTexts.heroCompetence2;
+      try {
+        localStorage.setItem("site_texts", JSON.stringify(parsed));
+      } catch (inner) {}
+    }
+    if (parsed && (parsed.aboutTitle === "안녕하세요, 비디오 마케팅 디렉터 이주원 PD 입니다." || !parsed.aboutTitle?.includes("\n"))) {
+      parsed.aboutTitle = defaultSiteTexts.aboutTitle;
+      parsed.aboutDescription = defaultSiteTexts.aboutDescription;
       try {
         localStorage.setItem("site_texts", JSON.stringify(parsed));
       } catch (inner) {}

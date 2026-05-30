@@ -89,6 +89,17 @@ export default function Portfolio({ items }: PortfolioProps) {
   const getEmbedUrl = (url: string) => {
     if (!url) return "";
     if (url.includes("embed")) return url;
+
+    // Instagram check
+    if (url.includes("instagram.com/reel/") || url.includes("instagram.com/p/")) {
+      const isReel = url.includes("/reel/");
+      const keyword = isReel ? "instagram.com/reel/" : "instagram.com/p/";
+      const parts = url.split(keyword);
+      const id = parts[1]?.split("/")[0]?.split("?")[0];
+      if (id) {
+        return `https://www.instagram.com/${isReel ? "reel" : "p"}/${id}/embed/`;
+      }
+    }
     
     // YouTube Shorts check
     if (url.includes("youtube.com/shorts/")) {
@@ -212,20 +223,12 @@ export default function Portfolio({ items }: PortfolioProps) {
                     </span>
                   </div>
 
-                  {/* Playback HUD overlay on hover */}
-                  {item.duration && (
-                    <span className="absolute bottom-3 right-3 z-10 px-2 py-0.5 bg-black/80 text-sm font-mono tracking-wider text-white/95 rounded border border-white/5">
-                      {item.duration}
-                    </span>
-                  )}
+
                 </div>
 
                 {/* Meta details text card column bottom fill */}
                 <div className="p-6 flex-grow flex flex-col justify-between">
                   <div>
-                    <h4 className="text-sm tracking-widest font-mono text-primary-red font-bold mb-2 uppercase">
-                      {item.client}
-                    </h4>
                     <h3 className="text-lg md:text-xl font-bold tracking-tight text-white group-hover:text-primary-red transition-colors duration-200 line-clamp-1 font-display">
                       {item.title}
                     </h3>
@@ -288,8 +291,6 @@ export default function Portfolio({ items }: PortfolioProps) {
                   <span className="px-3 py-0.5 bg-primary-red/10 border border-primary-red/30 text-xs md:text-sm font-bold tracking-widest text-primary-red rounded uppercase font-display">
                     {activeItem.format}
                   </span>
-                  <span className="text-white/40 font-mono text-sm">/</span>
-                  <span className="text-white/70 font-semibold text-xs md:text-sm font-mono tracking-widest">{activeItem.client}</span>
                 </div>
                 
                 <h3 className="text-xl md:text-3xl font-bold tracking-tight text-white mb-4 font-display">

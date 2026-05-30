@@ -24,7 +24,7 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, siteTexts }: 
       setIsScrolled(window.scrollY > 30);
 
       // Simple active link calculation based on element viewports
-      const sections = ["home", "about", "portfolio", "career", "skills"];
+      const sections = ["home", "about", "portfolio", "career", "skills", "vision"];
       const scrollPosition = window.scrollY + 120;
 
       for (const section of sections) {
@@ -66,7 +66,8 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, siteTexts }: 
     { id: "about", label: "ABOUT" },
     { id: "portfolio", label: "PORTFOLIO" },
     { id: "career", label: "CAREER" },
-    { id: "skills", label: "SKILLS" }
+    { id: "skills", label: "SKILLS" },
+    { id: "vision", label: "VISION" }
   ];
 
   return (

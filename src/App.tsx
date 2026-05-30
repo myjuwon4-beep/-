@@ -10,6 +10,7 @@ import About from "./components/About";
 import Career from "./components/Career";
 import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
+import Vision from "./components/Vision";
 import Footer from "./components/Footer";
 import AdminPanel from "./components/AdminPanel";
 import { PortfolioItem, SiteTexts, CareerItem, SkillCategory } from "./types";
@@ -112,6 +113,9 @@ export default function App() {
 
       {/* 5. Bento Skill Board */}
       <Skills skills={skillsList} />
+
+      {/* 6. Future Vision & Career Commitment */}
+      <Vision />
 
       {/* 7. Footer and Administrative Backdoor triggers */}
       <Footer

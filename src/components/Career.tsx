@@ -33,7 +33,7 @@ export default function Career({ careerItems = [] }: CareerProps) {
     {
       label: "비즈니스 지표 가치",
       metric: "+48%",
-      subDetail: "실제 견인장치 시공 오더 문의율 상승",
+      subDetail: "견인장치 레저 용품 구매 문의율 상승",
       tag: "매출 직행성",
       glow: "shadow-white/15 border-white/20 text-white"
     }
@@ -50,7 +50,7 @@ export default function Career({ careerItems = [] }: CareerProps) {
         <div className="flex flex-col mb-16 md:flex-row md:items-end justify-between">
           <div>
             <span className="text-xs tracking-[0.4em] text-primary-red font-bold block mb-2 font-display">
-              02 / EXPERIENCE & PERFORMANCE
+              03 / EXPERIENCE & PERFORMANCE
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-medium tracking-tight text-white">
               CAREER <span className="font-light italic text-white/70">TIMELINE</span>
@@ -70,9 +70,15 @@ export default function Career({ careerItems = [] }: CareerProps) {
               className={`p-6 bg-cinema-card border rounded transition-all duration-300 hover:scale-[1.02] shadow-sm flex flex-col justify-between ${s.glow}`}
             >
               <div>
-                <div className="flex justify-between items-center mb-4">
+                <div className="flex justify-between items-center mb-4 gap-2">
                   <span className="text-xs uppercase font-mono tracking-widest text-white/50">{s.label}</span>
-                  <span className="text-xs px-2.5 py-0.5 bg-white/5 rounded-full border border-white/10 font-bold tracking-wide">
+                  <span className={`text-sm sm:text-base px-3.5 py-1 rounded border font-extrabold tracking-wider shadow-md transition-all duration-300 ${
+                    idx === 0 
+                      ? "bg-primary-red/20 border-primary-red/40 text-primary-red" 
+                      : idx === 1 
+                      ? "bg-accent-orange/20 border-accent-orange/40 text-accent-orange" 
+                      : "bg-white/10 border-white/20 text-white"
+                  }`}>
                     {s.tag}
                   </span>
                 </div>
@@ -106,7 +112,7 @@ export default function Career({ careerItems = [] }: CareerProps) {
                     <span className="font-display font-bold text-sm tracking-wider">{item.period}</span>
                   </div>
                   <h3 className="text-xl font-bold text-white tracking-tight leading-tight">{item.title}</h3>
-                  <p className="text-xs text-white/50 mt-1 font-mono tracking-wider">{item.role}</p>
+                  <p className="text-xs text-white/50 mt-1 font-mono tracking-wider whitespace-pre-line">{item.role}</p>
                 </div>
 
                 {/* Operations & Success Criteria */}
@@ -125,11 +131,6 @@ export default function Career({ careerItems = [] }: CareerProps) {
                   {/* Achievements Metric Block if it exists */}
                   {item.achievements && item.achievements.length > 0 && (
                     <div className="mt-6 pt-6 border-t border-white/5">
-                      <div className="flex items-center space-x-2 mb-4">
-                        <Flame size={15} className="text-primary-red" />
-                        <h4 className="text-sm text-primary-red hover:text-white font-bold tracking-[0.1em]">주요 정량적 성과 (KPI)</h4>
-                      </div>
-
                       <div className="space-y-4">
                         {item.achievements.map((ach, aIdx) => (
                           <div key={aIdx} className="p-4 bg-black/40 rounded border border-white/5">
