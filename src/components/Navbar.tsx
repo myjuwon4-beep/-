@@ -4,17 +4,18 @@
  */
 
 import React, { useState, useEffect } from "react";
-import { Lock, Eye, LogOut, Menu, X, ShieldCheck } from "lucide-react";
+import { Lock, Eye, LogOut, Menu, X, ShieldCheck, Printer } from "lucide-react";
 import { SiteTexts } from "../types";
 
 interface NavbarProps {
   isAdmin: boolean;
   onAdminToggle: () => void;
   onLogout: () => void;
+  onPdfClick: () => void;
   siteTexts?: SiteTexts;
 }
 
-export default function Navbar({ isAdmin, onAdminToggle, onLogout, siteTexts }: NavbarProps) {
+export default function Navbar({ isAdmin, onAdminToggle, onLogout, onPdfClick, siteTexts }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -62,12 +63,12 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, siteTexts }: 
   };
 
   const menuItems = [
-    { id: "home", label: "HOME" },
-    { id: "about", label: "ABOUT" },
-    { id: "portfolio", label: "PORTFOLIO" },
-    { id: "career", label: "CAREER" },
-    { id: "skills", label: "SKILLS" },
-    { id: "vision", label: "VISION" }
+    { id: "home", label: "홈" },
+    { id: "about", label: "소개" },
+    { id: "portfolio", label: "포트폴리오" },
+    { id: "career", label: "경력" },
+    { id: "skills", label: "보유 역량" },
+    { id: "vision", label: "포부" }
   ];
 
   return (
@@ -75,59 +76,73 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, siteTexts }: 
       id="main-nav"
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-black/95 backdrop-blur-md border-b border-white/10 py-4"
-          : "bg-transparent py-6"
+          ? "bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-md py-4"
+          : "bg-transparent py-5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 xl:px-12 flex justify-between items-center">
         {/* Logo / Brand Name */}
         <div 
           onClick={() => scrollToSection("home")} 
-          className="flex flex-col cursor-pointer group"
+          className="flex flex-col cursor-pointer group mr-4"
           id="nav-logo"
         >
-          <span className="font-display text-lg md:text-xl font-bold tracking-[0.25em] text-white group-hover:text-primary-red transition-colors duration-200">
+          <span className="font-display text-[19px] md:text-[22px] font-extrabold tracking-[0.22em] text-slate-800 group-hover:text-primary-red transition-colors duration-200 whitespace-nowrap">
             JU WON LEE
           </span>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center space-x-8">
-          <ul className="flex items-center space-x-8">
+        <div className="hidden lg:flex items-center space-x-2.5 xl:space-x-6 2xl:space-x-8">
+          <ul className="flex items-center space-x-2.5 xl:space-x-6 2xl:space-x-8">
             {menuItems.map((item) => (
               <li key={item.id}>
                 <button
                   id={`nav-link-${item.id}`}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-sm tracking-[0.2em] font-medium transition-all duration-200 cursor-pointer relative py-1 ${
+                  className={`text-[13px] xl:text-[15px] tracking-[0.08em] xl:tracking-[0.18em] font-bold transition-all duration-200 cursor-pointer relative py-1 ${
                     activeSection === item.id
-                      ? "text-primary-red font-semibold"
-                      : "text-white/80 hover:text-white"
+                      ? "text-primary-red font-extrabold"
+                      : "text-slate-600 hover:text-slate-900"
                   }`}
                 >
                   {item.label}
                   {activeSection === item.id && (
-                    <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-primary-red" />
+                    <span className="absolute bottom-0 left-0 w-full h-[2px] bg-primary-red" />
                   )}
                 </button>
               </li>
             ))}
           </ul>
 
-          <div className="h-4 w-[1px] bg-white/20" />
+          <div className="h-4 w-[1px] bg-slate-200" />
+
+          {/* PDF Downloader */}
+          <button
+            id="nav-pdf-btn"
+            onClick={onPdfClick}
+            className="flex items-center space-x-1 xl:space-x-1.5 px-2.5 py-1.5 md:px-3.5 md:py-1.5 border border-primary-red/40 hover:border-primary-red bg-primary-red/5 hover:bg-primary-red/15 text-xs xl:text-sm tracking-widest text-primary-red hover:text-white rounded font-extrabold transition-all duration-200 cursor-pointer whitespace-nowrap"
+            title="PDF 다운로드 / 인쇄하기"
+          >
+            <Printer size={13} />
+            <span className="hidden xl:inline">PDF 저장</span>
+          </button>
+
+          <div className="h-4 w-[1px] bg-slate-200" />
 
           {/* Admin Control Trigger */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 xl:space-x-3">
             {isAdmin ? (
               <div className="flex items-center space-x-2">
-                <span className="flex items-center space-x-1.5 px-3 py-1 bg-primary-red/15 border border-primary-red/40 rounded text-xs tracking-widest text-primary-red font-medium animate-pulse">
-                  <ShieldCheck size={13} />
-                  <span>ADMIN ACTIVE</span>
+                <span className="flex items-center space-x-1 px-2.5 py-1.5 bg-primary-red/10 border border-primary-red/30 rounded text-[10px] xl:text-xs tracking-widest text-primary-red font-extrabold animate-pulse whitespace-nowrap">
+                  <ShieldCheck size={14} />
+                  <span className="hidden xl:inline">관리자 모드 활성화</span>
+                  <span className="xl:hidden">관리자 모드</span>
                 </span>
                 <button
                   id="admin-logout-btn"
                   onClick={onLogout}
-                  className="p-1.5 bg-neutral-900 border border-white/10 hover:border-primary-red text-white/75 hover:text-primary-red rounded transition-all duration-200"
+                  className="p-2 bg-slate-100 hover:bg-slate-200 border border-slate-200 hover:border-primary-red text-slate-700 hover:text-primary-red rounded transition-all duration-200"
                   title="관리자 로그아웃"
                 >
                   <LogOut size={15} />
@@ -137,10 +152,11 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, siteTexts }: 
               <button
                 id="admin-login-trigger"
                 onClick={onAdminToggle}
-                className="flex items-center space-x-1.5 px-3 py-1.5 border border-white/25 hover:border-primary-red/80 hover:bg-primary-red/10 text-xs tracking-widest text-white/80 hover:text-white rounded transition-all duration-200 cursor-pointer"
+                className="flex items-center space-x-1 xl:space-x-1.5 px-2.5 py-1.5 border border-slate-200 hover:border-primary-red/80 hover:bg-primary-red/5 text-xs xl:text-[13px] tracking-widest text-slate-600 hover:text-primary-red rounded font-extrabold transition-all duration-205 cursor-pointer whitespace-nowrap"
               >
-                <Lock size={12} className="text-white/70" />
-                <span>ADMIN PANEL</span>
+                <Lock size={13} className="text-slate-500" />
+                <span className="hidden xl:inline">관리자 패널</span>
+                <span className="xl:hidden">관리자</span>
               </button>
             )}
           </div>
@@ -156,7 +172,7 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, siteTexts }: 
           <button
             id="mobile-menu-toggle"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-white/80 hover:text-white p-1"
+            className="text-slate-800 hover:text-primary-red p-1"
           >
             {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -165,15 +181,15 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, siteTexts }: 
 
       {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[65px] bg-black/98 z-40 flex flex-col justify-between p-8 border-t border-white/10 animate-fade-in">
+        <div className="lg:hidden fixed inset-0 top-[60px] bg-white/98 z-40 flex flex-col justify-between p-8 border-t border-slate-200 animate-fade-in text-slate-800 shadow-2xl">
           <ul className="flex flex-col space-y-6 pt-6">
             {menuItems.map((item) => (
               <li key={item.id}>
                 <button
                   id={`nav-mobile-${item.id}`}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-base tracking-[0.2em] font-medium block w-full text-left py-2 ${
-                    activeSection === item.id ? "text-primary-red" : "text-white/80"
+                  className={`text-lg tracking-[0.2em] font-extrabold block w-full text-left py-2 ${
+                    activeSection === item.id ? "text-primary-red" : "text-slate-600 hover:text-slate-900"
                   }`}
                 >
                   {item.label}
@@ -182,11 +198,24 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, siteTexts }: 
             ))}
           </ul>
 
-          <div className="border-t border-white/10 pt-6 pb-12 flex flex-col space-y-4">
+          <div className="border-t border-slate-200 pt-6 pb-12 flex flex-col space-y-4">
+            {/* Mobile PDF Button */}
+            <button
+              id="mobile-pdf-btn"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                onPdfClick();
+              }}
+              className="flex items-center justify-center space-x-2 w-full py-3 bg-primary-red/10 hover:bg-primary-red/20 border border-primary-red/30 hover:border-primary-red rounded text-sm tracking-widest text-primary-red font-extrabold transition-all duration-200"
+            >
+              <Printer size={15} />
+              <span>PDF 다운로드 / 인쇄하기</span>
+            </button>
+
             {isAdmin ? (
               <div className="flex items-center justify-between p-3 bg-primary-red/10 border border-primary-red/20 rounded">
-                <span className="text-xs tracking-wider text-primary-red flex items-center space-x-1.5">
-                  <ShieldCheck size={14} />
+                <span className="text-sm tracking-wider text-primary-red flex items-center space-x-1.5 font-bold">
+                  <ShieldCheck size={15} />
                   <span>관리자 모드 활성화됨</span>
                 </span>
                 <button
@@ -195,7 +224,7 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, siteTexts }: 
                     onLogout();
                     setIsMobileMenuOpen(false);
                   }}
-                  className="px-3 py-1 bg-neutral-900 border border-white/10 text-xs tracking-wide text-white/85 hover:text-primary-red rounded"
+                  className="px-3 py-1.5 bg-slate-800 border border-white/15 text-sm tracking-wide text-white hover:text-primary-red rounded font-bold"
                 >
                   로그아웃
                 </button>
@@ -207,9 +236,9 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, siteTexts }: 
                   setIsMobileMenuOpen(false);
                   onAdminToggle();
                 }}
-                className="flex items-center justify-center space-x-2 w-full py-3 bg-neutral-900 hover:bg-neutral-800 border border-white/15 hover:border-primary-red rounded text-xs tracking-widest text-white/80"
+                className="flex items-center justify-center space-x-2 w-full py-3 bg-slate-100 hover:bg-slate-200 border border-slate-200 hover:border-primary-red rounded text-sm tracking-widest text-slate-700 font-bold"
               >
-                <Lock size={12} />
+                <Lock size={13} />
                 <span>ADMIN PANEL (포트폴리오 관리)</span>
               </button>
             )}

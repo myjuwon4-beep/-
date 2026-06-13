@@ -608,8 +608,9 @@ export default function AdminPanel({
                       >
                         <option value="PROMOTION">PROMOTION (홍보)</option>
                         <option value="YOUTUBE LONG">YOUTUBE LONG (유튜브 롱폼)</option>
-                        <option value="SHORTS">SHORTS (릴스/숏폼)</option>
+                        <option value="SHORTS">SHORTS (쇼츠/릴스)</option>
                         <option value="INTERVIEW">INTERVIEW (다큐 인물 인터뷰)</option>
+                        <option value="LIVE">LIVE (라이브 중계 구축)</option>
                       </select>
                     </div>
 
@@ -950,51 +951,6 @@ export default function AdminPanel({
                             />
                           </div>
                         </div>
-
-                        {/* ID Photo File Upload Section */}
-                        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 bg-black/60 p-6 border border-white/10 rounded-xl mt-6">
-                          <div className="md:col-span-4 flex flex-col items-center justify-center md:border-r border-white/15 pr-6">
-                            <span className="text-xs font-semibold tracking-wide text-white/70 uppercase block mb-3 text-center">선택된 증명사진 예시</span>
-                            <div className="w-28 h-36 bg-neutral-950 border border-white/15 rounded-md overflow-hidden relative font-sans shadow-lg flex items-center justify-center">
-                              {editableSiteTexts.profileImage ? (
-                                <img
-                                  src={editableSiteTexts.profileImage}
-                                  alt="ID Photo Preview"
-                                  className="w-full h-full object-cover"
-                                  referrerPolicy="no-referrer"
-                                  onError={(e) => {
-                                    e.currentTarget.style.display = "none";
-                                    const parent = e.currentTarget.parentElement;
-                                    if (parent) {
-                                      const fallback = parent.querySelector(".admin-profile-fallback");
-                                      if (fallback) {
-                                        fallback.classList.remove("hidden");
-                                      }
-                                    }
-                                  }}
-                                />
-                              ) : null}
-                              <div className={`admin-profile-fallback ${editableSiteTexts.profileImage ? "hidden" : ""} absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-neutral-900 to-neutral-950 text-neutral-500 p-2 text-center`}>
-                                <User className="w-8 h-8 text-neutral-600 mb-1" />
-                                <span className="text-[7px] font-mono tracking-widest text-neutral-500 uppercase">NO PHOTO</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="md:col-span-8 flex flex-col justify-center gap-3">
-                            <span className="text-xs sm:text-sm font-bold text-primary-red uppercase">👤 인적 사항 증명사진 파일 실시간 업로드 (ID Photo)</span>
-                            <p className="text-xs text-white/50 leading-relaxed font-sans">내 컴퓨터에서 본인 인물 증명사진을 선택하여 실시간으로 업로드하십시오. 이름 왼쪽에 독립된 카드 형태로 즉각 노출됩니다.</p>
-                            
-                            <label className="mt-2 inline-flex items-center justify-center px-5 py-3 border border-dashed border-white/30 hover:border-primary-red/50 bg-neutral-950 hover:bg-primary-red/5 rounded-md text-sm text-white/95 hover:text-white cursor-pointer transition-all duration-200">
-                              <span className="font-semibold tracking-wide text-xs sm:text-sm">📁 컴퓨터에서 증명사진 파일 선택 (.jpg / .png / .webp)</span>
-                              <input
-                                type="file"
-                                accept="image/*"
-                                onChange={handleIDPhotoUpload}
-                                className="hidden"
-                              />
-                            </label>
-                          </div>
-                        </div>
                       </div>
 
                       {/* Section 3: About Settings */}
@@ -1042,7 +998,7 @@ export default function AdminPanel({
                             <span className="text-xs font-semibold tracking-wide text-white/70 uppercase block mb-3 text-center">선택된 프로필 이미지 예시</span>
                             <div className="w-28 h-36 bg-neutral-950 border border-white/15 rounded-md overflow-hidden relative font-sans shadow-lg">
                               <img
-                                src={editableSiteTexts.aboutImage || "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=800"}
+                                src={editableSiteTexts.aboutImage || "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"}
                                 alt="Profile Thumbnail Preview"
                                 className="w-full h-full object-cover grayscale brightness-90"
                               />

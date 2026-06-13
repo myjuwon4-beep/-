@@ -7,16 +7,16 @@
   --font-display: "Space Grotesk", sans-serif;
   --color-primary-red: #E30613;
   --color-accent-orange: #FF5A00;
-  --color-cinema-black: #0A0A0A;
-  --color-cinema-gray: #121212;
-  --color-cinema-card: #18181C;
+  --color-cinema-black: #EAECEE; /* Matte-silver cool gray background, completely cuts visual glare */
+  --color-cinema-gray: #D5DBDE;  /* Soft supporting metallic gray background */
+  --color-cinema-card: #FAFBFB;  /* Soothing premium off-white card tone */
 }
 
 /* Base custom definitions */
 html {
   scroll-behavior: smooth;
-  background-color: #0A0A0A;
-  color: #FFFFFF;
+  background-color: #EAECEE;
+  color: #0F172A; /* Premium high-contrast slate-900 dark charcoal text */
   font-family: var(--font-sans);
 }
 
@@ -27,11 +27,11 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0A0A0A;
+  background: #F1F5F9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2A2A2A;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 
@@ -53,4 +53,103 @@ html {
 .card-hover-shadow:hover {
   box-shadow: 0 10px 30px -10px rgba(227, 6, 19, 0.4);
 }
+
+/* ==========================================
+   ELEGANT PRINT & PDF EXPORT STYLES
+   ========================================== */
+@media print {
+  /* Clean slate paper setup */
+  html, body, #root {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Hide interactive web noise & admin portals completely */
+  #main-nav,
+  #footer,
+  #admin-panel,
+  .no-print,
+  button,
+  input,
+  textarea,
+  .admin-trigger,
+  .video-play-indicator,
+  .video-player-overlay,
+  .admin-profile-fallback {
+    display: none !important;
+  }
+
+  /* Section containers optimized for page-breaks */
+  section {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    padding: 1.5rem 0 !important;
+    border-bottom: 2px solid #e5e7eb !important;
+    background: transparent !important;
+    color: #111827 !important;
+    page-break-after: auto;
+  }
+
+  /* Text color replacement for maximum black-and-white ink efficiency */
+  h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+    page-break-after: avoid;
+  }
+
+  p, span, div, li, strong, small {
+    color: #111827 !important;
+  }
+
+  /* Keep brand premium touch using deep physical-print-safe Red tint */
+  .text-primary-red, 
+  .text-red-600, 
+  .text-red-500,
+  span.text-primary-red {
+    color: #b91c1c !important;
+  }
+
+  /* Style adjustment for grids to render properly on PDF engine */
+  .grid {
+    display: grid !important;
+    gap: 1rem !important;
+  }
+
+  /* Reset dark backgrounds of cards to clean bordered cards for high print legibility */
+  .bg-cinema-card, 
+  .bg-cinema-gray,
+  .bg-neutral-900,
+  .bg-neutral-950,
+  .bg-black\/50,
+  .bg-black\/80 {
+    background-color: #f9fafb !important;
+    border: 1px solid #e5e7eb !important;
+    color: #111827 !important;
+    box-shadow: none !important;
+  }
+
+  /* Ensure all image assets render clearly */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    filter: none !important;
+  }
+
+  /* PDF header watermark or title metadata format */
+  .print-header {
+    display: block !important;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Page margins configuration */
+  @page {
+    size: A4 portrait;
+    margin: 15mm 15mm 15mm 15mm;
+  }
+}
+
 

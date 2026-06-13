@@ -56,7 +56,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     order: 3
   },
 
-  // YOUTUBE LONG (유튜브 롱폼) - 7 items
+  // YOUTUBE LONG (유튜브 롱폼) - 13 items
   {
     id: "portfolio-long-1",
     title: "PV5 전기차 23시간 전기 테스트",
@@ -155,8 +155,91 @@ export const initialPortfolioItems: PortfolioItem[] = [
     date: "2024-03",
     order: 10
   },
-
-  // SHORTS (쇼츠 / 숏폼) - 5 items
+  {
+    id: "portfolio-long-8",
+    title: "[신형 무쏘] 순정 하드탑 vs 진텍·오브로 캐노피 완벽 비교!",
+    client: "K-TRAILER",
+    role: "기획, 촬영, 편집 (1인제작)",
+    format: "YOUTUBE LONG",
+    description: "신형 무쏘 차량의 순정 하드탑과 진텍·오브로 캐노피 제품의 장단점 및 특징을 완벽하게 비교하여 고객들의 선택을 돕는 유익하고 직관적인 콘텐츠",
+    videoUrl: "https://www.youtube.com/watch?v=4keiyUtKJIA",
+    imageUrl: "https://img.youtube.com/vi/4keiyUtKJIA/hqdefault.jpg",
+    equipment: "a7c2, 오즈모 포켓3 | Premiere Pro",
+    duration: "13:45",
+    date: "2024-11",
+    order: 11
+  },
+  {
+    id: "portfolio-long-9",
+    title: "[EP3] 강아지가 낑낑거리며 인형에 집착합니다..😢 #견생연구소",
+    client: "버찌 BUDZZI",
+    role: "기획, 촬영, 편집 (1인제작)",
+    format: "YOUTUBE LONG",
+    description: "인위적인 연출을 배제하고 강아지의 자연스러운 행동 습성과 집착 행동에 따른 전문 교육 조언을 담아 시청자 공감을 자아내는 반려동물 정보성 예능 다큐멘터리.",
+    videoUrl: "https://www.youtube.com/watch?v=8BfgwkXrD0g",
+    imageUrl: "https://img.youtube.com/vi/8BfgwkXrD0g/maxresdefault.jpg",
+    equipment: "Sony a7m3 | Premiere Pro",
+    duration: "10:14",
+    date: "2024-05",
+    order: 11.1
+  },
+  {
+    id: "portfolio-long-10",
+    title: "[큰별쌤의 오늘] '김지섭 도쿄 니중바시 투탄 의거'의 날",
+    client: "최태성 (스터디요)",
+    role: "촬영",
+    format: "YOUTUBE LONG",
+    description: "역사적 의거인 김지섭 의사의 니중바시 투탄 의거일을 알기 위해 대중적인 역사 스토리텔링 기법을 적용하여 교육 지식과 감동을 동시에 제공하는 브랜디드 콘텐츠.",
+    videoUrl: "https://www.youtube.com/watch?v=I6L4Uuc61_M",
+    imageUrl: "https://img.youtube.com/vi/I6L4Uuc61_M/maxresdefault.jpg",
+    equipment: "CANON 5D Mark 2,3,",
+    duration: "08:45",
+    date: "2023-10",
+    order: 11.2
+  },
+  {
+    id: "portfolio-long-11",
+    title: "[축구맛집] 인간이 가장 집중력을 발휘하는 시간 7분... with 김재성 ep.09 요약편 (왕초보 축구 도전기⚽)",
+    client: "스터디요",
+    role: "촬영, 총괄",
+    format: "YOUTUBE LONG",
+    description: "왕초보들의 생생한 축구 도전기를 김재성 은퇴 선수와의 유쾌한 지도를 통해 흥미롭게 구성하고, 인간 집중력의 한계를 재치 있는 과학적 서사로 풀어낸 스포츠 예능 콘텐츠.",
+    videoUrl: "https://www.youtube.com/watch?v=TDFKqqDjG18",
+    imageUrl: "https://img.youtube.com/vi/TDFKqqDjG18/maxresdefault.jpg",
+    equipment: "CANON 5D Mark 2,3, CANON C300",
+    duration: "07:15",
+    date: "2023-08",
+    order: 11.3
+  },
+  {
+    id: "portfolio-long-12",
+    title: "쿡사001_[Cook史] 요리초보 큰별쌤의 요리 역사 이야기_궁중떡볶이",
+    client: "최태성 (최태성 2TV)",
+    role: "촬영, 총괄",
+    format: "YOUTUBE LONG",
+    description: "전통 요리 궁중떡볶이에 숨겨진 한국사의 역사적 맥락과 조리 방식을 결합한 푸드 인문학 다큐멘터리 예능으로, 요리 초보의 좌충우돌 스토리를 즐겁게 연출.",
+    videoUrl: "https://www.youtube.com/watch?v=7jBHyQjZMJA",
+    imageUrl: "https://img.youtube.com/vi/7jBHyQjZMJA/maxresdefault.jpg",
+    equipment: "CANON 5D Mark 2,3, CANON C300",
+    duration: "12:30",
+    date: "2023-09",
+    order: 11.4
+  },
+  {
+    id: "portfolio-long-13",
+    title: "[특별한 하루] 정승제쌤의 특별한 하루",
+    client: "정승제 (승제튜브)",
+    role: "촬영",
+    format: "YOUTUBE LONG",
+    description: "인기 수학 강사 정승제의 오프라인 강연회이자 토크 콘서트 '특별한 하루'의 생생한 현장 라이브 및 강연 실황을 감동적으로 기록한 풀 다큐멘터리 영상.",
+    videoUrl: "https://www.youtube.com/watch?v=CT03HGVmg-g",
+    imageUrl: "https://img.youtube.com/vi/CT03HGVmg-g/maxresdefault.jpg",
+    equipment: "",
+    duration: "58:20",
+    date: "2019-12",
+    order: 11.5
+  },
+  // SHORTS (쇼츠 / 릴스) - 6 items
   {
     id: "portfolio-shorts-1",
     title: "견인장치 무사고 연결법 (유럽식 커플러)",
@@ -165,10 +248,10 @@ export const initialPortfolioItems: PortfolioItem[] = [
     format: "SHORTS",
     description: "기존에 다른 PD가 제작했던 영상에서 keypoint 부분을 재 편집하여 고객들의 트레일러 장착 방법을 짧고 굵게 전달 17만 조회수 달성",
     videoUrl: "https://www.youtube.com/shorts/upLsH4PXbrM",
-    imageUrl: "/coupling_thumb_hq1.jpg",
+    imageUrl: "https://img.youtube.com/vi/upLsH4PXbrM/hqdefault.jpg",
     duration: "00:45",
     date: "2024-08",
-    order: 11
+    order: 12
   },
   {
     id: "portfolio-shorts-2",
@@ -181,7 +264,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     imageUrl: "",
     duration: "00:38",
     date: "2024-07",
-    order: 12
+    order: 13
   },
   {
     id: "portfolio-shorts-3",
@@ -194,10 +277,52 @@ export const initialPortfolioItems: PortfolioItem[] = [
     imageUrl: "",
     duration: "00:52",
     date: "2024-05",
-    order: 13
+    order: 14
+  },
+  {
+    id: "portfolio-shorts-4",
+    title: "무쏘를 무쏘 답게 타는 4가지 튜닝 옵션",
+    client: "K-TRAILER",
+    role: "기획, 촬영, 편집 (1인제작)",
+    format: "SHORTS",
+    description: "무쏘 차량 오너들을 저격하는 필수 튜닝 옵션 4가지를 빠르고 직관적으로 소개하여 흥미와 정보 전달력 극대화",
+    videoUrl: "https://www.youtube.com/shorts/5kTzL12Py50",
+    imageUrl: "https://img.youtube.com/vi/5kTzL12Py50/hqdefault.jpg",
+    equipment: "a7c2, 오즈모 포켓3 | Premiere Pro",
+    duration: "00:58",
+    date: "2024-09",
+    order: 15
+  },
+  {
+    id: "portfolio-shorts-5",
+    title: "기아 타스만 블랙 vs 화이트 (feat. 오브로 캐노피)",
+    client: "K-TRAILER",
+    role: "기획, 촬영, 편집 (1인제작)",
+    format: "SHORTS",
+    description: "기아 타스만 블랙과 화이트 컬러 차량의 오브로 캐노피 장착 모습을 감각적으로 비교 연출하여 예비 구매자들의 취향 저격 및 기획전 유도",
+    videoUrl: "https://www.youtube.com/shorts/J--3np5hqGI",
+    imageUrl: "https://img.youtube.com/vi/J--3np5hqGI/hqdefault.jpg",
+    equipment: "a7c2, 오즈모 액션5, DJI Mini 4 Pro | Premiere Pro",
+    duration: "00:48",
+    date: "2024-11",
+    order: 16
+  },
+  {
+    id: "portfolio-shorts-6",
+    title: "팰리세이드 가족을 위한 필수템! (GSC 전동 사이드 스텝)",
+    client: "K-TRAILER",
+    role: "기획, 촬영, 편집 (1인제작)",
+    format: "SHORTS",
+    description: "팰리세이드 차량 패밀리 오너를 저격하는 편리하고 안전한 GSC 전동 사이드 스텝의 실사용 모습 및 장점을 임팩트 있게 전달",
+    videoUrl: "https://www.youtube.com/shorts/gDIrYKh8fkw",
+    imageUrl: "https://img.youtube.com/vi/gDIrYKh8fkw/hqdefault.jpg",
+    equipment: "a7c2, 오즈모 포켓3 | Premiere Pro",
+    duration: "00:50",
+    date: "2024-10",
+    order: 17
   },
 
-  // INTERVIEW (인터뷰) - 2 items
+  // INTERVIEW (인터뷰) - 3 items
   {
     id: "portfolio-interview-1",
     title: "무쏘EV 2만km 주행 후기 | 진텍 캐노피",
@@ -206,12 +331,12 @@ export const initialPortfolioItems: PortfolioItem[] = [
     format: "INTERVIEW",
     description: "회사 사업 확장을 위해 판매하고 있는 제품과 무쏘EV 차량을 구매 고민하는 시청자들의 궁금증을 풀어 주는 주행 후기 인터뷰",
     videoUrl: "https://www.youtube.com/watch?v=LleqHF6Zmcs",
-    imageUrl: "",
+    imageUrl: "https://img.youtube.com/vi/LleqHF6Zmcs/hqdefault.jpg",
     previewVideoUrl: "",
     equipment: "a7c2, 오즈모 포켓3, DJI Mini 4 Pro | Premiere Pro",
     duration: "08:50",
     date: "2024-04",
-    order: 16
+    order: 18
   },
   {
     id: "portfolio-interview-2",
@@ -226,7 +351,36 @@ export const initialPortfolioItems: PortfolioItem[] = [
     equipment: "a7c2, 오즈모액션5, 오즈모 포켓3, 고프로10, DJI Mini 4 Pro | Premiere Pro",
     duration: "11:05",
     date: "2023-11",
-    order: 17
+    order: 19
+  },
+  {
+    id: "portfolio-interview-3",
+    title: "타스만 주행 후기 | 툴레 아웃셋",
+    client: "K-TRAILER",
+    role: "기획, 촬영, 편집 (1인제작)",
+    format: "INTERVIEW",
+    description: "기아 타스만 차량에 혁신적인 견인장치 장착형 텐트 '툴레 아웃셋'을 결합하고 주행 질감 및 감성 가득한 캠핑 실사용 장단점을 풀어내는 밀착 인터뷰 및 리뷰",
+    videoUrl: "https://www.youtube.com/watch?v=d8EEun7E8J0",
+    imageUrl: "https://img.youtube.com/vi/d8EEun7E8J0/hqdefault.jpg",
+    previewVideoUrl: "",
+    equipment: "a7c2, 오즈모 포켓3, DJI Mini 4 Pro | Premiere Pro",
+    duration: "10:15",
+    date: "2024-12",
+    order: 20
+  },
+  {
+    id: "portfolio-live-1",
+    title: "[LIVE] 이투스교육 라이브 시스템 전반적인 구축",
+    client: "이투스교육",
+    role: "라이브 중계 전송 및 방송 시스템 총괄 구축",
+    format: "LIVE",
+    description: "이투스교육의 전국 대형 지점 라이브 생중계 및 인터넷 방송 전송 하드웨어, 소프트웨어 시스템을 전반적으로 인프라 설계 구축하고 기술 오퍼레이팅 프로세스를 완성한 프로젝트.",
+    videoUrl: "https://youtu.be/XVEqu1hdato",
+    imageUrl: "https://img.youtube.com/vi/S6L6kCVd8F4/maxresdefault.jpg",
+    equipment: "Live Streaming Engine, OBS Studio, DeckLink Capture, CANON Cameras, 다채널 오디오 믹싱 시스템",
+    duration: "Live",
+    date: "2020-05",
+    order: 21
   }
 ];
 
@@ -242,20 +396,21 @@ export const initialCareerItems: CareerItem[] = [
     ],
     achievements: [
       {
-        platform: "YouTube 콘텐츠 부문 (@k_trailer)",
+        platform: "YouTube 콘텐츠 부문",
         metrics: [
-          "운영 1년 만에 유튜브 채널 구독자 약 2,000명 대에서 7,200명 돌파 (360% 폭발적 성장)",
-          "핵심 오토모티브 기획 영상 최고 누적 조회수 42만 회 돌파",
+          "운영 1년 만에 유튜브 채널 구독자 약 2,000명 대에서 7,200명 돌파 (260% 폭발적 성장)",
+          "핵심 오토모티브 기획 영상 최고 누적 조회수 43만 회, 19만, 10만 등 파격 상승 기록",
           "연계 오더 문의율 전년 동 분기 대비 약 48% 가치 신장 기여"
         ],
         link: "https://www.youtube.com/@k_trailer",
         linkName: "@k_trailer 유튜브 바로가기"
       },
       {
-        platform: "Instagram 숏폼 채널 운영 (@ktrailer1)",
+        platform: "Instagram 릴스 채널 운영",
         metrics: [
-          "입사 후 120명 대 팔로워에서 릴스 연출을 장려하여 단기간 내 1,300명으로 증가",
-          "캠핑 시장이 죽어 가면서 모터홈에 관심을 갖는 시청자들에게 원하고 필요로하는 콘텐츠를 제작하여 최고 누적 조회수 91만 회 달성"
+          "인스타그램 100명 대 팔로워에서 릴스 연출을 장려하여 단기간 내 1,600명으로 증가",
+          "입사 전 인스타그램 릴스 최고 조회수 1,000회를 넘지 못했으나 입사 후 최고 조회수 91만 기록.",
+          "채널의 방향성을 캐치 하여 최근 업로드한 릴스 영상들의 조회수의 평균치를 상승 기여."
         ],
         link: "https://www.instagram.com/ktrailer1/",
         linkName: "@ktrailer1 인스타그램 바로가기"
@@ -286,9 +441,11 @@ export const initialCareerItems: CareerItem[] = [
     title: "이투스 (ETOOS) 교육",
     role: "기획 영상 촬영 & 스튜디오 관리 &\n촬영 팀 관리 & 라이브",
     description: [
-      "이투스 공식 유튜브 채널 기획 다큐멘터리, 수강 동기화 트렌드 및 대형 성명 쇼츠 예능 영상 제작",
-      "라이브 대형 세미나 중계 및 파견직 촬영 크루(10여 명) 인력 수급/관리 및 스튜디오 실시간 운영 설계",
-      "스타 강사 맞춤형 시각 이펙트 설계 가이드라인 구축 및 촬영 장비 유지보수 전반 총괄"
+      "1타 강사 전담 촬영, 인하우스 기획 영상 촬영, 이투스 공식 유튜브 채널 촬영",
+      "촬영팀 아르바이트, 파견직 관리 및 프로젝트 촬영 총괄 PD 업무 진행",
+      "라이브 시스템 가이드라인 구축",
+      "자사 스튜디오 총 관리",
+      "촬영 장비 유지보수 전반 총괄"
     ]
   },
   {
@@ -307,7 +464,7 @@ export const initialCareerItems: CareerItem[] = [
 export const initialSkills: SkillCategory[] = [
   {
     category: "촬영",
-    skills: ["a7m4", "a7c2", "DJI Drone", "액션 캠", "짐벌"]
+    skills: ["미러리스", "DSLR", "DJI Drone", "액션 캠", "짐벌"]
   },
   {
     category: "영상편집",
@@ -323,9 +480,20 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
     if (
       !stored || 
       stored.includes("유럽 명품 COCHET 트레일러") ||
+      stored.includes("현장 중계, 촬영, 편집") ||
+      stored.includes("Sony a7m3, 다중 카메라도 촬영 구도") ||
+      stored.includes("Sony a7m3, 고성능 외장 마이크") ||
+      stored.includes("Sony FX3, 고해상도 조명 장비") ||
+      stored.includes("Sony DSLR, 무선 마이크") ||
       !stored.includes("대한민국 견인장치") ||
-      stored.includes("portfolio-shorts-4") ||
-      stored.includes("portfolio-shorts-5")
+      !stored.includes("portfolio-shorts-4") ||
+      !stored.includes("portfolio-shorts-5") ||
+      !stored.includes("portfolio-shorts-6") ||
+      !stored.includes("portfolio-long-8") ||
+      !stored.includes("portfolio-long-13") ||
+      !stored.includes("portfolio-interview-3") ||
+      !stored.includes("portfolio-live-1") ||
+      !stored.includes("XVEqu1hdato")
     ) {
       // Force migrate to show the beautiful updated titles/descriptions instantly
       try {
@@ -333,8 +501,13 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
       } catch (inner) {}
       return initialPortfolioItems;
     }
-    const parsed = JSON.parse(stored) as PortfolioItem[];
-    let updated = false;
+    let parsed = JSON.parse(stored) as PortfolioItem[];
+
+    // Auto-remove deleted items from user's local storage if they exist
+    const filteredParsed = parsed.filter(item => !["portfolio-shorts-7", "portfolio-shorts-8", "portfolio-shorts-9"].includes(item.id));
+    let updated = filteredParsed.length !== parsed.length;
+    parsed = filteredParsed;
+
     const migrated = parsed.map(item => {
       const defaultItem = initialPortfolioItems.find(x => x.id === item.id);
       if (defaultItem) {
@@ -373,6 +546,16 @@ export const getStoredCareerItems = (): CareerItem[] => {
     if (
       !stored || 
       !stored.includes("career-4") || 
+      stored.includes("캠핑 시장이 죽어 가면서") ||
+      stored.includes("자사 인스타그램 릴스 최고 조회수") ||
+      !stored.includes("입사 전 인스타그램 릴스 최고 조회수") ||
+      !stored.includes("인스타그램 100명 대 팔로워") ||
+      stored.includes("360% 폭발적 성장") ||
+      !stored.includes("260% 폭발적 성장") ||
+      stored.includes("42만 회") ||
+      !stored.includes("43만 회") ||
+      stored.includes(" (@k_trailer)") ||
+      stored.includes(" (@ktrailer1)") ||
       stored.includes("이투스 (ETOOS) 교육 미디어 스튜디오") ||
       stored.includes("기초 120명 대") ||
       !stored.includes("캠핑 레저 용품") ||
@@ -384,14 +567,34 @@ export const getStoredCareerItems = (): CareerItem[] => {
       stored.includes("홍보 영상 촬영 PD") ||
       !stored.includes("루씨드 드림") ||
       !stored.includes("스튜디오 관리 &") ||
-      !stored.includes("촬영 팀 관리")
+      !stored.includes("촬영 팀 관리") ||
+      stored.includes("1,500명으로 증가") ||
+      !stored.includes("1,600명으로 증가") ||
+      !stored.includes("1타 강사 전담 촬영") ||
+      stored.includes("라이브 시스템 가이드라인 구축 및 스튜디오 관리") ||
+      !stored.includes("라이브 시스템 가이드라인 구축") ||
+      !stored.includes("자사 스튜디오 총 관리") ||
+      !stored.includes("촬영 장비 유지보수 전반 총괄") ||
+      !stored.includes("프로젝트 촬영 총괄 PD 업무 진행")
     ) {
       try {
         localStorage.setItem("career_items", JSON.stringify(initialCareerItems));
       } catch (inner) {}
       return initialCareerItems;
     }
-    return JSON.parse(stored);
+    const parsed = JSON.parse(stored) as CareerItem[];
+    const etoosItem = parsed.find(item => item.id === "career-3");
+    if (
+      etoosItem &&
+      etoosItem.description &&
+      etoosItem.description[1] !== "촬영팀 아르바이트, 파견직 관리 및 프로젝트 촬영 총괄 PD 업무 진행"
+    ) {
+      try {
+        localStorage.setItem("career_items", JSON.stringify(initialCareerItems));
+      } catch (inner) {}
+      return initialCareerItems;
+    }
+    return parsed;
   } catch (e) {
     return initialCareerItems;
   }
@@ -409,7 +612,14 @@ export const getStoredSkills = (): SkillCategory[] => {
   if (typeof window === "undefined") return initialSkills;
   try {
     const stored = localStorage.getItem("skill_categories");
-    if (!stored || stored.includes("Automotive Production") || !stored.includes("촬영") || !stored.includes("영상편집")) {
+    if (
+      !stored || 
+      stored.includes("Automotive Production") || 
+      !stored.includes("촬영") || 
+      !stored.includes("영상편집") ||
+      stored.includes("a7m4") ||
+      stored.includes("a7c2")
+    ) {
       try {
         localStorage.setItem("skill_categories", JSON.stringify(initialSkills));
       } catch (inner) {}
@@ -434,17 +644,17 @@ export const defaultSiteTexts: SiteTexts = {
   heroTitle: "VIDEO MARKETING",
   heroSubtitle: "DIRECTOR",
   heroSlogan: "기획부터 촬영, 편집까지 브랜드 가치를 관통하는 1인 제작\n장기 근속 경력의 신뢰성과 플래그십 팀 협업 프로젝트 리드 경력",
-  heroCompetence1: "홍보 · 유튜브 · 숏폼 영상 콘텐츠 전문",
+  heroCompetence1: "홍보 · 유튜브 · 쇼츠/릴스 영상 전문",
   heroCompetence2: "기획 · 촬영 · 편집 · 브랜디드 콘텐츠 총괄",
   aboutTagline: "\"브랜드 가치를 주행시키는 시네마 크리에이터\"",
   aboutTitle: "안녕하세요, 비디오 마케팅 디렉터\n이주원 PD 입니다.",
-  aboutDescription: "단순한 기획·촬영·편집의 도구적 대행이 아닌, 브랜드가 시장에 전달하고픈 코어 메시지를 \n눈을 뗄 수 없는 영상 구조로 설계하고 실행합니다.",
+  aboutDescription: "단순한 영상 제작을 넘어 전략적인 마케팅과 브랜딩을 전개하여, 브랜드의 신뢰도와 본연의 가치를 극대화하겠습니다.",
   profileName: "이주원",
   profileAge: "41세",
   profilePhone: "010-4820-0441",
   profileEmail: "seoulpotato@naver.com",
-  aboutImage: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=800",
-  profileImage: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400"
+  aboutImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+  profileImage: "/profile.jpg"
 };
 
 export const getStoredSiteTexts = (): SiteTexts => {
@@ -458,12 +668,47 @@ export const getStoredSiteTexts = (): SiteTexts => {
       return defaultSiteTexts;
     }
     const parsed = JSON.parse(stored);
+    
+    // Migration: If about image is empty or features older cameras, update to modern video analysis / editing workstation
+    if (
+      parsed &&
+      (!parsed.aboutImage || 
+       parsed.aboutImage === "" || 
+       parsed.aboutImage.includes("photo-1542038784456") ||
+       parsed.aboutImage.includes("photo-1554941068-a252680d25d9") ||
+       parsed.aboutImage.includes("photo-1626544827763") ||
+       parsed.aboutImage.includes("photo-1616440347437"))
+    ) {
+      parsed.aboutImage = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800";
+      try {
+        localStorage.setItem("site_texts", JSON.stringify(parsed));
+      } catch (inner) {}
+    }
+
+    // Migration: Prevent showing any foreigner or old placeholder image of a face that does not match the real face of Lee Ju Won
+    if (
+      parsed && 
+      (!parsed.profileImage ||
+       parsed.profileImage === "" ||
+       parsed.profileImage.includes("photo-1574717024653-61fd2cf4d44d") ||
+       parsed.profileImage.includes("photo-1519085360753-af0119f7cbe7") ||
+       parsed.profileImage.includes("photo-1536440136628") ||
+       parsed.profileImage.includes("svg") ||
+       parsed.profileImage.includes("photo-1516035069371-29a1b244cc32"))
+    ) {
+      parsed.profileImage = defaultSiteTexts.profileImage;
+      try {
+        localStorage.setItem("site_texts", JSON.stringify(parsed));
+      } catch (inner) {}
+    }
+
     // Migration: If user has local storage with the old default slogan variants, migrate it automatically to the upgraded professional Korean slogan
     if (
       parsed &&
       (parsed.heroSlogan === "기획부터 촬영, 완벽한 편집까지 브랜드 가치를 관통하는 1인 제작" ||
        parsed.heroSlogan?.includes("장기 비즈니스 파트너십") ||
        parsed.heroSlogan?.includes("견고한 신뢰성") ||
+       parsed.heroCompetence1?.includes("쇼츠/숏폼") ||
        !parsed.heroCompetence1?.includes("홍보"))
     ) {
       parsed.heroSlogan = defaultSiteTexts.heroSlogan;
@@ -478,7 +723,13 @@ export const getStoredSiteTexts = (): SiteTexts => {
         localStorage.setItem("site_texts", JSON.stringify(parsed));
       } catch (inner) {}
     }
-    if (parsed && (parsed.aboutTitle === "안녕하세요, 비디오 마케팅 디렉터 이주원 PD 입니다." || !parsed.aboutTitle?.includes("\n"))) {
+    if (parsed && (!parsed.heroTagline || parsed.heroTagline === "")) {
+      parsed.heroTagline = "HIGH-END VIDEO PRODUCER";
+      try {
+        localStorage.setItem("site_texts", JSON.stringify(parsed));
+      } catch (inner) {}
+    }
+    if (parsed && (parsed.aboutTitle === "안녕하세요, 비디오 마케팅 디렉터 이주원 PD 입니다." || !parsed.aboutTitle?.includes("\n") || parsed.aboutDescription?.includes("코어 메시지") || parsed.aboutDescription?.includes("도구적 대행"))) {
       parsed.aboutTitle = defaultSiteTexts.aboutTitle;
       parsed.aboutDescription = defaultSiteTexts.aboutDescription;
       try {

@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" width="540" height="960">
+  <defs>
+    <!-- Fonts -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&amp;display=swap');
+      .title-text {
+        font-family: 'Noto Sans KR', 'Inter', sans-serif;
+        font-weight: 900;
+        fill: #06454d;
+        text-anchor: middle;
+      }
+      .logo-text-p {
+        font-family: 'Noto Sans KR', 'Inter', sans-serif;
+        font-weight: 900;
+        font-style: italic;
+        fill: #e51d25;
+      }
+      .logo-text-s {
+        font-family: 'Noto Sans KR', 'Inter', sans-serif;
+        font-weight: 700;
+        fill: #ffffff;
+      }
+      .callout-text {
+        font-family: 'Noto Sans KR', 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        fill: #ffffff;
+        text-anchor: middle;
+      }
+      .footer-text {
+        font-family: 'Noto Sans KR', 'Inter', sans-serif;
+        font-weight: 900;
+        font-style: italic;
+        fill: #ffffff;
+        text-anchor: middle;
+      }
+    </style>
+    
+    <!-- Shadow filters for crisp legibility -->
+    <filter id="text-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base of Overall Card -->
+  <rect width="540" height="960" fill="#082b30" />
+
+  <!-- TOP HEADER AREA (Dark Teal/Forest Green) -->
+  <rect x="0" y="0" width="540" height="210" fill="#063d44" />
+
+  <!-- K-TRAILER Brand Logo Overlay -->
+  <g transform="translate(210, 48)">
+    <!-- Red K Letter -->
+    <text x="0" y="0" class="logo-text-p" font-size="34">K</text>
+    <!-- White Trailer Part -->
+    <text x="24" y="0" class="logo-text-s" font-size="30">-Trailer</text>
+    <!-- Horizontal thin underline -->
+    <rect x="-8" y="10" width="130" height="2.5" fill="#e51d25" />
+  </g>
+
+  <!-- Title block in header: Rounded White Box -->
+  <rect x="25" y="96" width="490" height="100" rx="6" fill="#ffffff" />
+  <text x="270" y="136" class="title-text" font-size="25" letter-spacing="-1">카니발 하이브리드 캠핑카</text>
+  <text x="270" y="180" class="title-text" font-size="36" letter-spacing="-1">4인 가족 안성 맞춤</text>
+
+  <!-- CENTRAL PHOTOGRAPHY AREA -->
+  <!-- Gorgeous White Camping SUV with rooftop tent in snow, highly cinematic -->
+  <image href="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&amp;fit=crop&amp;q=80&amp;w=800"
+         x="0" y="210" width="540" height="570" preserveAspectRatio="xMidYMid slice" opacity="0.95" />
+
+  <!-- Semi-transparent overlay at the bottom of the photo for text legibility -->
+  <rect x="0" y="700" width="540" height="80" fill="url(#bottom-fade)" opacity="0.4" />
+  
+  <linearGradient id="bottom-fade" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="1"/>
+  </linearGradient>
+
+  <!-- CALL TO ACTION OVERLAYS (lower middle of photo area) -->
+  <!-- White pointing hand key visual -->
+  <path d="M 52,698 
+           C 52,694 48,690 44,690 
+           C 40,690 38,693 38,696 
+           L 38,716 
+           C 38,716 33,712 30,710 
+           C 27,708 23,710 22,714 
+           C 21,718 24,722 28,725 
+           L 38,735 
+           L 38,746 
+           C 38,748 40,750 42,750 
+           L 58,750 
+           C 62,750 64,747 64,743 
+           L 64,714 
+           C 64,710 61,707 58,707 
+           C 55,707 54,710 54,713 
+           L 54,705 
+           C 54,701 51,698 48,698 
+           Z" 
+        fill="#ffffff" stroke="#000000" stroke-width="2.5" filter="url(#text-shadow)" transform="translate(10, 32) scale(1.1)" />
+
+  <g transform="translate(295, 747)">
+    <text class="callout-text" x="0" y="0" filter="url(#text-shadow)">
+      <tspan fill="#ffffff">프로필 링크에서 </tspan>
+      <tspan fill="#ffee00">풀버전 </tspan>
+      <tspan fill="#ffffff">확인</tspan>
+    </text>
+  </g>
+
+  <!-- BOTTOM FOOTER AREA (Dark Teal/Forest Green) -->
+  <rect x="0" y="780" width="540" height="180" fill="#063d44" />
+  
+  <text x="270" y="845" class="footer-text" font-size="34" letter-spacing="-1">어릴적 아빠의 꿈</text>
+  <text x="270" y="904" class="footer-text" font-size="34" letter-spacing="-1">아이들의 로망</text>
+</svg>
