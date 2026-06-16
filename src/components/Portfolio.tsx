@@ -138,6 +138,81 @@ export default function Portfolio({ items }: PortfolioProps) {
           </div>
         </div>
 
+        {/* Channel Links Row */}
+        <div className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-6" id="portfolio-external-channels">
+          {/* YouTube Channel Link Banner */}
+          <div className="animate-fade-in-up" id="longform-youtube-link-banner">
+            <a
+              href="https://youtube.com/@k_trailer?si=EPUoTm4DX4WhMCUP"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative overflow-hidden group block rounded-xl border border-red-100/40 p-0.5 bg-gradient-to-r from-[#ff0000] via-[#e60303] to-[#9d0202] shadow-lg hover:shadow-xl hover:shadow-red-500/10 transition-all duration-300 cursor-pointer h-full"
+            >
+              <div className="bg-white rounded-[10px] px-6 py-5 md:py-6 flex flex-col sm:flex-row items-center justify-between gap-4 transition-all duration-300 group-hover:bg-slate-50/90 h-full">
+                <div className="flex items-center gap-4 text-center sm:text-left flex-col sm:flex-row">
+                  <div className="p-3 bg-gradient-to-tr from-[#ff3333] via-[#ff0000] to-[#990000] text-white rounded-full shadow-md group-hover:scale-110 transition-transform duration-300 shrink-0">
+                    <Youtube size={24} className="animate-pulse-slow" />
+                  </div>
+                  <div>
+                    <div className="flex items-center justify-center sm:justify-start gap-2">
+                      <span className="text-xs tracking-widest font-black uppercase text-red-600 bg-red-50 px-2.5 py-0.5 rounded border border-red-150">
+                        유튜브 롱폼 채널
+                      </span>
+                      <span className="text-xs text-slate-500 font-mono font-bold">@k_trailer</span>
+                    </div>
+                    <h3 className="text-lg font-black text-slate-900 mt-1.5 font-display flex items-center justify-center sm:justify-start gap-1">
+                      인하우스 PD 유튜브 채널 관리 바로가기
+                    </h3>
+                    <p className="text-xs text-slate-600 mt-1 font-bold leading-relaxed">
+                      전문 기어가 탑재된 캠핑카 리뷰부터 다채로운 고기능성 롱폼 콘텐츠와 고품격 브랜디드 영상들을 공식 유튜브 채널에서 확인해 보세요.
+                    </p>
+                  </div>
+                </div>
+                <div className="shrink-0 flex items-center gap-1.5 px-4 py-2 bg-slate-900 hover:bg-slate-950 text-white font-extrabold text-xs tracking-wider rounded-lg shadow group-hover:translate-x-1.5 transition-all">
+                  <span>유튜브 바로가기</span>
+                  <ExternalLink size={12} className="mt-0.5" />
+                </div>
+              </div>
+            </a>
+          </div>
+
+          {/* Instagram Reels Link Banner */}
+          <div className="animate-fade-in-up" id="shorts-instagram-link-banner">
+            <a
+              href="https://www.instagram.com/ktrailer1/reels/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative overflow-hidden group block rounded-xl border border-rose-100/40 p-0.5 bg-gradient-to-r from-[#ffd521] via-[#f50000] via-[#b900b4] to-[#1900d5] shadow-lg hover:shadow-xl hover:shadow-rose-500/10 transition-all duration-300 cursor-pointer h-full"
+            >
+              <div className="bg-white rounded-[10px] px-6 py-5 md:py-6 flex flex-col sm:flex-row items-center justify-between gap-4 transition-all duration-300 group-hover:bg-slate-50/90 h-full">
+                <div className="flex items-center gap-4 text-center sm:text-left flex-col sm:flex-row">
+                  <div className="p-3 bg-gradient-to-tr from-[#ffd521] via-[#f50000] to-[#b900b4] text-white rounded-full shadow-md group-hover:scale-110 transition-transform duration-300 shrink-0">
+                    <Instagram size={24} className="animate-pulse-slow" />
+                  </div>
+                  <div>
+                    <div className="flex items-center justify-center sm:justify-start gap-2">
+                      <span className="text-xs tracking-widest font-black uppercase text-rose-600 bg-rose-50 px-2.5 py-0.5 rounded border border-rose-150">
+                        인스타그램 릴스 채널
+                      </span>
+                      <span className="text-xs text-slate-500 font-mono font-bold">@ktrailer1</span>
+                    </div>
+                    <h3 className="text-lg font-black text-slate-900 mt-1.5 font-display flex items-center justify-center sm:justify-start gap-1">
+                      인하우스 PD 인스타그램 릴스 채널 바로가기
+                    </h3>
+                    <p className="text-xs text-slate-600 mt-1 font-bold leading-relaxed">
+                      91만회 돌파 캠핑카 Reels 등 실시간 트렌드를 반영하는 다채로운 세로형 숏폼 영상을 인스타그램에서 직접 만나보세요.
+                    </p>
+                  </div>
+                </div>
+                <div className="shrink-0 flex items-center gap-1.5 px-4 py-2 bg-slate-900 hover:bg-slate-950 text-white font-extrabold text-xs tracking-wider rounded-lg shadow group-hover:translate-x-1.5 transition-all">
+                  <span>릴스 바로가기</span>
+                  <ExternalLink size={12} className="mt-0.5" />
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
         {/* Categories Tab Bar Filter */}
         <div className="flex flex-wrap items-center gap-2.5 mb-10 overflow-x-auto pb-4 border-b border-slate-200">
           {categories.map((cat) => (
@@ -285,81 +360,6 @@ export default function Portfolio({ items }: PortfolioProps) {
             ))}
           </div>
         )}
-
-        {/* Channel Links Row */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6" id="portfolio-external-channels">
-          {/* YouTube Channel Link Banner */}
-          <div className="animate-fade-in-up" id="longform-youtube-link-banner">
-            <a
-              href="https://youtube.com/@k_trailer?si=EPUoTm4DX4WhMCUP"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative overflow-hidden group block rounded-xl border border-red-100/40 p-0.5 bg-gradient-to-r from-[#ff0000] via-[#e60303] to-[#9d0202] shadow-lg hover:shadow-xl hover:shadow-red-500/10 transition-all duration-300 cursor-pointer h-full"
-            >
-              <div className="bg-white rounded-[10px] px-6 py-5 md:py-6 flex flex-col sm:flex-row items-center justify-between gap-4 transition-all duration-300 group-hover:bg-slate-50/90 h-full">
-                <div className="flex items-center gap-4 text-center sm:text-left flex-col sm:flex-row">
-                  <div className="p-3 bg-gradient-to-tr from-[#ff3333] via-[#ff0000] to-[#990000] text-white rounded-full shadow-md group-hover:scale-110 transition-transform duration-300 shrink-0">
-                    <Youtube size={24} className="animate-pulse-slow" />
-                  </div>
-                  <div>
-                    <div className="flex items-center justify-center sm:justify-start gap-2">
-                      <span className="text-xs tracking-widest font-black uppercase text-red-600 bg-red-50 px-2.5 py-0.5 rounded border border-red-150">
-                        유튜브 롱폼 채널
-                      </span>
-                      <span className="text-xs text-slate-500 font-mono font-bold">@k_trailer</span>
-                    </div>
-                    <h3 className="text-lg font-black text-slate-900 mt-1.5 font-display flex items-center justify-center sm:justify-start gap-1">
-                      인하우스 PD 유튜브 채널 관리 바로가기
-                    </h3>
-                    <p className="text-xs text-slate-600 mt-1 font-bold leading-relaxed">
-                      전문 기어가 탑재된 캠핑카 리뷰부터 다채로운 고기능성 롱폼 콘텐츠와 고품격 브랜디드 영상들을 공식 유튜브 채널에서 확인해 보세요.
-                    </p>
-                  </div>
-                </div>
-                <div className="shrink-0 flex items-center gap-1.5 px-4 py-2 bg-slate-900 hover:bg-slate-950 text-white font-extrabold text-xs tracking-wider rounded-lg shadow group-hover:translate-x-1.5 transition-all">
-                  <span>유튜브 바로가기</span>
-                  <ExternalLink size={12} className="mt-0.5" />
-                </div>
-              </div>
-            </a>
-          </div>
-
-          {/* Instagram Reels Link Banner */}
-          <div className="animate-fade-in-up" id="shorts-instagram-link-banner">
-            <a
-              href="https://www.instagram.com/ktrailer1/reels/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative overflow-hidden group block rounded-xl border border-rose-100/40 p-0.5 bg-gradient-to-r from-[#ffd521] via-[#f50000] via-[#b900b4] to-[#1900d5] shadow-lg hover:shadow-xl hover:shadow-rose-500/10 transition-all duration-300 cursor-pointer h-full"
-            >
-              <div className="bg-white rounded-[10px] px-6 py-5 md:py-6 flex flex-col sm:flex-row items-center justify-between gap-4 transition-all duration-300 group-hover:bg-slate-50/90 h-full">
-                <div className="flex items-center gap-4 text-center sm:text-left flex-col sm:flex-row">
-                  <div className="p-3 bg-gradient-to-tr from-[#ffd521] via-[#f50000] to-[#b900b4] text-white rounded-full shadow-md group-hover:scale-110 transition-transform duration-300 shrink-0">
-                    <Instagram size={24} className="animate-pulse-slow" />
-                  </div>
-                  <div>
-                    <div className="flex items-center justify-center sm:justify-start gap-2">
-                      <span className="text-xs tracking-widest font-black uppercase text-rose-600 bg-rose-50 px-2.5 py-0.5 rounded border border-rose-150">
-                        인스타그램 릴스 채널
-                      </span>
-                      <span className="text-xs text-slate-500 font-mono font-bold">@ktrailer1</span>
-                    </div>
-                    <h3 className="text-lg font-black text-slate-900 mt-1.5 font-display flex items-center justify-center sm:justify-start gap-1">
-                      인하우스 PD 인스타그램 릴스 채널 바로가기
-                    </h3>
-                    <p className="text-xs text-slate-600 mt-1 font-bold leading-relaxed">
-                      91만회 돌파 캠핑카 Reels 등 실시간 트렌드를 반영하는 다채로운 세로형 숏폼 영상을 인스타그램에서 직접 만나보세요.
-                    </p>
-                  </div>
-                </div>
-                <div className="shrink-0 flex items-center gap-1.5 px-4 py-2 bg-slate-900 hover:bg-slate-950 text-white font-extrabold text-xs tracking-wider rounded-lg shadow group-hover:translate-x-1.5 transition-all">
-                  <span>릴스 바로가기</span>
-                  <ExternalLink size={12} className="mt-0.5" />
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
 
       </div>
 

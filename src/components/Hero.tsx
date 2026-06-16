@@ -76,8 +76,30 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
             </>
           ) : (
             <span className="relative inline-block pb-3 md:pb-4">
-              {siteTexts.heroTitle}
-              <span className="absolute bottom-0 left-0 w-24 md:w-36 h-[4px] md:h-[6px] bg-primary-red" />
+              {(() => {
+                const titleStr = siteTexts.heroTitle || "CONTENT PRODUCER";
+                const index = titleStr.indexOf("CONTENT");
+                if (index !== -1) {
+                  const before = titleStr.substring(0, index);
+                  const after = titleStr.substring(index + 7);
+                  return (
+                    <>
+                      {before}
+                      <span className="relative">
+                        CONTENT
+                        <span className="absolute -bottom-3 md:-bottom-4 left-0 w-full h-[4px] md:h-[6px] bg-primary-red" />
+                      </span>
+                      {after}
+                    </>
+                  );
+                }
+                return (
+                  <>
+                    {titleStr}
+                    <span className="absolute bottom-0 left-0 w-24 md:w-36 h-[4px] md:h-[6px] bg-primary-red" />
+                  </>
+                );
+              })()}
             </span>
           )}
         </h1>
