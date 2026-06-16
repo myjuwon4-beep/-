@@ -398,9 +398,9 @@ export const initialCareerItems: CareerItem[] = [
       {
         platform: "YouTube 콘텐츠 부문",
         metrics: [
-          "운영 1년 만에 유튜브 채널 구독자 약 2,000명 대에서 7,200명 돌파 (260% 폭발적 성장)",
-          "핵심 오토모티브 기획 영상 최고 누적 조회수 43만 회, 19만, 10만 등 파격 상승 기록",
-          "연계 오더 문의율 전년 동 분기 대비 약 48% 가치 신장 기여"
+          "운영 1년 만에 유튜브 채널 구독자 2,000명 → 7,200명 증가",
+          "최고 조회수 43만 회 (10만 회 이상 콘텐츠 다수 제작)",
+          "콘텐츠 기반 고객 문의율 전년 동기 대비 약 48% 증가"
         ],
         link: "https://www.youtube.com/@k_trailer",
         linkName: "@k_trailer 유튜브 바로가기"
@@ -408,9 +408,10 @@ export const initialCareerItems: CareerItem[] = [
       {
         platform: "Instagram 릴스 채널 운영",
         metrics: [
-          "인스타그램 100명 대 팔로워에서 릴스 연출을 장려하여 단기간 내 1,600명으로 증가",
-          "입사 전 인스타그램 릴스 최고 조회수 1,000회를 넘지 못했으나 입사 후 최고 조회수 91만 기록.",
-          "채널의 방향성을 캐치 하여 최근 업로드한 릴스 영상들의 조회수의 평균치를 상승 기여."
+          "독립적인 숏폼 콘텐츠 전략 수립 및 주도적 채널 운영",
+          "인스타그램 팔로워 100명대 → 단기간 내 1,600명으로 증가",
+          "릴스 최고 조회수 극적 성장 (입사 전 1,000회 미만 → 입사 후 최고 91만 회 달성)",
+          "트렌드 분석 및 연출 최적화를 통한 릴스 평균 조회수 지속 성장 견인"
         ],
         link: "https://www.instagram.com/ktrailer1/",
         linkName: "@ktrailer1 인스타그램 바로가기"
@@ -423,17 +424,11 @@ export const initialCareerItems: CareerItem[] = [
     title: "루씨드 드림",
     role: "영상제작팀 팀장 및 APM(어시스턴트 PM)",
     description: [
-      "한국관광공사 주관 국제회의시설(유니크베뉴)의 메인 8K 다각 및 360° VR 감각 시네마 촬영 총괄 및 홍보 영상 제작"
+      "국제 바이어 유치용 8K 및 360VR 관광 콘텐츠 제작 총괄",
+      "유니크베뉴 홍보 영상 제작",
+      "프로젝트 PM 및 촬영 총괄"
     ],
-    achievements: [
-      {
-        platform: "한국관광공사 (KTO)",
-        metrics: [
-          "국제 바이어 유치용 고해상도 테마 VR 투어 프로덕션 리딩",
-          "유니크 베뉴 관광 홍보용 영상 제작"
-        ]
-      }
-    ]
+    achievements: []
   },
   {
     id: "career-3",
@@ -441,11 +436,12 @@ export const initialCareerItems: CareerItem[] = [
     title: "이투스 (ETOOS) 교육",
     role: "기획 영상 촬영 & 스튜디오 관리 &\n촬영 팀 관리 & 라이브",
     description: [
-      "1타 강사 전담 촬영, 인하우스 기획 영상 촬영, 이투스 공식 유튜브 채널 촬영",
-      "촬영팀 아르바이트, 파견직 관리 및 프로젝트 촬영 총괄 PD 업무 진행",
-      "라이브 시스템 가이드라인 구축",
-      "자사 스튜디오 총 관리",
-      "촬영 장비 유지보수 전반 총괄"
+      "스튜디오 운영 총괄",
+      "촬영 장비 유지보수 체계 구축",
+      "라이브 송출 가이드라인 수립",
+      "촬영팀 운영 및 외주 인력 관리",
+      "대형 프로젝트 촬영 총괄",
+      "교육 콘텐츠 제작 프로세스 표준화"
     ]
   },
   {
@@ -463,12 +459,21 @@ export const initialCareerItems: CareerItem[] = [
 
 export const initialSkills: SkillCategory[] = [
   {
-    category: "촬영",
-    skills: ["미러리스", "DSLR", "DJI Drone", "액션 캠", "짐벌"]
+    category: "전략 및 기획 역량",
+    skills: ["콘텐츠 전략", "채널 운영", "프로젝트 리딩", "브랜디드 콘텐츠"]
   },
   {
-    category: "영상편집",
-    skills: ["Premiere", "After effect", "Photoshop"]
+    category: "콘텐츠 제작 역량",
+    skills: ["Premiere", "After Effects", "Photoshop"]
+  },
+  {
+    category: "운영 및 시스템 기술",
+    skills: [
+      "미러리스, DSLR, 짐벌, 드론 등 다양한 촬영 기술 보유",
+      "Live Streaming",
+      "스튜디오 관리 및 개선",
+      "영상 제작팀 빌딩 및 조직 매니지먼트"
+    ]
   }
 ];
 
@@ -548,10 +553,13 @@ export const getStoredCareerItems = (): CareerItem[] => {
       !stored.includes("career-4") || 
       stored.includes("캠핑 시장이 죽어 가면서") ||
       stored.includes("자사 인스타그램 릴스 최고 조회수") ||
-      !stored.includes("입사 전 인스타그램 릴스 최고 조회수") ||
-      !stored.includes("인스타그램 100명 대 팔로워") ||
+      !stored.includes("독립적인 숏폼 콘텐츠 전략 수립") ||
+      !stored.includes("인스타그램 팔로워 100명대") ||
       stored.includes("360% 폭발적 성장") ||
-      !stored.includes("260% 폭발적 성장") ||
+      stored.includes("260% 폭발적 성장") ||
+      !stored.includes("2,000명 → 7,200명 증가") ||
+      !stored.includes("10만 회 이상 콘텐츠 다수 제작") ||
+      !stored.includes("콘텐츠 기반 고객 문의율 전년 동기 대비 약 48% 증가") ||
       stored.includes("42만 회") ||
       !stored.includes("43만 회") ||
       stored.includes(" (@k_trailer)") ||
@@ -560,7 +568,7 @@ export const getStoredCareerItems = (): CareerItem[] => {
       stored.includes("기초 120명 대") ||
       !stored.includes("캠핑 레저 용품") ||
       stored.includes("국가 정보 홍보 사업 콘텐츠 사업부") ||
-      !stored.includes("국제회의시설(유니크베뉴)") ||
+      !stored.includes("국제 바이어 유치용 8K 및 360VR 관광 콘텐츠 제작 총괄") ||
       stored.includes("견인장치 및 오토모티브 미디어") ||
       stored.includes("인하우스 PD + 국가 정보 홍보 사업 콘텐츠") ||
       stored.includes("인하우스 메인 영상 기획 & 촬영 책임 PD") ||
@@ -570,12 +578,12 @@ export const getStoredCareerItems = (): CareerItem[] => {
       !stored.includes("촬영 팀 관리") ||
       stored.includes("1,500명으로 증가") ||
       !stored.includes("1,600명으로 증가") ||
-      !stored.includes("1타 강사 전담 촬영") ||
-      stored.includes("라이브 시스템 가이드라인 구축 및 스튜디오 관리") ||
-      !stored.includes("라이브 시스템 가이드라인 구축") ||
-      !stored.includes("자사 스튜디오 총 관리") ||
-      !stored.includes("촬영 장비 유지보수 전반 총괄") ||
-      !stored.includes("프로젝트 촬영 총괄 PD 업무 진행")
+      !stored.includes("스튜디오 운영 총괄") ||
+      !stored.includes("촬영 장비 유지보수 체계 구축") ||
+      !stored.includes("라이브 송출 가이드라인 수립") ||
+      !stored.includes("촬영팀 운영 및 외주 인력 관리") ||
+      !stored.includes("대형 프로젝트 촬영 총괄") ||
+      !stored.includes("교육 콘텐츠 제작 프로세스 표준화")
     ) {
       try {
         localStorage.setItem("career_items", JSON.stringify(initialCareerItems));
@@ -587,7 +595,7 @@ export const getStoredCareerItems = (): CareerItem[] => {
     if (
       etoosItem &&
       etoosItem.description &&
-      etoosItem.description[1] !== "촬영팀 아르바이트, 파견직 관리 및 프로젝트 촬영 총괄 PD 업무 진행"
+      etoosItem.description[1] !== "촬영 장비 유지보수 체계 구축"
     ) {
       try {
         localStorage.setItem("career_items", JSON.stringify(initialCareerItems));
@@ -615,10 +623,13 @@ export const getStoredSkills = (): SkillCategory[] => {
     if (
       !stored || 
       stored.includes("Automotive Production") || 
-      !stored.includes("촬영") || 
-      !stored.includes("영상편집") ||
-      stored.includes("a7m4") ||
-      stored.includes("a7c2")
+      stored.includes("촬영") || 
+      stored.includes("영상편집") ||
+      stored.includes("Strategic Skills") ||
+      !stored.includes("전략 및 기획 역량") ||
+      !stored.includes("콘텐츠 제작 역량") ||
+      !stored.includes("운영 및 시스템 기술") ||
+      !stored.includes("다양한 촬영 기술 보유")
     ) {
       try {
         localStorage.setItem("skill_categories", JSON.stringify(initialSkills));
@@ -640,15 +651,15 @@ export const saveStoredSkills = (items: SkillCategory[]) => {
 };
 
 export const defaultSiteTexts: SiteTexts = {
-  heroTagline: "HIGH-END VIDEO PRODUCER",
-  heroTitle: "VIDEO MARKETING",
-  heroSubtitle: "DIRECTOR",
-  heroSlogan: "기획부터 촬영, 편집까지 브랜드 가치를 관통하는 1인 제작\n장기 근속 경력의 신뢰성과 플래그십 팀 협업 프로젝트 리드 경력",
+  heroTagline: "",
+  heroTitle: "CONTENT PRODUCER",
+  heroSubtitle: "",
+  heroSlogan: "콘텐츠 제작, 조직 운영, 채널 성장을 통해 비즈니스 성과를 만들어 온 콘텐츠 리더",
   heroCompetence1: "홍보 · 유튜브 · 쇼츠/릴스 영상 전문",
   heroCompetence2: "기획 · 촬영 · 편집 · 브랜디드 콘텐츠 총괄",
-  aboutTagline: "\"브랜드 가치를 주행시키는 시네마 크리에이터\"",
-  aboutTitle: "안녕하세요, 비디오 마케팅 디렉터\n이주원 PD 입니다.",
-  aboutDescription: "단순한 영상 제작을 넘어 전략적인 마케팅과 브랜딩을 전개하여, 브랜드의 신뢰도와 본연의 가치를 극대화하겠습니다.",
+  aboutTagline: "",
+  aboutTitle: "안녕하세요.\n브랜드 콘텐츠 프로듀서\n이주원 PD 입니다.",
+  aboutDescription: "단순한 영상 제작을 넘어 전략적인 마케팅과 브랜딩을 전개하여,\n브랜드의 신뢰도와 본연의 가치를 극대화하겠습니다.",
   profileName: "이주원",
   profileAge: "41세",
   profilePhone: "010-4820-0441",
@@ -706,8 +717,10 @@ export const getStoredSiteTexts = (): SiteTexts => {
     if (
       parsed &&
       (parsed.heroSlogan === "기획부터 촬영, 완벽한 편집까지 브랜드 가치를 관통하는 1인 제작" ||
+       parsed.heroSlogan?.includes("기획부터 촬영") ||
        parsed.heroSlogan?.includes("장기 비즈니스 파트너십") ||
        parsed.heroSlogan?.includes("견고한 신뢰성") ||
+       parsed.heroSlogan?.includes("콘텐츠 제작을 넘어") ||
        parsed.heroCompetence1?.includes("쇼츠/숏폼") ||
        !parsed.heroCompetence1?.includes("홍보"))
     ) {
@@ -723,14 +736,26 @@ export const getStoredSiteTexts = (): SiteTexts => {
         localStorage.setItem("site_texts", JSON.stringify(parsed));
       } catch (inner) {}
     }
-    if (parsed && (!parsed.heroTagline || parsed.heroTagline === "")) {
-      parsed.heroTagline = "HIGH-END VIDEO PRODUCER";
+    if (parsed && (parsed.heroTagline === "HIGH-END VIDEO PRODUCER" || parsed.heroTitle === "VIDEO MARKETING" || parsed.heroSubtitle === "DIRECTOR")) {
+      parsed.heroTagline = "";
+      parsed.heroTitle = "CONTENT PRODUCER";
+      parsed.heroSubtitle = "";
       try {
         localStorage.setItem("site_texts", JSON.stringify(parsed));
       } catch (inner) {}
     }
-    if (parsed && (parsed.aboutTitle === "안녕하세요, 비디오 마케팅 디렉터 이주원 PD 입니다." || !parsed.aboutTitle?.includes("\n") || parsed.aboutDescription?.includes("코어 메시지") || parsed.aboutDescription?.includes("도구적 대행"))) {
+    if (parsed && (
+      parsed.aboutTitle === "안녕하세요, 비디오 마케팅 디렉터 이주원 PD 입니다." || 
+      parsed.aboutTitle === "안녕하세요. 브랜드 콘텐츠 프로듀서\n이주원 PD 입니다." || 
+      parsed.aboutTitle?.includes("비디오 마케팅 디렉터") || 
+      parsed.aboutTagline?.includes("브랜드 가치를 주행시키는 시네마 크리에이터") ||
+      !parsed.aboutTitle?.includes("\n") || 
+      parsed.aboutDescription?.includes("코어 메시지") || 
+      parsed.aboutDescription?.includes("도구적 대행") ||
+      !parsed.aboutDescription?.includes("\n")
+    )) {
       parsed.aboutTitle = defaultSiteTexts.aboutTitle;
+      parsed.aboutTagline = defaultSiteTexts.aboutTagline;
       parsed.aboutDescription = defaultSiteTexts.aboutDescription;
       try {
         localStorage.setItem("site_texts", JSON.stringify(parsed));

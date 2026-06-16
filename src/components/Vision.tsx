@@ -28,10 +28,6 @@ export default function Vision() {
               입사 지원 포부
             </h2>
           </div>
-          <div className="h-[2px] bg-slate-200 flex-grow mx-8 hidden md:block mb-3" />
-          <p className="text-slate-500 text-sm font-mono mt-4 md:mt-0 tracking-widest font-black">
-            성장과 협업 시너지
-          </p>
         </div>
 
         {/* Content Layout Grid */}
@@ -43,29 +39,22 @@ export default function Vision() {
             <div className="absolute -top-12 -left-12 w-48 h-48 bg-primary-red/5 blur-[50px] rounded-full pointer-events-none" />
             
             <div className="relative z-10 space-y-6">
-              <div className="flex items-center space-x-2 text-primary-red">
-                <Play size={14} className="fill-primary-red/20" />
-                <span className="text-xs font-mono tracking-[0.25em] uppercase font-bold">직업적 가치관</span>
-              </div>
-              
-              <h3 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900 font-display leading-tight">
-                “단순히 영상을 제작하는 디렉터에 머무르지 않겠습니다.”
+              <h3 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900 font-display leading-normal whitespace-pre-wrap">
+                저는 영상을 제작하는 사람을 넘어{"\n"}
+                콘텐츠를 통해 브랜드 성장을 만드는 사람이 되고 싶습니다.
               </h3>
               
-              <div className="h-[1px] bg-slate-250 w-24 my-6" />
+              <div className="h-[2px] bg-primary-red w-16 my-6" />
 
-              <p className="text-base md:text-lg text-slate-750 leading-relaxed font-bold">
-                제가 기획하고 제작하는 모든 한 프레임에 기업의 가치를 만들고, 실제 비즈니스 성장을 이끌어내는 정교한 유효 마케팅 메시지를 담겠습니다.
+              <p className="text-base md:text-lg text-slate-750 leading-relaxed font-bold whitespace-pre-wrap">
+                교육 콘텐츠 현장부터 자동차&캠핑 전문 콘텐츠 채널 운영까지 경험하며{"\n"}
+                기획, 제작, 운영, 성장의 전 과정을 수행해 왔습니다.
               </p>
               
-              <p className="text-base md:text-lg text-slate-750 leading-relaxed font-bold">
-                <strong className="text-slate-900 font-extrabold underline decoration-primary-red/80 decoration-2 underline-offset-4">회사의 성장이 곧 나 자신의 가치 증명이며, 저의 끊임없는 성장이 회사의 혁신적 도약을 촉진하는 핵심 엔진</strong>이라는 마음가짐으로 기여하겠습니다.
+              <p className="text-base md:text-lg text-slate-900 leading-relaxed font-black whitespace-pre-wrap underline decoration-primary-red/40 decoration-2 underline-offset-4">
+                앞으로도 데이터와 크리에이티브를 기반으로{"\n"}
+                브랜드와 고객을 연결하는 콘텐츠를 만들겠습니다.
               </p>
-            </div>
-
-            <div className="mt-8 pt-6 border-t border-slate-200/80 flex items-center justify-between text-xs font-mono text-slate-500/80 font-bold tracking-wider">
-              <span>제작 가치관</span>
-              <span className="text-primary-red font-semibold">★ 가치 지향</span>
             </div>
           </div>
 
@@ -74,13 +63,9 @@ export default function Vision() {
             <div className="absolute top-0 right-0 w-48 h-48 bg-primary-red/5 blur-[60px] rounded-full pointer-events-none" />
 
             <div className="relative z-10">
-              <div className="flex items-center space-x-2 text-slate-650 mb-6">
-                <span className="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse mr-1" />
-                <span className="text-sm font-mono tracking-[0.2em] uppercase font-black">상시 연락 채널</span>
-              </div>
-
-              <h4 className="text-2xl font-black tracking-tight text-slate-900 mb-6 font-display">
-                상시 연락처
+              <h4 className="text-2xl font-black tracking-tight text-slate-900 mb-6 font-display flex items-center gap-2">
+                <span className="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                연락처
               </h4>
 
               {/* Direct Buttons list */}
@@ -105,11 +90,6 @@ export default function Vision() {
                   <ArrowUpRight size={16} className="text-slate-500 group-hover/btn:text-primary-red group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-all" />
                 </a>
               </div>
-            </div>
-
-            <div className="mt-8 pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-mono text-slate-500 tracking-widest font-bold">
-              <span>상시 소통</span>
-              <span>24시간 대기</span>
             </div>
           </div>
 

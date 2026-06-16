@@ -32,10 +32,6 @@ export default function Career({ careerItems = [] }: CareerProps) {
               경력 소개 <span className="font-light italic text-slate-400">타임라인</span>
             </h2>
           </div>
-          <div className="h-[2px] bg-slate-200 flex-grow mx-8 hidden md:block mb-3" />
-          <p className="text-slate-500 text-sm font-mono mt-4 md:mt-0 tracking-widest font-black">
-            성과 및 역량 입증
-          </p>
         </div>
 
         {/* Timeline List */}

@@ -54,19 +54,25 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
       title: "마케팅 지표 성장 증명",
       description: (
         <>
-          케이트레일러 채널의 유튜브 구독자를 입사 후 1년 만에 2,000명에서 7,200명대
+          니치 시장의 전문 제품군을 다루는{" "}
           <span className="text-slate-900 font-extrabold border-b-[2px] border-blue-600/50 pb-0.5 px-0.5">
-            (260%↑)
+            유튜브 채널을 성장시키며 브랜드 인지도 확대
           </span>
-          로 성장시키고, 핵심 기획 영상으로{" "}
+          에
+          <br />
+          기여했습니다.
+          <br />
+          핵심 기획 영상으로{" "}
           <span className="text-slate-900 font-extrabold border-b-[2px] border-blue-600/50 pb-0.5 px-0.5">
             유튜브 최고 조회수 43만회, 19만, 10만 등 파격 상승 기록.
           </span>{" "}
+          <br />
           이에 더하여 타겟화된 인스타그램{" "}
           <span className="text-slate-900 font-extrabold border-b-[2px] border-blue-600/50 pb-0.5 px-0.5">
             릴스 91만 조회수
           </span>
           를 달성 하여{" "}
+          <br />
           <span className="text-slate-900 font-extrabold border-b-[2px] border-blue-600/50 pb-0.5 px-0.5">
             채널과 기업 가치를 상승
           </span>
@@ -87,16 +93,9 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
         <div className="flex flex-col mb-16 md:flex-row md:items-end justify-between">
           <div>
             <span className="text-sm tracking-[0.4em] text-primary-red font-bold block mb-2 font-display">
-              01 / 제작 철학
+              01 / 소개
             </span>
-            <h2 className="text-3xl md:text-5xl font-display font-black tracking-tight text-slate-900 animate-fade-in animate-pulse-slow">
-              이주원 PD <span className="font-light italic text-slate-500">브랜드 소개</span>
-            </h2>
           </div>
-          <div className="h-[2px] bg-slate-200 flex-grow mx-8 hidden md:block mb-3" />
-          <p className="text-slate-500 text-sm font-mono mt-4 md:mt-0 tracking-widest font-black">
-            콘텐츠 디렉팅 철학
-          </p>
         </div>
 
         {/* Content Box Grid split */}
@@ -120,7 +119,7 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
               <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/95 backdrop-blur-md border border-slate-200/85 rounded flex items-center justify-between shadow-md">
                 <div>
                   <h4 className="text-base font-black text-slate-850 tracking-[0.25em] font-display">이주원</h4>
-                  <p className="text-xs text-slate-500 tracking-wider font-bold mt-0.5">비디오 마케팅 디렉터</p>
+                  <p className="text-xs text-slate-500 tracking-wider font-bold mt-0.5">브랜드 콘텐츠 프로듀서</p>
                 </div>
                 <span className="inline-flex h-2.5 w-2.5 rounded-full bg-primary-red animate-pulse" />
               </div>
@@ -129,9 +128,11 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
 
           {/* Right Block: Pitch Copy & Core Pillars */}
           <div className="lg:col-span-7 flex flex-col justify-start">
-            <span className="text-primary-red text-base font-bold font-display tracking-widest mb-3 uppercase">
-              {siteTexts.aboutTagline}
-            </span>
+            {siteTexts.aboutTagline && (
+              <span className="text-primary-red text-base font-bold font-display tracking-widest mb-3 uppercase">
+                {siteTexts.aboutTagline}
+              </span>
+            )}
             <h3 className="text-3xl md:text-5xl font-display font-black text-slate-900 leading-snug whitespace-pre-line">
               {siteTexts.aboutTitle}
             </h3>

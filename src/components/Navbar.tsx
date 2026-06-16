@@ -127,48 +127,10 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, onPdfClick, s
             <Printer size={13} />
             <span className="hidden xl:inline">PDF 저장</span>
           </button>
-
-          <div className="h-4 w-[1px] bg-slate-200" />
-
-          {/* Admin Control Trigger */}
-          <div className="flex items-center space-x-2 xl:space-x-3">
-            {isAdmin ? (
-              <div className="flex items-center space-x-2">
-                <span className="flex items-center space-x-1 px-2.5 py-1.5 bg-primary-red/10 border border-primary-red/30 rounded text-[10px] xl:text-xs tracking-widest text-primary-red font-extrabold animate-pulse whitespace-nowrap">
-                  <ShieldCheck size={14} />
-                  <span className="hidden xl:inline">관리자 모드 활성화</span>
-                  <span className="xl:hidden">관리자 모드</span>
-                </span>
-                <button
-                  id="admin-logout-btn"
-                  onClick={onLogout}
-                  className="p-2 bg-slate-100 hover:bg-slate-200 border border-slate-200 hover:border-primary-red text-slate-700 hover:text-primary-red rounded transition-all duration-200"
-                  title="관리자 로그아웃"
-                >
-                  <LogOut size={15} />
-                </button>
-              </div>
-            ) : (
-              <button
-                id="admin-login-trigger"
-                onClick={onAdminToggle}
-                className="flex items-center space-x-1 xl:space-x-1.5 px-2.5 py-1.5 border border-slate-200 hover:border-primary-red/80 hover:bg-primary-red/5 text-xs xl:text-[13px] tracking-widest text-slate-600 hover:text-primary-red rounded font-extrabold transition-all duration-205 cursor-pointer whitespace-nowrap"
-              >
-                <Lock size={13} className="text-slate-500" />
-                <span className="hidden xl:inline">관리자 패널</span>
-                <span className="xl:hidden">관리자</span>
-              </button>
-            )}
-          </div>
         </div>
 
         {/* Mobile controls */}
         <div className="flex lg:hidden items-center space-x-4">
-          {isAdmin && (
-            <span className="px-2 py-0.5 bg-primary-red/20 border border-primary-red/40 rounded text-xs tracking-widest text-primary-red font-bold">
-              ADMIN
-            </span>
-          )}
           <button
             id="mobile-menu-toggle"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -211,37 +173,6 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, onPdfClick, s
               <Printer size={15} />
               <span>PDF 다운로드 / 인쇄하기</span>
             </button>
-
-            {isAdmin ? (
-              <div className="flex items-center justify-between p-3 bg-primary-red/10 border border-primary-red/20 rounded">
-                <span className="text-sm tracking-wider text-primary-red flex items-center space-x-1.5 font-bold">
-                  <ShieldCheck size={15} />
-                  <span>관리자 모드 활성화됨</span>
-                </span>
-                <button
-                  id="mobile-logout-btn"
-                  onClick={() => {
-                    onLogout();
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className="px-3 py-1.5 bg-slate-800 border border-white/15 text-sm tracking-wide text-white hover:text-primary-red rounded font-bold"
-                >
-                  로그아웃
-                </button>
-              </div>
-            ) : (
-              <button
-                id="mobile-admin-login"
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  onAdminToggle();
-                }}
-                className="flex items-center justify-center space-x-2 w-full py-3 bg-slate-100 hover:bg-slate-200 border border-slate-200 hover:border-primary-red rounded text-sm tracking-widest text-slate-700 font-bold"
-              >
-                <Lock size={13} />
-                <span>ADMIN PANEL (포트폴리오 관리)</span>
-              </button>
-            )}
           </div>
         </div>
       )}

@@ -43,10 +43,6 @@ export default function Skills({ skills = [] }: SkillsProps) {
               보유 기술 및 역량
             </h2>
           </div>
-          <div className="h-[2px] bg-slate-200 flex-grow mx-8 hidden md:block mb-3" />
-          <p className="text-slate-500 text-sm font-mono mt-4 md:mt-0 tracking-widest font-black">
-            실무 제작 장비 및 소프트웨어
-          </p>
         </div>
 
         {/* Tactical Skills Bento-Style Matrix */}
@@ -68,7 +64,6 @@ export default function Skills({ skills = [] }: SkillsProps) {
                     <h3 className="text-base md:text-lg font-black text-slate-800 tracking-widest uppercase font-display">
                       {section.category}
                     </h3>
-                    <span className="text-xs text-slate-500 tracking-[0.1em] font-mono font-bold uppercase">전문 분야</span>
                   </div>
                 </div>
 
@@ -80,7 +75,7 @@ export default function Skills({ skills = [] }: SkillsProps) {
                        className="flex items-center space-x-3 px-3.5 py-2.5 bg-slate-50 rounded border border-slate-150 hover:border-primary-red/20 hover:bg-slate-100/50 transition-all duration-200"
                     >
                       <Check size={14} className="text-primary-red mt-0.5 shrink-0" />
-                      <span className="text-sm md:text-base text-slate-800 font-mono font-bold tracking-wide">{skill}</span>
+                      <span className="text-sm md:text-base text-slate-850 font-sans font-medium">{skill}</span>
                     </div>
                   ))}
                 </div>

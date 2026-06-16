@@ -136,10 +136,6 @@ export default function Portfolio({ items }: PortfolioProps) {
               포트폴리오
             </h2>
           </div>
-          <div className="h-[2px] bg-slate-200 flex-grow mx-8 hidden md:block mb-3" />
-          <p className="text-slate-500 text-sm font-mono mt-4 md:mt-0 tracking-widest font-extrabold">
-            직접 기획 · 연출 및 제작
-          </p>
         </div>
 
         {/* Categories Tab Bar Filter */}

@@ -29,10 +29,6 @@ export default function Footer({ onAdminToggle, isAdmin, onPdfClick }: FooterPro
           <p className="text-sm md:text-base text-slate-800 font-extrabold tracking-wider">
             © {new Date().getFullYear()} 이주원 PD. All Rights Reserved.
           </p>
-          <div className="flex items-center justify-center md:justify-start space-x-2 mt-2 font-mono text-[11px] text-slate-500 tracking-widest uppercase font-bold">
-            <Disc size={11} className="text-primary-red animate-spin-slow" />
-            <span>자동차 마케팅 및 캠페인 전문 콘텐츠 디렉터 포트폴리오</span>
-          </div>
         </div>
 
         {/* Action Panel Links */}
