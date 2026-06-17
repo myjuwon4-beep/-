@@ -175,7 +175,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "버찌 BUDZZI",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "[제작 의도]\n이전 직장 '루씨드드림'에서 어플 홍보 마케팅 목적으로 운영 했던 콘텐츠로서\n대본에 따른 인위적인 클리셰들을 배제하고, 실제 가정환경에서 흘러가는 강아지의 내밀한 자연적 몸짓 언어를 포착해 전문 반려 육아 지식 솔루션을 조화롭게 분배해 내는 것에 완성의 목표를 두었습니다.\n\n[핵심 비하인드]\n반려견의 시선 패스를 완벽히 담아내기 위해, 바닥과 평행한 저고도 로우 앵글 장비 세팅 및 초점 전이를 극대화하는 카메라 워크를 직접 연구하여 적용했습니다. 또한 반려인들이 가장 공감하는 백그라운드 오디오와 따뜻한 색감의 시네컬러 그레이딩 처리를 공들여 수행하였습니다.",
+    description: "이전 직장 '루씨드드림'에서 어플 마케팅 목적으로 기획·제작하여, 반려견의 실제 행동 특성과 전문 육아 지식 솔루션을 조화롭게 풀어내 반려인들의 높은 공감을 이끌어낸 콘텐츠입니다.\n\n[제작 의도]\n대본에 따른 인위적인 클리셰들을 배제하고, 실제 가정환경에서 흘러가는 강아지의 내밀한 자연적 몸짓 언어를 포착해 전문 반려 육아 지식 솔루션을 조화롭게 분배해 내는 것에 완성의 목표를 두었습니다.\n\n[핵심 비하인드]\n반려견의 시선 패스를 완벽히 담아내기 위해, 바닥과 평행한 저고도 로우 앵글 장비 세팅 및 초점 전이를 극대화하는 카메라 워크를 직접 연구하여 적용했습니다. 또한 반려인들이 가장 공감하는 백그라운드 오디오와 따뜻한 색감의 시네컬러 그레이딩 처리를 공들여 수행하였습니다.",
     videoUrl: "https://www.youtube.com/watch?v=8BfgwkXrD0g",
     imageUrl: "https://img.youtube.com/vi/8BfgwkXrD0g/maxresdefault.jpg",
     equipment: "Sony a7m3 | Premiere Pro",
@@ -374,7 +374,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "이투스교육",
     role: "라이브 중계 전송 및 방송 시스템 총괄 구축",
     format: "LIVE",
-    description: "이투스교육의 차세대 전국 주요 랜드마크 메가 지점 간의 쌍방향 하이브리드 대형 라이브 인강 생중계 시스템과 디지털 전송 플랫폼의 인프라 하드웨어/소프트웨어를 설계 구축하고 전송 프로세스를 완성 대성공을 이룬 교육 뉴딜 프로젝트 핵심 성과 정보입니다.\n\n[제작 의도]\n이투스교육에서 근무 할 시 코로나팬데믹 시기가 찾아 왔고, 비대면의 시대에 맞춰\n라이브 시스템을 구축하고 테스트, 송출, 가이드까지 제작하여 진행 하였습니다.\n\n[핵심 비하인드]\n대표적으로 스타 강사 최태성 선생님의 라이브를 담당 하였고, 스튜디오와 야외 현장의 라이브를 함께 송출 하는 등 다양한 송출 방식을 사용해 라이브 시스템을 구축 했습니다.",
+    description: "코로나 팬데믹 시기에 대응하여 비대면 인강을 전송할 수 있는 쌍방향 라이브 인터넷 방송 시스템과 주요 지점 간 생중계 인프라를 설계 및 구축한 프로젝트입니다.\n\n[제작 의도]\n이투스교육에서 근무 할 시 코로나팬데믹 시기가 찾아 왔고, 비대면의 시대에 맞춰\n라이브 시스템을 구축하고 테스트, 송출, 가이드까지 제작하여 진행 하였습니다.\n\n[핵심 비하인드]\n대표적으로 스타 강사 최태성 선생님의 라이브를 담당 하였고, 스튜디오와 야외 현장의 라이브를 함께 송출 하는 등 다양한 송출 방식을 사용해 라이브 시스템을 구축 했습니다.",
     videoUrl: "https://youtu.be/XVEqu1hdato",
     imageUrl: "https://img.youtube.com/vi/S6L6kCVd8F4/maxresdefault.jpg",
     equipment: "Live Streaming Engine, OBS Studio, DeckLink Capture, CANON Cameras, 다채널 오디오 믹싱 시스템",
@@ -389,7 +389,7 @@ export const initialCareerItems: CareerItem[] = [
     id: "career-1",
     period: "2024 ~ 2026",
     title: "K트레일러",
-    role: "인하우스 영상기획총괄 PD",
+    role: "인하우스PD & 콘텐츠 마케터",
     description: [
       "유튜브 및 인스타그램 채널의 카라반/트레일러/캠핑 레저 용품 전문 브랜디드\n영상 기획, 촬영, 최적화 편집 전담",
       "캠핑 아웃도어 트렌드와 EV 친환경 차량의 한계를 테스트 하거나\n소비자들의 니즈를 풀어주는 콘텐츠 기획"
@@ -422,7 +422,7 @@ export const initialCareerItems: CareerItem[] = [
     id: "career-2",
     period: "2021 ~ 2024",
     title: "루씨드 드림",
-    role: "영상제작팀 팀장 및 APM(어시스턴트 PM)",
+    role: "영상제작팀 팀장 및 (어시스턴트 PM)",
     description: [
       "국제 바이어 유치용 8K 및 360VR 관광 콘텐츠 제작 총괄",
       "유니크베뉴 홍보 영상 제작",
@@ -520,6 +520,7 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
       !stored.includes("게릴라 이벤트를 준비해 자전거 라이더들에게") ||
       !stored.includes("비인기 제품인 아웃셋을 팔기 위해") ||
       !stored.includes("이투스교육에서 근무 할 시 코로나팬데믹") ||
+      stored.includes("이투스교육의 차세대") ||
       stored.includes("당시 촬영 기획안을 초과하는") ||
       !stored.includes("Cook史")
     ) {
@@ -595,6 +596,8 @@ export const getStoredCareerItems = (): CareerItem[] => {
     if (
       !stored || 
       !stored.includes("career-4") || 
+      stored.includes("인하우스 영상기획총괄 PD") ||
+      stored.includes("영상제작팀 팀장 및 APM") ||
       stored.includes("캠핑 시장이 죽어 가면서") ||
       stored.includes("한계 견력을 테스트하는") ||
       !stored.includes("소비자들의 니즈를 풀어주는") ||

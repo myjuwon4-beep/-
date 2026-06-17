@@ -185,7 +185,7 @@ export default function Portfolio({ items }: PortfolioProps) {
                       </span>
                     </div>
                     <h3 className="text-[17px] md:text-lg font-black text-slate-900 mt-2 font-display tracking-tight leading-snug">
-                      인하우스 PD 유튜브 채널 관리 바로가기
+                      인하우스 PD 유튜브
                     </h3>
                   </div>
                 </div>
@@ -222,7 +222,7 @@ export default function Portfolio({ items }: PortfolioProps) {
                       </span>
                     </div>
                     <h3 className="text-[17px] md:text-lg font-black text-slate-900 mt-2 font-display tracking-tight leading-snug">
-                      인하우스 PD 인스타그램 릴스 채널 바로가기
+                      인하우스 PD 인스타그램 릴스
                     </h3>
                   </div>
                 </div>

@@ -118,9 +118,6 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
             <h3 className="text-xl md:text-2xl font-black text-slate-800 tracking-tight leading-none">
               핵심 역량 및 성과 요약
             </h3>
-            <p className="mt-2 text-xs md:text-sm text-slate-500 font-bold">
-              중견기업 기획·촬영·라이브 인프라 운영 노하우와 유튜브/인스타그램 고성장 성과의 조화
-            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
