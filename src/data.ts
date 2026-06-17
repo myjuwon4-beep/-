@@ -599,7 +599,8 @@ export const getStoredCareerItems = (): CareerItem[] => {
       stored.includes("영상제작팀 팀장 및 APM") ||
       stored.includes("캠핑 시장이 죽어 가면서") ||
       stored.includes("한계 견력을 테스트하는") ||
-      !stored.includes("소비자들의 니즈를 풀어주는") ||
+      stored.includes("소비자들의 니즈를 풀어주는") ||
+      !stored.includes("편집 전담 제작 및 전반적인 브랜드 마케팅 전략 수립") ||
       stored.includes("자사 인스타그램 릴스 최고 조회수") ||
       !stored.includes("독립적인 숏폼 콘텐츠 전략 수립") ||
       !stored.includes("인스타그램 팔로워 100명대") ||
