@@ -338,15 +338,6 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
             <Play size={15} fill="currentColor" className="text-white group-hover:translate-x-0.5 transition-transform" />
             <span>PORTFOLIO 바로가기</span>
           </button>
-          <button
-            id="hero-pdf-btn"
-            onClick={onPdfClick}
-            className="group px-10 py-4 bg-white hover:bg-slate-50 border border-slate-300 hover:border-primary-red/85 text-slate-800 hover:text-primary-red font-display text-base tracking-[0.2em] font-extrabold transition-all duration-300 rounded shadow-md flex items-center justify-center space-x-2 cursor-pointer hover:scale-[1.03] no-print"
-            title="PDF 다운로드 / 인쇄 안내 팝업 열기"
-          >
-            <Printer size={16} />
-            <span>PDF 이력서 저장/인쇄</span>
-          </button>
         </div>
 
       </div>

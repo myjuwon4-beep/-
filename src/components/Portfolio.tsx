@@ -11,6 +11,15 @@ interface PortfolioProps {
   items: PortfolioItem[];
 }
 
+const getCleanDescription = (desc: string): string => {
+  if (!desc) return "";
+  const index = desc.indexOf("[제작 의도]");
+  if (index !== -1) {
+    return desc.substring(index).trim();
+  }
+  return desc;
+};
+
 export default function Portfolio({ items }: PortfolioProps) {
   const [selectedCategory, setSelectedCategory] = useState("ALL");
   const [activeItem, setActiveItem] = useState<PortfolioItem | null>(null);
@@ -350,7 +359,7 @@ export default function Portfolio({ items }: PortfolioProps) {
                       {item.title}
                     </h3>
                     <p className="text-sm md:text-[15px] text-slate-600 leading-relaxed mt-2.5 line-clamp-2 font-bold select-none">
-                      {item.description}
+                      {getCleanDescription(item.description)}
                     </p>
                   </div>
 
@@ -418,7 +427,7 @@ export default function Portfolio({ items }: PortfolioProps) {
                   <span>제작 의도 및 핵심 비하인드</span>
                 </h4>
                 <p className="text-sm md:text-base text-white/95 leading-relaxed font-medium whitespace-pre-line bg-black/50 p-5 rounded border border-white/5 shadow-inner">
-                  {activeItem.description}
+                  {getCleanDescription(activeItem.description)}
                 </p>
 
                 {/* Multiple snapshots/images dynamic gallery */}
