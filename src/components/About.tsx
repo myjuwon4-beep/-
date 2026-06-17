@@ -24,14 +24,14 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
           궁금해하고 <span className="text-slate-900 font-extrabold border-b-[2px] border-emerald-500/50 pb-0.5 px-0.5">몰입하는 지점</span>과{" "}
           <br />
           <span className="text-slate-900 font-extrabold border-b-[2px] border-emerald-500/50 pb-0.5 px-0.5">숨은 소구 포인트</span>를
-          영리하게 파악하여 자연스러운{" "}
+          파악하여 자연스러운{" "}
           <span className="text-slate-900 font-extrabold border-b-[2px] border-emerald-500/50 pb-0.5 px-0.5">브랜드 신뢰</span>로 연결합니다.
         </>
       )
     },
     {
       icon: <Zap className="text-violet-600" size={22} />,
-      title: "협업 제작 & 올인원 책임 프로덕션",
+      title: "올인원 책임 프로듀서",
       description: (
         <>
           8년이라는 오랜 기간 동안 몸 담았던 회사에서{" "}
@@ -80,11 +80,11 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
             유튜브 최고 조회수 43만회, 19만, 10만 등 파격 상승 기록
           </span>{" "}
           <br />
-          이에 더하여 타겟화된 인스타그램{" "}
+          타겟화된 인스타그램{" "}
           <span className="text-slate-900 font-extrabold border-b-[2px] border-blue-600/50 pb-0.5 px-0.5">
-            릴스 91만 조회수
+            릴스 최고 조회수 91만
           </span>
-          를 달성 하여{" "}
+          을 달성 하여{" "}
           <br />
           <span className="text-slate-900 font-extrabold border-b-[2px] border-blue-600/50 pb-0.5 px-0.5">
             채널과 기업 가치를 상승
