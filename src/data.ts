@@ -391,8 +391,8 @@ export const initialCareerItems: CareerItem[] = [
     title: "K트레일러",
     role: "인하우스 영상기획총괄 PD",
     description: [
-      "유튜브 및 인스타그램 채널의 카라반/트레일러/캠핑 레저 용품 전문 브랜디드 영상 기획, 촬영, 최적화 편집 전담",
-      "캠핑 아웃도어 트렌드와 EV 친환경 차량의 한계 견력을 테스트하는 유니크 오토모티브 로드마크 콘텐츠 개발"
+      "유튜브 및 인스타그램 채널의 카라반/트레일러/캠핑 레저 용품 전문 브랜디드\n영상 기획, 촬영, 최적화 편집 전담",
+      "캠핑 아웃도어 트렌드와 EV 친환경 차량의 한계를 테스트 하거나\n소비자들의 니즈를 풀어주는 콘텐츠 기획"
     ],
     achievements: [
       {
@@ -596,6 +596,8 @@ export const getStoredCareerItems = (): CareerItem[] => {
       !stored || 
       !stored.includes("career-4") || 
       stored.includes("캠핑 시장이 죽어 가면서") ||
+      stored.includes("한계 견력을 테스트하는") ||
+      !stored.includes("소비자들의 니즈를 풀어주는") ||
       stored.includes("자사 인스타그램 릴스 최고 조회수") ||
       !stored.includes("독립적인 숏폼 콘텐츠 전략 수립") ||
       !stored.includes("인스타그램 팔로워 100명대") ||
@@ -698,7 +700,7 @@ export const defaultSiteTexts: SiteTexts = {
   heroTagline: "",
   heroTitle: "CONTENT PRODUCER",
   heroSubtitle: "",
-  heroSlogan: "콘텐츠 제작, 조직 운영, 채널 성장을 통해 비즈니스 성과를 만들어 온 콘텐츠 리더",
+  heroSlogan: "콘텐츠 제작, 조직 운영, 채널 성장을 통해\n비즈니스 성과를 만들어 온 콘텐츠 리더",
   heroCompetence1: "홍보 · 유튜브 · 쇼츠/릴스 영상 전문",
   heroCompetence2: "기획 · 촬영 · 편집 · 브랜디드 콘텐츠 총괄",
   aboutTagline: "",
@@ -761,6 +763,7 @@ export const getStoredSiteTexts = (): SiteTexts => {
     if (
       parsed &&
       (parsed.heroSlogan === "기획부터 촬영, 완벽한 편집까지 브랜드 가치를 관통하는 1인 제작" ||
+       parsed.heroSlogan === "콘텐츠 제작, 조직 운영, 채널 성장을 통해 비즈니스 성과를 만들어 온 콘텐츠 리더" ||
        parsed.heroSlogan?.includes("기획부터 촬영") ||
        parsed.heroSlogan?.includes("장기 비즈니스 파트너십") ||
        parsed.heroSlogan?.includes("견고한 신뢰성") ||

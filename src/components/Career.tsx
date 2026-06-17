@@ -66,7 +66,7 @@ export default function Career({ careerItems = [] }: CareerProps) {
                     {item.description.map((desc, dIdx) => (
                       <li key={dIdx} className="text-[15px] md:text-base text-slate-750 leading-relaxed font-bold flex items-start">
                         <CheckCircle size={14} className="text-primary-red mr-2.5 mt-1 shrink-0" />
-                        <span>{desc}</span>
+                        <span className="whitespace-pre-line">{desc}</span>
                       </li>
                     ))}
                   </ul>

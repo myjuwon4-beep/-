@@ -22,6 +22,7 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
           단순히 예쁜 영상이 아닙니다.{" "}
           <span className="text-slate-900 font-extrabold border-b-[2px] border-emerald-500/50 pb-0.5 px-0.5">주 타겟층</span>이 가장
           궁금해하고 <span className="text-slate-900 font-extrabold border-b-[2px] border-emerald-500/50 pb-0.5 px-0.5">몰입하는 지점</span>과{" "}
+          <br />
           <span className="text-slate-900 font-extrabold border-b-[2px] border-emerald-500/50 pb-0.5 px-0.5">숨은 소구 포인트</span>를
           영리하게 파악하여 자연스러운{" "}
           <span className="text-slate-900 font-extrabold border-b-[2px] border-emerald-500/50 pb-0.5 px-0.5">브랜드 신뢰</span>로 연결합니다.
@@ -35,13 +36,23 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
         <>
           8년이라는 오랜 기간 동안 몸 담았던 회사에서{" "}
           <span className="text-slate-900 font-extrabold border-b-[2px] border-violet-500/50 pb-0.5 px-0.5">
-            스튜디오 관리와 아르바이트, 파견직원 에스코팅 관리
+            스튜디오 관리와 아르바이트, 파견직원
+          </span>{" "}
+          <br />
+          <span className="text-slate-900 font-extrabold border-b-[2px] border-violet-500/50 pb-0.5 px-0.5">
+            에스코팅 관리
           </span>
           까지 전문적으로 수행했기 때문에{" "}
           <span className="text-slate-900 font-extrabold border-b-[2px] border-violet-500/50 pb-0.5 px-0.5">
             팀워크 활동에 능숙
           </span>
-          합니다. 이에 더하여 전략적 기획안 도출, 1인 촬영 시 고성능 멀티캠(최대 4cam) 동시 제어·운영 노하우, 그리고 정확하고 깔끔한 최종 컷 편집까지 완성도 높은{" "}
+          합니다.{" "}
+          <br />
+          이에 더하여 전략적 기획안 도출, 1인 촬영 시 고성능 멀티캠(최대 4cam){" "}
+          <br />
+          동시 제어·운영 노하우 그리고 정확하고 깔끔한 최종 컷 편집까지{" "}
+          <br />
+          완성도 높은{" "}
           <span className="text-slate-900 font-extrabold border-b-[2px] border-violet-500/50 pb-0.5 px-0.5">
             1인 책임 제작
           </span>
@@ -54,17 +65,19 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
       title: "마케팅 지표 성장 증명",
       description: (
         <>
-          니치 시장의 전문 제품군을 다루는{" "}
+          니치 마켓의 제품군을 다루는{" "}
           <span className="text-slate-900 font-extrabold border-b-[2px] border-blue-600/50 pb-0.5 px-0.5">
-            유튜브 채널을 성장시키며 브랜드 인지도 확대
-          </span>
-          에
+            유튜브 채널을 성장시키며 브랜드 인지도
+          </span>{" "}
           <br />
-          기여했습니다.
+          <span className="text-slate-900 font-extrabold border-b-[2px] border-blue-600/50 pb-0.5 px-0.5">
+            확대
+          </span>
+          에 기여했습니다.
           <br />
           핵심 기획 영상으로{" "}
           <span className="text-slate-900 font-extrabold border-b-[2px] border-blue-600/50 pb-0.5 px-0.5">
-            유튜브 최고 조회수 43만회, 19만, 10만 등 파격 상승 기록.
+            유튜브 최고 조회수 43만회, 19만, 10만 등 파격 상승 기록
           </span>{" "}
           <br />
           이에 더하여 타겟화된 인스타그램{" "}
@@ -75,7 +88,7 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
           <br />
           <span className="text-slate-900 font-extrabold border-b-[2px] border-blue-600/50 pb-0.5 px-0.5">
             채널과 기업 가치를 상승
-          </span>
+          </span>{" "}
           시켰습니다.
         </>
       )

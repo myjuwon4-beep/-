@@ -20,6 +20,19 @@ const getCleanDescription = (desc: string): string => {
   return desc;
 };
 
+const getCardDescription = (desc: string): string => {
+  if (!desc) return "";
+  const index = desc.indexOf("[제작 의도]");
+  if (index !== -1) {
+    return desc.substring(0, index).trim();
+  }
+  const index2 = desc.indexOf("[제작의도]");
+  if (index2 !== -1) {
+    return desc.substring(0, index2).trim();
+  }
+  return desc;
+};
+
 export default function Portfolio({ items }: PortfolioProps) {
   const [selectedCategory, setSelectedCategory] = useState("ALL");
   const [activeItem, setActiveItem] = useState<PortfolioItem | null>(null);
@@ -155,31 +168,32 @@ export default function Portfolio({ items }: PortfolioProps) {
               href="https://youtube.com/@k_trailer?si=EPUoTm4DX4WhMCUP"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative overflow-hidden group block rounded-xl border border-red-100/40 p-0.5 bg-gradient-to-r from-[#ff0000] via-[#e60303] to-[#9d0202] shadow-lg hover:shadow-xl hover:shadow-red-500/10 transition-all duration-300 cursor-pointer h-full"
+              className="group block relative bg-white border border-slate-200/80 rounded-2xl p-6 hover:shadow-xl hover:shadow-red-500/5 hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden h-full"
             >
-              <div className="bg-white rounded-[10px] px-6 py-5 md:py-6 flex flex-col sm:flex-row items-center justify-between gap-4 transition-all duration-300 group-hover:bg-slate-50/90 h-full">
-                <div className="flex items-center gap-4 text-center sm:text-left flex-col sm:flex-row">
-                  <div className="p-3 bg-gradient-to-tr from-[#ff3333] via-[#ff0000] to-[#990000] text-white rounded-full shadow-md group-hover:scale-110 transition-transform duration-300 shrink-0">
-                    <Youtube size={24} className="animate-pulse-slow" />
+              {/* Subtle top accent line */}
+              <div className="absolute top-0 left-0 w-full h-1.5 bg-[#E30613]" />
+              
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 h-full pt-1">
+                <div className="flex items-start gap-4 text-left">
+                  <div className="p-3.5 bg-red-50 text-[#E30613] rounded-xl shrink-0 group-hover:bg-[#E30613] group-hover:text-white transition-all duration-300 shadow-sm border border-red-100">
+                    <Youtube size={26} className="transition-transform duration-300 group-hover:scale-110" />
                   </div>
                   <div>
-                    <div className="flex items-center justify-center sm:justify-start gap-2">
-                      <span className="text-xs tracking-widest font-black uppercase text-red-600 bg-red-50 px-2.5 py-0.5 rounded border border-red-150">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="text-[10px] tracking-[0.15em] font-black uppercase text-[#E30613] bg-red-50/70 border border-red-250 px-2 py-0.5 rounded font-display">
                         유튜브 롱폼 채널
                       </span>
-                      <span className="text-xs text-slate-500 font-mono font-bold">@k_trailer</span>
                     </div>
-                    <h3 className="text-lg font-black text-slate-900 mt-1.5 font-display flex items-center justify-center sm:justify-start gap-1">
+                    <h3 className="text-[17px] md:text-lg font-black text-slate-900 mt-2 font-display tracking-tight leading-snug">
                       인하우스 PD 유튜브 채널 관리 바로가기
                     </h3>
-                    <p className="text-xs text-slate-600 mt-1 font-bold leading-relaxed">
-                      전문 기어가 탑재된 캠핑카 리뷰부터 다채로운 고기능성 롱폼 콘텐츠와 고품격 브랜디드 영상들을 공식 유튜브 채널에서 확인해 보세요.
-                    </p>
                   </div>
                 </div>
-                <div className="shrink-0 flex items-center gap-1.5 px-4 py-2 bg-slate-900 hover:bg-slate-950 text-white font-extrabold text-xs tracking-wider rounded-lg shadow group-hover:translate-x-1.5 transition-all">
-                  <span>유튜브 바로가기</span>
-                  <ExternalLink size={12} className="mt-0.5" />
+                <div className="shrink-0 self-end sm:self-center">
+                  <div className="flex items-center gap-1.5 px-4.5 py-2.5 bg-slate-900 hover:bg-[#E30613] text-white font-extrabold text-xs tracking-wider rounded-lg shadow-sm transition-all duration-300 group-hover:scale-105">
+                    <span>유튜브 바로가기</span>
+                    <ExternalLink size={12} className="ml-0.5 group-hover:translate-x-0.5 transition-transform" />
+                  </div>
                 </div>
               </div>
             </a>
@@ -191,31 +205,32 @@ export default function Portfolio({ items }: PortfolioProps) {
               href="https://www.instagram.com/ktrailer1/reels/"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative overflow-hidden group block rounded-xl border border-rose-100/40 p-0.5 bg-gradient-to-r from-[#ffd521] via-[#f50000] via-[#b900b4] to-[#1900d5] shadow-lg hover:shadow-xl hover:shadow-rose-500/10 transition-all duration-300 cursor-pointer h-full"
+              className="group block relative bg-white border border-slate-200/80 rounded-2xl p-6 hover:shadow-xl hover:shadow-indigo-500/5 hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden h-full"
             >
-              <div className="bg-white rounded-[10px] px-6 py-5 md:py-6 flex flex-col sm:flex-row items-center justify-between gap-4 transition-all duration-300 group-hover:bg-slate-50/90 h-full">
-                <div className="flex items-center gap-4 text-center sm:text-left flex-col sm:flex-row">
-                  <div className="p-3 bg-gradient-to-tr from-[#ffd521] via-[#f50000] to-[#b900b4] text-white rounded-full shadow-md group-hover:scale-110 transition-transform duration-300 shrink-0">
-                    <Instagram size={24} className="animate-pulse-slow" />
+              {/* Subtle top accent line */}
+              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#ffd200] via-[#ff006c] to-[#7f00ff]" />
+              
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 h-full pt-1">
+                <div className="flex items-start gap-4 text-left">
+                  <div className="p-3.5 bg-rose-50 text-[#e1306c] rounded-xl shrink-0 group-hover:bg-gradient-to-tr group-hover:from-[#ffd200] group-hover:via-[#ff006c] group-hover:to-[#7f00ff] group-hover:text-white transition-all duration-300 shadow-sm border border-rose-100">
+                    <Instagram size={26} className="transition-transform duration-300 group-hover:scale-110" />
                   </div>
                   <div>
-                    <div className="flex items-center justify-center sm:justify-start gap-2">
-                      <span className="text-xs tracking-widest font-black uppercase text-rose-600 bg-rose-50 px-2.5 py-0.5 rounded border border-rose-150">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="text-[10px] tracking-[0.15em] font-black uppercase text-[#e1306c] bg-rose-50/70 border border-rose-250 px-2 py-0.5 rounded font-display">
                         인스타그램 릴스 채널
                       </span>
-                      <span className="text-xs text-slate-500 font-mono font-bold">@ktrailer1</span>
                     </div>
-                    <h3 className="text-lg font-black text-slate-900 mt-1.5 font-display flex items-center justify-center sm:justify-start gap-1">
+                    <h3 className="text-[17px] md:text-lg font-black text-slate-900 mt-2 font-display tracking-tight leading-snug">
                       인하우스 PD 인스타그램 릴스 채널 바로가기
                     </h3>
-                    <p className="text-xs text-slate-600 mt-1 font-bold leading-relaxed">
-                      91만회 돌파 캠핑카 Reels 등 실시간 트렌드를 반영하는 다채로운 세로형 숏폼 영상을 인스타그램에서 직접 만나보세요.
-                    </p>
                   </div>
                 </div>
-                <div className="shrink-0 flex items-center gap-1.5 px-4 py-2 bg-slate-900 hover:bg-slate-950 text-white font-extrabold text-xs tracking-wider rounded-lg shadow group-hover:translate-x-1.5 transition-all">
-                  <span>릴스 바로가기</span>
-                  <ExternalLink size={12} className="mt-0.5" />
+                <div className="shrink-0 self-end sm:self-center">
+                  <div className="flex items-center gap-1.5 px-4.5 py-2.5 bg-slate-900 hover:bg-slate-950 text-white font-extrabold text-xs tracking-wider rounded-lg shadow-sm transition-all duration-300 group-hover:scale-105">
+                    <span>릴스 바로가기</span>
+                    <ExternalLink size={12} className="ml-0.5 group-hover:translate-x-0.5 transition-transform" />
+                  </div>
                 </div>
               </div>
             </a>
@@ -248,9 +263,9 @@ export default function Portfolio({ items }: PortfolioProps) {
               안내 가이드
             </h4>
             <p className="text-slate-600 text-xs sm:text-[13px] md:text-[14px] font-bold leading-relaxed">
-              홍보, 유튜브 롱폼 및 쇼츠/릴스 등 전체 작업물 중에서 <span className="text-slate-900 font-extrabold">1인 제작 중심의 프로젝트</span>와 역량을 직관적으로 확인하실 수 있는
+              홍보, 유튜브 롱폼 및 쇼츠/릴스 등 전체 작업물 중에서 <span className="text-slate-900 font-extrabold">1인 제작 중심의 프로젝트와</span>
               <br />
-              <span className="text-slate-900 font-extrabold">대표 프로젝트 위주로 선별하여</span> 링크 하였습니다.
+              역량을 직관적으로 확인하실 수 있는 <span className="text-slate-900 font-extrabold">대표 프로젝트 위주로 선별하여</span> 링크 하였습니다.
             </p>
           </div>
         </div>
@@ -359,7 +374,7 @@ export default function Portfolio({ items }: PortfolioProps) {
                       {item.title}
                     </h3>
                     <p className="text-sm md:text-[15px] text-slate-600 leading-relaxed mt-2.5 line-clamp-2 font-bold select-none">
-                      {getCleanDescription(item.description)}
+                      {getCardDescription(item.description)}
                     </p>
                   </div>
 

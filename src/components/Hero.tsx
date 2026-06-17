@@ -137,7 +137,7 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
                   <Briefcase className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <p className="text-base md:text-lg font-black text-slate-900">콘텐츠 제작 조직 운영</p>
-                    <p className="text-sm md:text-[15px] text-slate-600 font-extrabold mt-1">촬영팀 아르바이트생 및 파견직 관리, 제작 총괄</p>
+                    <p className="text-sm md:text-[15px] text-slate-600 font-extrabold mt-1">촬영팀 아르바이트 및 파견직 관리, 제작 총괄</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3 p-2 rounded-lg hover:bg-slate-50/80 transition-colors">
@@ -172,7 +172,7 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
                     <p className="text-base md:text-lg font-black text-slate-900">
                       유튜브 최고 <span className="text-emerald-700 border-b-2 border-emerald-500/20 px-0.5 font-black">43만 회</span> & 인스타 최고 <span className="text-emerald-700 border-b-2 border-emerald-500/20 px-0.5 font-black">91만 회</span>
                     </p>
-                    <p className="text-sm md:text-[15px] text-slate-600 font-extrabold mt-1">고효율 릴스/쇼츠 및 기획 연출 전략으로 일군 최고치 조회수</p>
+                    <p className="text-sm md:text-[15px] text-slate-600 font-extrabold mt-1">고효율 릴스/쇼츠 및 기획 연출 전략으로 최고치 조회수 성과</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3 p-2 rounded-lg hover:bg-slate-50/80 transition-colors">
@@ -181,7 +181,7 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
                     <p className="text-base md:text-lg font-black text-slate-900">
                       콘텐츠 기반 문의율 <span className="text-emerald-750 border-b-2 border-emerald-500/20 px-0.5 font-black">48% 증가</span>
                     </p>
-                    <p className="text-sm md:text-[15px] text-slate-600 font-extrabold mt-1">고객 인바운드 문의율을 전년 동기 대비 대폭 성장 견인</p>
+                    <p className="text-sm md:text-[15px] text-slate-600 font-extrabold mt-1">고객 인바운드 문의율을 전년 동기 대비 대폭 성장</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3 p-2 rounded-lg hover:bg-slate-50/80 transition-colors">
@@ -274,7 +274,7 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
                   </li>
                   <li className="leading-snug flex items-start">
                     <span className="text-slate-400 mr-2 shrink-0">•</span> 
-                    <span>스튜디오 관리 & 라이브 송출 가동</span>
+                    <span>스튜디오 관리 & 라이브 송출</span>
                   </li>
                   <li className="leading-snug flex items-start">
                     <span className="text-slate-400 mr-2 shrink-0">•</span> 
@@ -282,7 +282,7 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
                   </li>
                   <li className="leading-snug flex items-start">
                     <span className="text-slate-400 mr-2 shrink-0">•</span> 
-                    <span>1타 강사 촬영 대행 전담</span>
+                    <span>기획영상 및 1타 강사 촬영 전담</span>
                   </li>
                 </ul>
               </div>
