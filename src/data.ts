@@ -55,6 +55,21 @@ export const initialPortfolioItems: PortfolioItem[] = [
     date: "2024-09",
     order: 3
   },
+  {
+    id: "portfolio-promo-4",
+    title: "PPF 기업 홍보 콘텐츠",
+    client: "K-TRAILER",
+    role: "기획, 촬영, 편집 1인 제작",
+    format: "PROMOTION",
+    description: "PPF를 시공하는 기업의 홍보영상을 제작한 콘텐츠로\n기획 촬영 편집 1인 제작한 영상 입니다.",
+    videoUrl: "https://youtu.be/MwlKk7E2ZSs",
+    imageUrl: "https://img.youtube.com/vi/MwlKk7E2ZSs/maxresdefault.jpg",
+    previewVideoUrl: "",
+    equipment: "Sony a7c2, DJI Mini 4 Pro | Premiere Pro",
+    duration: "03:10",
+    date: "2025-02",
+    order: 3.5
+  },
 
   // YOUTUBE LONG (유튜브 롱폼) - 13 items
   {
@@ -521,7 +536,8 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
       !stored.includes("이투스교육에서 근무 할 시 코로나팬데믹") ||
       stored.includes("이투스교육의 차세대") ||
       stored.includes("당시 촬영 기획안을 초과하는") ||
-      !stored.includes("Cook史")
+      !stored.includes("Cook史") ||
+      !stored.includes("MwlKk7E2ZSs")
     ) {
       // Force migrate to show the beautiful updated titles/descriptions instantly
       try {
@@ -540,7 +556,7 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
        const defaultItem = initialPortfolioItems.find(x => x.id === item.id);
        if (defaultItem) {
         // Force-sync specific content updates to bypass browser local storage caching
-        if (["portfolio-shorts-1", "portfolio-shorts-2", "portfolio-shorts-3", "portfolio-shorts-4", "portfolio-shorts-5", "portfolio-shorts-6", "portfolio-interview-1", "portfolio-interview-2", "portfolio-interview-3", "portfolio-live-1", "portfolio-promo-1", "portfolio-promo-2", "portfolio-long-1", "portfolio-long-2", "portfolio-long-3", "portfolio-long-4", "portfolio-long-7", "portfolio-long-8", "portfolio-long-9", "portfolio-long-10", "portfolio-long-11", "portfolio-long-12", "portfolio-long-13"].includes(item.id)) {
+        if (["portfolio-shorts-1", "portfolio-shorts-2", "portfolio-shorts-3", "portfolio-shorts-4", "portfolio-shorts-5", "portfolio-shorts-6", "portfolio-interview-1", "portfolio-interview-2", "portfolio-interview-3", "portfolio-live-1", "portfolio-promo-1", "portfolio-promo-2", "portfolio-promo-4", "portfolio-long-1", "portfolio-long-2", "portfolio-long-3", "portfolio-long-4", "portfolio-long-7", "portfolio-long-8", "portfolio-long-9", "portfolio-long-10", "portfolio-long-11", "portfolio-long-12", "portfolio-long-13"].includes(item.id)) {
           if (
             item.title !== defaultItem.title ||
             item.description !== defaultItem.description ||
