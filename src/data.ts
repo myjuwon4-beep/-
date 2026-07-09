@@ -68,7 +68,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     equipment: "Sony a7c2, DJI Mini 4 Pro | Premiere Pro",
     duration: "03:10",
     date: "2025-02",
-    order: 3.5
+    order: 1.5
   },
 
   // YOUTUBE LONG (유튜브 롱폼) - 13 items
@@ -569,6 +569,12 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
             item.role = defaultItem.role;
             updated = true;
           }
+        }
+
+        // Sync order if defaultItem's order has changed
+        if (item.order !== defaultItem.order) {
+          item.order = defaultItem.order;
+          updated = true;
         }
 
         // Sync thumbnail if the code definition has updated to a fresh thumbnail URL
