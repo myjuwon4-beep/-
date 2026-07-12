@@ -65,7 +65,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     videoUrl: "https://youtu.be/MwlKk7E2ZSs",
     imageUrl: "https://img.youtube.com/vi/MwlKk7E2ZSs/maxresdefault.jpg",
     previewVideoUrl: "",
-    equipment: "Sony a7c2, DJI Mini 4 Pro | Premiere Pro",
+    equipment: "SONY ZV-E10, DJI Mini 4 Pro, 오즈모 포켓3 | Premiere Pro, After effect",
     duration: "03:10",
     date: "2025-02",
     order: 1.5
@@ -80,7 +80,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     videoUrl: "https://youtu.be/Z2995_gc2VA",
     imageUrl: "https://img.youtube.com/vi/Z2995_gc2VA/maxresdefault.jpg",
     previewVideoUrl: "",
-    equipment: "카메라 | Premiere Pro",
+    equipment: "a7m3, dji mini4 Pro, 오즈모 포켓3 | Premiere Pro, After effect",
     duration: "03:20",
     date: "2025-03",
     order: 1.7
@@ -572,17 +572,19 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
        const defaultItem = initialPortfolioItems.find(x => x.id === item.id);
        if (defaultItem) {
         // Force-sync specific content updates to bypass browser local storage caching
-        if (["portfolio-shorts-1", "portfolio-shorts-2", "portfolio-shorts-3", "portfolio-shorts-4", "portfolio-shorts-5", "portfolio-shorts-6", "portfolio-interview-1", "portfolio-interview-2", "portfolio-interview-3", "portfolio-live-1", "portfolio-promo-1", "portfolio-promo-2", "portfolio-promo-4", "portfolio-long-1", "portfolio-long-2", "portfolio-long-3", "portfolio-long-4", "portfolio-long-7", "portfolio-long-8", "portfolio-long-9", "portfolio-long-10", "portfolio-long-11", "portfolio-long-12", "portfolio-long-13"].includes(item.id)) {
+        if (["portfolio-shorts-1", "portfolio-shorts-2", "portfolio-shorts-3", "portfolio-shorts-4", "portfolio-shorts-5", "portfolio-shorts-6", "portfolio-interview-1", "portfolio-interview-2", "portfolio-interview-3", "portfolio-live-1", "portfolio-promo-1", "portfolio-promo-2", "portfolio-promo-4", "portfolio-promo-5", "portfolio-long-1", "portfolio-long-2", "portfolio-long-3", "portfolio-long-4", "portfolio-long-7", "portfolio-long-8", "portfolio-long-9", "portfolio-long-10", "portfolio-long-11", "portfolio-long-12", "portfolio-long-13"].includes(item.id)) {
           if (
             item.title !== defaultItem.title ||
             item.description !== defaultItem.description ||
             item.videoUrl !== defaultItem.videoUrl ||
-            item.role !== defaultItem.role
+            item.role !== defaultItem.role ||
+            item.equipment !== defaultItem.equipment
           ) {
             item.title = defaultItem.title;
             item.description = defaultItem.description;
             item.videoUrl = defaultItem.videoUrl;
             item.role = defaultItem.role;
+            item.equipment = defaultItem.equipment;
             updated = true;
           }
         }
