@@ -70,6 +70,21 @@ export const initialPortfolioItems: PortfolioItem[] = [
     date: "2025-02",
     order: 1.5
   },
+  {
+    id: "portfolio-promo-5",
+    title: "무쏘EV+진텍 캐노피 제품 홍보",
+    client: "진텍 (JINTEC)",
+    role: "기획, 촬영, 편집 1인 제작",
+    format: "PROMOTION",
+    description: "신차 출고 후 회사의 제품과 함께\n차량과 제품을 홍보하는 영상 제작\n기획부터 촬영, 편집까지 1인 제작 하였으며,\n촬영은 1일 편집은 2.5일 소요 되었습니다.",
+    videoUrl: "https://youtu.be/Z2995_gc2VA",
+    imageUrl: "https://img.youtube.com/vi/Z2995_gc2VA/maxresdefault.jpg",
+    previewVideoUrl: "",
+    equipment: "카메라 | Premiere Pro",
+    duration: "03:20",
+    date: "2025-03",
+    order: 1.7
+  },
 
   // YOUTUBE LONG (유튜브 롱폼) - 13 items
   {
@@ -537,7 +552,8 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
       stored.includes("이투스교육의 차세대") ||
       stored.includes("당시 촬영 기획안을 초과하는") ||
       !stored.includes("Cook史") ||
-      !stored.includes("MwlKk7E2ZSs")
+      !stored.includes("MwlKk7E2ZSs") ||
+      !stored.includes("Z2995_gc2VA")
     ) {
       // Force migrate to show the beautiful updated titles/descriptions instantly
       try {
