@@ -65,7 +65,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     videoUrl: "https://youtu.be/MwlKk7E2ZSs",
     imageUrl: "https://img.youtube.com/vi/MwlKk7E2ZSs/maxresdefault.jpg",
     previewVideoUrl: "",
-    equipment: "SONY ZV-E10, DJI Mini 4 Pro, 오즈모 포켓3 | Premiere Pro, After effect",
+    equipment: "SONY ZV-E1, DJI Mini 4 Pro, 오즈모 포켓3 | Premiere Pro, After effect",
     duration: "03:10",
     date: "2025-02",
     order: 1.5
@@ -351,6 +351,20 @@ export const initialPortfolioItems: PortfolioItem[] = [
     date: "2024-10",
     order: 17
   },
+  {
+    id: "portfolio-shorts-7",
+    title: "PPF 기업 홍보 숏폼",
+    client: "PPF 시공 기업",
+    role: "기획, 촬영, 편집 (1인제작)",
+    format: "SHORTS",
+    description: "PPF 필름 전문 시공 기업의 시공 과정과 뛰어난 마감 퀄리티를 감각적이고 스피디하게 담아낸 기업 홍보 숏폼 콘텐츠입니다.\n\n[제작 의도]\nPPF 디테일링 시공의 정교함과 고품질 마감 상태를 숏폼 트렌드에 맞춰 속도감 있게 연출하여, 시청자에게 브랜드의 전문성과 신뢰도를 직관적으로 전달하고자 제작하였습니다.\n\n[핵심 비하인드]\n트렌디한 사운드와 리드미컬한 컷 편집을 통해 시공 세부 과정을 감각적으로 보여줌으로써 짧은 시간 내에 유저의 흥미와 브랜드 인지도를 극대화했습니다.",
+    videoUrl: "https://youtube.com/shorts/XJit4uq6c1I",
+    imageUrl: "https://img.youtube.com/vi/XJit4uq6c1I/hqdefault.jpg",
+    equipment: "SONY ZV-E1, DJI Mini 4 Pro, 오즈모 포켓3 | Premiere Pro, After effect",
+    duration: "00:45",
+    date: "2025-02",
+    order: 11.8
+  },
 
   // INTERVIEW (인터뷰) - 3 items
   {
@@ -553,7 +567,9 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
       stored.includes("당시 촬영 기획안을 초과하는") ||
       !stored.includes("Cook史") ||
       !stored.includes("MwlKk7E2ZSs") ||
-      !stored.includes("Z2995_gc2VA")
+      !stored.includes("Z2995_gc2VA") ||
+      !stored.includes("XJit4uq6c1I") ||
+      !stored.includes("PPF 기업 홍보 숏폼")
     ) {
       // Force migrate to show the beautiful updated titles/descriptions instantly
       try {
@@ -564,7 +580,7 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
     let parsed = JSON.parse(stored) as PortfolioItem[];
 
     // Auto-remove deleted items from user's local storage if they exist
-    const filteredParsed = parsed.filter(item => !["portfolio-shorts-7", "portfolio-shorts-8", "portfolio-shorts-9"].includes(item.id));
+    const filteredParsed = parsed.filter(item => !["portfolio-shorts-8", "portfolio-shorts-9"].includes(item.id));
     let updated = filteredParsed.length !== parsed.length;
     parsed = filteredParsed;
 
@@ -572,7 +588,7 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
        const defaultItem = initialPortfolioItems.find(x => x.id === item.id);
        if (defaultItem) {
         // Force-sync specific content updates to bypass browser local storage caching
-        if (["portfolio-shorts-1", "portfolio-shorts-2", "portfolio-shorts-3", "portfolio-shorts-4", "portfolio-shorts-5", "portfolio-shorts-6", "portfolio-interview-1", "portfolio-interview-2", "portfolio-interview-3", "portfolio-live-1", "portfolio-promo-1", "portfolio-promo-2", "portfolio-promo-4", "portfolio-promo-5", "portfolio-long-1", "portfolio-long-2", "portfolio-long-3", "portfolio-long-4", "portfolio-long-7", "portfolio-long-8", "portfolio-long-9", "portfolio-long-10", "portfolio-long-11", "portfolio-long-12", "portfolio-long-13"].includes(item.id)) {
+        if (["portfolio-shorts-1", "portfolio-shorts-2", "portfolio-shorts-3", "portfolio-shorts-4", "portfolio-shorts-5", "portfolio-shorts-6", "portfolio-shorts-7", "portfolio-interview-1", "portfolio-interview-2", "portfolio-interview-3", "portfolio-live-1", "portfolio-promo-1", "portfolio-promo-2", "portfolio-promo-4", "portfolio-promo-5", "portfolio-long-1", "portfolio-long-2", "portfolio-long-3", "portfolio-long-4", "portfolio-long-7", "portfolio-long-8", "portfolio-long-9", "portfolio-long-10", "portfolio-long-11", "portfolio-long-12", "portfolio-long-13"].includes(item.id)) {
           if (
             item.title !== defaultItem.title ||
             item.description !== defaultItem.description ||
