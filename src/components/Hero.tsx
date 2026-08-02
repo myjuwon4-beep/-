@@ -77,16 +77,17 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
           ) : (
             <span className="relative inline-block pb-3 md:pb-4">
               {(() => {
-                const titleStr = siteTexts.heroTitle || "CONTENT PRODUCER";
-                const index = titleStr.indexOf("CONTENT");
-                if (index !== -1) {
+                const titleStr = siteTexts.heroTitle || "Content Marketer";
+                const highlightWord = titleStr.includes("Content") ? "Content" : titleStr.includes("콘텐츠") ? "콘텐츠" : titleStr.includes("Marketer") ? "Marketer" : "";
+                if (highlightWord) {
+                  const index = titleStr.indexOf(highlightWord);
                   const before = titleStr.substring(0, index);
-                  const after = titleStr.substring(index + 7);
+                  const after = titleStr.substring(index + highlightWord.length);
                   return (
                     <>
                       {before}
                       <span className="relative">
-                        CONTENT
+                        {highlightWord}
                         <span className="absolute -bottom-3 md:-bottom-4 left-0 w-full h-[4px] md:h-[6px] bg-primary-red" />
                       </span>
                       {after}
@@ -95,8 +96,10 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
                 }
                 return (
                   <>
-                    {titleStr}
-                    <span className="absolute bottom-0 left-0 w-24 md:w-36 h-[4px] md:h-[6px] bg-primary-red" />
+                    <span className="relative">
+                      {titleStr}
+                      <span className="absolute -bottom-3 md:-bottom-4 left-0 w-full h-[4px] md:h-[6px] bg-primary-red" />
+                    </span>
                   </>
                 );
               })()}
@@ -160,14 +163,14 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
                 <span className="px-3 py-1 bg-emerald-50 border border-emerald-150 text-emerald-700 text-xs md:text-sm font-black rounded shadow-sm">
                   채널 성장 & 마케팅 성과
                 </span>
-                <span className="text-xs md:text-sm font-black text-slate-700">K-트레일러 뉴미디어 채널 성과</span>
+                <span className="text-xs md:text-sm font-black text-slate-700">기업 홍보 및 콘텐츠 마케팅 성과</span>
               </div>
               <div className="space-y-3">
                 <div className="flex items-start space-x-3 p-2 rounded-lg hover:bg-slate-50/80 transition-colors">
                   <TrendingUp className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <p className="text-base md:text-lg font-black text-slate-900">
-                      유튜브 최고 <span className="text-emerald-700 border-b-2 border-emerald-500/20 px-0.5 font-black">43만 회</span> & 인스타 최고 <span className="text-emerald-700 border-b-2 border-emerald-500/20 px-0.5 font-black">91만 회</span>
+                      유튜브 최고 <span className="text-emerald-700 border-b-2 border-emerald-500/20 px-0.5 font-black">45만 회</span> & 인스타 최고 <span className="text-emerald-700 border-b-2 border-emerald-500/20 px-0.5 font-black">91만 회</span>
                     </p>
                     <p className="text-sm md:text-[15px] text-slate-600 font-extrabold mt-1">고효율 릴스/쇼츠 및 기획 연출 전략으로 최고치 조회수 성과</p>
                   </div>
@@ -189,7 +192,7 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
                       인지도 및 가치 극대화
                     </p>
                     <p className="text-sm md:text-[15px] text-slate-600 font-extrabold mt-1 leading-relaxed">
-                      유튜브(2,000 → 7,200명), 인스타(100 → 1,600명) <br />
+                      유튜브(2,000 → 7,800명), 인스타(113 → 1,800명) <br />
                       트래픽 성장 및 단기간 유입 확보
                     </p>
                   </div>

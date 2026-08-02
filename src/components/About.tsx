@@ -67,20 +67,20 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
         <>
           니치 마켓의 제품군을 다루는{" "}
           <span className="text-slate-900 font-extrabold border-b-[2px] border-blue-600/50 pb-0.5 px-0.5">
-            유튜브 채널을 성장시키며 브랜드 인지도
+            유튜브 채널을 성장시키며
           </span>{" "}
           <br />
           <span className="text-slate-900 font-extrabold border-b-[2px] border-blue-600/50 pb-0.5 px-0.5">
-            확대
+            브랜드 인지도 확대
           </span>
           에 기여했습니다.
           <br />
           핵심 기획 영상으로{" "}
           <span className="text-slate-900 font-extrabold border-b-[2px] border-blue-600/50 pb-0.5 px-0.5">
-            유튜브 최고 조회수 43만회, 19만, 10만 등 파격 상승 기록
+            유튜브 최고 조회수 롱폼 45만회 쇼츠 36만회
           </span>{" "}
           <br />
-          타겟화된 인스타그램{" "}
+          인스타그램{" "}
           <span className="text-slate-900 font-extrabold border-b-[2px] border-blue-600/50 pb-0.5 px-0.5">
             릴스 최고 조회수 91만
           </span>

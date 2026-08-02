@@ -93,7 +93,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "캠핑 혹은 차박을 위해 전기 PBV를 구입한다면 가장 우려되고 궁금해하는 '1박 동안의 전력 소비량'을 직접 실증하여 예비 구매자들의 의구심을 단번에 불식시킨 최고 조회수 기획 콘텐츠입니다. 구독자 2,000명 시기에 최고 조회수 43만을 기록했습니다.\n\n[제작 의도]\n말뿐인 스펙 나열이 아닌, 혹한기 겨울에 히터를 장시간 켜놓고 전기 기기들을 동시 사용하는 하드코어 1박 2일 캠핑 시나리오를 설계하여 소비자가 피부로 체감할 수 있는 사실적인 정보를 제공하고자 했습니다.\n\n[핵심 비하인드]\n촬영 당시 장비 고장으로 오즈모 포켓3와 드론으로만 촬영을 진행 했고 \n솔직하고 투명한 테스트 포맷은 소셜 알고리즘을 타고 폭발적인 조회수 43만 회를 \n이끌어 냈으며, 전국 예비 전기 오너들의 자발적인 커뮤니티 공유로 이어져 \nK트레일러 채널의 브랜딩 신뢰도 제고와 문의 상담량을 폭등 시켰습니다.",
+    description: "캠핑 혹은 차박을 위해 전기 PBV를 구입한다면 가장 우려되고 궁금해하는 '1박 동안의 전력 소비량'을 직접 실증하여 예비 구매자들의 의구심을 단번에 불식시킨 최고 조회수 기획 콘텐츠입니다. 구독자 2,000명 시기에 최고 조회수 45만을 기록했습니다.\n\n[제작 의도]\n말뿐인 스펙 나열이 아닌, 혹한기 겨울에 히터를 장시간 켜놓고 전기 기기들을 동시 사용하는 하드코어 1박 2일 캠핑 시나리오를 설계하여 소비자가 피부로 체감할 수 있는 사실적인 정보를 제공하고자 했습니다.\n\n[핵심 비하인드]\n촬영 당시 장비 고장으로 오즈모 포켓3와 드론으로만 촬영을 진행 했고 \n솔직하고 투명한 테스트 포맷은 소셜 알고리즘을 타고 폭발적인 조회수 45만 회를 \n이끌어 냈으며, 전국 예비 전기 오너들의 자발적인 커뮤니티 공유로 이어져 \nK트레일러 채널의 브랜딩 신뢰도 제고와 문의 상담량을 폭등 시켰습니다.",
     videoUrl: "https://www.youtube.com/watch?v=5Vhtzdd1Pyw",
     imageUrl: "",
     equipment: "오즈모 포켓3, DJI Mini 4 Pro | Premiere Pro",
@@ -441,8 +441,8 @@ export const initialCareerItems: CareerItem[] = [
       {
         platform: "YouTube 콘텐츠 부문",
         metrics: [
-          "운영 1년 만에 유튜브 채널 구독자 2,000명 → 7,200명 증가",
-          "최고 조회수 43만 회 (10만 회 이상 콘텐츠 다수 제작)",
+          "운영 1년 만에 유튜브 채널 구독자 2,000명 → 7,800명 증가",
+          "최고 조회수 롱폼 45만 회 · 쇼츠 36만 회 (10만 회 이상 콘텐츠 다수 제작)",
           "콘텐츠 기반 고객 문의율 전년 동기 대비 약 48% 증가"
         ],
         link: "https://www.youtube.com/@k_trailer",
@@ -452,7 +452,7 @@ export const initialCareerItems: CareerItem[] = [
         platform: "Instagram 릴스 채널 운영",
         metrics: [
           "독립적인 숏폼 콘텐츠 전략 수립 및 주도적 채널 운영",
-          "인스타그램 팔로워 100명대 → 단기간 내 1,600명으로 증가",
+          "인스타그램 팔로워 113명 → 단기간 내 1,800명으로 증가",
           "릴스 최고 조회수 극적 성장 (입사 전 1,000회 미만 → 입사 후 최고 91만 회 달성)",
           "트렌드 분석 및 연출 최적화를 통한 릴스 평균 조회수 지속 성장 견인"
         ],
@@ -659,14 +659,14 @@ export const getStoredCareerItems = (): CareerItem[] => {
       !stored.includes("편집 전담 제작 및 전반적인 브랜드 마케팅 전략 수립") ||
       stored.includes("자사 인스타그램 릴스 최고 조회수") ||
       !stored.includes("독립적인 숏폼 콘텐츠 전략 수립") ||
-      !stored.includes("인스타그램 팔로워 100명대") ||
+      !stored.includes("인스타그램 팔로워 113명") ||
       stored.includes("360% 폭발적 성장") ||
       stored.includes("260% 폭발적 성장") ||
-      !stored.includes("2,000명 → 7,200명 증가") ||
+      !stored.includes("2,000명 → 7,800명 증가") ||
       !stored.includes("10만 회 이상 콘텐츠 다수 제작") ||
       !stored.includes("콘텐츠 기반 고객 문의율 전년 동기 대비 약 48% 증가") ||
       stored.includes("42만 회") ||
-      !stored.includes("43만 회") ||
+      !stored.includes("45만 회") ||
       stored.includes(" (@k_trailer)") ||
       stored.includes(" (@ktrailer1)") ||
       stored.includes("이투스 (ETOOS) 교육 미디어 스튜디오") ||
@@ -682,7 +682,7 @@ export const getStoredCareerItems = (): CareerItem[] => {
       !stored.includes("스튜디오 관리 &") ||
       !stored.includes("촬영 팀 관리") ||
       stored.includes("1,500명으로 증가") ||
-      !stored.includes("1,600명으로 증가") ||
+      !stored.includes("1,800명으로 증가") ||
       !stored.includes("스튜디오 운영 총괄") ||
       !stored.includes("촬영 장비 유지보수 체계 구축") ||
       !stored.includes("라이브 송출 가이드라인 수립") ||
@@ -757,9 +757,9 @@ export const saveStoredSkills = (items: SkillCategory[]) => {
 
 export const defaultSiteTexts: SiteTexts = {
   heroTagline: "",
-  heroTitle: "CONTENT PRODUCER",
+  heroTitle: "Content Marketer",
   heroSubtitle: "",
-  heroSlogan: "콘텐츠 제작, 조직 운영, 채널 성장을 통해\n비즈니스 성과를 만들어 온 콘텐츠 리더",
+  heroSlogan: "콘텐츠 제작, 조직 운영, 채널 성장으로 비즈니스 성과를 만들어온 크리에이터",
   heroCompetence1: "홍보 · 유튜브 · 쇼츠/릴스 영상 전문",
   heroCompetence2: "기획 · 촬영 · 편집 · 브랜디드 콘텐츠 총괄",
   aboutTagline: "",
@@ -821,7 +821,8 @@ export const getStoredSiteTexts = (): SiteTexts => {
     // Migration: If user has local storage with the old default slogan variants, migrate it automatically to the upgraded professional Korean slogan
     if (
       parsed &&
-      (parsed.heroSlogan === "기획부터 촬영, 완벽한 편집까지 브랜드 가치를 관통하는 1인 제작" ||
+      (parsed.heroSlogan !== "콘텐츠 제작, 조직 운영, 채널 성장으로 비즈니스 성과를 만들어온 크리에이터" ||
+       parsed.heroSlogan === "기획부터 촬영, 완벽한 편집까지 브랜드 가치를 관통하는 1인 제작" ||
        parsed.heroSlogan === "콘텐츠 제작, 조직 운영, 채널 성장을 통해 비즈니스 성과를 만들어 온 콘텐츠 리더" ||
        parsed.heroSlogan?.includes("기획부터 촬영") ||
        parsed.heroSlogan?.includes("장기 비즈니스 파트너십") ||
@@ -842,9 +843,9 @@ export const getStoredSiteTexts = (): SiteTexts => {
         localStorage.setItem("site_texts", JSON.stringify(parsed));
       } catch (inner) {}
     }
-    if (parsed && (parsed.heroTagline === "HIGH-END VIDEO PRODUCER" || parsed.heroTitle === "VIDEO MARKETING" || parsed.heroSubtitle === "DIRECTOR")) {
+    if (parsed && (parsed.heroTagline === "HIGH-END VIDEO PRODUCER" || parsed.heroTitle === "VIDEO MARKETING" || parsed.heroTitle === "CONTENT PRODUCER" || parsed.heroSubtitle === "DIRECTOR" || !parsed.heroTitle?.includes("Content Marketer"))) {
       parsed.heroTagline = "";
-      parsed.heroTitle = "CONTENT PRODUCER";
+      parsed.heroTitle = "Content Marketer";
       parsed.heroSubtitle = "";
       try {
         localStorage.setItem("site_texts", JSON.stringify(parsed));
