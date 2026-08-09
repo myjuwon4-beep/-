@@ -85,6 +85,21 @@ export const initialPortfolioItems: PortfolioItem[] = [
     date: "2025-03",
     order: 1.7
   },
+  {
+    id: "portfolio-promo-6",
+    title: "[기업홍보] 차량시공 기업 홍보 콘텐츠",
+    client: "K-TRAILER",
+    role: "기획, 촬영, 편집 1인 제작",
+    format: "PROMOTION",
+    description: "차량 시공 및 튜닝 전문 기업의 정밀한 시공 공정과 브랜드 가치를 입체적으로 담아낸 기업 홍보 콘텐츠입니다.\n\n[제작 의도]\n차량 시공 기술의 섬세함과 고품질 시공 프로세스를 감각적인 비주얼로 연출하여 예비 고객에게 깊은 브랜드 신뢰를 전달하고자 기획했습니다.\n\n[핵심 비하인드]\n기획부터 연출, 촬영, 편집까지 1인 전담 제작으로 최적의 톤앤매너를 구사했으며, 시각적 몰입감을 높여 브랜드 홍보 성과를 효과적으로 높였습니다.",
+    videoUrl: "https://youtu.be/cwP5oEYEpSY",
+    imageUrl: "https://img.youtube.com/vi/cwP5oEYEpSY/maxresdefault.jpg",
+    previewVideoUrl: "",
+    equipment: "SONY ZV-E1, DJI Mini 4 Pro, 오즈모 포켓3 | Premiere Pro, After effect",
+    duration: "03:15",
+    date: "2025-02",
+    order: 1.8
+  },
 
   // YOUTUBE LONG (유튜브 롱폼) - 13 items
   {
@@ -568,6 +583,7 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
       !stored.includes("Cook史") ||
       !stored.includes("MwlKk7E2ZSs") ||
       !stored.includes("Z2995_gc2VA") ||
+      !stored.includes("cwP5oEYEpSY") ||
       !stored.includes("XJit4uq6c1I") ||
       !stored.includes("PPF 기업 홍보 숏폼")
     ) {
@@ -588,7 +604,7 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
        const defaultItem = initialPortfolioItems.find(x => x.id === item.id);
        if (defaultItem) {
         // Force-sync specific content updates to bypass browser local storage caching
-        if (["portfolio-shorts-1", "portfolio-shorts-2", "portfolio-shorts-3", "portfolio-shorts-4", "portfolio-shorts-5", "portfolio-shorts-6", "portfolio-shorts-7", "portfolio-interview-1", "portfolio-interview-2", "portfolio-interview-3", "portfolio-live-1", "portfolio-promo-1", "portfolio-promo-2", "portfolio-promo-4", "portfolio-promo-5", "portfolio-long-1", "portfolio-long-2", "portfolio-long-3", "portfolio-long-4", "portfolio-long-7", "portfolio-long-8", "portfolio-long-9", "portfolio-long-10", "portfolio-long-11", "portfolio-long-12", "portfolio-long-13"].includes(item.id)) {
+        if (["portfolio-shorts-1", "portfolio-shorts-2", "portfolio-shorts-3", "portfolio-shorts-4", "portfolio-shorts-5", "portfolio-shorts-6", "portfolio-shorts-7", "portfolio-interview-1", "portfolio-interview-2", "portfolio-interview-3", "portfolio-live-1", "portfolio-promo-1", "portfolio-promo-2", "portfolio-promo-4", "portfolio-promo-5", "portfolio-promo-6", "portfolio-long-1", "portfolio-long-2", "portfolio-long-3", "portfolio-long-4", "portfolio-long-7", "portfolio-long-8", "portfolio-long-9", "portfolio-long-10", "portfolio-long-11", "portfolio-long-12", "portfolio-long-13"].includes(item.id)) {
           if (
             item.title !== defaultItem.title ||
             item.description !== defaultItem.description ||
