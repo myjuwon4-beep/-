@@ -380,6 +380,20 @@ export const initialPortfolioItems: PortfolioItem[] = [
     date: "2025-02",
     order: 11.8
   },
+  {
+    id: "portfolio-shorts-8",
+    title: "테슬라 모델Y PPF 기업 홍보",
+    client: "PPF 시공 기업",
+    role: "기획, 촬영, 편집 (1인제작)",
+    format: "SHORTS",
+    description: "테슬라 모델Y 차량의 PPF(정밀 보호 필름) 전문 시공 과정과 정교한 마감 퀄리티를 감각적이고 스피디하게 담아낸 기업 홍보 숏폼 콘텐츠입니다.\n\n[제작 의도]\n테슬라 모델Y의 정밀한 차량 시공 공정과 디테일을 숏폼 트렌드에 맞춰 속도감 있게 연출하여 예비 테슬라 오너와 시청자에게 브랜드의 높은 기술력과 신뢰도를 효과적으로 전달하고자 기획했습니다.\n\n[핵심 비하인드]\n트렌디한 사운드와 리드미컬한 컷 편집, 클로즈업 앵글 연출을 활용해 시공 디테일을 세련되게 전달하고 짧은 시간 내 시청자의 몰입감과 브랜드 인지도를 대폭 높였습니다.",
+    videoUrl: "https://youtube.com/shorts/4OPStyGFCBs",
+    imageUrl: "https://img.youtube.com/vi/4OPStyGFCBs/hqdefault.jpg",
+    equipment: "SONY ZV-E1, DJI Mini 4 Pro, 오즈모 포켓3 | Premiere Pro, After effect",
+    duration: "00:45",
+    date: "2025-02",
+    order: 11.9
+  },
 
   // INTERVIEW (인터뷰) - 3 items
   {
@@ -585,7 +599,8 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
       !stored.includes("Z2995_gc2VA") ||
       !stored.includes("cwP5oEYEpSY") ||
       !stored.includes("XJit4uq6c1I") ||
-      !stored.includes("PPF 기업 홍보 숏폼")
+      !stored.includes("PPF 기업 홍보 숏폼") ||
+      !stored.includes("4OPStyGFCBs")
     ) {
       // Force migrate to show the beautiful updated titles/descriptions instantly
       try {
@@ -596,7 +611,7 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
     let parsed = JSON.parse(stored) as PortfolioItem[];
 
     // Auto-remove deleted items from user's local storage if they exist
-    const filteredParsed = parsed.filter(item => !["portfolio-shorts-8", "portfolio-shorts-9"].includes(item.id));
+    const filteredParsed = parsed.filter(item => !["portfolio-shorts-9"].includes(item.id));
     let updated = filteredParsed.length !== parsed.length;
     parsed = filteredParsed;
 
@@ -604,7 +619,7 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
        const defaultItem = initialPortfolioItems.find(x => x.id === item.id);
        if (defaultItem) {
         // Force-sync specific content updates to bypass browser local storage caching
-        if (["portfolio-shorts-1", "portfolio-shorts-2", "portfolio-shorts-3", "portfolio-shorts-4", "portfolio-shorts-5", "portfolio-shorts-6", "portfolio-shorts-7", "portfolio-interview-1", "portfolio-interview-2", "portfolio-interview-3", "portfolio-live-1", "portfolio-promo-1", "portfolio-promo-2", "portfolio-promo-4", "portfolio-promo-5", "portfolio-promo-6", "portfolio-long-1", "portfolio-long-2", "portfolio-long-3", "portfolio-long-4", "portfolio-long-7", "portfolio-long-8", "portfolio-long-9", "portfolio-long-10", "portfolio-long-11", "portfolio-long-12", "portfolio-long-13"].includes(item.id)) {
+        if (["portfolio-shorts-1", "portfolio-shorts-2", "portfolio-shorts-3", "portfolio-shorts-4", "portfolio-shorts-5", "portfolio-shorts-6", "portfolio-shorts-7", "portfolio-shorts-8", "portfolio-interview-1", "portfolio-interview-2", "portfolio-interview-3", "portfolio-live-1", "portfolio-promo-1", "portfolio-promo-2", "portfolio-promo-4", "portfolio-promo-5", "portfolio-promo-6", "portfolio-long-1", "portfolio-long-2", "portfolio-long-3", "portfolio-long-4", "portfolio-long-7", "portfolio-long-8", "portfolio-long-9", "portfolio-long-10", "portfolio-long-11", "portfolio-long-12", "portfolio-long-13"].includes(item.id)) {
           if (
             item.title !== defaultItem.title ||
             item.description !== defaultItem.description ||
