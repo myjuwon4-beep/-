@@ -9,7 +9,7 @@ import { PortfolioItem, CareerItem, SkillCategory, SiteTexts } from "./types";
 export const DEFAULT_HERO_VIDEO = "https://player.vimeo.com/external/554868018.sd.mp4?s=5543c740292cc2cca0b8ece493c06e23296c0964&profile_id=165&oauth2_token_id=57447761";
 
 export const initialPortfolioItems: PortfolioItem[] = [
-  // PROMOTION (홍보) - 3 items
+  // PROMOTION (홍보) - 8 items
   {
     id: "portfolio-promo-1",
     title: "K트레일러&큐브렉 자사 기업 홍보용 영상",
@@ -114,6 +114,21 @@ export const initialPortfolioItems: PortfolioItem[] = [
     duration: "03:30",
     date: "2025-03",
     order: 1.9
+  },
+  {
+    id: "portfolio-promo-8",
+    title: "새마을 금고 중앙회_홍보 및 인터뷰",
+    client: "새마을금고중앙회 / 스마트콘텐츠연구소",
+    role: "기획, 촬영, 편집 (1인제작)",
+    format: "PROMOTION",
+    description: "충남 공주 새마을금고의 지역 금융 서비스와 조합원 신뢰 가치를 전달하기 위한 공식 기업 홍보 및 임직원 인터뷰 영상 콘텐츠입니다.\n\n[제작 의도]\n새마을금고가 지역 사회와 주민들에게 제공하는 든든한 금융 지원과 따뜻한 소통의 가치를 알기 쉽게 전달하고, 현장감 넘치는 임직원 인터뷰를 통해 기관의 공신력과 고객 신뢰도를 높이고자 기획했습니다.\n\n[핵심 비하인드]\n새마을금고 현장 지점의 분위기와 임직원 인터뷰를 안정적인 조명과 오디오 연출로 깔끔하게 담아냈으며, 자연스러운 컷 편집과 자막 모션을 통해 정보 전달력과 친근한 브랜드 이미지를 효과적으로 극대화했습니다.",
+    videoUrl: "https://www.youtube.com/watch?v=J4W7tFXb36I",
+    imageUrl: "https://img.youtube.com/vi/J4W7tFXb36I/maxresdefault.jpg",
+    previewVideoUrl: "",
+    equipment: "Sony 카메라, 무선 마이크 | Premiere Pro, After effect",
+    duration: "04:30",
+    date: "2023-08",
+    order: 2.1
   },
 
   // YOUTUBE LONG (유튜브 롱폼) - 15 items
@@ -438,7 +453,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     order: 11.9
   },
 
-  // INTERVIEW (인터뷰) - 3 items
+  // INTERVIEW (인터뷰) - 4 items
   {
     id: "portfolio-interview-1",
     title: "무쏘EV 2만km 주행 후기 | 진텍 캐노피",
@@ -483,6 +498,21 @@ export const initialPortfolioItems: PortfolioItem[] = [
     duration: "10:15",
     date: "2024-12",
     order: 20
+  },
+  {
+    id: "portfolio-interview-4",
+    title: "[이투스교육] 기획 영상_윤훈관 강사님 인터뷰",
+    client: "이투스교육",
+    role: "기획, 촬영, 편집",
+    format: "INTERVIEW",
+    description: "이투스교육 신규 입성 및 대표 강사 인터뷰를 통해 강사의 교육 철학과 커리큘럼의 핵심 경쟁력을 수험생들에게 생생하게 전달하는 기획 인터뷰 영상 콘텐츠입니다.\n\n[제작 의도]\n수험생과 학부모에게 강사의 진정성 있는 메시지와 과목별 학습 전략을 친근하면서도 설득력 있게 전달하고, 강사의 비전과 학습 방향성을 직관적으로 이해할 수 있도록 구성했습니다.\n\n[핵심 비하인드]\n스튜디오 인프라를 활용하여 안정적인 인터뷰 구도와 조명, 깔끔한 오디오를 세팅하고 강사의 스토리텔링에 맞춘 리드미컬한 컷 편집과 키워드 자막 모션을 적용해 인터뷰의 몰입감을 극대화했습니다.",
+    videoUrl: "https://www.youtube.com/watch?v=SiXkOaMNdio",
+    imageUrl: "https://img.youtube.com/vi/SiXkOaMNdio/maxresdefault.jpg",
+    previewVideoUrl: "",
+    equipment: "스튜디오 카메라, 무선 핀마이크, 조명 시스템 | Premiere Pro, After effect",
+    duration: "05:40",
+    date: "2022-04",
+    order: 20.5
   },
   {
     id: "portfolio-live-1",
@@ -646,7 +676,10 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
       !stored.includes("4OPStyGFCBs") ||
       !stored.includes("4keiyUtKJIA") ||
       !stored.includes("TgvGn_i5faw") ||
-      !stored.includes("1xLWmkim-kE")
+      !stored.includes("1xLWmkim-kE") ||
+      !stored.includes("J4W7tFXb36I") ||
+      !stored.includes("새마을 금고 중앙회_홍보 및 인터뷰") ||
+      !stored.includes("SiXkOaMNdio")
     ) {
       // Force migrate to show the beautiful updated titles/descriptions instantly
       try {
@@ -665,7 +698,7 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
        const defaultItem = initialPortfolioItems.find(x => x.id === item.id);
        if (defaultItem) {
         // Force-sync specific content updates to bypass browser local storage caching
-        if (["portfolio-shorts-1", "portfolio-shorts-2", "portfolio-shorts-3", "portfolio-shorts-4", "portfolio-shorts-5", "portfolio-shorts-6", "portfolio-shorts-7", "portfolio-shorts-8", "portfolio-interview-1", "portfolio-interview-2", "portfolio-interview-3", "portfolio-live-1", "portfolio-promo-1", "portfolio-promo-2", "portfolio-promo-4", "portfolio-promo-5", "portfolio-promo-6", "portfolio-promo-7", "portfolio-long-1", "portfolio-long-2", "portfolio-long-3", "portfolio-long-4", "portfolio-long-7", "portfolio-long-8", "portfolio-long-9", "portfolio-long-10", "portfolio-long-11", "portfolio-long-12", "portfolio-long-13", "portfolio-long-14", "portfolio-long-15"].includes(item.id)) {
+        if (["portfolio-shorts-1", "portfolio-shorts-2", "portfolio-shorts-3", "portfolio-shorts-4", "portfolio-shorts-5", "portfolio-shorts-6", "portfolio-shorts-7", "portfolio-shorts-8", "portfolio-interview-1", "portfolio-interview-2", "portfolio-interview-3", "portfolio-interview-4", "portfolio-live-1", "portfolio-promo-1", "portfolio-promo-2", "portfolio-promo-4", "portfolio-promo-5", "portfolio-promo-6", "portfolio-promo-7", "portfolio-promo-8", "portfolio-long-1", "portfolio-long-2", "portfolio-long-3", "portfolio-long-4", "portfolio-long-7", "portfolio-long-8", "portfolio-long-9", "portfolio-long-10", "portfolio-long-11", "portfolio-long-12", "portfolio-long-13", "portfolio-long-14", "portfolio-long-15"].includes(item.id)) {
           if (
             item.title !== defaultItem.title ||
             item.description !== defaultItem.description ||
