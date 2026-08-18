@@ -263,9 +263,7 @@ export default function Portfolio({ items }: PortfolioProps) {
               안내 가이드
             </h4>
             <p className="text-slate-600 text-xs sm:text-[13px] md:text-[14px] font-bold leading-relaxed">
-              홍보, 유튜브 롱폼 및 쇼츠/릴스 등 전체 작업물 중에서 <span className="text-slate-900 font-extrabold">1인 제작 중심의 프로젝트와</span>
-              <br />
-              역량을 직관적으로 확인하실 수 있는 <span className="text-slate-900 font-extrabold">대표 프로젝트 위주로 선별하여</span> 링크 하였습니다.
+              홍보, 유튜브 롱폼 및 쇼츠/릴스 등 전체 작업 물 중 <span className="text-slate-900 font-extrabold">1인 제작 영상을</span> 직관적으로 확인하실 수 있는 <span className="text-slate-900 font-extrabold">대표 프로젝트 위주로 선별하여</span> 링크 하였습니다.
             </p>
           </div>
         </div>

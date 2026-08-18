@@ -40,14 +40,14 @@ export default function Vision() {
             
             <div className="relative z-10 space-y-6">
               <h3 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900 font-display leading-normal whitespace-pre-wrap">
-                저는 영상을 제작하는 사람을 넘어{"\n"}
-                콘텐츠를 통해 브랜드 성장을 만드는 사람이 되고 싶습니다.
+                저는 영상을 제작하는 사람을 넘어 콘텐츠를 통해{"\n"}
+                브랜드 성장을 만드는 사람이 되고 싶습니다.
               </h3>
               
               <div className="h-[2px] bg-primary-red w-16 my-6" />
 
               <p className="text-base md:text-lg text-slate-750 leading-relaxed font-bold whitespace-pre-wrap">
-                교육 콘텐츠 현장부터 자동차&캠핑 전문 콘텐츠 채널 운영까지 경험하며{"\n"}
+                홍보 영상 부터 유튜브, 인스타그램(릴스) 콘텐츠 채널 운영까지 경험하며{"\n"}
                 기획, 제작, 운영, 성장의 전 과정을 수행해 왔습니다.
               </p>
               

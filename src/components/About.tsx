@@ -77,7 +77,7 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
           <br />
           핵심 기획 영상으로{" "}
           <span className="text-slate-900 font-extrabold border-b-[2px] border-blue-600/50 pb-0.5 px-0.5">
-            유튜브 최고 조회수 롱폼 45만회 쇼츠 36만회
+            유튜브 최고 조회수 롱폼 45만회 쇼츠 48만회
           </span>{" "}
           <br />
           인스타그램{" "}

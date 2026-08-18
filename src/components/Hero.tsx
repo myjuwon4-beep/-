@@ -192,7 +192,7 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
                       인지도 및 가치 극대화
                     </p>
                     <p className="text-sm md:text-[15px] text-slate-600 font-extrabold mt-1 leading-relaxed">
-                      유튜브(2,000 → 7,800명), 인스타(113 → 1,800명) <br />
+                      유튜브(2,000 → 7,900명), 인스타(113 → 1,800명) <br />
                       트래픽 성장 및 단기간 유입 확보
                     </p>
                   </div>

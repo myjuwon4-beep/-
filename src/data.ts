@@ -100,8 +100,37 @@ export const initialPortfolioItems: PortfolioItem[] = [
     date: "2025-02",
     order: 1.8
   },
+  {
+    id: "portfolio-promo-7",
+    title: "[신형 무쏘] 순정 하드탑 vs 진텍·오브로 캐노피 완벽 비교!",
+    client: "K-TRAILER / JINTEC",
+    role: "기획, 촬영, 편집 1인 제작",
+    format: "PROMOTION",
+    description: "신형 무쏘 차량의 순정 하드탑과 진텍·오브로 캐노피 옵션을 다각도로 비교 분석하여 차량 개조 및 튜닝 수요자의 선택을 돕는 브랜디드 홍보 콘텐츠입니다.\n\n[제작 의도]\n신형 무쏘 오너 및 예비 구매 고객들이 가장 크게 고민하는 하드탑과 캐노피의 차이점, 디자인, 실용적 기능성을 직관적으로 비교하고 제품의 강점을 완성도 높게 전달하고자 기획했습니다.\n\n[핵심 비하인드]\n기획부터 연출, 촬영, 디테일 컷 편집까지 1인 제작으로 완성했으며, 소비자 시선에 맞춘 디테일한 비주얼 전달로 제품 문의 유입 및 마케팅 시너지를 극대화했습니다.",
+    videoUrl: "https://youtu.be/4keiyUtKJIA",
+    imageUrl: "https://img.youtube.com/vi/4keiyUtKJIA/maxresdefault.jpg",
+    previewVideoUrl: "",
+    equipment: "SONY ZV-E1, DJI Mini 4 Pro, 오즈모 포켓3 | Premiere Pro, After effect",
+    duration: "03:30",
+    date: "2025-03",
+    order: 1.9
+  },
 
-  // YOUTUBE LONG (유튜브 롱폼) - 13 items
+  // YOUTUBE LONG (유튜브 롱폼) - 15 items
+  {
+    id: "portfolio-long-14",
+    title: "카니발 캠핑카 24시간! 무시동히터&배터리 얼마나 달까?",
+    client: "K-TRAILER",
+    role: "기획, 촬영, 편집 (1인제작)",
+    format: "YOUTUBE LONG",
+    description: "카니발 캠핑카로 24시간 동안 무시동히터와 전력 배터리 소비량을 직접 실증 테스트하여 차박·캠핑 오너들의 궁금증을 명쾌하게 해결한 롱폼 기획 콘텐츠입니다.\n\n[제작 의도]\n단순한 스펙 안내를 넘어 24시간 동안 실전 캠핑 환경에서 무시동 히터 및 인산철 배터리 전력 소모 상태를 세밀하게 추적 측정하여 예비 구매 고객들에게 가장 객관적이고 신뢰도 높은 필드 데이터를 전달하고자 기획했습니다.\n\n[핵심 비하인드]\n기획부터 촬영, 편집까지 1인 전담 제작으로 완료했으며, K트레일러 채널 브랜딩 및 제품 문의 상담 증대에 크게 기여했습니다.",
+    videoUrl: "https://youtu.be/TgvGn_i5faw",
+    imageUrl: "https://img.youtube.com/vi/TgvGn_i5faw/maxresdefault.jpg",
+    equipment: "SONY a7c2, DJI Mini 4 Pro, 오즈모 포켓3 | Premiere Pro",
+    duration: "15:20",
+    date: "2025-03",
+    order: 3.8
+  },
   {
     id: "portfolio-long-1",
     title: "PV5 전기차 23시간 전기 테스트",
@@ -283,6 +312,20 @@ export const initialPortfolioItems: PortfolioItem[] = [
     duration: "58:20",
     date: "2019-12",
     order: 11.5
+  },
+  {
+    id: "portfolio-long-15",
+    title: "[방송통신이용자보호협회] 온라인강의(모션)_사이버안심존",
+    client: "방송통신이용자보호협회",
+    role: "모션그래픽, 편집",
+    format: "YOUTUBE LONG",
+    description: "청소년 스마트폰 과몰입 예방 및 안전한 디지털 환경 조성을 위해 사이버안심존 서비스의 주요 기능과 활용법을 알기 쉽게 전달한 모션그래픽 온라인 강의 콘텐츠입니다.\n\n[제작 의도]\n공공기관 서비스 및 유해 매체 차단 기능 등 다소 어렵고 복잡할 수 있는 정보들을 학부모, 청소년, 교사가 직관적으로 이해할 수 있도록 인포그래픽과 친근한 2D 모션 애니메이션으로 시각화하여 기획·제작했습니다.\n\n[핵심 비하인드]\n서비스의 핵심 설치 절차와 기능 안내를 다이내믹한 컷 전환 및 직관적인 키 비주얼로 표현하여 강의의 정보 전달력과 시청 몰입도를 극대화했습니다.",
+    videoUrl: "https://youtu.be/1xLWmkim-kE",
+    imageUrl: "https://img.youtube.com/vi/1xLWmkim-kE/maxresdefault.jpg",
+    equipment: "After Effects, Premiere Pro, Illustrator",
+    duration: "06:30",
+    date: "2023-05",
+    order: 11.6
   },
   // SHORTS (쇼츠 / 릴스) - 6 items
   {
@@ -470,8 +513,8 @@ export const initialCareerItems: CareerItem[] = [
       {
         platform: "YouTube 콘텐츠 부문",
         metrics: [
-          "운영 1년 만에 유튜브 채널 구독자 2,000명 → 7,800명 증가",
-          "최고 조회수 롱폼 45만 회 · 쇼츠 36만 회 (10만 회 이상 콘텐츠 다수 제작)",
+          "운영 1년 만에 유튜브 채널 구독자 2,000명 → 7,900명 증가",
+          "최고 조회수 롱폼 45만 회 · 쇼츠 48만 회 (10만 회 이상 콘텐츠 다수 제작)",
           "콘텐츠 기반 고객 문의율 전년 동기 대비 약 48% 증가"
         ],
         link: "https://www.youtube.com/@k_trailer",
@@ -600,7 +643,10 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
       !stored.includes("cwP5oEYEpSY") ||
       !stored.includes("XJit4uq6c1I") ||
       !stored.includes("PPF 기업 홍보 숏폼") ||
-      !stored.includes("4OPStyGFCBs")
+      !stored.includes("4OPStyGFCBs") ||
+      !stored.includes("4keiyUtKJIA") ||
+      !stored.includes("TgvGn_i5faw") ||
+      !stored.includes("1xLWmkim-kE")
     ) {
       // Force migrate to show the beautiful updated titles/descriptions instantly
       try {
@@ -619,7 +665,7 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
        const defaultItem = initialPortfolioItems.find(x => x.id === item.id);
        if (defaultItem) {
         // Force-sync specific content updates to bypass browser local storage caching
-        if (["portfolio-shorts-1", "portfolio-shorts-2", "portfolio-shorts-3", "portfolio-shorts-4", "portfolio-shorts-5", "portfolio-shorts-6", "portfolio-shorts-7", "portfolio-shorts-8", "portfolio-interview-1", "portfolio-interview-2", "portfolio-interview-3", "portfolio-live-1", "portfolio-promo-1", "portfolio-promo-2", "portfolio-promo-4", "portfolio-promo-5", "portfolio-promo-6", "portfolio-long-1", "portfolio-long-2", "portfolio-long-3", "portfolio-long-4", "portfolio-long-7", "portfolio-long-8", "portfolio-long-9", "portfolio-long-10", "portfolio-long-11", "portfolio-long-12", "portfolio-long-13"].includes(item.id)) {
+        if (["portfolio-shorts-1", "portfolio-shorts-2", "portfolio-shorts-3", "portfolio-shorts-4", "portfolio-shorts-5", "portfolio-shorts-6", "portfolio-shorts-7", "portfolio-shorts-8", "portfolio-interview-1", "portfolio-interview-2", "portfolio-interview-3", "portfolio-live-1", "portfolio-promo-1", "portfolio-promo-2", "portfolio-promo-4", "portfolio-promo-5", "portfolio-promo-6", "portfolio-promo-7", "portfolio-long-1", "portfolio-long-2", "portfolio-long-3", "portfolio-long-4", "portfolio-long-7", "portfolio-long-8", "portfolio-long-9", "portfolio-long-10", "portfolio-long-11", "portfolio-long-12", "portfolio-long-13", "portfolio-long-14", "portfolio-long-15"].includes(item.id)) {
           if (
             item.title !== defaultItem.title ||
             item.description !== defaultItem.description ||
@@ -693,7 +739,9 @@ export const getStoredCareerItems = (): CareerItem[] => {
       !stored.includes("인스타그램 팔로워 113명") ||
       stored.includes("360% 폭발적 성장") ||
       stored.includes("260% 폭발적 성장") ||
-      !stored.includes("2,000명 → 7,800명 증가") ||
+      !stored.includes("2,000명 → 7,900명 증가") ||
+      stored.includes("쇼츠 36만") ||
+      !stored.includes("쇼츠 48만 회") ||
       !stored.includes("10만 회 이상 콘텐츠 다수 제작") ||
       !stored.includes("콘텐츠 기반 고객 문의율 전년 동기 대비 약 48% 증가") ||
       stored.includes("42만 회") ||
