@@ -543,8 +543,8 @@ export const initialCareerItems: CareerItem[] = [
       {
         platform: "YouTube 콘텐츠 부문",
         metrics: [
-          "운영 1년 만에 유튜브 채널 구독자 2,000명 → 7,900명 증가",
-          "최고 조회수 롱폼 45만 회 · 쇼츠 48만 회 (10만 회 이상 콘텐츠 다수 제작)",
+          "운영 1년 만에 유튜브 채널 구독자 2,000명 → 8,000명 증가",
+          "최고 조회수 롱폼 45만 회 · 쇼츠 54만 회 (10만 회 이상 콘텐츠 다수 제작)",
           "콘텐츠 기반 고객 문의율 전년 동기 대비 약 48% 증가"
         ],
         link: "https://www.youtube.com/@k_trailer",
@@ -772,9 +772,12 @@ export const getStoredCareerItems = (): CareerItem[] => {
       !stored.includes("인스타그램 팔로워 113명") ||
       stored.includes("360% 폭발적 성장") ||
       stored.includes("260% 폭발적 성장") ||
-      !stored.includes("2,000명 → 7,900명 증가") ||
+      stored.includes("2,000명 → 7,800명 증가") ||
+      stored.includes("2,000명 → 7,900명 증가") ||
+      !stored.includes("2,000명 → 8,000명 증가") ||
       stored.includes("쇼츠 36만") ||
-      !stored.includes("쇼츠 48만 회") ||
+      stored.includes("쇼츠 48만") ||
+      !stored.includes("쇼츠 54만 회") ||
       !stored.includes("10만 회 이상 콘텐츠 다수 제작") ||
       !stored.includes("콘텐츠 기반 고객 문의율 전년 동기 대비 약 48% 증가") ||
       stored.includes("42만 회") ||

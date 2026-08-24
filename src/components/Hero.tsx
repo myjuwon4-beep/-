@@ -170,7 +170,7 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
                   <TrendingUp className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <p className="text-base md:text-lg font-black text-slate-900">
-                      유튜브 최고 <span className="text-emerald-700 border-b-2 border-emerald-500/20 px-0.5 font-black">45만 회</span> & 인스타 최고 <span className="text-emerald-700 border-b-2 border-emerald-500/20 px-0.5 font-black">91만 회</span>
+                      유튜브 최고 <span className="text-emerald-700 border-b-2 border-emerald-500/20 px-0.5 font-black">54만 회</span> & 인스타 최고 <span className="text-emerald-700 border-b-2 border-emerald-500/20 px-0.5 font-black">91만 회</span>
                     </p>
                     <p className="text-sm md:text-[15px] text-slate-600 font-extrabold mt-1">고효율 릴스/쇼츠 및 기획 연출 전략으로 최고치 조회수 성과</p>
                   </div>
@@ -192,7 +192,7 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
                       인지도 및 가치 극대화
                     </p>
                     <p className="text-sm md:text-[15px] text-slate-600 font-extrabold mt-1 leading-relaxed">
-                      유튜브(2,000 → 7,900명), 인스타(113 → 1,800명) <br />
+                      유튜브(2,000 → 8,000명), 인스타(113 → 1,800명) <br />
                       트래픽 성장 및 단기간 유입 확보
                     </p>
                   </div>
