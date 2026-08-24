@@ -29,171 +29,139 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
   return (
     <section
       id="home"
-      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-cinema-black py-24 lg:py-0"
+      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#F8F9FA] pt-28 pb-20 lg:pt-32 lg:pb-24"
     >
       {/* Background Cinematic Video Loop */}
-      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none">
         <video
           ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
-          className="absolute min-w-full min-h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover scale-[1.03] opacity-30"
+          className="absolute min-w-full min-h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover opacity-15"
           poster="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1600"
         >
           <source src={DEFAULT_HERO_VIDEO} type="video/mp4" />
         </video>
 
-        {/* Ambient Light Gradients Layer (Elegant Light/Airy Vibe) */}
-        <div className="absolute inset-0 z-10 bg-gradient-to-t from-cinema-black via-cinema-black/75 to-cinema-black/40" />
-        <div className="absolute inset-0 z-10 bg-gradient-to-r from-cinema-black/90 via-transparent to-[#F8FAFC]/40" />
+        {/* Ambient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F8F9FA]/60 via-[#F8F9FA]/80 to-[#F8F9FA]" />
       </div>
 
-      {/* Hero Typography Overlays */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col justify-center items-start text-left mt-12 md:mt-20">
+      {/* Hero Content */}
+      <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col justify-center items-start text-left">
         
         {/* Decorative Tagline */}
         {siteTexts.heroTagline && siteTexts.heroTagline.trim() !== "" && (
-          <div className="flex items-center space-x-2.5 mb-5 animate-fade-in">
-            <span className="w-10 h-[2px] bg-primary-red" />
-            <span className="text-primary-red text-base md:text-lg font-extrabold tracking-[0.25em] font-display">
-              {siteTexts.heroTagline}
-            </span>
-            <Film size={15} className="text-primary-red/90 animate-spin-slow" />
+          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-slate-900 text-white rounded-full text-xs font-semibold tracking-wider mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary-red" />
+            <span>{siteTexts.heroTagline}</span>
           </div>
         )}
 
-        {/* Big Displays Title */}
-        <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-slate-900 leading-[0.95] max-w-4xl" id="hero-title">
+        {/* Big Display Title */}
+        <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-slate-900 leading-[1.02] max-w-4xl" id="hero-title">
           {siteTexts.heroSubtitle && siteTexts.heroSubtitle.trim() !== "" ? (
             <>
               {siteTexts.heroTitle}<br />
-              <span className="text-slate-900 relative inline-block mt-1">
+              <span className="text-slate-900">
                 {siteTexts.heroSubtitle}
-                <span className="absolute bottom-0 left-0 w-1/3 h-[4px] md:h-[6px] bg-primary-red" />
               </span>
             </>
           ) : (
-            <span className="relative inline-block pb-3 md:pb-4">
-              {(() => {
-                const titleStr = siteTexts.heroTitle || "Content Marketer";
-                const highlightWord = titleStr.includes("Content") ? "Content" : titleStr.includes("콘텐츠") ? "콘텐츠" : titleStr.includes("Marketer") ? "Marketer" : "";
-                if (highlightWord) {
-                  const index = titleStr.indexOf(highlightWord);
-                  const before = titleStr.substring(0, index);
-                  const after = titleStr.substring(index + highlightWord.length);
-                  return (
-                    <>
-                      {before}
-                      <span className="relative">
-                        {highlightWord}
-                        <span className="absolute -bottom-3 md:-bottom-4 left-0 w-full h-[4px] md:h-[6px] bg-primary-red" />
-                      </span>
-                      {after}
-                    </>
-                  );
-                }
-                return (
-                  <>
-                    <span className="relative">
-                      {titleStr}
-                      <span className="absolute -bottom-3 md:-bottom-4 left-0 w-full h-[4px] md:h-[6px] bg-primary-red" />
-                    </span>
-                  </>
-                );
-              })()}
+            <span>
+              {siteTexts.heroTitle || "Content Marketer"}
             </span>
           )}
         </h1>
 
         {/* Brand Slogan */}
-        <p className="mt-8 text-xl sm:text-2xl md:text-3xl font-semibold text-slate-850 max-w-4xl font-display tracking-wide break-keep whitespace-pre-line font-bold">
+        <p className="mt-6 text-lg sm:text-xl md:text-2xl font-medium text-slate-600 max-w-3xl leading-relaxed break-keep whitespace-pre-line">
           {siteTexts.heroSlogan}
         </p>
 
         {/* Core Career & Performance Summary Card */}
-        <div className="mt-8 w-full max-w-4xl bg-white/95 backdrop-blur-md p-6 md:p-8 rounded-xl border border-slate-200 shadow-xl relative overflow-hidden">
-          {/* Aesthetic premium brand red top line */}
-          <div className="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-indigo-500 via-[#E30613] to-emerald-500" />
-          
-          <div className="border-b border-slate-100 pb-4 mb-6">
-            <h3 className="text-xl md:text-2xl font-black text-slate-800 tracking-tight leading-none">
-              핵심 역량 및 성과 요약
-            </h3>
+        <div className="mt-10 w-full max-w-4xl bg-white p-7 md:p-9 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden">
+          <div className="flex items-center justify-between border-b border-slate-100 pb-4 mb-7">
+            <div className="flex items-center space-x-2.5">
+              <span className="w-2.5 h-2.5 rounded-full bg-slate-900" />
+              <h3 className="text-lg md:text-xl font-bold text-slate-900 tracking-tight">
+                핵심 역량 및 성과 요약
+              </h3>
+            </div>
+            <span className="text-xs font-mono text-slate-400 font-medium hidden sm:inline-block">OVERVIEW</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
-            {/* Left Section: Corporate Leadership & Infrastructure (Indigo theme) */}
-            <div className="space-y-4 lg:border-r lg:border-slate-150 lg:pr-8">
-              <div className="flex items-center space-x-2 pb-2 border-b border-slate-100">
-                <span className="px-3 py-1 bg-indigo-50 border border-indigo-150 text-indigo-700 text-xs md:text-sm font-black rounded shadow-sm">
+            {/* Left Section: Corporate Leadership & Infrastructure */}
+            <div className="space-y-4 lg:border-r lg:border-slate-100 lg:pr-8">
+              <div className="flex items-center space-x-2 pb-1">
+                <span className="px-2.5 py-1 bg-slate-100 text-slate-800 text-xs font-bold rounded-md">
                   조직 운영 & 스튜디오 인프라
                 </span>
-                <span className="text-sm md:text-base font-black text-slate-700">중견기업 등 핵심 전문성</span>
+                <span className="text-xs font-semibold text-slate-500">중견기업 등 핵심 전문성</span>
               </div>
-              <div className="space-y-3">
-                <div className="flex items-start space-x-3 p-2 rounded-lg hover:bg-slate-50/80 transition-colors">
-                  <Briefcase className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+              <div className="space-y-3 pt-1">
+                <div className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors">
+                  <Briefcase className="w-4 h-4 text-slate-700 shrink-0 mt-1" />
                   <div className="flex-1">
-                    <p className="text-base md:text-lg font-black text-slate-900">콘텐츠 제작 조직 운영</p>
-                    <p className="text-sm md:text-[15px] text-slate-600 font-extrabold mt-1">촬영팀 아르바이트 및 파견직 관리, 제작 총괄</p>
+                    <p className="text-sm md:text-base font-bold text-slate-900">콘텐츠 제작 조직 운영</p>
+                    <p className="text-xs md:text-sm text-slate-500 font-medium mt-0.5">촬영팀 아르바이트 및 파견직 관리, 제작 총괄</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3 p-2 rounded-lg hover:bg-slate-50/80 transition-colors">
-                  <Film className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+                <div className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors">
+                  <Film className="w-4 h-4 text-slate-700 shrink-0 mt-1" />
                   <div className="flex-1">
-                    <p className="text-base md:text-lg font-black text-slate-900">촬영팀 및 스튜디오 리딩</p>
-                    <p className="text-sm md:text-[15px] text-slate-600 font-extrabold mt-1">자사 스튜디오 총 관리 및 리소스 운용 총괄</p>
+                    <p className="text-sm md:text-base font-bold text-slate-900">촬영팀 및 스튜디오 리딩</p>
+                    <p className="text-xs md:text-sm text-slate-500 font-medium mt-0.5">자사 스튜디오 총 관리 및 리소스 운용 총괄</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3 p-2 rounded-lg hover:bg-slate-50/80 transition-colors">
-                  <Radio className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+                <div className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors">
+                  <Radio className="w-4 h-4 text-slate-700 shrink-0 mt-1" />
                   <div className="flex-1">
-                    <p className="text-base md:text-lg font-black text-slate-900">라이브 시스템 구축</p>
-                    <p className="text-sm md:text-[15px] text-slate-600 font-extrabold mt-1">온라인 라이브 송출 가이드라인 수립 및 고도화</p>
+                    <p className="text-sm md:text-base font-bold text-slate-900">라이브 시스템 구축</p>
+                    <p className="text-xs md:text-sm text-slate-500 font-medium mt-0.5">온라인 라이브 송출 가이드라인 수립 및 고도화</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Right Section: New Media Growth & Performance (Emerald theme) */}
+            {/* Right Section: New Media Growth & Performance */}
             <div className="space-y-4">
-              <div className="flex items-center space-x-2 pb-2 border-b border-slate-100">
-                <span className="px-3 py-1 bg-emerald-50 border border-emerald-150 text-emerald-700 text-xs md:text-sm font-black rounded shadow-sm">
+              <div className="flex items-center space-x-2 pb-1">
+                <span className="px-2.5 py-1 bg-red-50 text-primary-red text-xs font-bold rounded-md">
                   채널 성장 & 마케팅 성과
                 </span>
-                <span className="text-xs md:text-sm font-black text-slate-700">기업 홍보 및 콘텐츠 마케팅 성과</span>
+                <span className="text-xs font-semibold text-slate-500">기업 홍보 및 콘텐츠 마케팅 성과</span>
               </div>
-              <div className="space-y-3">
-                <div className="flex items-start space-x-3 p-2 rounded-lg hover:bg-slate-50/80 transition-colors">
-                  <TrendingUp className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+              <div className="space-y-3 pt-1">
+                <div className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors">
+                  <TrendingUp className="w-4 h-4 text-primary-red shrink-0 mt-1" />
                   <div className="flex-1">
-                    <p className="text-base md:text-lg font-black text-slate-900">
-                      유튜브 최고 <span className="text-emerald-700 border-b-2 border-emerald-500/20 px-0.5 font-black">54만 회</span> & 인스타 최고 <span className="text-emerald-700 border-b-2 border-emerald-500/20 px-0.5 font-black">91만 회</span>
+                    <p className="text-sm md:text-base font-bold text-slate-900">
+                      유튜브 최고 <span className="font-extrabold text-primary-red">54만 회</span> & 인스타 최고 <span className="font-extrabold text-primary-red">91만 회</span>
                     </p>
-                    <p className="text-sm md:text-[15px] text-slate-600 font-extrabold mt-1">고효율 릴스/쇼츠 및 기획 연출 전략으로 최고치 조회수 성과</p>
+                    <p className="text-xs md:text-sm text-slate-500 font-medium mt-0.5">고효율 릴스/쇼츠 및 기획 연출 전략으로 최고치 조회수 성과</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3 p-2 rounded-lg hover:bg-slate-50/80 transition-colors">
-                  <BarChart3 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                <div className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors">
+                  <BarChart3 className="w-4 h-4 text-primary-red shrink-0 mt-1" />
                   <div className="flex-1">
-                    <p className="text-base md:text-lg font-black text-slate-900">
-                      콘텐츠 기반 문의율 <span className="text-emerald-750 border-b-2 border-emerald-500/20 px-0.5 font-black">48% 증가</span>
+                    <p className="text-sm md:text-base font-bold text-slate-900">
+                      콘텐츠 기반 문의율 <span className="font-extrabold text-primary-red">48% 증가</span>
                     </p>
-                    <p className="text-sm md:text-[15px] text-slate-600 font-extrabold mt-1">고객 인바운드 문의율을 전년 동기 대비 대폭 성장</p>
+                    <p className="text-xs md:text-sm text-slate-500 font-medium mt-0.5">고객 인바운드 문의율을 전년 동기 대비 대폭 성장</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3 p-2 rounded-lg hover:bg-slate-50/80 transition-colors">
-                  <Target className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                <div className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors">
+                  <Target className="w-4 h-4 text-primary-red shrink-0 mt-1" />
                   <div className="flex-1">
-                    <p className="text-base md:text-lg font-black text-slate-900 leading-snug">
-                      니치 마켓 상품(카라반·트레일러·견인장치) <br />
-                      인지도 및 가치 극대화
+                    <p className="text-sm md:text-base font-bold text-slate-900 leading-snug">
+                      니치 마켓 상품(카라반·트레일러·견인장치) 인지도 및 가치 극대화
                     </p>
-                    <p className="text-sm md:text-[15px] text-slate-600 font-extrabold mt-1 leading-relaxed">
-                      유튜브(2,000 → 8,000명), 인스타(113 → 1,800명) <br />
-                      트래픽 성장 및 단기간 유입 확보
+                    <p className="text-xs md:text-sm text-slate-500 font-medium mt-0.5 leading-relaxed">
+                      유튜브(2,000 → 8,000명), 인스타(113 → 1,800명) 트래픽 성장 및 단기간 유입 확보
                     </p>
                   </div>
                 </div>
@@ -202,9 +170,9 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
           </div>
 
           <div className="mt-8 pt-5 border-t border-slate-100 flex justify-center">
-            <div className="inline-flex items-center space-x-2.5 px-6 py-2.5 rounded-full bg-slate-900 border border-slate-800 shadow-md transition-all duration-300 transform hover:scale-[1.01]">
-              <Award className="w-5 h-5 text-[#E30613] shrink-0 animate-pulse" />
-              <span className="text-sm md:text-base font-black text-slate-100 tracking-wide">
+            <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-slate-50 border border-slate-200">
+              <Award className="w-4 h-4 text-primary-red shrink-0" />
+              <span className="text-xs md:text-sm font-bold text-slate-800">
                 기획 · 촬영 · 편집 · 채널 운영 전 영역 올라운더 역량 보유
               </span>
             </div>
@@ -212,49 +180,48 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
         </div>
 
         {/* 주 경력 사항 (MAIN EXPERIENCE) */}
-        <div className="mt-12 w-full max-w-4xl relative z-20">
-          <h4 className="text-base md:text-lg font-black tracking-widest text-slate-800 mb-4 uppercase flex items-center space-x-2.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-slate-700 animate-pulse" />
-            <span className="font-extrabold text-slate-800 text-base md:text-lg">주 경력 사항</span>
-          </h4>
+        <div className="mt-10 w-full max-w-4xl relative z-20">
+          <div className="flex items-center space-x-2 mb-3.5">
+            <span className="w-2 h-2 rounded-full bg-slate-900" />
+            <h4 className="text-sm md:text-base font-bold text-slate-900">
+              주 경력 사항
+            </h4>
+          </div>
           
-          <div className="bg-white/95 backdrop-blur-md p-6 md:p-8 rounded-xl border border-slate-200 shadow-xl relative overflow-hidden">
-            {/* Elegant dark charcoal accent bar */}
-            <div className="absolute top-0 left-0 right-0 h-[4px] bg-slate-800" />
- 
+          <div className="bg-white p-7 md:p-8 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               
               {/* 분야별 콘텐츠 */}
-              <div className="space-y-3.5">
+              <div className="space-y-3">
                 <div className="flex items-center space-x-2 border-b border-slate-100 pb-2">
-                  <Layers className="w-5 h-5 text-indigo-600 shrink-0" />
-                  <span className="font-black text-slate-900 text-base md:text-lg">분야별 콘텐츠</span>
+                  <Layers className="w-4 h-4 text-slate-700 shrink-0" />
+                  <span className="font-bold text-slate-900 text-sm md:text-base">분야별 콘텐츠</span>
                 </div>
                 <ul className="space-y-2">
-                  <li className="flex items-center space-x-2 text-[15px] md:text-base font-extrabold text-slate-800">
-                    <span className="w-1.5 h-1.5 bg-indigo-500 rounded-full shrink-0" />
+                  <li className="flex items-center space-x-2 text-xs md:text-sm font-medium text-slate-700">
+                    <span className="w-1.5 h-1.5 bg-slate-400 rounded-full shrink-0" />
                     <span>교육 콘텐츠</span>
                   </li>
-                  <li className="flex items-center space-x-2 text-[15px] md:text-base font-extrabold text-slate-800">
-                    <span className="w-1.5 h-1.5 bg-indigo-50 rounded-full border border-indigo-400 shrink-0" />
+                  <li className="flex items-center space-x-2 text-xs md:text-sm font-medium text-slate-700">
+                    <span className="w-1.5 h-1.5 bg-slate-400 rounded-full shrink-0" />
                     <span>자동차&캠핑 콘텐츠</span>
                   </li>
-                  <li className="flex items-center space-x-2 text-[15px] md:text-base font-extrabold text-slate-800">
-                    <span className="w-1.5 h-1.5 bg-indigo-500 rounded-full shrink-0" />
+                  <li className="flex items-center space-x-2 text-xs md:text-sm font-medium text-slate-700">
+                    <span className="w-1.5 h-1.5 bg-slate-400 rounded-full shrink-0" />
                     <span>브랜디드 콘텐츠</span>
                   </li>
                 </ul>
               </div>
  
               {/* 1인 제작 */}
-              <div className="space-y-3.5">
+              <div className="space-y-3">
                 <div className="flex items-center space-x-2 border-b border-slate-100 pb-2">
-                  <User className="w-5 h-5 text-emerald-600 shrink-0" />
-                  <span className="font-black text-slate-900 text-base md:text-lg">1인 제작</span>
+                  <User className="w-4 h-4 text-slate-700 shrink-0" />
+                  <span className="font-bold text-slate-900 text-sm md:text-base">1인 제작</span>
                 </div>
                 <div className="flex flex-wrap gap-1.5 pt-1">
                   {["기획", "촬영", "편집", "채널 운영", "프로젝트 리딩"].map((skill) => (
-                    <span key={skill} className="px-2.5 py-1.5 bg-slate-50 border border-slate-200 text-slate-700 text-xs md:text-sm font-black rounded-md hover:bg-slate-100 hover:text-slate-900 transition-colors shadow-sm">
+                    <span key={skill} className="px-2.5 py-1 bg-slate-50 border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">
                       {skill}
                     </span>
                   ))}
@@ -262,12 +229,12 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
               </div>
  
               {/* 팀 프로젝트 */}
-              <div className="space-y-3.5">
+              <div className="space-y-3">
                 <div className="flex items-center space-x-2 border-b border-slate-100 pb-2">
-                  <Users className="w-5 h-5 text-blue-600 shrink-0" />
-                  <span className="font-black text-slate-900 text-base md:text-lg">팀 프로젝트</span>
+                  <Users className="w-4 h-4 text-slate-700 shrink-0" />
+                  <span className="font-bold text-slate-900 text-sm md:text-base">팀 프로젝트</span>
                 </div>
-                <ul className="space-y-2 text-sm md:text-[15px] font-extrabold text-slate-800">
+                <ul className="space-y-1.5 text-xs md:text-sm font-medium text-slate-600">
                   <li className="leading-snug flex items-start">
                     <span className="text-slate-400 mr-2 shrink-0">•</span> 
                     <span>촬영팀 인력 관리 및 프로젝트 리딩</span>
@@ -290,10 +257,10 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
             </div>
  
             {/* 인하우스PD 전문 */}
-            <div className="mt-6 pt-5 border-t border-slate-150 flex items-center">
-              <div className="flex items-center space-x-3 bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-lg w-full shadow-inner">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
-                <span className="text-sm md:text-base font-black text-slate-900">
+            <div className="mt-6 pt-5 border-t border-slate-100 flex items-center">
+              <div className="flex items-center space-x-2.5 bg-slate-50 border border-slate-200/80 px-3.5 py-2 rounded-lg w-full">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
+                <span className="text-xs md:text-sm font-bold text-slate-800">
                   인하우스PD 전문
                 </span>
               </div>
@@ -302,28 +269,30 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
         </div>
 
         {/* 인적 사항 (Personal Profile) Section */}
-        <div className="mt-12 w-full max-w-4xl relative z-20">
-          <h4 className="text-[13px] md:text-sm font-display font-black tracking-[0.2em] text-slate-400 mb-4 uppercase">
-            인적 사항
-          </h4>
+        <div className="mt-10 w-full max-w-4xl relative z-20">
+          <div className="flex items-center space-x-2 mb-3.5">
+            <span className="w-2 h-2 rounded-full bg-slate-900" />
+            <h4 className="text-sm md:text-base font-bold text-slate-900">
+              인적 사항
+            </h4>
+          </div>
 
-          {/* 인적사항 이름 나이 연락처 이메일 인포 그리드 */}
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 bg-white/90 backdrop-blur-md p-5 rounded-lg border border-slate-250 shadow-lg">
-            <div className="p-4 bg-slate-50 border border-slate-200/40 hover:border-primary-red/20 transition-all duration-300 rounded flex flex-col justify-between shadow-sm">
-              <span className="text-xs md:text-sm text-slate-500 tracking-widest font-mono font-black uppercase">이름</span>
-              <span className="text-xl md:text-2xl font-black text-slate-800 mt-2 font-display">{siteTexts.profileName}</span>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5 bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+            <div className="p-3.5 bg-slate-50/70 border border-slate-150 rounded-xl flex flex-col justify-between">
+              <span className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">이름</span>
+              <span className="text-base md:text-lg font-bold text-slate-900 mt-1">{siteTexts.profileName}</span>
             </div>
-            <div className="p-4 bg-slate-50 border border-slate-200/40 hover:border-primary-red/20 transition-all duration-300 rounded flex flex-col justify-between shadow-sm">
-              <span className="text-xs md:text-sm text-slate-500 tracking-widest font-mono font-black uppercase">나이</span>
-              <span className="text-xl md:text-2xl font-black text-slate-800 mt-2 font-display">{siteTexts.profileAge}</span>
+            <div className="p-3.5 bg-slate-50/70 border border-slate-150 rounded-xl flex flex-col justify-between">
+              <span className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">나이</span>
+              <span className="text-base md:text-lg font-bold text-slate-900 mt-1">{siteTexts.profileAge}</span>
             </div>
-            <div className="p-4 bg-slate-50 border border-slate-200/40 hover:border-primary-red/20 transition-all duration-300 rounded flex flex-col justify-between shadow-sm">
-              <span className="text-xs md:text-sm text-slate-500 tracking-widest font-mono font-black uppercase">연락처</span>
-              <a href={`tel:${siteTexts.profilePhone}`} className="text-[19px] md:text-xl font-black text-slate-800 hover:text-primary-red transition-all mt-2 tracking-wide block">{siteTexts.profilePhone}</a>
+            <div className="p-3.5 bg-slate-50/70 border border-slate-150 rounded-xl flex flex-col justify-between">
+              <span className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">연락처</span>
+              <a href={`tel:${siteTexts.profilePhone}`} className="text-sm md:text-base font-bold text-slate-900 hover:text-primary-red transition-colors mt-1 block truncate">{siteTexts.profilePhone}</a>
             </div>
-            <div className="p-4 bg-slate-50 border border-slate-200/40 hover:border-primary-red/20 transition-all duration-300 rounded flex flex-col justify-between shadow-sm overflow-hidden">
-              <span className="text-xs md:text-sm text-slate-500 tracking-widest font-mono font-black uppercase">이메일</span>
-              <a href={`mailto:${siteTexts.profileEmail}`} className="text-[15px] md:text-lg font-black text-slate-800 hover:text-primary-red transition-all mt-2 truncate block" title={siteTexts.profileEmail}>{siteTexts.profileEmail}</a>
+            <div className="p-3.5 bg-slate-50/70 border border-slate-150 rounded-xl flex flex-col justify-between overflow-hidden">
+              <span className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">이메일</span>
+              <a href={`mailto:${siteTexts.profileEmail}`} className="text-xs md:text-sm font-bold text-slate-900 hover:text-primary-red transition-colors mt-1 truncate block" title={siteTexts.profileEmail}>{siteTexts.profileEmail}</a>
             </div>
           </div>
         </div>
@@ -333,9 +302,9 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
           <button
             id="hero-portfolio-btn"
             onClick={onPortfolioCall}
-            className="group px-10 py-4 bg-primary-red hover:bg-primary-red/90 text-white font-display text-base tracking-[0.2em] font-extrabold transition-all duration-300 rounded shadow-lg shadow-primary-red/20 flex items-center justify-center space-x-2 cursor-pointer border border-primary-red hover:scale-[1.03]"
+            className="group px-8 py-3.5 bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 cursor-pointer shadow-sm hover:shadow-md"
           >
-            <Play size={15} fill="currentColor" className="text-white group-hover:translate-x-0.5 transition-transform" />
+            <Play size={14} fill="currentColor" className="text-white group-hover:translate-x-0.5 transition-transform" />
             <span>PORTFOLIO 바로가기</span>
           </button>
         </div>
@@ -343,21 +312,18 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
       </div>
 
       {/* Right Scroll Indicator */}
-      <div className="absolute right-6 md:right-12 bottom-12 z-20 hidden md:flex flex-col items-center space-y-4">
-        <span className="font-display text-xs tracking-[0.3em] font-bold text-slate-400 rotate-90 origin-bottom translate-y-[-20px]">
-          스크롤
+      <div className="absolute right-6 md:right-12 bottom-12 z-20 hidden md:flex flex-col items-center space-y-3">
+        <span className="font-mono text-[10px] tracking-widest uppercase font-semibold text-slate-400 rotate-90 origin-bottom translate-y-[-16px]">
+          SCROLL
         </span>
         <button
           onClick={onPortfolioCall}
-          className="p-3 border border-white/10 hover:border-primary-red text-slate-400 hover:text-primary-red bg-slate-900/60 rounded-full transition-colors duration-200 animate-bounce shadow-sm"
+          className="p-2.5 border border-slate-200 hover:border-slate-400 text-slate-500 hover:text-slate-900 bg-white rounded-full transition-colors shadow-xs"
           title="밑으로 스크롤"
         >
-          <ArrowDown size={16} />
+          <ArrowDown size={14} />
         </button>
       </div>
-
-      {/* Bottom fade line */}
-      <div className="absolute bottom-0 left-0 w-full h-[60px] bg-gradient-to-t from-cinema-black to-transparent z-10" />
     </section>
   );
 }

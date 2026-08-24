@@ -145,54 +145,50 @@ export default function Portfolio({ items }: PortfolioProps) {
   };
 
   return (
-    <section id="portfolio" className="py-24 bg-cinema-black relative border-b border-slate-200">
+    <section id="portfolio" className="py-24 bg-[#F8F9FA] relative border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col mb-12 md:flex-row md:items-end justify-between">
-          <div>
-            <span className="text-sm tracking-[0.4em] text-primary-red font-black block mb-2 font-display">
-              02 / 주요 영상 포트폴리오
+        <div className="mb-12">
+          <div className="flex items-center space-x-2 mb-3">
+            <span className="w-2 h-2 rounded-full bg-primary-red" />
+            <span className="text-xs font-bold tracking-widest text-slate-500 uppercase">
+              PORTFOLIO
             </span>
-            <h2 className="text-3xl md:text-5xl font-display font-black tracking-tight text-slate-900 animate-pulse-slow">
-              포트폴리오
-            </h2>
           </div>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
+            주요 영상 포트폴리오
+          </h2>
         </div>
 
         {/* Channel Links Row */}
-        <div className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-6" id="portfolio-external-channels">
+        <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-4" id="portfolio-external-channels">
           {/* YouTube Channel Link Banner */}
-          <div className="animate-fade-in-up" id="longform-youtube-link-banner">
+          <div id="longform-youtube-link-banner">
             <a
               href="https://youtube.com/@k_trailer?si=EPUoTm4DX4WhMCUP"
               target="_blank"
               rel="noopener noreferrer"
-              className="group block relative bg-white border border-slate-200/80 rounded-2xl p-6 hover:shadow-xl hover:shadow-red-500/5 hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden h-full"
+              className="group block relative bg-white border border-slate-200 hover:border-slate-300 rounded-2xl p-5 sm:p-6 transition-all duration-200 cursor-pointer shadow-xs hover:shadow-md h-full"
             >
-              {/* Subtle top accent line */}
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-[#E30613]" />
-              
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 h-full pt-1">
-                <div className="flex items-start gap-4 text-left">
-                  <div className="p-3.5 bg-red-50 text-[#E30613] rounded-xl shrink-0 group-hover:bg-[#E30613] group-hover:text-white transition-all duration-300 shadow-sm border border-red-100">
-                    <Youtube size={26} className="transition-transform duration-300 group-hover:scale-110" />
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 h-full">
+                <div className="flex items-start gap-3.5 text-left">
+                  <div className="p-3 bg-red-50 text-primary-red rounded-xl shrink-0 border border-red-100">
+                    <Youtube size={22} />
                   </div>
                   <div>
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="text-[10px] tracking-[0.15em] font-black uppercase text-[#E30613] bg-red-50/70 border border-red-250 px-2 py-0.5 rounded font-display">
-                        유튜브 롱폼 채널
-                      </span>
-                    </div>
-                    <h3 className="text-[17px] md:text-lg font-black text-slate-900 mt-2 font-display tracking-tight leading-snug">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-primary-red">
+                      유튜브 롱폼 채널
+                    </span>
+                    <h3 className="text-base sm:text-lg font-bold text-slate-900 mt-0.5 tracking-tight">
                       인하우스 PD 유튜브
                     </h3>
                   </div>
                 </div>
-                <div className="shrink-0 self-end sm:self-center">
-                  <div className="flex items-center gap-1.5 px-4.5 py-2.5 bg-slate-900 hover:bg-[#E30613] text-white font-extrabold text-xs tracking-wider rounded-lg shadow-sm transition-all duration-300 group-hover:scale-105">
+                <div className="shrink-0 self-start sm:self-center">
+                  <div className="flex items-center gap-1.5 px-3.5 py-2 bg-slate-900 group-hover:bg-slate-800 text-white font-semibold text-xs rounded-lg transition-colors">
                     <span>유튜브 바로가기</span>
-                    <ExternalLink size={12} className="ml-0.5 group-hover:translate-x-0.5 transition-transform" />
+                    <ExternalLink size={12} />
                   </div>
                 </div>
               </div>
@@ -200,36 +196,31 @@ export default function Portfolio({ items }: PortfolioProps) {
           </div>
 
           {/* Instagram Reels Link Banner */}
-          <div className="animate-fade-in-up" id="shorts-instagram-link-banner">
+          <div id="shorts-instagram-link-banner">
             <a
               href="https://www.instagram.com/ktrailer1/reels/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group block relative bg-white border border-slate-200/80 rounded-2xl p-6 hover:shadow-xl hover:shadow-indigo-500/5 hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden h-full"
+              className="group block relative bg-white border border-slate-200 hover:border-slate-300 rounded-2xl p-5 sm:p-6 transition-all duration-200 cursor-pointer shadow-xs hover:shadow-md h-full"
             >
-              {/* Subtle top accent line */}
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#ffd200] via-[#ff006c] to-[#7f00ff]" />
-              
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 h-full pt-1">
-                <div className="flex items-start gap-4 text-left">
-                  <div className="p-3.5 bg-rose-50 text-[#e1306c] rounded-xl shrink-0 group-hover:bg-gradient-to-tr group-hover:from-[#ffd200] group-hover:via-[#ff006c] group-hover:to-[#7f00ff] group-hover:text-white transition-all duration-300 shadow-sm border border-rose-100">
-                    <Instagram size={26} className="transition-transform duration-300 group-hover:scale-110" />
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 h-full">
+                <div className="flex items-start gap-3.5 text-left">
+                  <div className="p-3 bg-rose-50 text-[#e1306c] rounded-xl shrink-0 border border-rose-100">
+                    <Instagram size={22} />
                   </div>
                   <div>
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="text-[10px] tracking-[0.15em] font-black uppercase text-[#e1306c] bg-rose-50/70 border border-rose-250 px-2 py-0.5 rounded font-display">
-                        인스타그램 릴스 채널
-                      </span>
-                    </div>
-                    <h3 className="text-[17px] md:text-lg font-black text-slate-900 mt-2 font-display tracking-tight leading-snug">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#e1306c]">
+                      인스타그램 릴스 채널
+                    </span>
+                    <h3 className="text-base sm:text-lg font-bold text-slate-900 mt-0.5 tracking-tight">
                       인하우스 PD 인스타그램 릴스
                     </h3>
                   </div>
                 </div>
-                <div className="shrink-0 self-end sm:self-center">
-                  <div className="flex items-center gap-1.5 px-4.5 py-2.5 bg-slate-900 hover:bg-slate-950 text-white font-extrabold text-xs tracking-wider rounded-lg shadow-sm transition-all duration-300 group-hover:scale-105">
+                <div className="shrink-0 self-start sm:self-center">
+                  <div className="flex items-center gap-1.5 px-3.5 py-2 bg-slate-900 group-hover:bg-slate-800 text-white font-semibold text-xs rounded-lg transition-colors">
                     <span>릴스 바로가기</span>
-                    <ExternalLink size={12} className="ml-0.5 group-hover:translate-x-0.5 transition-transform" />
+                    <ExternalLink size={12} />
                   </div>
                 </div>
               </div>
@@ -238,16 +229,16 @@ export default function Portfolio({ items }: PortfolioProps) {
         </div>
 
         {/* Categories Tab Bar Filter */}
-        <div className="flex flex-wrap items-center gap-2.5 mb-10 overflow-x-auto pb-4 border-b border-slate-200">
+        <div className="flex flex-wrap items-center gap-2 mb-8 overflow-x-auto pb-2">
           {categories.map((cat) => (
             <button
               key={cat.code}
               id={`portfolio-tab-${cat.code}`}
               onClick={() => setSelectedCategory(cat.code)}
-              className={`px-4.5 py-2.5 text-sm md:text-base font-black tracking-widest transition-all duration-300 rounded font-display select-none cursor-pointer ${
+              className={`px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-150 cursor-pointer ${
                 selectedCategory === cat.code
-                  ? "bg-primary-red text-white font-extrabold shadow-md hover:bg-primary-red/95"
-                  : "bg-cinema-card border border-slate-200 hover:border-primary-red/50 text-slate-650 hover:text-primary-red shadow-sm transition-all"
+                  ? "bg-slate-900 text-white shadow-xs"
+                  : "bg-white border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300"
               }`}
             >
               {cat.label}
@@ -256,55 +247,53 @@ export default function Portfolio({ items }: PortfolioProps) {
         </div>
 
         {/* Recruiter Polite Notice Message */}
-        <div className="mb-10 p-4.5 bg-red-50/50 border border-primary-red/20 rounded-md flex items-start space-x-3.5 max-w-4xl" id="portfolio-recruiter-notice">
-          <Sparkles className="text-primary-red shrink-0 mt-0.5" size={16} />
-          <div className="space-y-1">
-            <h4 className="text-xs tracking-[0.15em] uppercase font-black text-primary-red font-display">
+        <div className="mb-8 p-4 bg-white border border-slate-200 rounded-xl flex items-start space-x-3 max-w-3xl shadow-2xs" id="portfolio-recruiter-notice">
+          <Sparkles className="text-primary-red shrink-0 mt-0.5" size={15} />
+          <div>
+            <span className="text-xs font-bold text-primary-red uppercase tracking-wider block mb-0.5">
               안내 가이드
-            </h4>
-            <p className="text-slate-600 text-xs sm:text-[13px] md:text-[14px] font-bold leading-relaxed">
-              홍보, 유튜브 롱폼 및 쇼츠/릴스 등 전체 작업 물 중 <span className="text-slate-900 font-extrabold">1인 제작 영상을</span> 직관적으로 확인하실 수 있는 <span className="text-slate-900 font-extrabold">대표 프로젝트 위주로 선별하여</span> 링크 하였습니다.
+            </span>
+            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              홍보, 유튜브 롱폼 및 쇼츠/릴스 등 전체 작업 물 중 <strong className="text-slate-900 font-semibold">1인 제작 영상을</strong> 직관적으로 확인하실 수 있는 <strong className="text-slate-900 font-semibold">대표 프로젝트 위주로 선별하여</strong> 링크 하였습니다.
             </p>
           </div>
         </div>
 
         {/* Portfolio Cards Grid */}
         {filteredItems.length === 0 ? (
-          <div className="py-20 text-center bg-cinema-card rounded-lg border border-slate-200 shadow-lg" id="portfolio-empty-state">
-            <AlertCircle size={32} className="mx-auto text-slate-400 mb-4 animate-bounce" />
-            <p className="text-base text-slate-800 tracking-wider font-extrabold">해당 카테고리에 업로드된 포트폴리오 영상이 없습니다.</p>
-            <p className="text-sm text-slate-500 mt-2 font-mono font-bold">ADMIN PANEL을 통하여 언제든 새 포토폴리오를 작성할 수 있습니다.</p>
+          <div className="py-16 text-center bg-white rounded-2xl border border-slate-200 shadow-xs" id="portfolio-empty-state">
+            <AlertCircle size={28} className="mx-auto text-slate-400 mb-3" />
+            <p className="text-sm sm:text-base text-slate-800 font-bold">해당 카테고리에 업로드된 포트폴리오 영상이 없습니다.</p>
+            <p className="text-xs text-slate-500 mt-1">ADMIN PANEL을 통하여 언제든 새 포트폴리오를 작성할 수 있습니다.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
-            {filteredItems.map((item, idx) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+            {filteredItems.map((item) => (
               <div
                 key={item.id}
                 id={`portfolio-item-${item.id}`}
-                className="group relative bg-cinema-card rounded-lg border border-slate-200/80 overflow-hidden cursor-pointer transition-all duration-500 scale-100 hover:scale-[1.02] hover:border-primary-red/50 hover:shadow-xl shadow-md shadow-slate-100 flex flex-col justify-between"
+                className="group bg-white rounded-2xl border border-slate-200 hover:border-slate-300 overflow-hidden cursor-pointer transition-all duration-200 hover:shadow-md flex flex-col justify-between"
                 onMouseEnter={() => handleMouseEnter(item.id)}
                 onMouseLeave={() => handleMouseLeave(item.id)}
                 onClick={() => setActiveItem(item)}
               >
                 {/* Image / Video Dynamic Container */}
-                <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-100 border-b border-slate-150">
+                <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-900">
                   
                   {/* Default Cover Static Photo */}
                   {item.format === "SHORTS" ? (
                     <div className="w-full h-full relative flex items-center justify-center bg-black overflow-hidden pointer-events-none">
-                      {/* Blurred Background */}
                       <img
                         src={getYoutubeThumbnailUrl(item.videoUrl, item.imageUrl)}
                         alt=""
                         referrerPolicy="no-referrer"
                         className="absolute inset-0 w-full h-full object-cover blur-md opacity-30 scale-110 pointer-events-none"
                       />
-                      {/* Crisp Centered Portrait Image */}
                       <img
                         src={getYoutubeThumbnailUrl(item.videoUrl, item.imageUrl)}
                         alt={item.title}
                         referrerPolicy="no-referrer"
-                        className={`h-full w-auto object-contain relative z-10 transition-transform duration-700 ${
+                        className={`h-full w-auto object-contain relative z-10 transition-transform duration-300 ${
                           hoveredId === item.id ? "scale-105" : "scale-100"
                         }`}
                       />
@@ -320,62 +309,58 @@ export default function Portfolio({ items }: PortfolioProps) {
                           e.currentTarget.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
                         }
                       }}
-                      className={`w-full h-full object-cover transition-transform duration-700 ${
+                      className={`w-full h-full object-cover transition-transform duration-300 ${
                         hoveredId === item.id ? "scale-105" : "scale-100"
                       }`}
                     />
                   )}
 
-                  {/* Netflix-style Hover Video autoloop */}
+                  {/* Video autoloop on hover */}
                   {item.previewVideoUrl && (
                     <video
                       ref={(el) => (videoRefs.current[item.id] = el)}
                       muted
                       loop
                       playsInline
-                      className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 z-10 ${
-                        hoveredId === item.id ? "opacity-100 scale-105" : "opacity-0 scale-100 pointer-events-none"
+                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 z-10 ${
+                        hoveredId === item.id ? "opacity-100" : "opacity-0 pointer-events-none"
                       }`}
                     >
                       <source src={item.previewVideoUrl} type="video/mp4" />
                     </video>
                   )}
 
-                  {/* Hover Overlay Red Vignette */}
-                  <div className={`absolute inset-0 bg-gradient-to-t from-cinema-black via-black/20 to-transparent transition-opacity duration-300 pointer-events-none z-20 ${
-                    hoveredId === item.id ? "opacity-40" : "opacity-0"
-                  }`} />
-
-                  {/* Corners Focus Marks on Hover */}
-                  <div className="absolute inset-3 border border-slate-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
-                    <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t border-l border-primary-red" />
-                    <div className="absolute top-0 right-0 w-2.5 h-2.5 border-t border-r border-primary-red" />
-                    <div className="absolute bottom-0 left-0 w-2.5 h-2.5 border-b border-l border-primary-red" />
-                    <div className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b border-r border-primary-red" />
-                  </div>
-
-
-
-                  {/* Centered Play Indicator on Hover */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                    <span className="p-3 bg-primary-red text-white rounded-full shadow-lg shadow-primary-red/50 scale-75 group-hover:scale-100 transition-transform duration-300">
-                      <Play size={16} fill="currentColor" />
+                  {/* Format Badge */}
+                  <div className="absolute top-3 left-3 z-20">
+                    <span className="px-2.5 py-1 bg-black/75 backdrop-blur-xs text-white text-[11px] font-semibold rounded-md uppercase tracking-wider">
+                      {item.format}
                     </span>
                   </div>
 
+                  {/* Centered Play Button on Hover */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20">
+                    <span className="p-3 bg-white text-slate-900 rounded-full shadow-lg transition-transform duration-200 group-hover:scale-105">
+                      <Play size={16} fill="currentColor" />
+                    </span>
+                  </div>
                 </div>
 
-                {/* Meta details text card column bottom fill */}
-                <div className="p-6 flex-grow flex flex-col justify-between bg-cinema-card">
+                {/* Card Info */}
+                <div className="p-5 flex-grow flex flex-col justify-between">
                   <div>
-                    <h3 className="text-xl font-black tracking-tight text-slate-800 group-hover:text-primary-red transition-colors duration-200 line-clamp-1 font-display">
+                    <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-primary-red transition-colors duration-150 line-clamp-1">
                       {item.title}
                     </h3>
-                    <p className="text-sm md:text-[15px] text-slate-600 leading-relaxed mt-2.5 line-clamp-2 font-bold select-none">
+                    <p className="text-xs sm:text-sm text-slate-500 leading-relaxed mt-2 line-clamp-2">
                       {getCardDescription(item.description)}
                     </p>
                   </div>
-
+                  
+                  {item.role && (
+                    <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+                      <span className="truncate">{item.role}</span>
+                    </div>
+                  )}
                 </div>
 
               </div>
@@ -385,23 +370,23 @@ export default function Portfolio({ items }: PortfolioProps) {
 
       </div>
 
-      {/* Dynamic Immersive Pop-out Modal */}
+      {/* Pop-out Modal */}
       {activeItem && (
-        <div id="portfolio-modal-overlay" className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center overflow-y-auto p-4 md:p-8 animate-fade-in">
+        <div id="portfolio-modal-overlay" className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center overflow-y-auto p-4 md:p-6">
           
-          <div className="relative bg-[#1A1A1E] w-full max-w-5xl rounded-lg border border-white/10 shadow-2xl overflow-hidden my-auto">
+          <div className="relative bg-white w-full max-w-4xl rounded-2xl border border-slate-200 shadow-2xl overflow-hidden my-auto animate-fade-in">
             
             {/* Modal Exit Toggle */}
             <button
               id="portfolio-modal-close"
               onClick={() => setActiveItem(null)}
-              className="absolute top-4 right-4 z-50 p-2.5 bg-black/80 hover:bg-primary-red hover:text-white text-white/70 rounded-full border border-white/10 transition-all duration-200 cursor-pointer"
+              className="absolute top-4 right-4 z-50 p-2 bg-slate-900/80 hover:bg-slate-900 text-white rounded-full transition-colors cursor-pointer"
               title="닫기"
             >
-              <X size={18} />
+              <X size={16} />
             </button>
 
-            {/* Video Player Display widescreen */}
+            {/* Video Player Display */}
             <div className="aspect-[16/9] w-full bg-black relative">
               {activeItem.videoUrl ? (
                 <iframe
@@ -414,49 +399,48 @@ export default function Portfolio({ items }: PortfolioProps) {
                 />
               ) : (
                 <div className="w-full h-full flex flex-col items-center justify-center text-white/50 p-6">
-                  <Film size={48} className="text-white/20 mb-4 animate-pulse" />
-                  <p className="text-sm font-mono tracking-widest text-warning">등록된 영상 링크가 올바르지 않습니다.</p>
+                  <Film size={40} className="text-white/20 mb-3" />
+                  <p className="text-sm font-mono tracking-widest">등록된 영상 링크가 올바르지 않습니다.</p>
                 </div>
               )}
             </div>
 
-            {/* Dynamic details description matrix underneath */}
-            <div className="p-6 md:p-10 grid grid-cols-1 lg:grid-cols-3 gap-8 border-t border-white/10">
+            {/* Details Section */}
+            <div className="p-6 md:p-8 grid grid-cols-1 lg:grid-cols-3 gap-6 border-t border-slate-100">
               
-              {/* Intent Text & Primary Info left columns */}
-              <div className="lg:col-span-2">
-                <div className="flex items-center space-x-2.5 mb-2">
-                  <span className="px-3 py-0.5 bg-primary-red/10 border border-primary-red/30 text-xs md:text-sm font-bold tracking-widest text-primary-red rounded uppercase font-display">
+              {/* Left Column: Title & Description */}
+              <div className="lg:col-span-2 space-y-4">
+                <div>
+                  <span className="px-2.5 py-0.5 bg-red-50 text-primary-red text-xs font-bold rounded uppercase">
                     {activeItem.format}
                   </span>
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mt-2">
+                    {activeItem.title}
+                  </h3>
                 </div>
-                
-                <h3 className="text-xl md:text-3xl font-extrabold tracking-tight text-white mb-4 font-display">
-                  {activeItem.title}
-                </h3>
 
-                <h4 className="text-xs md:text-sm tracking-[0.2em] uppercase font-bold text-white/60 font-display mb-2 flex items-center">
-                  <Sparkles size={12} className="text-primary-red mr-1.5" />
-                  <span>제작 의도 및 핵심 비하인드</span>
-                </h4>
-                <p className="text-sm md:text-base text-white/95 leading-relaxed font-medium whitespace-pre-line bg-black/50 p-5 rounded border border-white/5 shadow-inner">
-                  {getCleanDescription(activeItem.description)}
-                </p>
+                <div>
+                  <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+                    제작 의도 및 설명
+                  </h4>
+                  <p className="text-sm text-slate-700 leading-relaxed font-normal whitespace-pre-line bg-slate-50 p-4 rounded-xl border border-slate-150">
+                    {getCleanDescription(activeItem.description)}
+                  </p>
+                </div>
 
-                {/* Multiple snapshots/images dynamic gallery */}
+                {/* Snapshots Gallery */}
                 {activeItem.images && activeItem.images.length > 0 && (
-                  <div className="mt-8 border-t border-white/10 pt-6 bg-transparent" id="portfolio-photo-gallery">
-                    <h4 className="text-xs md:text-sm tracking-[0.2em] uppercase font-bold text-white/60 font-display mb-4 flex items-center">
-                      <span>📸 제작 현장 스냅샷 & 이미지 갤러리</span>
-                      <span className="ml-2 text-xs font-mono text-primary-red/80 font-normal font-sans">({activeItem.images.length})</span>
+                  <div className="pt-4" id="portfolio-photo-gallery">
+                    <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">
+                      제작 현장 스냅샷 ({activeItem.images.length})
                     </h4>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                       {activeItem.images.map((img, idx) => (
-                        <div key={idx} className="relative aspect-[16/9] rounded overflow-hidden border border-white/10 group bg-black/50 shadow">
+                        <div key={idx} className="relative aspect-[16/9] rounded-lg overflow-hidden border border-slate-200 group bg-slate-100">
                           <img
                             src={img}
-                            alt={`${activeItem.title} custom screenshot ${idx + 1}`}
-                            className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 cursor-zoom-in"
+                            alt={`${activeItem.title} screenshot ${idx + 1}`}
+                            className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105 cursor-zoom-in"
                             referrerPolicy="no-referrer"
                             onClick={() => window.open(img, "_blank")}
                           />
@@ -467,34 +451,24 @@ export default function Portfolio({ items }: PortfolioProps) {
                 )}
               </div>
 
-              {/* Direct Specifications Panel parameters columns right */}
-              <div className="space-y-4 bg-black/70 p-5 rounded border border-white/10">
-                <h4 className="text-xs tracking-[0.25rem] uppercase font-bold text-white/50 font-display border-b border-white/10 pb-2">
-                  상세 제작 정보
+              {/* Right Column: Specs */}
+              <div className="bg-slate-50 p-5 rounded-xl border border-slate-150 space-y-4 h-fit">
+                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider border-b border-slate-200 pb-2">
+                  제작 정보
                 </h4>
 
-                <div className="space-y-3.5 font-sans animate-fade-in">
-                  
-                  {/* Role specification */}
-                  <div className="flex items-start">
-                    <Award size={15} className="text-primary-red mr-2.5 mt-0.5" />
-                    <div>
-                      <p className="text-xs font-mono text-white/50 tracking-wider font-extrabold uppercase">담당 주 역할</p>
-                      <p className="text-sm md:text-base text-white font-bold">{activeItem.role}</p>
-                    </div>
+                <div className="space-y-3">
+                  <div>
+                    <p className="text-xs text-slate-400 font-semibold uppercase">주요 역할</p>
+                    <p className="text-sm font-bold text-slate-900 mt-0.5">{activeItem.role}</p>
                   </div>
 
-                  {/* Gear specifications */}
                   {activeItem.equipment && (
-                    <div className="flex items-start">
-                      <Hammer size={15} className="text-primary-red mr-2.5 mt-0.5" />
-                      <div>
-                        <p className="text-xs font-mono text-white/50 tracking-wider font-extrabold uppercase">제작 장비 및 툴</p>
-                        <p className="text-sm md:text-base text-white/90 leading-relaxed font-medium">{activeItem.equipment}</p>
-                      </div>
+                    <div>
+                      <p className="text-xs text-slate-400 font-semibold uppercase">장비 및 툴</p>
+                      <p className="text-sm font-medium text-slate-700 mt-0.5 leading-relaxed">{activeItem.equipment}</p>
                     </div>
                   )}
-
                 </div>
               </div>
 

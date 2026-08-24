@@ -76,39 +76,43 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, onPdfClick, s
       id="main-nav"
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-md py-4"
+          ? "bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm py-3.5"
           : "bg-transparent py-5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-6 xl:px-12 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Logo / Brand Name */}
         <div 
           onClick={() => scrollToSection("home")} 
-          className="flex flex-col cursor-pointer group mr-4"
+          className="flex items-center space-x-2 cursor-pointer group"
           id="nav-logo"
         >
-          <span className="font-display text-[19px] md:text-[22px] font-extrabold tracking-[0.22em] text-slate-800 group-hover:text-primary-red transition-colors duration-200 whitespace-nowrap">
+          <span className="w-2 h-2 rounded-full bg-primary-red" />
+          <span className="font-display text-lg md:text-xl font-bold tracking-wider text-slate-900 group-hover:text-primary-red transition-colors whitespace-nowrap">
             JU WON LEE
+          </span>
+          <span className="hidden sm:inline-block text-xs font-mono text-slate-400 pl-1 font-medium">
+            / PORTFOLIO
           </span>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center space-x-2.5 xl:space-x-6 2xl:space-x-8">
-          <ul className="flex items-center space-x-2.5 xl:space-x-6 2xl:space-x-8">
+        <div className="hidden lg:flex items-center space-x-8">
+          <ul className="flex items-center space-x-7">
             {menuItems.map((item) => (
               <li key={item.id}>
                 <button
                   id={`nav-link-${item.id}`}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-[13px] xl:text-[15px] tracking-[0.08em] xl:tracking-[0.18em] font-bold transition-all duration-200 cursor-pointer relative py-1 ${
+                  className={`text-sm font-semibold transition-colors duration-150 cursor-pointer relative py-1 ${
                     activeSection === item.id
-                      ? "text-primary-red font-extrabold"
+                      ? "text-primary-red font-bold"
                       : "text-slate-600 hover:text-slate-900"
                   }`}
                 >
                   {item.label}
                   {activeSection === item.id && (
-                    <span className="absolute bottom-0 left-0 w-full h-[2px] bg-primary-red" />
+                    <span className="absolute bottom-0 left-0 w-full h-[2px] bg-primary-red rounded-full" />
                   )}
                 </button>
               </li>
@@ -121,11 +125,11 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, onPdfClick, s
           <button
             id="nav-pdf-btn"
             onClick={onPdfClick}
-            className="flex items-center space-x-1 xl:space-x-1.5 px-2.5 py-1.5 md:px-3.5 md:py-1.5 border border-primary-red/40 hover:border-primary-red bg-primary-red/5 hover:bg-primary-red/15 text-xs xl:text-sm tracking-widest text-primary-red hover:text-white rounded font-extrabold transition-all duration-200 cursor-pointer whitespace-nowrap"
+            className="flex items-center space-x-1.5 px-3.5 py-1.5 border border-slate-300 hover:border-slate-900 bg-white hover:bg-slate-900 text-slate-700 hover:text-white text-xs font-medium rounded-lg transition-all duration-200 cursor-pointer shadow-xs whitespace-nowrap"
             title="PDF 다운로드 / 인쇄하기"
           >
             <Printer size={13} />
-            <span className="hidden xl:inline">PDF 저장</span>
+            <span>PDF 저장</span>
           </button>
         </div>
 
@@ -134,7 +138,7 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, onPdfClick, s
           <button
             id="mobile-menu-toggle"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-slate-800 hover:text-primary-red p-1"
+            className="text-slate-800 hover:text-primary-red p-1.5 rounded-lg hover:bg-slate-100 transition-colors"
           >
             {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -143,15 +147,15 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, onPdfClick, s
 
       {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[60px] bg-white/98 z-40 flex flex-col justify-between p-8 border-t border-slate-200 animate-fade-in text-slate-800 shadow-2xl">
-          <ul className="flex flex-col space-y-6 pt-6">
+        <div className="lg:hidden fixed inset-0 top-[60px] bg-white z-40 flex flex-col justify-between p-8 border-t border-slate-200 text-slate-800 shadow-xl">
+          <ul className="flex flex-col space-y-5 pt-4">
             {menuItems.map((item) => (
               <li key={item.id}>
                 <button
                   id={`nav-mobile-${item.id}`}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-lg tracking-[0.2em] font-extrabold block w-full text-left py-2 ${
-                    activeSection === item.id ? "text-primary-red" : "text-slate-600 hover:text-slate-900"
+                  className={`text-lg font-bold block w-full text-left py-2 border-b border-slate-100 ${
+                    activeSection === item.id ? "text-primary-red" : "text-slate-700 hover:text-slate-900"
                   }`}
                 >
                   {item.label}
@@ -160,7 +164,7 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, onPdfClick, s
             ))}
           </ul>
 
-          <div className="border-t border-slate-200 pt-6 pb-12 flex flex-col space-y-4">
+          <div className="pt-6 pb-10 flex flex-col space-y-4">
             {/* Mobile PDF Button */}
             <button
               id="mobile-pdf-btn"
@@ -168,7 +172,7 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, onPdfClick, s
                 setIsMobileMenuOpen(false);
                 onPdfClick();
               }}
-              className="flex items-center justify-center space-x-2 w-full py-3 bg-primary-red/10 hover:bg-primary-red/20 border border-primary-red/30 hover:border-primary-red rounded text-sm tracking-widest text-primary-red font-extrabold transition-all duration-200"
+              className="flex items-center justify-center space-x-2 w-full py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-sm font-semibold transition-colors"
             >
               <Printer size={15} />
               <span>PDF 다운로드 / 인쇄하기</span>

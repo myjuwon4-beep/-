@@ -3,27 +3,29 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Pretendard", "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Space Grotesk", sans-serif;
-  --color-primary-red: #E30613;
-  --color-accent-orange: #FF5A00;
-  --color-cinema-black: #EAECEE; /* Matte-silver cool gray background, completely cuts visual glare */
-  --color-cinema-gray: #D5DBDE;  /* Soft supporting metallic gray background */
-  --color-cinema-card: #FAFBFB;  /* Soothing premium off-white card tone */
+  --font-sans: "Pretendard", "Inter", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  --font-display: "Space Grotesk", "Pretendard", sans-serif;
+  --color-primary-red: #D9232E;
+  --color-accent-orange: #EA580C;
+  --color-cinema-black: #F8F9FA;
+  --color-cinema-gray: #F1F3F5;
+  --color-cinema-card: #FFFFFF;
 }
 
 /* Base custom definitions */
 html {
   scroll-behavior: smooth;
-  background-color: #EAECEE;
-  color: #0F172A; /* Premium high-contrast slate-900 dark charcoal text */
+  background-color: #F8F9FA;
+  color: #0F172A;
   font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Netflix-style scrollbar */
+/* Clean, unobtrusive scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -32,16 +34,16 @@ html {
 
 ::-webkit-scrollbar-thumb {
   background: #CBD5E1;
-  border-radius: 4px;
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #E30613;
+  background: #94A3B8;
 }
 
-/* Text selections matching the mood */
+/* Text selection */
 ::selection {
-  background-color: #E30613;
+  background-color: #D9232E;
   color: #FFFFFF;
 }
 
