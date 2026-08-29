@@ -872,9 +872,9 @@ export const saveStoredSkills = (items: SkillCategory[]) => {
 
 export const defaultSiteTexts: SiteTexts = {
   heroTagline: "",
-  heroTitle: "Content Marketer",
+  heroTitle: "Content Marketer & PD",
   heroSubtitle: "",
-  heroSlogan: "콘텐츠 제작, 조직 운영, 채널 성장으로 비즈니스 성과를 만들어온 크리에이터",
+  heroSlogan: "1인 제작부터 중견기업 장기근속까지, 책임감 있는 브랜드 콘텐츠 PD",
   heroCompetence1: "홍보 · 유튜브 · 쇼츠/릴스 영상 전문",
   heroCompetence2: "기획 · 촬영 · 편집 · 브랜디드 콘텐츠 총괄",
   aboutTagline: "",
@@ -936,13 +936,17 @@ export const getStoredSiteTexts = (): SiteTexts => {
     // Migration: If user has local storage with the old default slogan variants, migrate it automatically to the upgraded professional Korean slogan
     if (
       parsed &&
-      (parsed.heroSlogan !== "콘텐츠 제작, 조직 운영, 채널 성장으로 비즈니스 성과를 만들어온 크리에이터" ||
+      (parsed.heroSlogan !== "1인 제작부터 중견기업 장기근속까지, 책임감 있는 브랜드 콘텐츠 PD" ||
+       parsed.heroSlogan === "1인 제작부터 중견기업 장기근속까지, 책임감 있는 콘텐츠 크리에이터" ||
+       parsed.heroSlogan === "콘텐츠 제작, 조직 운영, 채널 성장으로 비즈니스 성과를 만들어온 크리에이터" ||
        parsed.heroSlogan === "기획부터 촬영, 완벽한 편집까지 브랜드 가치를 관통하는 1인 제작" ||
        parsed.heroSlogan === "콘텐츠 제작, 조직 운영, 채널 성장을 통해 비즈니스 성과를 만들어 온 콘텐츠 리더" ||
        parsed.heroSlogan?.includes("기획부터 촬영") ||
        parsed.heroSlogan?.includes("장기 비즈니스 파트너십") ||
        parsed.heroSlogan?.includes("견고한 신뢰성") ||
        parsed.heroSlogan?.includes("콘텐츠 제작을 넘어") ||
+       parsed.heroSlogan?.includes("비즈니스 성과를 만들어온") ||
+       parsed.heroSlogan?.includes("책임감 있는 콘텐츠 크리에이터") ||
        parsed.heroCompetence1?.includes("쇼츠/숏폼") ||
        !parsed.heroCompetence1?.includes("홍보"))
     ) {
@@ -958,9 +962,9 @@ export const getStoredSiteTexts = (): SiteTexts => {
         localStorage.setItem("site_texts", JSON.stringify(parsed));
       } catch (inner) {}
     }
-    if (parsed && (parsed.heroTagline === "HIGH-END VIDEO PRODUCER" || parsed.heroTitle === "VIDEO MARKETING" || parsed.heroTitle === "CONTENT PRODUCER" || parsed.heroSubtitle === "DIRECTOR" || !parsed.heroTitle?.includes("Content Marketer"))) {
+    if (parsed && (parsed.heroTagline === "HIGH-END VIDEO PRODUCER" || parsed.heroTitle === "VIDEO MARKETING" || parsed.heroTitle === "CONTENT PRODUCER" || parsed.heroSubtitle === "DIRECTOR" || parsed.heroTitle === "Content Marketer" || !parsed.heroTitle?.includes("Content Marketer & PD"))) {
       parsed.heroTagline = "";
-      parsed.heroTitle = "Content Marketer";
+      parsed.heroTitle = "Content Marketer & PD";
       parsed.heroSubtitle = "";
       try {
         localStorage.setItem("site_texts", JSON.stringify(parsed));

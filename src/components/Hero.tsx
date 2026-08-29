@@ -61,17 +61,17 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
         )}
 
         {/* Big Display Title */}
-        <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-slate-900 leading-[1.02] max-w-4xl" id="hero-title">
+        <h1 className="font-display text-2xl min-[400px]:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-slate-900 leading-tight whitespace-nowrap" id="hero-title">
           {siteTexts.heroSubtitle && siteTexts.heroSubtitle.trim() !== "" ? (
             <>
-              {siteTexts.heroTitle}<br />
+              <span className="whitespace-nowrap">{siteTexts.heroTitle}</span><br />
               <span className="text-slate-900">
                 {siteTexts.heroSubtitle}
               </span>
             </>
           ) : (
-            <span>
-              {siteTexts.heroTitle || "Content Marketer"}
+            <span className="whitespace-nowrap">
+              {siteTexts.heroTitle || "Content Marketer & PD"}
             </span>
           )}
         </h1>
@@ -237,7 +237,7 @@ export default function Hero({ onPortfolioCall, onPdfClick, siteTexts = defaultS
                 <ul className="space-y-1.5 text-xs md:text-sm font-medium text-slate-600">
                   <li className="leading-snug flex items-start">
                     <span className="text-slate-400 mr-2 shrink-0">•</span> 
-                    <span>촬영팀 인력 관리 및 프로젝트 리딩</span>
+                    <span>중견기업 8년 근속, 촬영 팀 관리</span>
                   </li>
                   <li className="leading-snug flex items-start">
                     <span className="text-slate-400 mr-2 shrink-0">•</span> 
