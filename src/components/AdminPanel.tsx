@@ -919,7 +919,7 @@ export default function AdminPanel({
                         
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
                           <div className="space-y-2">
-                            <label className="text-xs sm:text-sm font-semibold tracking-wide text-white/90 uppercase">나이 (Age Metric)</label>
+                            <label className="text-xs sm:text-sm font-semibold tracking-wide text-white/90 uppercase">나이 (Age)</label>
                             <input
                               required
                               type="text"

@@ -1,44 +1,53 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Oswald:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Pretendard", "Inter", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-  --font-display: "Space Grotesk", "Pretendard", sans-serif;
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  --font-headline: "Barlow Condensed", "Oswald", "Space Grotesk", sans-serif;
+  --font-display: "Space Grotesk", "Barlow Condensed", sans-serif;
   --color-primary-red: #D9232E;
   --color-accent-orange: #EA580C;
-  --color-cinema-black: #F8F9FA;
-  --color-cinema-gray: #F1F3F5;
-  --color-cinema-card: #FFFFFF;
+  --color-dark-base: #0E0E10;
+  --color-dark-surface: #16161A;
+  --color-dark-card: #1A1A1F;
+  --color-dark-card-hover: #222228;
+  --color-text-body: #C9C9CF;
+  --color-text-muted: #8A8A93;
 }
 
 /* Base custom definitions */
 html {
   scroll-behavior: smooth;
-  background-color: #F8F9FA;
-  color: #0F172A;
+  background-color: #0E0E10;
+  color: #C9C9CF;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Clean, unobtrusive scrollbar */
+body {
+  background-color: #0E0E10;
+  color: #C9C9CF;
+}
+
+/* Clean, dark precision scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: #0E0E10;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #26262E;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
+  background: #3A3A46;
 }
 
 /* Text selection */
@@ -47,17 +56,13 @@ html {
   color: #FFFFFF;
 }
 
-/* Immersive background vigneties helpful for video focus */
-.cinema-gradient-overlay {
-  background: linear-gradient(to top, #0A0A0A 0%, rgba(10, 10, 10, 0.4) 60%, rgba(10, 10, 10, 0.8) 100%);
-}
-
-.card-hover-shadow:hover {
-  box-shadow: 0 10px 30px -10px rgba(227, 6, 19, 0.4);
+/* Sub-classes for motor/outdoor headline typography */
+.font-headline {
+  font-family: var(--font-headline);
 }
 
 /* ==========================================
-   ELEGANT PRINT & PDF EXPORT STYLES
+   ELEGANT PRINT & PDF EXPORT STYLES (Light Paper Mode)
    ========================================== */
 @media print {
   /* Clean slate paper setup */
@@ -90,7 +95,7 @@ html {
     break-inside: avoid !important;
     padding: 1.5rem 0 !important;
     border-bottom: 2px solid #e5e7eb !important;
-    background: transparent !important;
+    background: #ffffff !important;
     color: #111827 !important;
     page-break-after: auto;
   }
@@ -120,10 +125,12 @@ html {
   }
 
   /* Reset dark backgrounds of cards to clean bordered cards for high print legibility */
-  .bg-cinema-card, 
-  .bg-cinema-gray,
-  .bg-neutral-900,
-  .bg-neutral-950,
+  .bg-[#1A1A1F],
+  .bg-[#16161A],
+  .bg-[#0E0E10],
+  .bg-[#222228],
+  .bg-stone-900,
+  .bg-stone-950,
   .bg-black\/50,
   .bg-black\/80 {
     background-color: #f9fafb !important;

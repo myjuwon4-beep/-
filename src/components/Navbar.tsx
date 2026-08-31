@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from "react";
-import { Lock, Eye, LogOut, Menu, X, ShieldCheck, Printer } from "lucide-react";
+import { Menu, X, Printer } from "lucide-react";
 import { SiteTexts } from "../types";
 
 interface NavbarProps {
@@ -15,7 +15,7 @@ interface NavbarProps {
   siteTexts?: SiteTexts;
 }
 
-export default function Navbar({ isAdmin, onAdminToggle, onLogout, onPdfClick, siteTexts }: NavbarProps) {
+export default function Navbar({ onPdfClick }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -76,7 +76,7 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, onPdfClick, s
       id="main-nav"
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm py-3.5"
+          ? "bg-[#0E0E10]/90 backdrop-blur-md border-b border-white/[0.07] py-3.5"
           : "bg-transparent py-5"
       }`}
     >
@@ -87,12 +87,11 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, onPdfClick, s
           className="flex items-center space-x-2 cursor-pointer group"
           id="nav-logo"
         >
-          <span className="w-2 h-2 rounded-full bg-primary-red" />
-          <span className="font-display text-lg md:text-xl font-bold tracking-wider text-slate-900 group-hover:text-primary-red transition-colors whitespace-nowrap">
+          <span className="font-headline text-xl md:text-2xl font-black tracking-wider text-white group-hover:text-primary-red transition-colors whitespace-nowrap">
             JU WON LEE
           </span>
-          <span className="hidden sm:inline-block text-xs font-mono text-slate-400 pl-1 font-medium">
-            / PORTFOLIO
+          <span className="hidden sm:inline-block text-xs font-mono text-[#8A8A93] pl-1 font-medium tracking-wider">
+            / PD &amp; MARKETER
           </span>
         </div>
 
@@ -104,10 +103,10 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, onPdfClick, s
                 <button
                   id={`nav-link-${item.id}`}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-sm font-semibold transition-colors duration-150 cursor-pointer relative py-1 ${
+                  className={`text-sm md:text-[15px] font-semibold transition-colors duration-150 cursor-pointer relative py-1 ${
                     activeSection === item.id
-                      ? "text-primary-red font-bold"
-                      : "text-slate-600 hover:text-slate-900"
+                      ? "text-white font-bold"
+                      : "text-[#C9C9CF] hover:text-white"
                   }`}
                 >
                   {item.label}
@@ -119,16 +118,16 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, onPdfClick, s
             ))}
           </ul>
 
-          <div className="h-4 w-[1px] bg-slate-200" />
+          <div className="h-4 w-[1px] bg-white/[0.12]" />
 
           {/* PDF Downloader */}
           <button
             id="nav-pdf-btn"
             onClick={onPdfClick}
-            className="flex items-center space-x-1.5 px-3.5 py-1.5 border border-slate-300 hover:border-slate-900 bg-white hover:bg-slate-900 text-slate-700 hover:text-white text-xs font-medium rounded-lg transition-all duration-200 cursor-pointer shadow-xs whitespace-nowrap"
+            className="flex items-center space-x-1.5 px-3.5 py-1.5 bg-[#1A1A1F] hover:bg-[#222228] border border-white/[0.08] hover:border-white/[0.2] text-[#C9C9CF] hover:text-white text-xs sm:text-sm font-semibold rounded-lg transition-colors cursor-pointer whitespace-nowrap"
             title="PDF 다운로드 / 인쇄하기"
           >
-            <Printer size={13} />
+            <Printer size={14} />
             <span>PDF 저장</span>
           </button>
         </div>
@@ -138,7 +137,7 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, onPdfClick, s
           <button
             id="mobile-menu-toggle"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-slate-800 hover:text-primary-red p-1.5 rounded-lg hover:bg-slate-100 transition-colors"
+            className="text-[#C9C9CF] hover:text-white p-1.5 rounded-lg hover:bg-white/[0.06] transition-colors"
           >
             {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -147,15 +146,15 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, onPdfClick, s
 
       {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[60px] bg-white z-40 flex flex-col justify-between p-8 border-t border-slate-200 text-slate-800 shadow-xl">
+        <div className="lg:hidden fixed inset-0 top-[60px] bg-[#0E0E10] z-40 flex flex-col justify-between p-8 border-t border-white/[0.07] text-[#C9C9CF] shadow-2xl">
           <ul className="flex flex-col space-y-5 pt-4">
             {menuItems.map((item) => (
               <li key={item.id}>
                 <button
                   id={`nav-mobile-${item.id}`}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-lg font-bold block w-full text-left py-2 border-b border-slate-100 ${
-                    activeSection === item.id ? "text-primary-red" : "text-slate-700 hover:text-slate-900"
+                  className={`text-lg font-bold block w-full text-left py-2 border-b border-white/[0.06] ${
+                    activeSection === item.id ? "text-primary-red" : "text-[#C9C9CF] hover:text-white"
                   }`}
                 >
                   {item.label}
@@ -172,7 +171,7 @@ export default function Navbar({ isAdmin, onAdminToggle, onLogout, onPdfClick, s
                 setIsMobileMenuOpen(false);
                 onPdfClick();
               }}
-              className="flex items-center justify-center space-x-2 w-full py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-sm font-semibold transition-colors"
+              className="flex items-center justify-center space-x-2 w-full py-3 bg-[#1A1A1F] hover:bg-[#222228] border border-white/[0.1] text-white rounded-lg text-sm font-semibold transition-colors"
             >
               <Printer size={15} />
               <span>PDF 다운로드 / 인쇄하기</span>

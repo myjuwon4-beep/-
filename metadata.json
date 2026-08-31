@@ -1,6 +1,6 @@
 {
-  "name": "Lee Ju-won Portfolio",
-  "description": "비디오 마케팅 디렉터 & Automotive Content Producer 이주원 PD의 시네마틱 포트폴리오",
+  "name": "이주원 | 브랜드 콘텐츠 PD · 콘텐츠 마케터",
+  "description": "영상 경력 14년. 유튜브 구독자 4배 성장, 릴스 최고 91만 조회, 콘텐츠 기반 문의율 48% 증가를 만든 인하우스 콘텐츠 프로듀서.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

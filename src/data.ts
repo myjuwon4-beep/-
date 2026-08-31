@@ -16,10 +16,10 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 1인 제작",
     format: "PROMOTION",
-    description: "입사 직후 사내 브랜딩 영상의 부재를 인지하고, 견인장치 제조 업체와 콜라보레이션을 통해 기업 납품 및 장착 역량을 높게 완성한 공식 홍보 영상입니다.\n\n[제작 의도]\n기업 신뢰도를 강화하기 위해, 견인장치 설치 전문 프로세스의 정밀성과 최고 수준의\n 기술력을 시청자들이 감각적으로 신뢰할 수 있도록 고급스러운 톤앤매너로 \n시인성 높게 담아내고자 하였습니다.\n\n[핵심 비하인드]\n외부 외주 제작 없이 기획부터 연출, 촬영, 편집을 진행 하였고,\n최저 예산으로 프리미엄 프로덕션 퀄리티를 만들어 냈습니다.\n타 제조 협력사와의 콜라보 시너지를 극대화하여 유기적인 연계 \n마케팅 성과를 만들어 냈습니다.",
+    description: "사내 공식 브랜딩 영상의 부재를 해결하고 견인장치 장착 기술력에 대한 기업 신뢰도를 높이기 위해 기획했습니다. 견인장치 제조사 큐브렉과의 협업으로 정밀 장착 공정을 1인 제작(기획·촬영·편집)하여 담아냈습니다.",
     videoUrl: "https://www.youtube.com/watch?v=XM2E0Eqf_8U",
     imageUrl: "https://img.youtube.com/vi/XM2E0Eqf_8U/maxresdefault.jpg",
-    previewVideoUrl: "https://player.vimeo.com/external/490898514.sd.mp4?s=c8afbdcf7ad1ea5408a688d0b679a9ccb2f6efba&profile_id=164&oauth2_token_id=57447761",
+    previewVideoUrl: "",
     equipment: "Sony a7m3, DJI Mini 4 Pro | Premiere Pro, After effect",
     duration: "03:45",
     date: "2025-01",
@@ -31,10 +31,10 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "왕의지밀",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "PROMOTION",
-    description: "한국관광공사 유니크베뉴로 지정된 전통 한옥 호텔 '왕의지밀'의 우아함과 공간적 정취를 \n완성도 높은 미장센으로 그려낸 홍보 영상입니다.\n\n[제작 의도]\n관광공사 VR360 프로젝트 수주 현장 지원 중, 한옥 고유의 가치를 대외적으로 알릴 브랜디드 에셋의 필요성을 느끼고, 왕의지밀과 주변 관광지를 독특한 매력 포인트 항공 및 실내 다각도 연출로 극대화하기 위해 직접 추가 기획 및 제작했습니다.\n\n[핵심 비하인드]\n최종 영상물은 별도 마케팅 예산 없이도 한국관광공사 공식 채널 및 호텔 로비 전시 메인 \n홍보 리소스로 브랜드 가치를 창출했습니다.",
+    description: "한국관광공사 프로젝트 현장 지원 중 한옥 호텔 고유의 공간적 가치를 대외에 알릴 영상 자산의 필요성을 느껴 기획했습니다. 호텔 전경 및 한옥 건축미를 항공 드론과 실내 다각도 앵글로 촬영해 1인 제작했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=cZLWRn6voS0",
     imageUrl: "https://img.youtube.com/vi/cZLWRn6voS0/maxresdefault.jpg",
-    previewVideoUrl: "https://player.vimeo.com/external/459389137.sd.mp4?s=89e900593b4a53fa38eafca6f2cc9689e3a6c5eb&profile_id=165&oauth2_token_id=57447761",
+    previewVideoUrl: "",
     equipment: "Sony a7m3, DJI Mavic 2 | Premiere Pro, After effect",
     duration: "04:15",
     date: "2024-11",
@@ -46,10 +46,10 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "한국관광공사",
     role: "PM, 편집",
     format: "PROMOTION",
-    description: "대한민국의 국제 회의 시설(MICE) 인프라를 전 세계 글로벌 바이어와 주최사들에게 시공간을 초월해 생생하게 전달하는 다각도 360VR 공간 홍보 콘텐츠입니다.\n\n[제작 의도]\n웹과 오프라인 어디서든 대형 컨벤션 센터의 내부 규모와 회의 동선 및 편의 시설을 직접 체험하는 것처럼 실감 나고 명확히 파악할 수 있도록 공간 메타데이터를 안정적으로 시각화하는 \n방향으로 설계했습니다.\n\n[핵심 비하인드]\n360도 왜곡이 불가피한 VR 카메라 특성을 극복하기 위해 천장 및 동선 조명 조율과\n고난도 수평 스티칭 기술을 적용했으며, 한국관광공사의 글로벌 MICE 바이어 유치\n 세일즈 미팅 시 핵심 프레젠테이션 툴로 장기 활용되어 국익 매력도를 높였습니다.",
+    description: "해외 바이어와 주최사에게 국내 국제회의 시설(MICE) 인프라를 소개하기 위해 제작했습니다. 컨벤션 센터의 규모와 동선을 체감할 수 있도록 수평 스티칭과 360VR 공간 연출을 적용해 편집했습니다.",
     videoUrl: "https://youtu.be/Ioh8RRnDAcg",
     imageUrl: "https://img.youtube.com/vi/Ioh8RRnDAcg/hq2.jpg",
-    previewVideoUrl: "https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c054273b1851722e1de7fe50ddf7cfda&profile_id=139&oauth2_token_id=57447761",
+    previewVideoUrl: "",
     equipment: "인스타 360 | Premiere Pro",
     duration: "02:50",
     date: "2024-09",
@@ -61,7 +61,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 1인 제작",
     format: "PROMOTION",
-    description: "PPF를 시공하는 기업의 홍보영상을 제작한 콘텐츠로\n기획 촬영 편집 1인 제작한 영상 입니다.",
+    description: "차량 시공 전문 기업의 기술력과 작업 프로세스를 알리기 위해 기획했습니다. 필름 부착 공정과 정밀 마감 디테일을 클로즈업 앵글로 1인 전담 제작했습니다.",
     videoUrl: "https://youtu.be/MwlKk7E2ZSs",
     imageUrl: "https://img.youtube.com/vi/MwlKk7E2ZSs/maxresdefault.jpg",
     previewVideoUrl: "",
@@ -76,7 +76,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "진텍 (JINTEC)",
     role: "기획, 촬영, 편집 1인 제작",
     format: "PROMOTION",
-    description: "신차 출고 후 회사의 제품과 함께\n차량과 제품을 홍보하는 영상 제작\n기획부터 촬영, 편집까지 1인 제작 하였으며,\n촬영은 1일 편집은 2.5일 소요 되었습니다.",
+    description: "신차 출고에 맞춰 차량과 결합되는 진텍 캐노피 제품의 호환성을 홍보하기 위해 제작했습니다. 실차 장착 상태와 활용도를 중심으로 기획부터 촬영, 편집까지 1인 제작을 진행했습니다.",
     videoUrl: "https://youtu.be/Z2995_gc2VA",
     imageUrl: "https://img.youtube.com/vi/Z2995_gc2VA/maxresdefault.jpg",
     previewVideoUrl: "",
@@ -91,7 +91,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 1인 제작",
     format: "PROMOTION",
-    description: "차량 시공 및 튜닝 전문 기업의 정밀한 시공 공정과 브랜드 가치를 입체적으로 담아낸 기업 홍보 콘텐츠입니다.\n\n[제작 의도]\n차량 시공 기술의 섬세함과 고품질 시공 프로세스를 감각적인 비주얼로 연출하여 예비 고객에게 깊은 브랜드 신뢰를 전달하고자 기획했습니다.\n\n[핵심 비하인드]\n기획부터 연출, 촬영, 편집까지 1인 전담 제작으로 최적의 톤앤매너를 구사했으며, 시각적 몰입감을 높여 브랜드 홍보 성과를 효과적으로 높였습니다.",
+    description: "차량 시공 및 튜닝 전문 기업의 정밀한 시공 공정을 신규 고객에게 전달하기 위해 기획했습니다. 시공 공정의 세부 디테일을 직관적인 컷 편집과 현장감 있는 앵글로 1인 제작했습니다.",
     videoUrl: "https://youtu.be/cwP5oEYEpSY",
     imageUrl: "https://img.youtube.com/vi/cwP5oEYEpSY/maxresdefault.jpg",
     previewVideoUrl: "",
@@ -106,7 +106,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER / JINTEC",
     role: "기획, 촬영, 편집 1인 제작",
     format: "PROMOTION",
-    description: "신형 무쏘 차량의 순정 하드탑과 진텍·오브로 캐노피 옵션을 다각도로 비교 분석하여 차량 개조 및 튜닝 수요자의 선택을 돕는 브랜디드 홍보 콘텐츠입니다.\n\n[제작 의도]\n신형 무쏘 오너 및 예비 구매 고객들이 가장 크게 고민하는 하드탑과 캐노피의 차이점, 디자인, 실용적 기능성을 직관적으로 비교하고 제품의 강점을 완성도 높게 전달하고자 기획했습니다.\n\n[핵심 비하인드]\n기획부터 연출, 촬영, 디테일 컷 편집까지 1인 제작으로 완성했으며, 소비자 시선에 맞춘 디테일한 비주얼 전달로 제품 문의 유입 및 마케팅 시너지를 극대화했습니다.",
+    description: "신형 무쏘 구매 고객이 고민하는 순정 하드탑과 사제 캐노피의 차이점을 알리기 위해 기획했습니다. 순정 하드탑과 진텍·오브로 캐노피의 재질, 디자인, 수납 구조를 다각도 앵글로 비교 촬영했습니다.",
     videoUrl: "https://youtu.be/4keiyUtKJIA",
     imageUrl: "https://img.youtube.com/vi/4keiyUtKJIA/maxresdefault.jpg",
     previewVideoUrl: "",
@@ -121,7 +121,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "새마을금고중앙회 / 스마트콘텐츠연구소",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "PROMOTION",
-    description: "충남 공주 새마을금고의 지역 금융 서비스와 조합원 신뢰 가치를 전달하기 위한 공식 기업 홍보 및 임직원 인터뷰 영상 콘텐츠입니다.\n\n[제작 의도]\n새마을금고가 지역 사회와 주민들에게 제공하는 든든한 금융 지원과 따뜻한 소통의 가치를 알기 쉽게 전달하고, 현장감 넘치는 임직원 인터뷰를 통해 기관의 공신력과 고객 신뢰도를 높이고자 기획했습니다.\n\n[핵심 비하인드]\n새마을금고 현장 지점의 분위기와 임직원 인터뷰를 안정적인 조명과 오디오 연출로 깔끔하게 담아냈으며, 자연스러운 컷 편집과 자막 모션을 통해 정보 전달력과 친근한 브랜드 이미지를 효과적으로 극대화했습니다.",
+    description: "지역 금융 서비스의 신뢰도와 조합원 소통 가치를 전달하기 위해 기획했습니다. 지점 현장 스케치와 임직원 인터뷰를 조명 및 오디오 연출을 통해 1인 제작했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=J4W7tFXb36I",
     imageUrl: "https://img.youtube.com/vi/J4W7tFXb36I/maxresdefault.jpg",
     previewVideoUrl: "",
@@ -138,7 +138,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "카니발 캠핑카로 24시간 동안 무시동히터와 전력 배터리 소비량을 직접 실증 테스트하여 차박·캠핑 오너들의 궁금증을 명쾌하게 해결한 롱폼 기획 콘텐츠입니다.\n\n[제작 의도]\n단순한 스펙 안내를 넘어 24시간 동안 실전 캠핑 환경에서 무시동 히터 및 인산철 배터리 전력 소모 상태를 세밀하게 추적 측정하여 예비 구매 고객들에게 가장 객관적이고 신뢰도 높은 필드 데이터를 전달하고자 기획했습니다.\n\n[핵심 비하인드]\n기획부터 촬영, 편집까지 1인 전담 제작으로 완료했으며, K트레일러 채널 브랜딩 및 제품 문의 상담 증대에 크게 기여했습니다.",
+    description: "차박·캠핑 오너들이 궁금해하는 동계 전력 소비량과 난방 지속성을 검증하기 위해 기획했습니다. 24시간 동안 실전 캠핑 환경에서 무시동 히터와 인산철 배터리의 소모량을 시간대별로 실측하여 1인 제작했습니다.",
     videoUrl: "https://youtu.be/TgvGn_i5faw",
     imageUrl: "https://img.youtube.com/vi/TgvGn_i5faw/maxresdefault.jpg",
     equipment: "SONY a7c2, DJI Mini 4 Pro, 오즈모 포켓3 | Premiere Pro",
@@ -152,7 +152,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "캠핑 혹은 차박을 위해 전기 PBV를 구입한다면 가장 우려되고 궁금해하는 '1박 동안의 전력 소비량'을 직접 실증하여 예비 구매자들의 의구심을 단번에 불식시킨 최고 조회수 기획 콘텐츠입니다. 구독자 2,000명 시기에 최고 조회수 45만을 기록했습니다.\n\n[제작 의도]\n말뿐인 스펙 나열이 아닌, 혹한기 겨울에 히터를 장시간 켜놓고 전기 기기들을 동시 사용하는 하드코어 1박 2일 캠핑 시나리오를 설계하여 소비자가 피부로 체감할 수 있는 사실적인 정보를 제공하고자 했습니다.\n\n[핵심 비하인드]\n촬영 당시 장비 고장으로 오즈모 포켓3와 드론으로만 촬영을 진행 했고 \n솔직하고 투명한 테스트 포맷은 소셜 알고리즘을 타고 폭발적인 조회수 45만 회를 \n이끌어 냈으며, 전국 예비 전기 오너들의 자발적인 커뮤니티 공유로 이어져 \nK트레일러 채널의 브랜딩 신뢰도 제고와 문의 상담량을 폭등 시켰습니다.",
+    description: "전기 PBV(PV5) 구매를 고려하는 소비자들이 가장 우려하는 1박 캠핑 시 전력 소비량을 검증하기 위해 기획했습니다. 혹한기 환경에서 23시간 동안 히터와 전자기기를 동시 가동하는 실전 필드 테스트로 1인 제작했습니다. 구독자 2,000명 시점에 최고 조회수 45만 회를 기록했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=5Vhtzdd1Pyw",
     imageUrl: "",
     equipment: "오즈모 포켓3, DJI Mini 4 Pro | Premiere Pro",
@@ -166,7 +166,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "'신형 무쏘' 출고 직후, 일상 속 도심 안정 성능과 거친 야생의 오프로드 극단 상황 성능까지 \n직접 체험 주행해 보며 타겟 오너들의 의심 어린 주행력 궁금증을 통쾌하게 \n풀어 주는 콘텐츠입니다.\n\n[제작 의도]\n스펙북 수치를 너머 거친 노면의 생동감과 차량의 서스펜션 능력, 뒤틀림 억제력, \n실주행 피로도를 차체 다각도에 부착한 고프로 카메라 멀티 앵글을 활용해 입체적이고 \n역동적인 비주얼로 표현하고자 연출 했습니다.\n\n[핵심 비하인드]\n주행 위험 요인을 철저히 방지하기 위해 로케이션 사전 답사를 진행하고 무선 통신망을 통해 원격 모니터링하며 안전하게 제작했습니다. 오프로드 테스트 편은 정통 SUV 애호가층과 \n마니아 커뮤니티의 뜨거운 반응을 유도하여 브랜드 전문 이미지를 상승 시켰습니다.",
+    description: "신형 무쏘 출고 직후 도심 주행 안정성과 오프로드 주행 성능에 대한 타깃층의 궁금증을 해소하기 위해 기획했습니다. 차체 다각도에 액션캠을 부착하여 노면 반응과 서스펜션 움직임을 멀티 앵글로 1인 제작했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=zILYhYno5Ps",
     imageUrl: "",
     equipment: "a7c2, 오즈모 액션5, 오즈모 포켓, 고프로10, DJI Mini 4 Pro | Premiere Pro",
@@ -180,7 +180,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "무쏘EV, 기아 타스만 국내 자동차 시장을 달구고 있는 신차들과 견인장치를 가장 많이 \n장착하는 카니발, 렉스턴 스포츠 칸 차량을 동원하여 무거운 카라반 견인 상태로 \n극단적인 급경사 길을 등판하는 하드코어 필드 콘텐츠입니다.\n\n[제작 의도]\n무거운 카라반을 견인하는 오너들이 가장 불안해하는 언덕길 제동력과 재출발 견인 토크를 \n국내 최초의 리얼 배틀 테스트 형식으로 시원하게 증명하여 타사 영상들과의 \n시각적 비교 우위를 확보하고자 기획했습니다.\n\n[핵심 비하인드]\n등판 각도계로 테크니컬한 디테일을 직관적으로 연출했고, 이를 통해 수많은 시청자로부터 \n'그동안 그 어디서도 볼 수 없었던 속 시원한 기획 전개'라는 극찬의 실댓글 과 함께\n 입소문을 타고 높은 브랜드 문의 전환을 창출했습니다.",
+    description: "카라반 견인 오너들이 불안해하는 급경사 언덕길 등판 및 재출발 성능을 검증하기 위해 기획했습니다. 무쏘EV, 타스만, 카니발, 렉스턴 스포츠에 카라반을 연결하고 실제 급경사로에서 비교 주행을 진행했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=x9j9Erj4chU",
     imageUrl: "",
     equipment: "a7c2, 오즈모 액션5, 오즈모 포켓3, 고프로10, DJI Mini 4 Pro | Premiere Pro",
@@ -194,7 +194,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "10년간 견인장치 안전 장착을 증명해 온 대표님과 최정예 엔지니어들이 직접 나서\n 유럽식 스완넥과 미국식 히치 등 견인 장치 타입의 날 선 토론을 유쾌하게 펼친 \n정보 가치형 배틀 콘텐츠입니다.\n\n[제작 의도]\n제조사 관점의 맹목적인 단순 정보 광고를 탈피하고, 현업 전문가들의 가감 없는 \n배틀 토크 설전을 유도하여 시청자에게 가장 맞는 \n제품 구매 기준점을 일깨워 주고자 기획했습니다.\n\n[핵심 비하인드]\n자칫 지루할 수 있는 제품 사양 비교를 빠른 템포의 배틀 편집 디자인과 자막 효과를 적용해 \n'예능형 토크쇼'로 탈바꿈시켰습니다. 본 콘텐츠는 자사 제품에 대한 \n과감한 필터 없는 단점 언급까지 시원하게 소통해 브랜드 진정성과 \n신뢰를 이끄는 바이럴 성공을 거두었습니다.",
+    description: "견인장치 규격(유럽식 스완넥 vs 미국식 히치) 선택으로 고민하는 고객들을 위해 기획했습니다. 10년 경력의 대표와 전문 엔지니어가 장단점을 비교하는 토크쇼 포맷으로 1인 제작했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=bCnX5uOil5U",
     imageUrl: "",
     equipment: "a7m3, 핸드폰, 고프로10, | Premiere Pro",
@@ -208,7 +208,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "신형 무쏘 픽업트럭과 고버랜드 캠퍼를 결합하여 극동계 노지 설원에서 직접 캠핑하고 히터의 성능과 야생 생존 편의성을 체감 연출해 낸 겨울 영하의 차박 캠핑 브이로그 입니다.\n\n[제작 의도]\n영하 15도 이하 극한 동계 환경 속에서 난방 효율성, 밀폐 능력, 동계 주행 역량 등 \n오너들이 직접 체험하기 두려운 혹한 실전 테스트를 캠핑 브이로그 형식을 차용하여 영상에서 경험할 수 있도록 기획했습니다.\n\n[핵심 비하인드]\n실감 나는 겨울 분위기 조성을 위해 산속 깊은 설산 오지를 탐색하여 드론을 활용해 탁 트인 설경의 수려한 가치를 촬영했습니다. 차가운 겨울과 따뜻한 내부의 자연스러운 색감을 표현 하였고 고가의 하이엔드 캠퍼 제품에 대한 직접적인 구매 욕구를 대폭 끌어올렸습니다.",
+    description: "신형 무쏘와 고버랜드 캠퍼 결합 시 혹한기 영하 환경에서의 난방 효율과 거주성을 검증하기 위해 기획했습니다. 영하 15도 설원 노지에서 직접 1박을 진행하며 실내 온도 변화와 주행 반응을 브이로그 포맷으로 1인 제작했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=g489MFvrbZ0",
     imageUrl: "",
     equipment: "a7c2, 오즈모 액션5, 오즈모 포켓3, DJI Mini 4 Pro | Premiere Pro",
@@ -222,7 +222,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "국내 최초 전기 픽업트럭 '신형 무쏘EV'의 등장을 기념해, 거대한 패밀리 카라반을 직접 뒤에 견인한 채 커브와 고속 직진 코스, 노면 충격 구간을 주행하며 차량의 하중 분배 및 견인 안전 피드백을 보여주는 정보 콘텐츠입니다.\n\n[제작 의도]\n'과연 전기 픽업이 내연기관만큼의 묵직한 견인 장치 파워와 고급스러운 승차감을 구현할 수 있는가?'라는 시장의 편견 어린 호기심에 영감을 얻어, 주행 진동과 회생제동등 을 실 체험 \n하면서 안정성을 팩트로 입증하고자 기획하였습니다.\n\n[핵심 비하인드]\n실주행 견인 안정성을 입증하기 위해, 탑승자가 실제로 체감하는 실 견인 주행 을 하였고, 대형 카라반 보유 예비 전기차주 고객들의 실제 시승 문의 및 견인장치 의뢰 예약 전환이 30% 이상 폭증하는 성과를 도출했습니다.",
+    description: "전기 픽업트럭의 대형 카라반 견인력과 주행 안정성에 대한 시장의 의구심을 검증하기 위해 기획했습니다. 대형 카라반을 체결한 상태로 코너링, 고속 주행, 회생제동 시 승차감 변화를 실측 주행으로 1인 제작했습니다. 영상 공개 후 대형 카라반 오너들의 견인장치 장착 문의 및 예약이 30% 이상 증가했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=B5KUOagAOoA",
     imageUrl: "",
     equipment: "a7c2, 오즈모 액션5, 오즈모 포켓3, DJI Mini 4 Pro | Premiere Pro",
@@ -236,7 +236,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "편집",
     format: "YOUTUBE LONG",
-    description: "K트레일러 대구 직영점의 친근하고 유쾌한 신뢰감을 전파하기 위해,\n'대표님이 자리를 비운 특별한 하루'라는 VLOG 컨셉을 활용해 루프탑텐트의 \n세부 사용 가이드와 직원의 자연스러운 열정을 재치 있는 스토리텔링 기술로\n담아낸 마케팅 콘텐츠입니다.\n\n[제작 의도]\n부담스럽고 뻔한 지점 광고를 피하고, 지점 직원들의 각기 다른 독특하고 정감 어린\n 캐릭터성을 입체화하는 세련되고 위트 있는 디자인을 설계했습니다. \n제품을 직접 오퍼레이팅하는 모습을 유쾌하게 그려 고객들이 언제든 믿고 \n놀러 올 수 있는 아지트 감성의 직영점 브랜딩을 기획했습니다.\n\n[핵심 비하인드]\n비대면으로 대구 직영점 직원들과 실시간 콘티와 연출법을 소통하며 촬영 클립의 포인트를\n원격 코칭했습니다. 러프한 스마트폰 영상 소스들을 감각적인 컷 템포, 귀여운 오버레이 \n모션 자막 및 절묘한 오디오 싱크로나이징을 통해 입체적 예능으로 복원해 내어\n고객들의 단골 친근도를 상승시키는 결과를 냈습니다.",
+    description: "신규 대구 직영점의 인지도 제고와 루프탑텐트 사용법 안내를 위해 기획했습니다. 직영점 직원의 하루 일과와 제품 조작 과정을 현장 브이로그 포맷으로 풀어내 편집했습니다.",
     videoUrl: "https://youtu.be/0lA9uVIcWK4",
     imageUrl: "",
     equipment: "핸드폰 | Premiere Pro",
@@ -250,7 +250,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "신형 무쏘 차량 전용 캐노피, 하드탑 끝판왕을 가리기 위해, 순정 하드탑과 \n하이엔드 튜닝 브랜드인 '진텍', '오브로(OBRO)'의 캐노피를 재질, 디자인 마감 등 핵심 부분들을 속 시원하게 검증·비교한 초밀착 튜닝 가이드입니다.\n\n[제작 의도]\n값비싼 튜닝 품목의 선택에서 고장 극성이나 호환성 고민으로 시달리는 무쏘 예비 오너분들을 위해, 각 장비의 장점만을 늘어놓는 편협한 광고를 극복하고 가감 없는 단점까지 공정하게 \n비교하는 정밀 가이드 포맷을 설정했습니다.\n\n[핵심 비하인드]\n실물을 한자리에 모으기 힘든 브랜드를 K트레일러만의 조율망으로 제품 섭외 완료했으며, \n디테일한 금속 밴딩이나 잠금장치 디테일을 촬영해 오프라인 매장의 실제 시연을 그대로 화면 \n속에 담았습니다. 각 캐노피 브랜드 대리점 예약률을 상승시키는 성과를 낳았습니다.",
+    description: "신형 무쏘 오너들의 주요 튜닝 품목인 순정 하드탑과 진텍·오브로 캐노피의 차이점을 안내하기 위해 기획했습니다. 실물 제품 3종을 섭외하여 마감 재질, 결합 구조, 편의 기능을 세부 비교하는 리뷰 포맷으로 1인 제작했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=4keiyUtKJIA",
     imageUrl: "https://img.youtube.com/vi/4keiyUtKJIA/hqdefault.jpg",
     equipment: "a7c2, 오즈모 포켓3 | Premiere Pro",
@@ -264,7 +264,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "버찌 BUDZZI",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "이전 직장 '루씨드드림'에서 어플 마케팅 목적으로 기획·제작하여, 반려견의 실제 행동 특성과 전문 육아 지식 솔루션을 조화롭게 풀어내 반려인들의 높은 공감을 이끌어낸 콘텐츠입니다.\n\n[제작 의도]\n대본에 따른 인위적인 클리셰들을 배제하고, 실제 가정환경에서 흘러가는 강아지의 내밀한 자연적 몸짓 언어를 포착해 전문 반려 육아 지식 솔루션을 조화롭게 분배해 내는 것에 완성의 목표를 두었습니다.\n\n[핵심 비하인드]\n반려견의 시선 패스를 완벽히 담아내기 위해, 바닥과 평행한 저고도 로우 앵글 장비 세팅 및 초점 전이를 극대화하는 카메라 워크를 직접 연구하여 적용했습니다. 또한 반려인들이 가장 공감하는 백그라운드 오디오와 따뜻한 색감의 시네컬러 그레이딩 처리를 공들여 수행하였습니다.",
+    description: "반려견 양육 앱 서비스의 브랜드 인지도와 타깃 유입을 늘리기 위해 기획했습니다. 가정 내 반려견의 실제 행동 패턴을 로우 앵글로 포착하고 전문가 솔루션을 결합해 1인 제작했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=8BfgwkXrD0g",
     imageUrl: "https://img.youtube.com/vi/8BfgwkXrD0g/maxresdefault.jpg",
     equipment: "Sony a7m3 | Premiere Pro",
@@ -278,7 +278,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "최태성 (스터디요)",
     role: "촬영",
     format: "YOUTUBE LONG",
-    description: "스타 강사 최태성 선생님과 함께 역사 속 김지섭 의사의 이야기를 되짚고 의미를 깊이 전달한 다큐 프로젝트 영상입니다.\n\n[제작 의도]\n이투스교육 근무 시기 기획 영상 담당으로서, 최태성 선생님의 '오늘' 이라는 주제로 역사적 사건들을 돌아보고 기억하는 콘텐츠의 촬영을 담당하였습니다.\n\n[핵심 비하인드]\n선생님의 강렬하면서도 섬세한 강의 호흡과 감정의 깊이를 그대로 시청자에게 전달하기 위해 여러 대의 카메라를 배치하여 촬영했습니다.",
+    description: "역사 속 주요 사건과 인물을 기념하고 올바른 역사적 사실을 전달하기 위해 기획했습니다. 최태성 강사의 강의 전달력과 호흡을 다채널 카메라 구도로 안정감 있게 촬영했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=I6L4Uuc61_M",
     imageUrl: "https://img.youtube.com/vi/I6L4Uuc61_M/maxresdefault.jpg",
     equipment: "CANON 5D Mark 2,3,",
@@ -292,7 +292,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "스터디요",
     role: "촬영, 총괄",
     format: "YOUTUBE LONG",
-    description: "국가대표 출신 전설 '김재성 선수'의 참다운 지도 아래, 좌충우돌 왕초보 레크레이션 축구 도전자들의 실시간 극적 도전기를 기획한 예능 콘텐츠입니다.\n\n[제작 의도]\n이투스 교육 근무 기간에 유튜브 채널 '스터디요'의 콘텐츠로서, 촬영팀 6명과 함께 현장을 총괄하여 촬영을 진행했던 콘텐츠입니다.\n\n[핵심 비하인드]\n경기장 피치 위의 숨소리와 생동감 있는 움직임을 담기 위해, 촬영팀과 카메라 배치 및 동선을 실시간으로 꼼꼼하게 조율하며 완성했습니다.",
+    description: "유튜브 채널 '스터디요'의 오리지널 스포츠 예능 콘텐츠를 제작하기 위해 기획했습니다. 전 국가대표 김재성 선수의 축구 레슨 현장을 촬영팀 6명과 함께 총괄하며 멀티 앵글로 촬영했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=TDFKqqDjG18",
     imageUrl: "https://img.youtube.com/vi/TDFKqqDjG18/maxresdefault.jpg",
     equipment: "CANON 5D Mark 2,3, CANON C300",
@@ -306,7 +306,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "최태성 (최태성 2TV)",
     role: "촬영",
     format: "YOUTUBE LONG",
-    description: "스타 강사 최태성 선생님의 쿡방 요리 역사 콘텐츠 촬영을 진행했던 영상입니다.\n\n[제작 의도]\n최태성 선생님의 궁중떡볶이 요리 과정과 조선 시대 한국사 이야기가 자연스럽게 연결되는 \n재미를 전하기 위해 촬영팀 5명과 함께 촬영 총괄해서 전담하였습니다.\n\n[핵심 비하인드]\n요리하는 실감 나는 모습과 식재료의 색감, 자글자글 끓는 소리가 시청자에게 생생하게 전달되도록 세심하게 앵글과 조명을 맞춰가며 촬영했습니다.",
+    description: "한국사 스토리텔링과 요리 과정을 결합한 에듀테인먼트 콘텐츠를 만들기 위해 기획했습니다. 최태성 강사의 요리 시연과 역사 해설을 5인 촬영팀과 함께 조명 및 다각도 앵글로 전담 촬영했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=7jBHyQjZMJA",
     imageUrl: "https://img.youtube.com/vi/7jBHyQjZMJA/maxresdefault.jpg",
     equipment: "CANON 5D Mark 2,3, CANON C300",
@@ -320,7 +320,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "정승제 (승제튜브)",
     role: "촬영",
     format: "YOUTUBE LONG",
-    description: "스타 강사 정승제 선생님의 기획 영상용 콘텐츠입니다.\n\n[제작 의도]\n정승제 선생님이 학생 6명과 함께 특별한 하루를 보내는 콘텐츠에서 촬영을 담당하였습니다.\n\n[핵심 비하인드]\n선생님과 학생들의 자연스러운 대화와 따뜻한 현장 리액션을 꾸밈없이 생생하게 담기 위해 집중하여 촬영했습니다.",
+    description: "수험생과 강사 간의 오프라인 소통을 기록하고 친근한 브랜드 이미지를 전달하기 위해 기획했습니다. 정승제 강사와 학생 6명의 하루 일정을 동행하며 자연스러운 현장 반응을 촬영했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=CT03HGVmg-g",
     imageUrl: "https://img.youtube.com/vi/CT03HGVmg-g/maxresdefault.jpg",
     equipment: "",
@@ -334,7 +334,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "방송통신이용자보호협회",
     role: "모션그래픽, 편집",
     format: "YOUTUBE LONG",
-    description: "청소년 스마트폰 과몰입 예방 및 안전한 디지털 환경 조성을 위해 사이버안심존 서비스의 주요 기능과 활용법을 알기 쉽게 전달한 모션그래픽 온라인 강의 콘텐츠입니다.\n\n[제작 의도]\n공공기관 서비스 및 유해 매체 차단 기능 등 다소 어렵고 복잡할 수 있는 정보들을 학부모, 청소년, 교사가 직관적으로 이해할 수 있도록 인포그래픽과 친근한 2D 모션 애니메이션으로 시각화하여 기획·제작했습니다.\n\n[핵심 비하인드]\n서비스의 핵심 설치 절차와 기능 안내를 다이내믹한 컷 전환 및 직관적인 키 비주얼로 표현하여 강의의 정보 전달력과 시청 몰입도를 극대화했습니다.",
+    description: "청소년 스마트폰 과몰입 예방 및 유해 매체 차단 서비스의 설치법과 기능을 안내하기 위해 제작했습니다. 복잡한 설정 절차를 2D 모션그래픽과 인포그래픽 애니메이션으로 시각화하여 편집했습니다.",
     videoUrl: "https://youtu.be/1xLWmkim-kE",
     imageUrl: "https://img.youtube.com/vi/1xLWmkim-kE/maxresdefault.jpg",
     equipment: "After Effects, Premiere Pro, Illustrator",
@@ -342,14 +342,14 @@ export const initialPortfolioItems: PortfolioItem[] = [
     date: "2023-05",
     order: 11.6
   },
-  // SHORTS (쇼츠 / 릴스) - 6 items
+  // SHORTS (쇼츠 / 릴스) - 8 items
   {
     id: "portfolio-shorts-1",
     title: "견인장치 무사고 연결법 (유럽식 커플러)",
     client: "K-TRAILER",
     role: "편집",
     format: "SHORTS",
-    description: "기존에 타 작업자가 제작해 아쉬움이 짙던 안전 연결법 원본 자료에서 오너들이 반드시 엄수해야 할 생명 직결 핵심 노하우 부위만을 완벽히 크롭 가공하고 스피디한 시각적 장치 효과를 버무려 리바이벌한 숏폼 콘텐츠입니다. 누적 17만 회의 높은 반응을 모았습니다.\n\n[제작 의도]\n카라반 연결법이라는 다소 딱딱하고 장황해질 수 있는 매뉴얼을 단 40초 만에 직관적으로 터득할 수 있도록 제작하였고, 안전사고 리스크를 획기적으로 낮추는 기능성 숏폼 가이드를 만드는 목적을 두었습니다.\n\n[핵심 비하인드]\n기존의 제작되어 있던 영상을 입사 직후 핵심 포인트를 발굴 및 재구조화하여 역주행 트래픽(17만 회)을 유도했으며, 안전에 민감한 실제 견인 오너들로부터 신뢰의 구심점을 확보 하였습니다.",
+    description: "카라반 연결 미숙으로 인한 안전사고를 예방하고 핵심 매뉴얼을 빠르게 전달하기 위해 제작했습니다. 기존 촬영본에서 체결 핵심 구간만을 재편집하고 자막과 그래픽을 보강해 45초 숏폼으로 재구성했습니다. 누적 조회수 17만 회를 기록했습니다.",
     videoUrl: "https://www.youtube.com/shorts/upLsH4PXbrM",
     imageUrl: "https://img.youtube.com/vi/upLsH4PXbrM/hqdefault.jpg",
     duration: "00:45",
@@ -362,7 +362,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "SHORTS",
-    description: "기아의 목적 기반 모빌리티(PBV)인 'PV5 큐브밴'의 오프라인 전시 현장을 빠르고 매력적으로 소개해 많은 예비 오너들의 주목을 이끌어 낸 홍보용 숏폼 콘텐츠입니다.\n\n[제작 의도]\n오프라인 전시 공간에 직접 방문하지 못하시는 소비자분들을 위해,\n단 3일, 인구 밀도가 높은 서울 현대 백화점 오프라인 부스에 전시 하고\nPV5 큐브밴만의 유니크하고 똑똑한 공간 레이아웃을 1분 내외로 속도감 있게 \n담아내어 정보를 명확하게 전달하고 접근성이 좋은 장소와 주말이라는 \n시기를 이용해 관심도를 끌어 올렸습니다.\n\n[핵심 비하인드]\n단기 전시 기간 동안의 현장 열기를 극대화하여 전달하고, 영상 게시 이후 K트레일러 채널로의 유입과 차량 견인장치 및 캠핑 관련 문의가 대폭 증가하는 등 단순 차량 소개를 넘어 브랜드 \n관심도로 이어지게 하는 실질적인 비즈니스 가치 변화를 이끌어 냈습니다. \n전시 기간 3일만에 10만 조회수를 달성 했습니다.",
+    description: "현대백화점 오프라인 팝업에 방문하지 못하는 고객에게 신차 공간을 신속히 소개하기 위해 기획했습니다. 차량의 내부 공간 구조와 특화 기능을 1분 이내 숏폼 포맷으로 1인 제작했습니다. 전시 기간 3일 만에 조회수 10만 회를 달성했습니다.",
     videoUrl: "https://youtube.com/shorts/hj6aLYEcVeY?si=9U6Cae0QG00QWCsP",
     imageUrl: "",
     duration: "00:38",
@@ -375,7 +375,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "SHORTS",
-    description: "현대백화점 시티 아웃도어 3일간의 짧은 팝업 전시 한정성을 활용해 시청자의 후킹 심리를 유도하고, 복잡한 인파 속에서 캠핑 맞춤형 유니크 내부 레이아웃을 감각적으로 조명한 전시 숏폼 마케팅 작입니다.\n\n[제작 의도]\n대형 유통점이라는 트렌디한 로케이션의 공간감을 바탕으로 썸네일과 앞단 3초 내에 시각적인 흥미 유발을 성공시키고, 좁은 단시간 내에 예비 오너들이 꼭 봐야 할 '가구 슬라이딩 기믹' 및 공간 확장성을 다이내믹한 연출로 전달하고자 했습니다.\n\n[핵심 비하인드]\n매우 혼잡한 오프라인 방문객 군더더기 동선을 최소 슬림화 앵글로 우회 처리하여 오롯이 차량의 공간 쾌적함에만 눈이 가도록 극적 편집을 감행했습니다. 팝업 기간 짧은 게시 즉시 K트레일러 오프라인 매장의 주말 상담 예약 콜백을 최고치로 활성화해, 단기 팝업 홍보 역량의 극한을 달성했습니다.",
+    description: "단기 팝업 전시 기간 동안 캠핑에 최적화된 PV5 큐브밴의 실내 레이아웃을 알리기 위해 기획했습니다. 슬라이딩 가구와 공간 확장성을 3초 내 후킹 컷과 빠른 컷 전환으로 1인 제작했습니다.",
     videoUrl: "https://www.youtube.com/shorts/-kx8OpMUvvs",
     imageUrl: "",
     duration: "00:52",
@@ -388,7 +388,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "SHORTS",
-    description: "정통 픽업 무쏘의 마스크를 야성적으로 극대화할 수 있는 필수 끝판왕 튜닝 옵션 4가지를 빠르고 명철하게 제안하여 액티비티 오너들을 저격한 속사포 릴리즈 숏폼입니다.\n\n[제작 의도]\n자사에서 판매하는 튜닝 제품을 홍보 하기 위해 실 테스트를 진행 했던 롱폼 콘텐츠\n와 추가 촬영을 통해 판매 제품을 홍보하는데 목적을 두었습니다.\n\n[핵심 비하인드]\n불필요한 인트로나 대기 시간 없이 오직 세련된 영상연출과 박력 있는 비트 음원에 맞추어 각 파트 장단점을 쏟아내듯 기획했습니다. 업로드 이후 무쏘 튜닝 파츠 관련 자사 네이버 샵 스토어 및 현장 패키지 장착 의뢰율을 40% 이상 증가시켰습니다.",
+    description: "무쏘 픽업 오너들의 선호도가 높은 핵심 튜닝 파츠 4종을 소개하기 위해 기획했습니다. 각 파츠의 장착 전후 모습과 기능을 빠른 템포의 숏폼 포맷으로 1인 제작했습니다. 영상 게시 후 자사 스마트스토어 및 현장 튜닝 패키지 의뢰가 40% 이상 증가했습니다.",
     videoUrl: "https://www.youtube.com/shorts/5kTzL12Py50",
     imageUrl: "https://img.youtube.com/vi/5kTzL12Py50/hqdefault.jpg",
     equipment: "a7c2, 오즈모 포켓3 | Premiere Pro",
@@ -402,7 +402,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "SHORTS",
-    description: "화제의 신차 '기아 타스만' 블랙과 화이트 실전 차량을 한 곳에 매칭하여 오너들의 최고 애고민인 색상 선택과 프리미엄 오브로 캐노피의 핏한 매치 실물을 감각적으로 조명한 하이 스피드 비교 쇼츠입니다.\n\n[제작 의도]\n자사 사업 확장으로 판매 하는 캐노피+판도라 제품을 BGM 템포에 맞춰\n홍보 하는 목적으로 제작 하였습니다.",
+    description: "기아 타스만 신차 출고 고객의 색상 선택 고민과 캐노피 장착 실물을 보여주기 위해 기획했습니다. 블랙과 화이트 실차에 오브로 캐노피를 장착한 모습을 대비 구조의 숏폼으로 1인 제작했습니다.",
     videoUrl: "https://www.youtube.com/shorts/J--3np5hqGI",
     imageUrl: "https://img.youtube.com/vi/J--3np5hqGI/hqdefault.jpg",
     equipment: "a7c2, 오즈모 액션5, DJI Mini 4 Pro | Premiere Pro",
@@ -416,7 +416,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "SHORTS",
-    description: "최고의 패밀리 SUV 팰리세이드 오너층의 온 가족 안전 승하차를 보우할 GSC 프리미엄 하이테크 전동 사이드 스텝의 작동성과 순정 부품급의 완성도를 스마트하게 세밀 피칭한 숏폼 콘텐츠입니다.\n\n[제작 의도]\n야간에도 안전하게 발밑을 비추는 고급 오토 LED 조명 전동 사이드 스텝 역동적이면서도 품위 높게 촬영하고 편집하여 오너들이 꼭 장착해야 할 가치를 시각적으로 표현시켰습니다.\n\n[핵심 비하인드]\n패밀리카를 구매하는 대부분의 목적이 가족을 위함이기 때문에\n거동이 불편하신 어르신이나 어린아이들을 위해 꼭 해야 한다.\n라는 구매 욕구를 충족 시키는 목적을 두었습니다.",
+    description: "패밀리 SUV 승하차 시 편의성과 안전성을 높이는 전동 사이드스텝의 필요성을 전달하기 위해 기획했습니다. 야간 LED 조명 작동과 실사용 승하차 동작을 클로즈업 앵글로 1인 제작했습니다.",
     videoUrl: "https://www.youtube.com/shorts/gDIrYKh8fkw",
     imageUrl: "https://img.youtube.com/vi/gDIrYKh8fkw/hqdefault.jpg",
     equipment: "a7c2, 오즈모 포켓3 | Premiere Pro",
@@ -430,7 +430,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "PPF 시공 기업",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "SHORTS",
-    description: "PPF 필름 전문 시공 기업의 시공 과정과 뛰어난 마감 퀄리티를 감각적이고 스피디하게 담아낸 기업 홍보 숏폼 콘텐츠입니다.\n\n[제작 의도]\nPPF 디테일링 시공의 정교함과 고품질 마감 상태를 숏폼 트렌드에 맞춰 속도감 있게 연출하여, 시청자에게 브랜드의 전문성과 신뢰도를 직관적으로 전달하고자 제작하였습니다.\n\n[핵심 비하인드]\n트렌디한 사운드와 리드미컬한 컷 편집을 통해 시공 세부 과정을 감각적으로 보여줌으로써 짧은 시간 내에 유저의 흥미와 브랜드 인지도를 극대화했습니다.",
+    description: "PPF 필름 시공 공정의 정밀도와 마감 상태를 전달하기 위해 기획했습니다. 정밀 재단과 부착 디테일을 빠른 템포의 숏폼 영상으로 1인 제작했습니다.",
     videoUrl: "https://youtube.com/shorts/XJit4uq6c1I",
     imageUrl: "https://img.youtube.com/vi/XJit4uq6c1I/hqdefault.jpg",
     equipment: "SONY ZV-E1, DJI Mini 4 Pro, 오즈모 포켓3 | Premiere Pro, After effect",
@@ -444,7 +444,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "PPF 시공 기업",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "SHORTS",
-    description: "테슬라 모델Y 차량의 PPF(정밀 보호 필름) 전문 시공 과정과 정교한 마감 퀄리티를 감각적이고 스피디하게 담아낸 기업 홍보 숏폼 콘텐츠입니다.\n\n[제작 의도]\n테슬라 모델Y의 정밀한 차량 시공 공정과 디테일을 숏폼 트렌드에 맞춰 속도감 있게 연출하여 예비 테슬라 오너와 시청자에게 브랜드의 높은 기술력과 신뢰도를 효과적으로 전달하고자 기획했습니다.\n\n[핵심 비하인드]\n트렌디한 사운드와 리드미컬한 컷 편집, 클로즈업 앵글 연출을 활용해 시공 디테일을 세련되게 전달하고 짧은 시간 내 시청자의 몰입감과 브랜드 인지도를 대폭 높였습니다.",
+    description: "테슬라 모델Y 맞춤형 PPF 시공 기술력과 완성도를 알리기 위해 기획했습니다. 차체 굴곡에 맞춘 밀착 시공과 마감 디테일을 클로즈업 숏폼으로 1인 제작했습니다.",
     videoUrl: "https://youtube.com/shorts/4OPStyGFCBs",
     imageUrl: "https://img.youtube.com/vi/4OPStyGFCBs/hqdefault.jpg",
     equipment: "SONY ZV-E1, DJI Mini 4 Pro, 오즈모 포켓3 | Premiere Pro, After effect",
@@ -460,7 +460,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "INTERVIEW",
-    description: "순수 전기 정통 픽업 '무쏘EV'를 대리점이 아닌 실제 필드 오너의 생생한 목소리로 2만km 장기 누적 실주행 가치와 필수 적재 파츠인 '진텍 캐노피'의 우수한 실사용 만족성을 팩트에 충실히 가감 없이 풀어낸 초밀착 오너 인터뷰입니다.\n\n[제작 의도]\n'전기차의 실제 적재 주행 연비는 어떠한가?', '캐노피 장착 후 소음이나 누수 문제는 정녕 없었는가?' 등 신차 예비 구매자들이 한 치의 의심 없이 알고자 하는 현실적인 오너 체험담을 가식 없는 인터뷰 형식으로 담아냈습니다.\n\n[핵심 비하인드]\n가식 없는 인터뷰를 편집하여 K트레일러 브랜드의 솔직함과 신뢰도에 중점을 두었습니다.",
+    description: "전기 픽업 실주행 연비와 진텍 캐노피 장착 후 내구성에 대한 예비 구매자의 궁금증을 해소하기 위해 기획했습니다. 2만km를 주행한 실오너를 인터뷰하여 소음과 누수 여부를 사실 그대로 1인 제작했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=LleqHF6Zmcs",
     imageUrl: "https://img.youtube.com/vi/LleqHF6Zmcs/hqdefault.jpg",
     previewVideoUrl: "",
@@ -475,7 +475,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "THULE",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "INTERVIEW",
-    description: "글로벌 명품 캐리어 툴레(THULE)와의 프리미엄 전략적 기획 하에, 실제 자전거 인플루언서 오너들과 야외 라이딩의 명소에서 우연히 조우하며 전국 대표 6대 성지 코스를 추천받고 신형 '툴레 에포스 캐리어'의 정밀 필드 깜짝 장착 이벤트까지 함께 직조해 낸 다큐 에듀 미니 예능 작입니다.\n\n[제작 의도]\n정형화된 광고가 아닌 자전거 덕후 시청자층의 마음을 열기 위해, 라이더들의 쉼터 성지에서 로드 인터뷰를 따내고 코스 맵 정보와 장비 편의 가치를 결합 기획했습니다.\n\n[핵심 비하인드]\n단순히 인터뷰를 하는게 아니라 자사에서 판매하는 제품과 함께\n공식 행사가 아닌 게릴라 이벤트를 준비해 자전거 라이더들에게 정말 쉬어가는\n시간을 준비해 브랜드를 알리는 목적을 중점으로 생각 했습니다.",
+    description: "툴레 신형 자전거 캐리어(에포스)의 브랜드 인지도와 타깃 접점을 확대하기 위해 기획했습니다. 주요 라이딩 성지에서 라이더들에게 코스를 추천받고 캐리어 현장 장착 이벤트를 진행하는 로드 인터뷰로 1인 제작했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=g1EDO_dBD7E",
     imageUrl: "",
     previewVideoUrl: "",
@@ -490,7 +490,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "INTERVIEW",
-    description: "대한민국 픽업의 혁신 '기아 타스만' 차량과 견인장치 장착형 오토 테크 하이엔드 텐트 '툴레 아웃셋'의 영혼의 결합을 이룩하고, 프리미엄 들판 속에서의 실전 감성 차박 만족도와 로드 주행 질감을 기품 어린 비주얼 다큐멘터리 인터뷰로 빚어낸 콘텐츠입니다.\n\n[제작 의도]\n'왜 지붕 위의 루프탑 텐트가 아닌 견인볼 결합형 아웃셋이어야 하는가?'라는 인터뷰와 함께 타스만 주행 후기를 함께 담아 타스만의 오너와 구매 고민중인 분들의 니즈를\n풀어주는 목적을 갖고 제작 하였습니다.\n\n[핵심 비하인드]\n비인기 제품인 아웃셋을 팔기 위해 타스만의 검색량을 이용 하였고\n조회수 보다는 제품을 모르는 소비자들에게 제품을 알리기 위함을\n중점으로 생각 했습니다.",
+    description: "견인볼 결합형 텐트(툴레 아웃셋)의 사용 편의성과 타스만 주행 질감을 알리기 위해 기획했습니다. 타스만 차주 인터뷰와 야외 설치 시연을 결합한 현장 인터뷰 포맷으로 1인 제작했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=d8EEun7E8J0",
     imageUrl: "https://img.youtube.com/vi/d8EEun7E8J0/hqdefault.jpg",
     previewVideoUrl: "",
@@ -505,7 +505,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "이투스교육",
     role: "기획, 촬영, 편집",
     format: "INTERVIEW",
-    description: "이투스교육 신규 입성 및 대표 강사 인터뷰를 통해 강사의 교육 철학과 커리큘럼의 핵심 경쟁력을 수험생들에게 생생하게 전달하는 기획 인터뷰 영상 콘텐츠입니다.\n\n[제작 의도]\n수험생과 학부모에게 강사의 진정성 있는 메시지와 과목별 학습 전략을 친근하면서도 설득력 있게 전달하고, 강사의 비전과 학습 방향성을 직관적으로 이해할 수 있도록 구성했습니다.\n\n[핵심 비하인드]\n스튜디오 인프라를 활용하여 안정적인 인터뷰 구도와 조명, 깔끔한 오디오를 세팅하고 강사의 스토리텔링에 맞춘 리드미컬한 컷 편집과 키워드 자막 모션을 적용해 인터뷰의 몰입감을 극대화했습니다.",
+    description: "신규 입성 강사의 교육 철학과 과목별 커리큘럼 경쟁력을 수험생에게 전달하기 위해 기획했습니다. 스튜디오 조명과 다채널 오디오를 세팅하고 핵심 키워드 자막 모션을 적용해 인터뷰 영상으로 제작했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=SiXkOaMNdio",
     imageUrl: "https://img.youtube.com/vi/SiXkOaMNdio/maxresdefault.jpg",
     previewVideoUrl: "",
@@ -520,7 +520,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "이투스교육",
     role: "라이브 중계 전송 및 방송 시스템 총괄 구축",
     format: "LIVE",
-    description: "코로나 팬데믹 시기에 대응하여 비대면 인강을 전송할 수 있는 쌍방향 라이브 인터넷 방송 시스템과 주요 지점 간 생중계 인프라를 설계 및 구축한 프로젝트입니다.\n\n[제작 의도]\n이투스교육에서 근무 할 시 코로나팬데믹 시기가 찾아 왔고, 비대면의 시대에 맞춰\n라이브 시스템을 구축하고 테스트, 송출, 가이드까지 제작하여 진행 하였습니다.\n\n[핵심 비하인드]\n대표적으로 스타 강사 최태성 선생님의 라이브를 담당 하였고, 스튜디오와 야외 현장의 라이브를 함께 송출 하는 등 다양한 송출 방식을 사용해 라이브 시스템을 구축 했습니다.",
+    description: "코로나19 시기 비대면 온라인 강의 전환과 안정적인 생중계 인프라 구축을 위해 추진되었습니다. 최태성 강사 라이브를 비롯해 스튜디오와 야외 현장을 잇는 다원 생중계 송출 프로세스를 설계하고 시스템을 구축했습니다.",
     videoUrl: "https://youtu.be/XVEqu1hdato",
     imageUrl: "https://img.youtube.com/vi/S6L6kCVd8F4/maxresdefault.jpg",
     equipment: "Live Streaming Engine, OBS Studio, DeckLink Capture, CANON Cameras, 다채널 오디오 믹싱 시스템",
@@ -629,6 +629,13 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
     const stored = localStorage.getItem("portfolio_items");
     if (
       !stored || 
+      stored.includes("통쾌하게") ||
+      stored.includes("기품 어린") ||
+      stored.includes("직조해") ||
+      stored.includes("속사포") ||
+      stored.includes("저격한") ||
+      stored.includes("[제작 의도]") ||
+      stored.includes("[핵심 비하인드]") ||
       stored.includes("유럽 명품 COCHET 트레일러") ||
       stored.includes("현장 중계, 촬영, 편집") ||
       stored.includes("Sony a7m3, 다중 카메라도 촬영 구도") ||
@@ -647,26 +654,8 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
       !stored.includes("hj6aLYEcVeY") ||
       !stored.includes("PV5 큐브밴") ||
       !stored.includes("360VR") ||
-      !stored.includes("최고 조회수 43만") ||
       !stored.includes("PV5 큐브밴 단기 전시 홍보") ||
       !stored.includes("(견생연구소)") ||
-      !stored.includes("이투스교육 근무 할 시기") ||
-      !stored.includes("촬영팀 6명") ||
-      !stored.includes("스타 강사 최태성 선생님") ||
-      !stored.includes("학생 6명") ||
-      !stored.includes("촬영팀 5명") ||
-      !stored.includes("안전사고 리스크를 획기적으로 낮추는 기능성") ||
-      !stored.includes("전시 기간 3일만에 10만 조회수") ||
-      !stored.includes("대형 유통점이라는 트렌디한 로케이션") ||
-      !stored.includes("자사에서 판매하는 튜닝 제품을 홍보") ||
-      !stored.includes("자사 사업 확장으로 판매 하는 캐노피+판도라") ||
-      !stored.includes("야간에도 안전하게 발밑을 비추는 고급 오토 LED") ||
-      !stored.includes("가식 없는 인터뷰를 편집하여 K트레일러") ||
-      !stored.includes("게릴라 이벤트를 준비해 자전거 라이더들에게") ||
-      !stored.includes("비인기 제품인 아웃셋을 팔기 위해") ||
-      !stored.includes("이투스교육에서 근무 할 시 코로나팬데믹") ||
-      stored.includes("이투스교육의 차세대") ||
-      stored.includes("당시 촬영 기획안을 초과하는") ||
       !stored.includes("Cook史") ||
       !stored.includes("MwlKk7E2ZSs") ||
       !stored.includes("Z2995_gc2VA") ||
@@ -681,7 +670,7 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
       !stored.includes("새마을 금고 중앙회_홍보 및 인터뷰") ||
       !stored.includes("SiXkOaMNdio")
     ) {
-      // Force migrate to show the beautiful updated titles/descriptions instantly
+      // Force migrate to show the updated crisp descriptions instantly
       try {
         localStorage.setItem("portfolio_items", JSON.stringify(initialPortfolioItems));
       } catch (inner) {}
@@ -872,9 +861,9 @@ export const saveStoredSkills = (items: SkillCategory[]) => {
 
 export const defaultSiteTexts: SiteTexts = {
   heroTagline: "",
-  heroTitle: "Content Marketer & PD",
+  heroTitle: "조회수를 매출 문의로 바꾸는 콘텐츠 PD",
   heroSubtitle: "",
-  heroSlogan: "1인 제작부터 중견기업 장기근속까지, 책임감 있는 브랜드 콘텐츠 PD",
+  heroSlogan: "기획·촬영·편집·채널 운영까지, 브랜드 성장에 책임지는 인하우스 프로듀서",
   heroCompetence1: "홍보 · 유튜브 · 쇼츠/릴스 영상 전문",
   heroCompetence2: "기획 · 촬영 · 편집 · 브랜디드 콘텐츠 총괄",
   aboutTagline: "",
@@ -884,7 +873,7 @@ export const defaultSiteTexts: SiteTexts = {
   profileAge: "41세",
   profilePhone: "010-4820-0441",
   profileEmail: "seoulpotato@naver.com",
-  aboutImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+  aboutImage: "/profile.jpg",
   profileImage: "/profile.jpg"
 };
 
@@ -900,17 +889,27 @@ export const getStoredSiteTexts = (): SiteTexts => {
     }
     const parsed = JSON.parse(stored);
     
-    // Migration: If about image is empty or features older cameras, update to modern video analysis / editing workstation
+    // Migration: update profileAge to "41세" if "14년" or empty
+    if (parsed && (parsed.profileAge === "14년" || !parsed.profileAge || parsed.profileAge.includes("년"))) {
+      parsed.profileAge = "41세";
+      try {
+        localStorage.setItem("site_texts", JSON.stringify(parsed));
+      } catch (inner) {}
+    }
+    
+    // Migration: Update aboutImage to /profile.jpg if empty or using Unsplash stock photos
     if (
       parsed &&
       (!parsed.aboutImage || 
        parsed.aboutImage === "" || 
+       parsed.aboutImage.includes("unsplash.com") ||
        parsed.aboutImage.includes("photo-1542038784456") ||
+       parsed.aboutImage.includes("photo-1551288049-bebda4e38f71") ||
        parsed.aboutImage.includes("photo-1554941068-a252680d25d9") ||
        parsed.aboutImage.includes("photo-1626544827763") ||
        parsed.aboutImage.includes("photo-1616440347437"))
     ) {
-      parsed.aboutImage = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800";
+      parsed.aboutImage = "/profile.jpg";
       try {
         localStorage.setItem("site_texts", JSON.stringify(parsed));
       } catch (inner) {}
@@ -936,7 +935,8 @@ export const getStoredSiteTexts = (): SiteTexts => {
     // Migration: If user has local storage with the old default slogan variants, migrate it automatically to the upgraded professional Korean slogan
     if (
       parsed &&
-      (parsed.heroSlogan !== "1인 제작부터 중견기업 장기근속까지, 책임감 있는 브랜드 콘텐츠 PD" ||
+      (parsed.heroSlogan !== "기획·촬영·편집·채널 운영까지, 브랜드 성장에 책임지는 인하우스 프로듀서" ||
+       parsed.heroSlogan === "1인 제작부터 중견기업 장기근속까지, 책임감 있는 브랜드 콘텐츠 PD" ||
        parsed.heroSlogan === "1인 제작부터 중견기업 장기근속까지, 책임감 있는 콘텐츠 크리에이터" ||
        parsed.heroSlogan === "콘텐츠 제작, 조직 운영, 채널 성장으로 비즈니스 성과를 만들어온 크리에이터" ||
        parsed.heroSlogan === "기획부터 촬영, 완벽한 편집까지 브랜드 가치를 관통하는 1인 제작" ||
@@ -962,9 +962,9 @@ export const getStoredSiteTexts = (): SiteTexts => {
         localStorage.setItem("site_texts", JSON.stringify(parsed));
       } catch (inner) {}
     }
-    if (parsed && (parsed.heroTagline === "HIGH-END VIDEO PRODUCER" || parsed.heroTitle === "VIDEO MARKETING" || parsed.heroTitle === "CONTENT PRODUCER" || parsed.heroSubtitle === "DIRECTOR" || parsed.heroTitle === "Content Marketer" || !parsed.heroTitle?.includes("Content Marketer & PD"))) {
+    if (parsed && (parsed.heroTagline === "HIGH-END VIDEO PRODUCER" || parsed.heroTitle === "VIDEO MARKETING" || parsed.heroTitle === "CONTENT PRODUCER" || parsed.heroSubtitle === "DIRECTOR" || parsed.heroTitle === "Content Marketer" || parsed.heroTitle === "Content Marketer & PD" || !parsed.heroTitle?.includes("조회수를 매출 문의로"))) {
       parsed.heroTagline = "";
-      parsed.heroTitle = "Content Marketer & PD";
+      parsed.heroTitle = "조회수를 매출 문의로 바꾸는 콘텐츠 PD";
       parsed.heroSubtitle = "";
       try {
         localStorage.setItem("site_texts", JSON.stringify(parsed));

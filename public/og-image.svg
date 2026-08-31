@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e11d48"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Geometric Grid Accent Line -->
+  <line x1="80" y1="120" x2="1120" y2="120" stroke="#334155" stroke-width="1" opacity="0.4"/>
+  <line x1="80" y1="520" x2="1120" y2="520" stroke="#334155" stroke-width="1" opacity="0.4"/>
+
+  <!-- Red Accent Pill -->
+  <rect x="80" y="70" width="180" height="32" rx="16" fill="url(#accent)"/>
+  <text x="170" y="91" fill="#ffffff" font-size="13" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, sans-serif" text-anchor="middle" letter-spacing="2">PORTFOLIO</text>
+
+  <!-- Subtitle Tagline -->
+  <text x="280" y="92" fill="#94a3b8" font-size="14" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, sans-serif" letter-spacing="1">VIDEO PRODUCER &amp; CONTENT MARKETER</text>
+
+  <!-- Main Headline -->
+  <text x="80" y="210" fill="#ffffff" font-size="52" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, sans-serif" letter-spacing="-1">
+    이주원 <tspan fill="#94a3b8" font-weight="400">|</tspan> 브랜드 콘텐츠 PD
+  </text>
+  <text x="80" y="275" fill="#f43f5e" font-size="34" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, sans-serif">
+    조회수를 매출 문의로 바꾸는 인하우스 프로듀서
+  </text>
+
+  <!-- Description Body -->
+  <text x="80" y="340" fill="#cbd5e1" font-size="20" font-weight="400" font-family="-apple-system, BlinkMacSystemFont, sans-serif">
+    영상 경력 14년 · 기획 · 촬영 · 편집 · 채널 운영까지 책임지는 올라운더
+  </text>
+
+  <!-- Metrics Cards Container -->
+  <!-- Card 1 -->
+  <g filter="url(#shadow)">
+    <rect x="80" y="390" width="235" height="100" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="105" y="425" fill="#94a3b8" font-size="13" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, sans-serif">최고 조회수 (릴스)</text>
+    <text x="105" y="468" fill="#f43f5e" font-size="32" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, sans-serif">91만 회</text>
+  </g>
+
+  <!-- Card 2 -->
+  <g filter="url(#shadow)">
+    <rect x="340" y="390" width="235" height="100" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="365" y="425" fill="#94a3b8" font-size="13" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, sans-serif">유튜브 구독자</text>
+    <text x="365" y="468" fill="#ffffff" font-size="32" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, sans-serif">4배 성장</text>
+  </g>
+
+  <!-- Card 3 -->
+  <g filter="url(#shadow)">
+    <rect x="600" y="390" width="235" height="100" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="625" y="425" fill="#94a3b8" font-size="13" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, sans-serif">콘텐츠 기반 문의율</text>
+    <text x="625" y="468" fill="#38bdf8" font-size="32" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, sans-serif">+48% 증가</text>
+  </g>
+
+  <!-- Card 4 -->
+  <g filter="url(#shadow)">
+    <rect x="860" y="390" width="260" height="100" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="885" y="425" fill="#94a3b8" font-size="13" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, sans-serif">총 영상 제작 경력</text>
+    <text x="885" y="468" fill="#fbbf24" font-size="32" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, sans-serif">14년차 PD</text>
+  </g>
+
+  <!-- Footer Tag -->
+  <text x="80" y="565" fill="#64748b" font-size="15" font-family="-apple-system, BlinkMacSystemFont, sans-serif">
+    Automotive &amp; Branded Video Portfolio · Lee Ju-won
+  </text>
+</svg>

@@ -4,7 +4,6 @@
  */
 
 import React from "react";
-import { Hammer, Cpu, Landmark, Sliders, Play, Settings, Check, Radio } from "lucide-react";
 import { initialSkills } from "../data";
 import { SkillCategory } from "../types";
 
@@ -15,31 +14,23 @@ interface SkillsProps {
 export default function Skills({ skills = [] }: SkillsProps) {
   const displaySkills = skills && skills.length > 0 ? skills : initialSkills;
 
-  const getIcon = (categoryName: string) => {
-    if (categoryName.includes("Production") || categoryName.includes("촬영")) {
-      return <Radio size={16} className="text-slate-800" />;
-    }
-    if (categoryName.includes("Post") || categoryName.includes("편집")) {
-      return <Sliders size={16} className="text-slate-800" />;
-    }
-    return <Cpu size={16} className="text-slate-800" />;
-  };
-
   return (
-    <section id="skills" className="py-24 bg-[#F8F9FA] border-y border-slate-200/80 relative">
+    <section id="skills" className="py-20 md:py-24 bg-[#0E0E10] relative border-t border-white/[0.05]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
-        {/* Section Header */}
-        <div className="mb-14">
-          <div className="flex items-center space-x-2 mb-3">
-            <span className="w-2 h-2 rounded-full bg-primary-red" />
-            <span className="text-xs font-bold tracking-widest text-slate-500 uppercase">
-              SKILLS & GEAR
+        {/* Editorial Section Header */}
+        <div className="mb-12 pb-6 border-b border-white/[0.07] flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <span className="font-headline text-sm text-[#8A8A93] font-bold tracking-widest uppercase block mb-2">
+              04 / CAPABILITIES
             </span>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+              보유 기술 및 역량
+            </h2>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
-            보유 기술 및 역량
-          </h2>
+          <p className="text-sm md:text-base text-[#8A8A93] font-medium max-w-md">
+            기획·연출부터 멀티캠 촬영, 색보정, 사운드 믹싱, AI 워크플로우까지
+          </p>
         </div>
 
         {/* Skills Grid */}
@@ -48,31 +39,28 @@ export default function Skills({ skills = [] }: SkillsProps) {
           {displaySkills.map((section, sIdx) => (
             <div
               key={sIdx}
-              className="p-7 bg-white rounded-2xl border border-slate-200 hover:border-slate-300 transition-all duration-200 flex flex-col justify-between shadow-2xs"
+              className="p-6 sm:p-7 bg-[#1A1A1F] border border-white/[0.07] hover:bg-[#222228] hover:border-white/[0.14] rounded-xl flex flex-col justify-between transition-all duration-200"
               id={`skill-card-${sIdx}`}
             >
               <div>
                 {/* Header Tag Category */}
-                <div className="flex items-center space-x-3 mb-6 border-b border-slate-100 pb-4">
-                  <div className="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
-                    {getIcon(section.category)}
-                  </div>
-                  <div>
-                    <h3 className="text-base font-bold text-slate-900">
-                      {section.category}
-                    </h3>
-                  </div>
+                <div className="mb-5 pb-3.5 border-b border-white/[0.07]">
+                  <span className="font-headline text-xs text-[#8A8A93] font-bold tracking-widest uppercase block mb-1">
+                    CATEGORY {sIdx + 1}
+                  </span>
+                  <h3 className="text-base sm:text-lg font-bold text-white">
+                    {section.category}
+                  </h3>
                 </div>
 
                 {/* Skills Bullet Items */}
-                <div className="space-y-2.5">
+                <div className="space-y-2">
                   {section.skills.map((skill, skIdx) => (
                     <div
                        key={skIdx}
-                       className="flex items-center space-x-3 px-3.5 py-2.5 bg-[#F8F9FA] rounded-xl border border-slate-150"
+                       className="px-3.5 py-2.5 bg-[#16161A] border border-white/[0.05] rounded-lg text-sm sm:text-[15px] text-[#C9C9CF] font-medium"
                     >
-                      <Check size={14} className="text-primary-red shrink-0" />
-                      <span className="text-xs sm:text-sm text-slate-750 font-medium">{skill}</span>
+                      {skill}
                     </div>
                   ))}
                 </div>
