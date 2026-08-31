@@ -25,7 +25,7 @@ export default function FloatingBottomBar({ isVisible, onPdfClick, profileEmail 
         
         {/* Left identity info */}
         <div className="flex items-center space-x-2.5 truncate">
-          <span className="w-2 h-2 rounded-full bg-primary-red shrink-0" />
+          <span className="w-2 h-2 rounded-full bg-white/40 shrink-0" />
           <span className="text-xs sm:text-sm font-bold text-white tracking-tight truncate">
             이주원 <span className="text-[#8A8A93] font-normal mx-1">|</span> 브랜드 콘텐츠 PD
           </span>
@@ -38,7 +38,7 @@ export default function FloatingBottomBar({ isVisible, onPdfClick, profileEmail 
             onClick={onPdfClick}
             className="h-9 px-3 sm:px-4 bg-[#1A1A1F] hover:bg-[#222228] border border-white/[0.1] hover:border-white/[0.2] text-white text-xs sm:text-sm font-headline font-bold tracking-wider rounded-lg transition-all flex items-center space-x-1.5 cursor-pointer"
           >
-            <Printer size={14} className="text-primary-red" />
+            <Printer size={14} className="text-white" />
             <span>PDF 저장</span>
           </button>
 

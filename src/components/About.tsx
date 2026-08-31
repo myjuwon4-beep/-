@@ -124,7 +124,7 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
                   <h4 className="text-base font-bold text-white">이주원</h4>
                   <p className="text-xs text-[#8A8A93] font-medium mt-0.5">브랜드 콘텐츠 프로듀서</p>
                 </div>
-                <span className="text-xs font-headline font-bold px-2.5 py-0.5 bg-primary-red text-white rounded">PD</span>
+                <span className="text-xs font-headline font-bold px-2.5 py-0.5 bg-white/10 border border-white/10 text-white rounded">PD</span>
               </div>
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
           {/* Right Block: Pitch Copy & Core Pillars */}
           <div className="lg:col-span-7 flex flex-col justify-start">
             {siteTexts.aboutTagline && (
-              <span className="text-primary-red text-xs sm:text-sm font-headline font-bold tracking-widest mb-2 uppercase">
+              <span className="text-[#C9C9CF] text-xs sm:text-sm font-headline font-bold tracking-widest mb-2 uppercase">
                 {siteTexts.aboutTagline}
               </span>
             )}

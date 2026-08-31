@@ -87,7 +87,7 @@ export default function Navbar({ onPdfClick }: NavbarProps) {
           className="flex items-center space-x-2 cursor-pointer group"
           id="nav-logo"
         >
-          <span className="font-headline text-xl md:text-2xl font-black tracking-wider text-white group-hover:text-primary-red transition-colors whitespace-nowrap">
+          <span className="font-headline text-xl md:text-2xl font-black tracking-wider text-white group-hover:text-white transition-colors whitespace-nowrap">
             JU WON LEE
           </span>
           <span className="hidden sm:inline-block text-xs font-mono text-[#8A8A93] pl-1 font-medium tracking-wider">
@@ -111,7 +111,7 @@ export default function Navbar({ onPdfClick }: NavbarProps) {
                 >
                   {item.label}
                   {activeSection === item.id && (
-                    <span className="absolute bottom-0 left-0 w-full h-[2px] bg-primary-red rounded-full" />
+                    <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white rounded-full" />
                   )}
                 </button>
               </li>
@@ -154,7 +154,7 @@ export default function Navbar({ onPdfClick }: NavbarProps) {
                   id={`nav-mobile-${item.id}`}
                   onClick={() => scrollToSection(item.id)}
                   className={`text-lg font-bold block w-full text-left py-2 border-b border-white/[0.06] ${
-                    activeSection === item.id ? "text-primary-red" : "text-[#C9C9CF] hover:text-white"
+                    activeSection === item.id ? "text-white font-bold" : "text-[#C9C9CF] hover:text-white"
                   }`}
                 >
                   {item.label}

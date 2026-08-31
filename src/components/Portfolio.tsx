@@ -14,7 +14,7 @@ interface PortfolioProps {
 interface FeaturedProject {
   id: string;
   title: string;
-  badge: string;
+  metricBadge?: string;
   format: string;
   problem: string;
   approach: string;
@@ -31,44 +31,43 @@ const FEATURED_PROJECTS: FeaturedProject[] = [
   {
     id: "portfolio-long-1",
     title: "PV5 전기차 23시간 전기 테스트",
-    badge: "조회수 45만",
+    metricBadge: "조회수 46만",
     format: "YOUTUBE LONG",
     videoUrl: "https://www.youtube.com/watch?v=5Vhtzdd1Pyw",
     imageUrl: "https://img.youtube.com/vi/5Vhtzdd1Pyw/maxresdefault.jpg",
     problem: "신차 전기 PBV(PV5) 1박 혹한기 차박 시 배터리 방전 및 난방 지속성에 대한 예비 구매자 불안 해소",
     approach: "영하 기온 노지에서 23시간 동안 히터 및 전자기기 연속 가동 실측 필드 테스트 진행",
-    result: "유튜브 조회수 45만 회 달성 (구독자 2,000명 시점 대비 채널 최고 롱폼 기록)",
+    result: "유튜브 조회수 46만 회 달성 (구독자 2,000명 시점 대비 채널 최고 롱폼 기록)",
     role: "기획, 촬영, 편집 (1인 총괄 제작)",
     equipment: "오즈모 포켓3, DJI Mini 4 Pro | Premiere Pro",
     client: "K-TRAILER",
-    description: "전기 PBV(PV5) 구매를 고려하는 소비자들이 가장 우려하는 1박 캠핑 시 전력 소비량을 검증하기 위해 기획했습니다. 혹한기 환경에서 23시간 동안 히터와 전자기기를 동시 가동하는 실전 필드 테스트로 1인 제작했습니다. 구독자 2,000명 시점에 최고 조회수 45만 회를 기록했습니다."
+    description: "전기 PBV(PV5) 구매를 고려하는 소비자들이 가장 우려하는 1박 캠핑 시 전력 소비량을 검증하기 위해 기획했습니다. 혹한기 환경에서 23시간 동안 히터와 전자기기를 동시 가동하는 실전 필드 테스트로 1인 제작했습니다. 구독자 2,000명 시점에 최고 조회수 46만 회를 기록했습니다."
   },
   {
-    id: "portfolio-shorts-1",
-    title: "견인장치 무사고 연결법 (유럽식 커플러)",
-    badge: "누적 17만",
+    id: "portfolio-shorts-2",
+    title: "PV5 큐브밴 단기 전시 홍보",
+    metricBadge: "조회수 60만",
     format: "SHORTS",
-    videoUrl: "https://www.youtube.com/shorts/upLsH4PXbrM",
-    imageUrl: "https://img.youtube.com/vi/upLsH4PXbrM/hqdefault.jpg",
-    problem: "카라반 체결 미숙으로 인한 대형 안전사고 예방 및 신속한 핵심 체결 매뉴얼 제공",
-    approach: "핵심 체결 구간만을 45초 숏폼으로 재편집하고 고대비 자막과 시각 그래픽 보강",
-    result: "누적 조회수 17만 회 달성, 안전사고 예방 매뉴얼 영상 공유 확산",
-    role: "기획, 숏폼 재가공 편집",
-    equipment: "Premiere Pro, After Effects",
+    videoUrl: "https://youtube.com/shorts/hj6aLYEcVeY?si=9U6Cae0QG00QWCsP",
+    imageUrl: "https://img.youtube.com/vi/hj6aLYEcVeY/hqdefault.jpg",
+    problem: "현대백화점 오프라인 단기 팝업 전시에 직접 방문하지 못하는 가망 고객 대상 신속한 신차 공간감 전달",
+    approach: "차량의 내부 구조와 핵심 특화 공간을 1분 이내 숏폼 포맷 및 직관적인 앵글로 1인 전담 제작",
+    result: "전시 기간 3일 만에 유튜브 숏폼 조회수 60만 회 달성 및 팝업 현장 유입 극대화",
+    role: "기획, 촬영, 편집 (1인 총괄 제작)",
+    equipment: "오즈모 포켓3, a7c2 | Premiere Pro",
     client: "K-TRAILER",
-    description: "카라반 연결 미숙으로 인한 안전사고를 예방하고 핵심 매뉴얼을 빠르게 전달하기 위해 제작했습니다. 기존 촬영본에서 체결 핵심 구간만을 재편집하고 자막과 그래픽을 보강해 45초 숏폼으로 재구성했습니다. 누적 조회수 17만 회를 기록했습니다."
+    description: "현대백화점 오프라인 팝업에 방문하지 못하는 고객에게 신차 공간을 신속히 소개하기 위해 기획했습니다. 차량의 내부 공간 구조와 특화 기능을 1분 이내 숏폼 포맷으로 1인 제작했습니다. 전시 기간 3일 만에 조회수 60만 회를 달성했습니다."
   },
   {
     id: "portfolio-promo-1",
-    title: "K트레일러&큐브렉 자사 기업 홍보용 영상",
-    badge: "기업 브랜딩",
+    title: "[기업홍보]차량시공 기업 홍보 콘텐츠",
     format: "PROMOTION",
     videoUrl: "https://www.youtube.com/watch?v=XM2E0Eqf_8U",
     imageUrl: "https://img.youtube.com/vi/XM2E0Eqf_8U/maxresdefault.jpg",
     problem: "공식 브랜드 영상 부재 해결 및 특수 견인장치 장착 공정 기술력에 대한 대외 신뢰도 제고",
     approach: "제조사(큐브렉)와의 정밀 장착 공정을 드론 및 지상 다각도 앵글로 1인 제작",
     result: "공식 기업 포트폴리오 영상 구축 및 B2B·B2C 인바운드 문의 견인",
-    role: "기획, 촬영, 편집 (1인 총괄 제작)",
+    role: "기획, 촬영, 편집 (1인 총괄 제작) · 기업 브랜딩",
     equipment: "Sony a7m3, DJI Mini 4 Pro | Premiere Pro, After Effects",
     client: "K-TRAILER",
     description: "사내 공식 브랜딩 영상의 부재를 해결하고 견인장치 장착 기술력에 대한 기업 신뢰도를 높이기 위해 기획했습니다. 견인장치 제조사 큐브렉과의 협업으로 정밀 장착 공정을 1인 제작(기획·촬영·편집)하여 담아냈습니다."
@@ -76,14 +75,13 @@ const FEATURED_PROJECTS: FeaturedProject[] = [
   {
     id: "portfolio-promo-2",
     title: "한국관광공사 유니크베뉴 | 왕의지밀 홍보 영상",
-    badge: "공공기관 프로젝트",
     format: "PROMOTION",
     videoUrl: "https://www.youtube.com/watch?v=cZLWRn6voS0",
     imageUrl: "https://img.youtube.com/vi/cZLWRn6voS0/maxresdefault.jpg",
     problem: "전통 한옥 호텔의 고유한 공간적 가치와 MICE 유니크베뉴로서의 매력 대외 홍보",
     approach: "항공 드론 뷰와 실내 다각도 시네마틱 앵글로 한국적 건축미와 공간 동선 연출",
     result: "한국관광공사 MICE 공식 홍보 자산 채택 및 기업 신뢰도 제고",
-    role: "기획, 항공 드론 및 지상 촬영, 편집 (1인 제작)",
+    role: "기획, 항공 드론 및 지상 촬영, 편집 (1인 제작) · 공공기관 프로젝트",
     equipment: "Sony a7m3, DJI Mavic 2 | Premiere Pro, After Effects",
     client: "왕의지밀",
     description: "한국관광공사 프로젝트 현장 지원 중 한옥 호텔 고유의 공간적 가치를 대외에 알릴 영상 자산의 필요성을 느껴 기획했습니다. 호텔 전경 및 한옥 건축미를 항공 드론과 실내 다각도 앵글로 촬영해 1인 제작했습니다."
@@ -91,14 +89,13 @@ const FEATURED_PROJECTS: FeaturedProject[] = [
   {
     id: "portfolio-interview-1",
     title: "무쏘EV 2만km 주행 후기 | 진텍 캐노피",
-    badge: "실오너 인터뷰",
     format: "INTERVIEW",
     videoUrl: "https://www.youtube.com/watch?v=LleqHF6Zmcs",
     imageUrl: "https://img.youtube.com/vi/LleqHF6Zmcs/hqdefault.jpg",
     problem: "전기 픽업 실주행 전비와 사제 캐노피(진텍) 장착 후 소음·누수 내구성에 대한 구매 의구심 해소",
     approach: "2만km를 실주행한 실제 오너의 가감 없는 솔직한 인터뷰와 디테일 실측 촬영",
     result: "장착 예약 및 제품 문의 전월 대비 30% 이상 증가",
-    role: "기획, 섭외, 촬영, 편집 (1인 총괄 제작)",
+    role: "기획, 섭외, 촬영, 편집 (1인 총괄 제작) · 실오너 인터뷰",
     equipment: "a7c2, 오즈모 포켓3, DJI Mini 4 Pro | Premiere Pro",
     client: "K-TRAILER",
     description: "전기 픽업 실주행 연비와 진텍 캐노피 장착 후 내구성에 대한 예비 구매자의 궁금증을 해소하기 위해 기획했습니다. 2만km를 주행한 실오너를 인터뷰하여 소음과 누수 여부를 사실 그대로 1인 제작했습니다."
@@ -106,14 +103,13 @@ const FEATURED_PROJECTS: FeaturedProject[] = [
   {
     id: "portfolio-live-1",
     title: "[LIVE] 이투스교육 라이브 시스템 구축",
-    badge: "방송 인프라",
     format: "LIVE",
     videoUrl: "https://youtu.be/XVEqu1hdato",
     imageUrl: "https://img.youtube.com/vi/S6L6kCVd8F4/maxresdefault.jpg",
     problem: "비대면 온라인 전환 시기 무중단 고화질 실시간 생중계 및 방송 송출 인프라 구축",
     approach: "스튜디오와 현장을 잇는 다원 생중계 송출 프로세스 및 1타 강사 라이브 시스템 설계",
     result: "전국 수험생 대상 대형 라이브 무장애 송출 및 방송 가이드라인 표준화",
-    role: "라이브 중계 전송 및 방송 시스템 총괄 구축",
+    role: "라이브 중계 전송 및 방송 시스템 총괄 구축 · 방송 인프라",
     equipment: "Live Streaming Engine, OBS Studio, DeckLink Capture, CANON Cameras",
     client: "이투스교육",
     description: "코로나19 시기 비대면 온라인 강의 전환과 안정적인 생중계 인프라 구축을 위해 추진되었습니다. 최태성 강사 라이브를 비롯해 스튜디오와 야외 현장을 잇는 다원 생중계 송출 프로세스를 설계하고 시스템을 구축했습니다."
@@ -251,14 +247,14 @@ export default function Portfolio({ items }: PortfolioProps) {
           >
             <div className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-3">
-                <div className="p-2.5 bg-[#16161A] border border-white/[0.06] text-primary-red rounded-lg shrink-0">
+                <div className="p-2.5 bg-[#16161A] border border-white/[0.06] text-white rounded-lg shrink-0">
                   <Youtube size={20} />
                 </div>
                 <div>
                   <span className="text-[11px] font-headline font-bold uppercase tracking-wider text-[#8A8A93] block">
                     YOUTUBE CHANNEL
                   </span>
-                  <h3 className="text-sm sm:text-base font-bold text-white group-hover:text-primary-red transition-colors">
+                  <h3 className="text-sm sm:text-base font-bold text-white group-hover:text-white transition-colors">
                     인하우스 PD 유튜브 채널
                   </h3>
                 </div>
@@ -275,14 +271,14 @@ export default function Portfolio({ items }: PortfolioProps) {
           >
             <div className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-3">
-                <div className="p-2.5 bg-[#16161A] border border-white/[0.06] text-primary-red rounded-lg shrink-0">
+                <div className="p-2.5 bg-[#16161A] border border-white/[0.06] text-white rounded-lg shrink-0">
                   <Instagram size={20} />
                 </div>
                 <div>
                   <span className="text-[11px] font-headline font-bold uppercase tracking-wider text-[#8A8A93] block">
                     INSTAGRAM REELS
                   </span>
-                  <h3 className="text-sm sm:text-base font-bold text-white group-hover:text-primary-red transition-colors">
+                  <h3 className="text-sm sm:text-base font-bold text-white group-hover:text-white transition-colors">
                     인하우스 PD 릴스 채널
                   </h3>
                 </div>
@@ -298,7 +294,7 @@ export default function Portfolio({ items }: PortfolioProps) {
         <div className="mb-14" id="featured-projects-section">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center space-x-2.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-primary-red animate-pulse" />
+              <span className="w-2.5 h-2.5 rounded-full bg-white/60" />
               <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
                 대표 프로젝트 6
               </h3>
@@ -323,12 +319,17 @@ export default function Portfolio({ items }: PortfolioProps) {
                 <div className="relative aspect-video w-full overflow-hidden bg-black select-none">
                   {/* Top Badges */}
                   <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-30 pointer-events-none">
-                    <span className="px-3 py-1 bg-black/80 backdrop-blur-md text-white text-xs font-headline font-bold rounded-lg uppercase tracking-wider border border-white/10">
+                    <span className="px-3 py-1.5 bg-black/85 backdrop-blur-md text-white text-xs sm:text-sm font-headline font-bold rounded-lg uppercase tracking-wider border border-white/15 shadow-md">
                       {project.format}
                     </span>
-                    <span className="px-3 py-1 bg-primary-red text-white text-xs font-headline font-bold rounded-lg tracking-wide shadow-md">
-                      {project.badge}
-                    </span>
+                    {project.metricBadge ? (
+                      <span className="px-3.5 py-1.5 bg-black/90 backdrop-blur-md text-white text-sm sm:text-base font-headline font-extrabold rounded-lg tracking-tight border border-white/20 flex items-center space-x-2 shadow-xl ring-1 ring-white/10">
+                        <span className="w-2 h-2 rounded-full bg-primary-red shrink-0 shadow-[0_0_8px_#FF4D57]" />
+                        <span className="text-white drop-shadow">{project.metricBadge}</span>
+                      </span>
+                    ) : (
+                      <div />
+                    )}
                   </div>
 
                   {/* Thumbnail Image */}
@@ -348,7 +349,7 @@ export default function Portfolio({ items }: PortfolioProps) {
                   {/* Hover Overlay with Large Play Button */}
                   <div className="absolute inset-0 flex items-center justify-center bg-black/55 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20">
                     <div className="flex items-center gap-2.5 px-5 py-2.5 bg-white text-black rounded-full shadow-2xl transition-transform duration-200 group-hover:scale-105">
-                      <Play size={15} fill="currentColor" className="text-primary-red ml-0.5" />
+                      <Play size={15} fill="currentColor" className="text-black ml-0.5" />
                       <span className="text-xs sm:text-sm font-headline font-bold tracking-wider uppercase">새 탭에서 영상 보기</span>
                     </div>
                   </div>
@@ -357,14 +358,14 @@ export default function Portfolio({ items }: PortfolioProps) {
                 {/* Card Content: Title + Clean 4-Line Structured Metadata */}
                 <div className="p-5 sm:p-6 flex-grow flex flex-col justify-between">
                   <div>
-                    <h4 className="text-lg sm:text-xl font-bold text-white group-hover:text-primary-red transition-colors duration-150 leading-snug line-clamp-1">
+                    <h4 className="text-lg sm:text-xl font-bold text-white group-hover:text-white transition-colors duration-150 leading-snug line-clamp-1">
                       {project.title}
                     </h4>
 
                     {/* Strict 4-Line Structure: Clean flat layout with no nested card borders */}
                     <div className="mt-4 pt-3.5 border-t border-white/[0.07] space-y-2.5 text-sm leading-[1.7]">
                       <div className="flex items-start gap-2.5">
-                        <span className="font-headline font-bold text-primary-red uppercase tracking-wider text-xs sm:text-[13px] shrink-0 w-16 pt-0.5">
+                        <span className="font-headline font-bold text-[#C9C9CF] uppercase tracking-wider text-xs sm:text-[13px] shrink-0 w-16 pt-0.5">
                           과제
                         </span>
                         <span className="text-[#C9C9CF] text-sm font-normal">{project.problem}</span>
@@ -395,7 +396,7 @@ export default function Portfolio({ items }: PortfolioProps) {
 
                   <div className="mt-5 pt-3.5 border-t border-white/[0.07] flex items-center justify-between text-xs sm:text-[13px] text-[#8A8A93]">
                     <span className="font-medium">{project.client}</span>
-                    <span className="font-headline font-bold tracking-wider text-primary-red flex items-center gap-1 group-hover:underline">
+                    <span className="font-headline font-bold tracking-wider text-[#C9C9CF] group-hover:text-white flex items-center gap-1 group-hover:underline">
                       <span>WATCH VIDEO</span>
                       <ExternalLink size={13} />
                     </span>
@@ -444,7 +445,7 @@ export default function Portfolio({ items }: PortfolioProps) {
                     onClick={() => setSelectedCategory(cat.code)}
                     className={`px-3.5 py-1.5 text-xs sm:text-sm font-headline font-bold tracking-wider uppercase rounded-lg transition-all duration-150 cursor-pointer ${
                       selectedCategory === cat.code
-                        ? "bg-primary-red text-white"
+                        ? "bg-white text-black font-bold"
                         : "bg-[#1A1A1F] border border-white/[0.07] text-[#8A8A93] hover:text-white hover:bg-[#222228]"
                     }`}
                   >
@@ -488,14 +489,14 @@ export default function Portfolio({ items }: PortfolioProps) {
                       {/* Hover play icon */}
                       <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-10">
                         <div className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center">
-                          <Play size={14} fill="currentColor" className="text-primary-red ml-0.5" />
+                          <Play size={14} fill="currentColor" className="text-black ml-0.5" />
                         </div>
                       </div>
                     </div>
 
                     {/* Card Title & Role Tag ONLY */}
                     <div className="p-3.5 flex-grow flex flex-col justify-between">
-                      <h4 className="text-sm font-bold text-white group-hover:text-primary-red transition-colors line-clamp-2 leading-snug">
+                      <h4 className="text-sm font-bold text-white group-hover:text-[#C9C9CF] transition-colors line-clamp-2 leading-snug">
                         {item.title}
                       </h4>
                       {item.role && (
@@ -555,7 +556,7 @@ export default function Portfolio({ items }: PortfolioProps) {
               {/* Left Column: Title & Description */}
               <div className="lg:col-span-2 space-y-4">
                 <div>
-                  <span className="px-2.5 py-1 bg-primary-red text-white text-xs font-headline font-bold rounded uppercase">
+                  <span className="px-2.5 py-1 bg-white/10 border border-white/10 text-white text-xs font-headline font-bold rounded uppercase">
                     {activeItem.format}
                   </span>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mt-2.5">

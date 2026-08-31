@@ -118,7 +118,7 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
     >
       {/* Subtle Atmospheric Spotlight */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-b from-primary-red/10 via-white/[0.02] to-transparent blur-3xl opacity-70" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-b from-white/[0.04] via-transparent to-transparent blur-3xl opacity-70" />
       </div>
 
       {/* Hero Content Wrapper */}
@@ -126,7 +126,7 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
         
         {/* Editorial Role Tag */}
         <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 bg-[#1A1A1F] border border-white/[0.09] text-[#C9C9CF] rounded-full text-xs font-headline font-bold tracking-widest uppercase mb-5">
-          <span className="w-1.5 h-1.5 rounded-full bg-primary-red animate-pulse" />
+          <span className="w-1.5 h-1.5 rounded-full bg-white/60 animate-pulse" />
           <span>IN-HOUSE CONTENT PRODUCER &amp; MARKETER</span>
         </div>
 
@@ -161,31 +161,20 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
             {/* Subtle Gradient Overlays */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40 pointer-events-none" />
 
-            {/* Top Bar Badges inside Showreel */}
-            <div className="absolute top-3.5 left-4 right-4 flex items-center justify-between pointer-events-none z-10">
-              <div className="inline-flex items-center space-x-1.5 px-2.5 py-1 bg-black/80 backdrop-blur-md rounded-lg text-white text-xs font-headline font-bold tracking-wider">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary-red" />
-                <span>OFFICIAL SHOWREEL</span>
-              </div>
-              <div className="hidden sm:inline-flex items-center px-2.5 py-1 bg-white/10 backdrop-blur-md rounded text-white text-xs font-mono font-medium">
-                <span>1080P HD</span>
-              </div>
-            </div>
-
-            {/* Center Play Action Button & "SHOWREEL 90s" Label */}
+            {/* Center Play Action Button & "1인 제작 홍보 영상" Label */}
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 z-10">
               <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/95 text-black flex items-center justify-center backdrop-blur-xs group-hover:scale-110 group-hover:bg-white transition-all duration-300">
-                <Play size={24} fill="currentColor" className="text-primary-red ml-1" />
+                <Play size={24} fill="currentColor" className="text-black ml-1" />
               </div>
               
-              <div className="inline-flex items-center space-x-1.5 px-4 py-1.5 bg-black/80 backdrop-blur-md rounded-full text-white text-xs sm:text-sm font-headline font-bold tracking-widest uppercase border border-white/10">
-                <span>SHOWREEL 90s</span>
+              <div className="inline-flex items-center space-x-1.5 px-4.5 py-2 bg-black/85 backdrop-blur-md rounded-full text-white text-sm sm:text-base font-headline font-bold tracking-wide border border-white/15 shadow-xl">
+                <span>1인 제작 홍보 영상</span>
               </div>
             </div>
 
             {/* Bottom Tag inside Showreel */}
-            <div className="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white/90 text-xs font-medium pointer-events-none z-10">
-              <span className="truncate text-[#C9C9CF]">주요 기획 영상 및 브랜디드 하이라이트</span>
+            <div className="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white/90 text-xs sm:text-sm font-medium pointer-events-none z-10">
+              <span className="truncate text-[#C9C9CF] font-semibold">브랜디드 홍보</span>
               <span className="hidden sm:inline-block font-mono text-xs bg-black/70 text-[#8A8A93] px-2.5 py-0.5 rounded border border-white/10">CLICK TO PLAY</span>
             </div>
           </div>

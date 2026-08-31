@@ -42,7 +42,7 @@ export default function Career({ careerItems = [] }: CareerProps) {
             <div key={item.id} className="relative" id={`career-node-${idx}`}>
               
               {/* Indicator Dot on Timeline */}
-              <span className="absolute -left-[31px] sm:-left-[47px] top-1.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-primary-red ring-4 ring-[#16161A]" />
+              <span className="absolute -left-[31px] sm:-left-[47px] top-1.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-white/80 ring-4 ring-[#16161A]" />
 
               {/* Node Layout */}
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
@@ -50,7 +50,7 @@ export default function Career({ careerItems = [] }: CareerProps) {
                 {/* Years & Basic Details */}
                 <div className="lg:col-span-4">
                   <div className="mb-1">
-                    <span className="font-headline font-bold text-xs sm:text-sm text-primary-red tracking-wider uppercase">{item.period}</span>
+                    <span className="font-headline font-bold text-xs sm:text-sm text-[#C9C9CF] tracking-wider uppercase">{item.period}</span>
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">{item.title}</h3>
                   <p className="text-sm sm:text-[15px] text-[#8A8A93] mt-1.5 font-medium whitespace-pre-line leading-[1.7]">{item.role}</p>
@@ -64,7 +64,7 @@ export default function Career({ careerItems = [] }: CareerProps) {
                     <ul className="space-y-2.5">
                       {item.description.map((desc, dIdx) => (
                         <li key={dIdx} className="text-[15px] md:text-base text-[#C9C9CF] leading-[1.7] font-normal flex items-start">
-                          <span className="w-1.5 h-1.5 rounded-full bg-primary-red mr-3 mt-2.5 shrink-0" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-white/40 mr-3 mt-2.5 shrink-0" />
                           <span className="whitespace-pre-line">{desc}</span>
                         </li>
                       ))}

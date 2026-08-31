@@ -12,7 +12,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
   // PROMOTION (홍보) - 8 items
   {
     id: "portfolio-promo-1",
-    title: "K트레일러&큐브렉 자사 기업 홍보용 영상",
+    title: "[기업홍보]차량시공 기업 홍보 콘텐츠",
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 1인 제작",
     format: "PROMOTION",
@@ -152,7 +152,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "전기 PBV(PV5) 구매를 고려하는 소비자들이 가장 우려하는 1박 캠핑 시 전력 소비량을 검증하기 위해 기획했습니다. 혹한기 환경에서 23시간 동안 히터와 전자기기를 동시 가동하는 실전 필드 테스트로 1인 제작했습니다. 구독자 2,000명 시점에 최고 조회수 45만 회를 기록했습니다.",
+    description: "전기 PBV(PV5) 구매를 고려하는 소비자들이 가장 우려하는 1박 캠핑 시 전력 소비량을 검증하기 위해 기획했습니다. 혹한기 환경에서 23시간 동안 히터와 전자기기를 동시 가동하는 실전 필드 테스트로 1인 제작했습니다. 구독자 2,000명 시점에 최고 조회수 46만 회를 기록했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=5Vhtzdd1Pyw",
     imageUrl: "",
     equipment: "오즈모 포켓3, DJI Mini 4 Pro | Premiere Pro",
@@ -362,9 +362,9 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "SHORTS",
-    description: "현대백화점 오프라인 팝업에 방문하지 못하는 고객에게 신차 공간을 신속히 소개하기 위해 기획했습니다. 차량의 내부 공간 구조와 특화 기능을 1분 이내 숏폼 포맷으로 1인 제작했습니다. 전시 기간 3일 만에 조회수 10만 회를 달성했습니다.",
+    description: "현대백화점 오프라인 팝업에 방문하지 못하는 고객에게 신차 공간을 신속히 소개하기 위해 기획했습니다. 차량의 내부 공간 구조와 특화 기능을 1분 이내 숏폼 포맷으로 1인 제작했습니다. 전시 기간 3일 만에 조회수 60만 회를 달성했습니다.",
     videoUrl: "https://youtube.com/shorts/hj6aLYEcVeY?si=9U6Cae0QG00QWCsP",
-    imageUrl: "",
+    imageUrl: "https://img.youtube.com/vi/hj6aLYEcVeY/hqdefault.jpg",
     duration: "00:38",
     date: "2024-07",
     order: 13
@@ -675,7 +675,7 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
       stored.includes("Sony a7m3, 고성능 외장 마이크") ||
       stored.includes("Sony FX3, 고해상도 조명 장비") ||
       stored.includes("Sony DSLR, 무선 마이크") ||
-      !stored.includes("K트레일러&큐브렉") ||
+      !stored.includes("[기업홍보]차량시공 기업 홍보 콘텐츠") ||
       !stored.includes("portfolio-shorts-4") ||
       !stored.includes("portfolio-shorts-5") ||
       !stored.includes("portfolio-shorts-6") ||

@@ -40,7 +40,7 @@ export default function Vision() {
                 브랜드 성장을 만드는 사람이 되고 싶습니다.
               </h3>
               
-              <div className="h-0.5 bg-primary-red w-12" />
+              <div className="h-0.5 bg-white/20 w-12" />
 
               <p className="text-[15px] sm:text-base md:text-lg text-[#C9C9CF] leading-[1.7] font-normal whitespace-pre-wrap">
                 홍보 영상부터 유튜브, 인스타그램(릴스) 콘텐츠 채널 운영까지 경험하며{"\n"}
@@ -72,12 +72,12 @@ export default function Vision() {
                   title="바로 전화 걸기"
                 >
                   <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-[#1A1A1F] border border-white/[0.06] text-primary-red rounded-lg group-hover:bg-primary-red group-hover:text-white transition-colors">
+                    <div className="p-3 bg-[#1A1A1F] border border-white/[0.06] text-white rounded-lg group-hover:bg-white group-hover:text-black transition-colors">
                       <Phone size={18} />
                     </div>
                     <div>
                       <span className="text-xs font-headline font-bold text-[#8A8A93] block tracking-wider uppercase">휴대폰 번호</span>
-                      <span className="text-base sm:text-lg font-bold text-white group-hover:text-primary-red tracking-wide font-mono transition-colors">
+                      <span className="text-base sm:text-lg font-bold text-white group-hover:text-white tracking-wide font-mono transition-colors">
                         {phoneNumber}
                       </span>
                     </div>

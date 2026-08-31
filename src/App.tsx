@@ -221,7 +221,7 @@ export default function App() {
             {/* Step-by-Step Instructions */}
             <div className="space-y-3 mb-6">
               <div className="flex gap-3.5 items-start p-3.5 bg-[#16161A] border border-white/[0.05] rounded-xl">
-                <div className="w-5 h-5 rounded-full bg-primary-red text-white font-headline text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-5 h-5 rounded-full bg-white/10 text-white font-headline text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 border border-white/10">
                   1
                 </div>
                 <div>
@@ -233,11 +233,11 @@ export default function App() {
               </div>
 
               <div className="flex gap-3.5 items-start p-3.5 bg-[#16161A] border border-white/[0.05] rounded-xl">
-                <div className="w-5 h-5 rounded-full bg-primary-red text-white font-headline text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-5 h-5 rounded-full bg-white/10 text-white font-headline text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 border border-white/10">
                   2
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-white">배경 그래픽 인쇄 체크 <span className="text-primary-red font-bold text-[10px] ml-1">★ 필수</span></h4>
+                  <h4 className="text-sm font-semibold text-white">배경 그래픽 인쇄 체크 <span className="text-white font-bold text-[10px] ml-1 bg-white/10 px-1.5 py-0.5 rounded border border-white/10">★ 필수</span></h4>
                   <p className="text-xs text-[#8A8A93] mt-1">
                     [설정 더보기]를 눌러 <strong className="text-white">[배경 그래픽] (Background graphics)</strong> 옵션을 활성화해야 포트폴리오 최적화 서식과 컬러가 누락없이 반영됩니다!
                   </p>
@@ -245,7 +245,7 @@ export default function App() {
               </div>
 
               <div className="flex gap-3.5 items-start p-3.5 bg-[#16161A] border border-white/[0.05] rounded-xl">
-                <div className="w-5 h-5 rounded-full bg-primary-red text-white font-headline text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-5 h-5 rounded-full bg-white/10 text-white font-headline text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 border border-white/10">
                   3
                 </div>
                 <div>
