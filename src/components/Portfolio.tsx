@@ -126,6 +126,7 @@ export default function Portfolio({ items }: PortfolioProps) {
     { code: "PROMOTION", label: "홍보" },
     { code: "YOUTUBE LONG", label: "유튜브 롱폼" },
     { code: "SHORTS", label: "쇼츠 / 릴스" },
+    { code: "AI", label: "AI" },
     { code: "INTERVIEW", label: "인터뷰" },
     { code: "LIVE", label: "라이브" }
   ];
@@ -428,7 +429,7 @@ export default function Portfolio({ items }: PortfolioProps) {
               {isArchiveExpanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
             </button>
             <p className="text-[13px] text-[#8A8A93] mt-2 font-medium">
-              {isArchiveExpanded ? "클릭 시 전체 작업물 그리드를 접습니다." : "홍보·유튜브 롱폼·숏폼·인터뷰·라이브 전체 30여 개 프로젝트를 한눈에 확인하실 수 있습니다."}
+              {isArchiveExpanded ? "클릭 시 전체 작업물 그리드를 접습니다." : "홍보·유튜브 롱폼·숏폼·AI·인터뷰·라이브 전체 30여 개 프로젝트를 한눈에 확인하실 수 있습니다."}
             </p>
           </div>
 

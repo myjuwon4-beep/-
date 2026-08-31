@@ -453,6 +453,23 @@ export const initialPortfolioItems: PortfolioItem[] = [
     order: 11.9
   },
 
+  // AI (AI 영상 제작) - 1 item
+  {
+    id: "portfolio-ai-1",
+    title: "[AI] 아사이 맥주 광고",
+    client: "브레인 힐링",
+    role: "AI 영상 생성, 프롬프트 엔지니어링, 연출, 편집",
+    format: "AI",
+    description: "생성형 AI 툴을 활용한 콘셉트 비주얼 연출 및 프롬프트 엔지니어링 기반의 아사이 맥주 광고 영상입니다. AI 비디오 제너레이션과 사운드·컬러 믹싱을 결합해 브랜드의 청량감과 감각적인 무드를 제작했습니다.",
+    videoUrl: "https://youtu.be/DKSVNU1PYbc",
+    imageUrl: "https://img.youtube.com/vi/DKSVNU1PYbc/maxresdefault.jpg",
+    previewVideoUrl: "",
+    equipment: "Generative AI, Midjourney, Runway / Kling, Premiere Pro, After Effects",
+    duration: "00:45",
+    date: "2024-10",
+    order: 17.5
+  },
+
   // INTERVIEW (인터뷰) - 4 items
   {
     id: "portfolio-interview-1",
@@ -700,7 +717,8 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
       !stored.includes("1xLWmkim-kE") ||
       !stored.includes("J4W7tFXb36I") ||
       !stored.includes("새마을 금고 중앙회_홍보 및 인터뷰") ||
-      !stored.includes("SiXkOaMNdio")
+      !stored.includes("SiXkOaMNdio") ||
+      !stored.includes("DKSVNU1PYbc")
     ) {
       // Force migrate to show the updated crisp descriptions instantly
       try {
@@ -719,7 +737,7 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
        const defaultItem = initialPortfolioItems.find(x => x.id === item.id);
        if (defaultItem) {
         // Force-sync specific content updates to bypass browser local storage caching
-        if (["portfolio-shorts-1", "portfolio-shorts-2", "portfolio-shorts-3", "portfolio-shorts-4", "portfolio-shorts-5", "portfolio-shorts-6", "portfolio-shorts-7", "portfolio-shorts-8", "portfolio-interview-1", "portfolio-interview-2", "portfolio-interview-3", "portfolio-interview-4", "portfolio-live-1", "portfolio-promo-1", "portfolio-promo-2", "portfolio-promo-4", "portfolio-promo-5", "portfolio-promo-6", "portfolio-promo-7", "portfolio-promo-8", "portfolio-long-1", "portfolio-long-2", "portfolio-long-3", "portfolio-long-4", "portfolio-long-7", "portfolio-long-8", "portfolio-long-9", "portfolio-long-10", "portfolio-long-11", "portfolio-long-12", "portfolio-long-13", "portfolio-long-14", "portfolio-long-15"].includes(item.id)) {
+        if (["portfolio-ai-1", "portfolio-shorts-1", "portfolio-shorts-2", "portfolio-shorts-3", "portfolio-shorts-4", "portfolio-shorts-5", "portfolio-shorts-6", "portfolio-shorts-7", "portfolio-shorts-8", "portfolio-interview-1", "portfolio-interview-2", "portfolio-interview-3", "portfolio-interview-4", "portfolio-live-1", "portfolio-promo-1", "portfolio-promo-2", "portfolio-promo-4", "portfolio-promo-5", "portfolio-promo-6", "portfolio-promo-7", "portfolio-promo-8", "portfolio-long-1", "portfolio-long-2", "portfolio-long-3", "portfolio-long-4", "portfolio-long-7", "portfolio-long-8", "portfolio-long-9", "portfolio-long-10", "portfolio-long-11", "portfolio-long-12", "portfolio-long-13", "portfolio-long-14", "portfolio-long-15"].includes(item.id)) {
           if (
             item.title !== defaultItem.title ||
             item.description !== defaultItem.description ||

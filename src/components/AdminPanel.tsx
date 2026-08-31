@@ -609,6 +609,7 @@ export default function AdminPanel({
                         <option value="PROMOTION">PROMOTION (홍보)</option>
                         <option value="YOUTUBE LONG">YOUTUBE LONG (유튜브 롱폼)</option>
                         <option value="SHORTS">SHORTS (쇼츠/릴스)</option>
+                        <option value="AI">AI (AI 영상 제작)</option>
                         <option value="INTERVIEW">INTERVIEW (다큐 인물 인터뷰)</option>
                         <option value="LIVE">LIVE (라이브 중계 구축)</option>
                       </select>

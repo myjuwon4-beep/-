@@ -8,7 +8,7 @@ export interface PortfolioItem {
   title: string;
   client: string;
   role: string;
-  format: string; // "PROMOTION" | "YOUTUBE LONG" | "SHORTS" | "INTERVIEW"
+  format: string; // "PROMOTION" | "YOUTUBE LONG" | "SHORTS" | "AI" | "INTERVIEW" | "LIVE"
   description: string;
   videoUrl: string; // YT embed or clean URL
   imageUrl: string; // cover image
