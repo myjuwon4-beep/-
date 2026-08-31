@@ -71,20 +71,20 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
   ];
 
   return (
-    <section id="about" className="py-24 md:py-28 bg-[#16161A] relative border-t border-white/[0.05]">
+    <section id="about" className="py-24 md:py-28 bg-[#1A1A21] relative border-t border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Editorial Section Intro */}
-        <div className="mb-14 pb-6 border-b border-white/[0.07] flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div className="mb-14 pb-6 border-b border-white/[0.08] flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
-            <span className="font-headline text-sm text-[#8A8A93] font-bold tracking-widest uppercase block mb-2">
+            <span className="font-headline text-[13px] sm:text-sm text-[#8A8A93] font-bold tracking-widest uppercase block mb-2">
               01 / ABOUT
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
               소개 및 핵심 역량
             </h2>
           </div>
-          <p className="text-sm md:text-base text-[#8A8A93] font-medium max-w-md">
+          <p className="text-[13px] sm:text-base text-[#8A8A93] font-medium max-w-md">
             기획부터 촬영, 정밀 편집, 채널 성장까지 단절 없이 책임집니다.
           </p>
         </div>
@@ -92,14 +92,14 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
         {/* Content Box Grid split */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           
-          {/* Left Block: Profile Portrait with fallback */}
+          {/* Left Block: Profile Portrait (4:5 ratio) with graceful JW fallback */}
           <div className="lg:col-span-5 relative" id="about-photo-wrapper">
-            <div className="relative aspect-[3/4] w-full bg-[#1A1A1F] border border-white/[0.08] rounded-xl overflow-hidden flex items-center justify-center">
+            <div className="relative aspect-[4/5] w-full bg-[#202028] border border-white/[0.12] border-t-white/[0.16] rounded-2xl overflow-hidden flex items-center justify-center shadow-xl">
               {!imageError ? (
                 <>
                   <img
                     src={profileSrc}
-                    alt="이주원 PD 프로필"
+                    alt="이주원 PD 프로필 사진 (/public/profile.jpg)"
                     referrerPolicy="no-referrer"
                     onError={() => setImageError(true)}
                     className="w-full h-full object-cover"
@@ -107,24 +107,30 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
                 </>
               ) : (
-                <div className="w-full h-full bg-[#1A1A1F] flex flex-col items-center justify-center p-8 text-center select-none">
-                  <div className="w-20 h-20 rounded-xl bg-[#222228] border border-white/10 flex items-center justify-center mb-4">
-                    <span className="font-headline text-3xl font-black text-white tracking-wider">JW</span>
+                <div className="w-full h-full bg-[#202028] flex flex-col items-center justify-center p-8 text-center select-none">
+                  <div className="w-24 h-24 rounded-2xl bg-[#2A2A34] border border-white/10 flex items-center justify-center mb-5 shadow-lg">
+                    <span className="font-headline text-3xl sm:text-4xl font-black text-white tracking-wider">JW</span>
                   </div>
-                  <div className="space-y-1">
-                    <span className="text-xs sm:text-sm font-headline font-bold text-white tracking-widest uppercase block">LEE JU WON</span>
-                    <span className="text-xs text-[#8A8A93] font-medium tracking-tight block">BRAND CONTENT PRODUCER</span>
+                  <div className="space-y-1.5">
+                    <span className="text-[13px] sm:text-sm font-headline font-bold text-white tracking-widest uppercase block">
+                      LEE JU WON
+                    </span>
+                    <span className="text-[13px] text-[#8A8A93] font-medium tracking-tight block">
+                      BRAND CONTENT PRODUCER
+                    </span>
                   </div>
                 </div>
               )}
               
-              {/* Studio Card */}
-              <div className="absolute bottom-4 left-4 right-4 p-4 bg-[#1A1A1F]/90 backdrop-blur-md border border-white/[0.08] rounded-xl flex items-center justify-between">
+              {/* Studio Card overlay */}
+              <div className="absolute bottom-4 left-4 right-4 p-4 bg-[#202028]/95 backdrop-blur-md border border-white/[0.12] border-t-white/[0.16] rounded-xl flex items-center justify-between shadow-md">
                 <div>
                   <h4 className="text-base font-bold text-white">이주원</h4>
-                  <p className="text-xs text-[#8A8A93] font-medium mt-0.5">브랜드 콘텐츠 프로듀서</p>
+                  <p className="text-[13px] text-[#8A8A93] font-medium mt-0.5">브랜드 콘텐츠 프로듀서</p>
                 </div>
-                <span className="text-xs font-headline font-bold px-2.5 py-0.5 bg-white/10 border border-white/10 text-white rounded">PD</span>
+                <span className="text-[13px] font-headline font-bold px-2.5 py-0.5 bg-white/10 border border-white/10 text-white rounded">
+                  PD
+                </span>
               </div>
             </div>
           </div>
@@ -132,7 +138,7 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
           {/* Right Block: Pitch Copy & Core Pillars */}
           <div className="lg:col-span-7 flex flex-col justify-start">
             {siteTexts.aboutTagline && (
-              <span className="text-[#C9C9CF] text-xs sm:text-sm font-headline font-bold tracking-widest mb-2 uppercase">
+              <span className="text-[#C9C9CF] text-[13px] sm:text-sm font-bold tracking-wide mb-2 uppercase block">
                 {siteTexts.aboutTagline}
               </span>
             )}
@@ -140,18 +146,18 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
               {siteTexts.aboutTitle}
             </h3>
             
-            <p className="mt-5 text-[15px] sm:text-base text-[#C9C9CF] leading-[1.7] font-normal whitespace-pre-line bg-[#1A1A1F] border border-white/[0.07] p-6 rounded-xl">
+            <p className="mt-5 text-[15px] sm:text-base text-[#C9C9CF] leading-[1.7] font-normal whitespace-pre-line bg-[#202028] border border-white/[0.12] border-t-white/[0.16] p-6 rounded-xl">
               {siteTexts.aboutDescription}
             </p>
 
             {/* Core Value Pillars - "Why Me" */}
             <div className="mt-8 space-y-3.5">
-              <h4 className="text-xs font-headline font-bold tracking-widest text-[#8A8A93] uppercase mb-3">핵심 강점</h4>
+              <h4 className="text-[13px] font-bold text-[#8A8A93] mb-3">핵심 강점</h4>
               
               {values.map((v, idx) => (
                 <div 
                   key={idx}
-                  className="p-5 sm:p-6 bg-[#1A1A1F] border border-white/[0.07] hover:bg-[#222228] hover:border-white/[0.14] rounded-xl transition-all duration-200"
+                  className="p-5 sm:p-6 bg-[#202028] border border-white/[0.12] border-t-white/[0.16] hover:bg-[#2A2A34] hover:border-white/[0.18] rounded-xl transition-all duration-200"
                   id={`about-pillar-${idx}`}
                 >
                   <h5 className="text-base sm:text-lg font-bold text-white">{v.title}</h5>

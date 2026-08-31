@@ -122,7 +122,7 @@ export default function App() {
   };
 
   return (
-    <div className="bg-[#0E0E10] text-[#C9C9CF] min-h-screen selection:bg-primary-red selection:text-white antialiased pb-14 sm:pb-16">
+    <div className="bg-[#131318] text-[#C9C9CF] min-h-screen selection:bg-primary-red selection:text-white antialiased pb-14 sm:pb-16">
       
       {/* Top 3px Scroll Progress Bar */}
       <ScrollProgressBar />
@@ -194,7 +194,7 @@ export default function App() {
       {/* PDF Export Guidance Modal */}
       {isPdfGuideOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm no-print">
-          <div className="bg-[#1A1A1F] border border-white/[0.1] rounded-xl w-full max-w-lg p-6 md:p-8 text-left shadow-2xl relative animate-fade-in text-[#C9C9CF]">
+          <div className="bg-[#202028] border border-white/[0.12] border-t-white/[0.16] rounded-xl w-full max-w-lg p-6 md:p-8 text-left shadow-2xl relative animate-fade-in text-[#C9C9CF]">
             {/* Close Button */}
             <button
               onClick={() => setIsPdfGuideOpen(false)}
@@ -205,7 +205,7 @@ export default function App() {
 
             {/* Header */}
             <div className="flex items-center space-x-3 mb-6">
-              <div className="p-2.5 bg-[#16161A] border border-white/[0.08] rounded-lg text-white">
+              <div className="p-2.5 bg-[#1A1A21] border border-white/[0.12] rounded-lg text-white">
                 <Printer size={20} />
               </div>
               <div>
@@ -220,7 +220,7 @@ export default function App() {
 
             {/* Step-by-Step Instructions */}
             <div className="space-y-3 mb-6">
-              <div className="flex gap-3.5 items-start p-3.5 bg-[#16161A] border border-white/[0.05] rounded-xl">
+              <div className="flex gap-3.5 items-start p-3.5 bg-[#1A1A21] border border-white/[0.08] rounded-xl">
                 <div className="w-5 h-5 rounded-full bg-white/10 text-white font-headline text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 border border-white/10">
                   1
                 </div>
@@ -232,7 +232,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="flex gap-3.5 items-start p-3.5 bg-[#16161A] border border-white/[0.05] rounded-xl">
+              <div className="flex gap-3.5 items-start p-3.5 bg-[#1A1A21] border border-white/[0.08] rounded-xl">
                 <div className="w-5 h-5 rounded-full bg-white/10 text-white font-headline text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 border border-white/10">
                   2
                 </div>
@@ -244,7 +244,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="flex gap-3.5 items-start p-3.5 bg-[#16161A] border border-white/[0.05] rounded-xl">
+              <div className="flex gap-3.5 items-start p-3.5 bg-[#1A1A21] border border-white/[0.08] rounded-xl">
                 <div className="w-5 h-5 rounded-full bg-white/10 text-white font-headline text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 border border-white/10">
                   3
                 </div>
@@ -258,7 +258,7 @@ export default function App() {
             </div>
 
             {/* Sandbox Iframe Caution */}
-            <div className="p-3 bg-[#16161A] border border-amber-500/30 text-[#C9C9CF] rounded-xl text-xs flex gap-2.5 mb-6">
+            <div className="p-3 bg-[#1A1A21] border border-amber-500/30 text-[#C9C9CF] rounded-xl text-xs flex gap-2.5 mb-6">
               <AlertTriangle size={16} className="shrink-0 mt-0.5 text-amber-400" />
               <div>
                 <span className="font-bold text-white">내장 뷰어(iFrame) 사용시 주의:</span> 브라우저 보안 규정상 이 내장된 미리보기 창에서는 인쇄 팝업이 차단될 수 있습니다. 정상적으로 인쇄되지 않을 경우, 상단의 <strong className="text-white">새 창으로 열기 (Open in New Tab)</strong> 또는 공유 받으신 링크로 브라우저에서 직접 페이지를 연 다음 [PDF 저장]을 다시 눌러주시길 바랍니다.
@@ -274,14 +274,14 @@ export default function App() {
                     window.print();
                   }, 150);
                 }}
-                className="flex-1 py-3 bg-primary-red hover:bg-rose-600 text-white font-headline font-bold text-sm tracking-wide rounded-xl flex items-center justify-center space-x-2 cursor-pointer transition-colors"
+                className="flex-1 py-3 bg-primary-red hover:bg-rose-600 text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2 cursor-pointer transition-colors"
               >
                 <Printer size={16} />
                 <span>인쇄 창 열기 / PDF 저장</span>
               </button>
               <button
                 onClick={() => setIsPdfGuideOpen(false)}
-                className="px-5 py-3 bg-[#16161A] border border-white/[0.08] hover:bg-white/10 text-[#C9C9CF] hover:text-white font-medium text-sm rounded-xl cursor-pointer transition-colors"
+                className="px-5 py-3 bg-[#1A1A21] border border-white/[0.12] hover:bg-[#2A2A34] text-[#C9C9CF] hover:text-white font-medium text-sm rounded-xl cursor-pointer transition-colors"
               >
                 취소
               </button>

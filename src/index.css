@@ -8,10 +8,10 @@
   --font-display: "Space Grotesk", "Barlow Condensed", sans-serif;
   --color-primary-red: #FF4D57;
   --color-accent-orange: #EA580C;
-  --color-dark-base: #0E0E10;
-  --color-dark-surface: #16161A;
-  --color-dark-card: #1A1A1F;
-  --color-dark-card-hover: #222228;
+  --color-dark-base: #131318;
+  --color-dark-surface: #1A1A21;
+  --color-dark-card: #202028;
+  --color-dark-card-hover: #2A2A34;
   --color-text-body: #C9C9CF;
   --color-text-muted: #8A8A93;
 }
@@ -19,7 +19,7 @@
 /* Base custom definitions */
 html {
   scroll-behavior: smooth;
-  background-color: #0E0E10;
+  background-color: #131318;
   color: #C9C9CF;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  background-color: #0E0E10;
+  background-color: #131318;
   color: #C9C9CF;
 }
 
@@ -38,16 +38,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0E0E10;
+  background: #131318;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #26262E;
+  background: #2A2A34;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3A3A46;
+  background: #3E3E4D;
 }
 
 /* Text selection */
@@ -125,10 +125,14 @@ body {
   }
 
   /* Reset dark backgrounds of cards to clean bordered cards for high print legibility */
-  .bg-[#1A1A1F],
-  .bg-[#16161A],
-  .bg-[#0E0E10],
-  .bg-[#222228],
+  .bg-\[\#202028\],
+  .bg-\[\#1A1A21\],
+  .bg-\[\#131318\],
+  .bg-\[\#2A2A34\],
+  .bg-\[\#1A1A1F\],
+  .bg-\[\#16161A\],
+  .bg-\[\#0E0E10\],
+  .bg-\[\#222228\],
   .bg-stone-900,
   .bg-stone-950,
   .bg-black\/50,

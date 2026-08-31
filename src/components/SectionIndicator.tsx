@@ -42,7 +42,7 @@ export default function SectionIndicator({ activeSection, onNavigate }: SectionI
           >
             {/* Tooltip on hover */}
             <div
-              className={`absolute right-7 px-3 py-1 bg-[#1A1A1F] border border-white/[0.12] rounded-lg text-xs font-headline font-bold tracking-wider text-white shadow-xl whitespace-nowrap transition-all duration-200 pointer-events-none ${
+              className={`absolute right-7 px-3 py-1 bg-[#202028] border border-white/[0.12] border-t-white/[0.16] rounded-lg text-[13px] font-bold text-white shadow-xl whitespace-nowrap transition-all duration-200 pointer-events-none ${
                 isHovered ? "opacity-100 translate-x-0" : "opacity-0 translate-x-2"
               }`}
             >

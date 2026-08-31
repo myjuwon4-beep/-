@@ -21,7 +21,7 @@ export default function Footer({ onPdfClick }: FooterProps) {
   };
 
   return (
-    <footer id="footer" className="bg-[#0E0E10] border-t border-white/[0.07] py-10">
+    <footer id="footer" className="bg-[#131318] border-t border-white/[0.08] py-10">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
         
         {/* Core Copyright */}
@@ -37,7 +37,7 @@ export default function Footer({ onPdfClick }: FooterProps) {
           <button
             id="footer-pdf-btn"
             onClick={onPdfClick}
-            className="flex items-center min-h-[44px] space-x-2 px-4 py-2 rounded-lg text-xs sm:text-sm font-headline font-bold bg-[#1A1A1F] border border-white/[0.08] hover:bg-[#222228] text-[#C9C9CF] hover:text-white transition-colors cursor-pointer"
+            className="flex items-center min-h-[44px] space-x-2 px-4 py-2 rounded-lg text-[13px] sm:text-sm font-bold bg-[#202028] border border-white/[0.12] border-t-white/[0.16] hover:bg-[#2A2A34] text-[#C9C9CF] hover:text-white transition-colors cursor-pointer"
           >
             <Printer size={14} className="text-[#8A8A93]" />
             <span>PDF 저장 / 인쇄</span>
@@ -47,7 +47,7 @@ export default function Footer({ onPdfClick }: FooterProps) {
           <button
             id="footer-scroll-top"
             onClick={scrollToTop}
-            className="min-h-[44px] min-w-[44px] flex items-center justify-center p-2.5 bg-[#1A1A1F] border border-white/[0.08] hover:bg-[#222228] text-[#C9C9CF] hover:text-white rounded-lg transition-colors cursor-pointer"
+            className="min-h-[44px] min-w-[44px] flex items-center justify-center p-2.5 bg-[#202028] border border-white/[0.12] border-t-white/[0.16] hover:bg-[#2A2A34] text-[#C9C9CF] hover:text-white rounded-lg transition-colors cursor-pointer"
             title="맨 위로 이동"
           >
             <ArrowUp size={14} />

@@ -76,7 +76,7 @@ export default function Navbar({ onPdfClick }: NavbarProps) {
       id="main-nav"
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#0E0E10]/90 backdrop-blur-md border-b border-white/[0.07] py-3.5"
+          ? "bg-[#131318]/90 backdrop-blur-md border-b border-white/[0.08] py-3.5"
           : "bg-transparent py-5"
       }`}
     >
@@ -90,7 +90,7 @@ export default function Navbar({ onPdfClick }: NavbarProps) {
           <span className="font-headline text-xl md:text-2xl font-black tracking-wider text-white group-hover:text-white transition-colors whitespace-nowrap">
             JU WON LEE
           </span>
-          <span className="hidden sm:inline-block text-xs font-mono text-[#8A8A93] pl-1 font-medium tracking-wider">
+          <span className="hidden sm:inline-block text-[13px] font-mono text-[#8A8A93] pl-1 font-medium tracking-wider">
             / PD &amp; MARKETER
           </span>
         </div>
@@ -124,7 +124,7 @@ export default function Navbar({ onPdfClick }: NavbarProps) {
           <button
             id="nav-pdf-btn"
             onClick={onPdfClick}
-            className="flex items-center space-x-1.5 px-3.5 py-1.5 bg-[#1A1A1F] hover:bg-[#222228] border border-white/[0.08] hover:border-white/[0.2] text-[#C9C9CF] hover:text-white text-xs sm:text-sm font-semibold rounded-lg transition-colors cursor-pointer whitespace-nowrap"
+            className="flex items-center space-x-1.5 px-3.5 py-1.5 bg-[#202028] hover:bg-[#2A2A34] border border-white/[0.12] border-t-white/[0.16] hover:border-white/[0.2] text-[#C9C9CF] hover:text-white text-[13px] sm:text-sm font-semibold rounded-lg transition-colors cursor-pointer whitespace-nowrap"
             title="PDF 다운로드 / 인쇄하기"
           >
             <Printer size={14} />
@@ -146,14 +146,14 @@ export default function Navbar({ onPdfClick }: NavbarProps) {
 
       {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[60px] bg-[#0E0E10] z-40 flex flex-col justify-between p-8 border-t border-white/[0.07] text-[#C9C9CF] shadow-2xl">
+        <div className="lg:hidden fixed inset-0 top-[60px] bg-[#131318] z-40 flex flex-col justify-between p-8 border-t border-white/[0.08] text-[#C9C9CF] shadow-2xl">
           <ul className="flex flex-col space-y-5 pt-4">
             {menuItems.map((item) => (
               <li key={item.id}>
                 <button
                   id={`nav-mobile-${item.id}`}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-lg font-bold block w-full text-left py-2 border-b border-white/[0.06] ${
+                  className={`text-lg font-bold block w-full text-left py-2 border-b border-white/[0.08] ${
                     activeSection === item.id ? "text-white font-bold" : "text-[#C9C9CF] hover:text-white"
                   }`}
                 >
@@ -171,7 +171,7 @@ export default function Navbar({ onPdfClick }: NavbarProps) {
                 setIsMobileMenuOpen(false);
                 onPdfClick();
               }}
-              className="flex items-center justify-center space-x-2 w-full min-h-[44px] py-3 bg-[#1A1A1F] hover:bg-[#222228] border border-white/[0.1] text-white rounded-lg text-sm font-semibold transition-colors cursor-pointer"
+              className="flex items-center justify-center space-x-2 w-full min-h-[44px] py-3 bg-[#202028] hover:bg-[#2A2A34] border border-white/[0.12] border-t-white/[0.16] text-white rounded-lg text-sm font-semibold transition-colors cursor-pointer"
             >
               <Printer size={15} />
               <span>PDF 다운로드 / 인쇄하기</span>

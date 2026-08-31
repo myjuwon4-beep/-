@@ -55,13 +55,13 @@ export default function CareerProofGallery({ proofImages = [] }: CareerProofGall
   if (availableImages.length === 0) return null;
 
   return (
-    <div className="pt-5 border-t border-white/[0.07]" id="career-proof-gallery">
+    <div className="pt-5 border-t border-white/[0.08]" id="career-proof-gallery">
       <div className="flex items-center justify-between mb-3">
-        <h4 className="text-xs font-headline font-bold text-[#8A8A93] uppercase tracking-widest flex items-center gap-2">
+        <h4 className="text-[13px] font-bold text-[#8A8A93] flex items-center gap-2">
           <span className="w-1.5 h-1.5 rounded-full bg-white/60" />
           <span>성과 실측 증빙 (애널리틱스 통계)</span>
         </h4>
-        <span className="text-[11px] font-mono text-[#8A8A93]">CLICK TO ENLARGE</span>
+        <span className="text-[13px] font-mono text-[#8A8A93]">CLICK TO ENLARGE</span>
       </div>
 
       {/* Proof Images Grid */}
@@ -71,7 +71,7 @@ export default function CareerProofGallery({ proofImages = [] }: CareerProofGall
             key={pIdx}
             id={`proof-image-card-${pIdx + 1}`}
             onClick={() => setSelectedProof(proof)}
-            className="group relative bg-[#16161A] border border-white/[0.08] hover:border-white/[0.22] rounded-xl overflow-hidden cursor-pointer transition-all duration-200"
+            className="group relative bg-[#1A1A21] border border-white/[0.12] border-t-white/[0.16] hover:border-white/[0.25] rounded-xl overflow-hidden cursor-pointer transition-all duration-200"
           >
             {/* Image Preview Container */}
             <div className="relative aspect-[16/9] w-full overflow-hidden bg-black/60">
@@ -82,18 +82,18 @@ export default function CareerProofGallery({ proofImages = [] }: CareerProofGall
               />
               
               {/* Hover Overlay with Zoom Icon */}
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-150 flex items-center justify-center gap-1.5 text-white text-xs font-headline font-bold uppercase tracking-wider">
+              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-150 flex items-center justify-center gap-1.5 text-white text-[13px] font-bold">
                 <ZoomIn size={16} className="text-white" />
                 <span>통계 원본 확대보기</span>
               </div>
             </div>
 
             {/* Proof Card Caption */}
-            <div className="p-3 bg-[#16161A] border-t border-white/[0.06]">
-              <p className="text-xs font-bold text-white truncate group-hover:text-white transition-colors">
+            <div className="p-3 bg-[#1A1A21] border-t border-white/[0.08]">
+              <p className="text-[13px] font-bold text-white truncate group-hover:text-white transition-colors">
                 {proof.title}
               </p>
-              <p className="text-[11px] text-[#8A8A93] truncate mt-0.5 font-normal">
+              <p className="text-[13px] text-[#8A8A93] truncate mt-0.5 font-normal">
                 {proof.caption}
               </p>
             </div>
@@ -110,21 +110,21 @@ export default function CareerProofGallery({ proofImages = [] }: CareerProofGall
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-4xl w-full bg-[#16161A] border border-white/[0.12] rounded-2xl overflow-hidden shadow-2xl cursor-default"
+            className="relative max-w-4xl w-full bg-[#1A1A21] border border-white/[0.14] rounded-2xl overflow-hidden shadow-2xl cursor-default"
           >
             {/* Header */}
-            <div className="px-5 py-3.5 border-b border-white/[0.08] flex items-center justify-between bg-[#1A1A1F]">
+            <div className="px-5 py-3.5 border-b border-white/[0.08] flex items-center justify-between bg-[#202028]">
               <div>
-                <h3 className="text-sm sm:text-base font-bold text-white">
+                <h3 className="text-[14px] sm:text-base font-bold text-white">
                   {selectedProof.title}
                 </h3>
-                <p className="text-xs text-[#8A8A93] mt-0.5 font-normal">
+                <p className="text-[13px] text-[#8A8A93] mt-0.5 font-normal">
                   {selectedProof.caption}
                 </p>
               </div>
               <button
                 onClick={() => setSelectedProof(null)}
-                className="p-1.5 rounded-lg bg-[#16161A] hover:bg-[#222228] border border-white/[0.1] text-white transition-colors cursor-pointer"
+                className="p-1.5 rounded-lg bg-[#1A1A21] hover:bg-[#2A2A34] border border-white/[0.1] text-white transition-colors cursor-pointer"
                 title="닫기"
               >
                 <X size={18} />

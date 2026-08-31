@@ -686,7 +686,7 @@ export default function AdminPanel({
                     {/* Uploaded Base64 Multiple Files array layout */}
                     {activeFormItem.images && activeFormItem.images.length > 0 && (
                       <div className="space-y-3 mt-4 bg-black/20 p-4 rounded-lg border border-white/5">
-                        <p className="text-xs font-bold text-white/60 tracking-wider">업로드 완료된 포트폴리오 스냅샷 목록 ({activeFormItem.images.length}장):</p>
+                        <p className="text-xs font-bold text-white/60">업로드 완료된 포트폴리오 스냅샷 목록 ({activeFormItem.images.length}장):</p>
                         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4">
                           {activeFormItem.images.map((img, idx) => (
                             <div key={idx} className="relative aspect-[16/9] rounded-md overflow-hidden border border-white/15 bg-black/90 group transition-all hover:border-primary-red/50">

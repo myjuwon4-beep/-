@@ -65,19 +65,22 @@ function AnimatedStatCard({
   return (
     <div 
       ref={ref}
-      className="bg-[#1A1A1F] border border-white/[0.07] p-5 rounded-xl transition-all duration-200 hover:bg-[#222228] hover:border-white/[0.14] flex flex-col justify-between"
+      className="bg-[#202028] border border-white/[0.12] border-t-white/[0.16] p-5 rounded-xl transition-all duration-200 hover:bg-[#2A2A34] hover:border-white/[0.18] flex flex-col justify-between"
     >
       <div>
-        <span className="text-xs sm:text-sm font-semibold text-[#8A8A93] tracking-tight block">
+        <span className="text-[13px] sm:text-sm font-semibold text-[#8A8A93] tracking-tight block">
           {label}
         </span>
         <div className="mt-1.5 flex items-baseline">
-          <span className={`font-headline text-3xl sm:text-4xl md:text-5xl font-black tracking-tight ${isRedHighlight ? "text-primary-red" : "text-white"}`}>
-            {prefix}{count}{suffix}
+          <span className={`font-headline text-[36px] sm:text-[42px] md:text-[48px] font-black leading-none ${isRedHighlight ? "text-primary-red" : "text-white"}`}>
+            {prefix}{count}
+          </span>
+          <span className="font-sans text-[22px] sm:text-[26px] md:text-[30px] font-bold text-[#C9C9CF] leading-none ml-1">
+            {suffix}
           </span>
         </div>
       </div>
-      <p className="mt-2 text-xs sm:text-sm text-[#8A8A93] font-normal leading-normal">
+      <p className="mt-2 text-[13px] sm:text-sm text-[#8A8A93] font-normal leading-normal">
         {description}
       </p>
     </div>
@@ -114,7 +117,7 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
   return (
     <section
       id="home"
-      className="relative min-h-screen w-full flex flex-col items-center justify-start overflow-hidden bg-[#0E0E10] pt-24 pb-20 lg:pt-28 lg:pb-28"
+      className="relative min-h-screen w-full flex flex-col items-center justify-start overflow-hidden bg-[#131318] pt-24 pb-20 lg:pt-28 lg:pb-28"
     >
       {/* Subtle Atmospheric Spotlight */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none">
@@ -125,7 +128,7 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
       <div className="relative z-20 max-w-5xl mx-auto px-5 sm:px-8 md:px-12 w-full flex flex-col justify-start items-center text-center">
         
         {/* Editorial Role Tag */}
-        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 bg-[#1A1A1F] border border-white/[0.09] text-[#C9C9CF] rounded-full text-xs font-headline font-bold tracking-widest uppercase mb-5">
+        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 bg-[#202028] border border-white/[0.12] border-t-white/[0.16] text-[#C9C9CF] rounded-full text-[13px] font-headline font-bold tracking-widest uppercase mb-5">
           <span className="w-1.5 h-1.5 rounded-full bg-white/60 animate-pulse" />
           <span>IN-HOUSE CONTENT PRODUCER &amp; MARKETER</span>
         </div>
@@ -167,15 +170,15 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
                 <Play size={24} fill="currentColor" className="text-black ml-1" />
               </div>
               
-              <div className="inline-flex items-center space-x-1.5 px-4.5 py-2 bg-black/85 backdrop-blur-md rounded-full text-white text-sm sm:text-base font-headline font-bold tracking-wide border border-white/15 shadow-xl">
+              <div className="inline-flex items-center space-x-1.5 px-4.5 py-2 bg-black/85 backdrop-blur-md rounded-full text-white text-[13px] sm:text-base font-bold border border-white/15 shadow-xl">
                 <span>1인 제작 홍보 영상</span>
               </div>
             </div>
 
             {/* Bottom Tag inside Showreel */}
-            <div className="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white/90 text-xs sm:text-sm font-medium pointer-events-none z-10">
+            <div className="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white/90 text-[13px] sm:text-sm font-medium pointer-events-none z-10">
               <span className="truncate text-[#C9C9CF] font-semibold">브랜디드 홍보</span>
-              <span className="hidden sm:inline-block font-mono text-xs bg-black/70 text-[#8A8A93] px-2.5 py-0.5 rounded border border-white/10">CLICK TO PLAY</span>
+              <span className="hidden sm:inline-block font-mono text-[13px] bg-black/70 text-[#8A8A93] px-2.5 py-0.5 rounded border border-white/10">CLICK TO PLAY</span>
             </div>
           </div>
         </div>
@@ -218,7 +221,7 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
           <button
             id="hero-portfolio-btn"
             onClick={onPortfolioCall}
-            className="group px-8 py-3.5 bg-primary-red hover:bg-[#c21c26] text-white text-sm sm:text-base font-headline font-bold tracking-wider uppercase rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 cursor-pointer shadow-lg shadow-primary-red/20"
+            className="group px-8 py-3.5 bg-primary-red hover:bg-[#c21c26] text-white text-sm sm:text-base font-bold rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 cursor-pointer shadow-lg shadow-primary-red/20"
           >
             <Play size={14} fill="currentColor" className="text-white group-hover:translate-x-0.5 transition-transform" />
             <span>대표 포트폴리오 작업물 보러가기</span>
@@ -229,12 +232,12 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
 
       {/* Right Scroll Indicator */}
       <div className="absolute right-6 md:right-12 bottom-12 z-20 hidden md:flex flex-col items-center space-y-3">
-        <span className="font-headline text-xs tracking-widest uppercase font-bold text-[#8A8A93] rotate-90 origin-bottom translate-y-[-16px]">
+        <span className="font-headline text-[13px] tracking-widest uppercase font-bold text-[#8A8A93] rotate-90 origin-bottom translate-y-[-16px]">
           SCROLL
         </span>
         <button
           onClick={onPortfolioCall}
-          className="p-2.5 bg-[#1A1A1F] border border-white/[0.08] text-[#C9C9CF] hover:text-white rounded-full transition-colors cursor-pointer"
+          className="p-2.5 bg-[#202028] border border-white/[0.12] border-t-white/[0.16] hover:bg-[#2A2A34] text-[#C9C9CF] hover:text-white rounded-full transition-colors cursor-pointer"
           title="밑으로 스크롤"
         >
           <ArrowDown size={14} />
@@ -266,7 +269,7 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
               <div className="flex items-center justify-between px-5 py-3.5 bg-stone-900 text-white">
                 <div className="flex items-center space-x-2">
                   <span className="w-2 h-2 rounded-full bg-stone-400" />
-                  <span className="text-xs sm:text-sm font-bold tracking-tight">SHOWREEL 90s — 이주원 PD</span>
+                  <span className="text-[13px] sm:text-sm font-bold tracking-tight">SHOWREEL 90s — 이주원 PD</span>
                 </div>
                 <button
                   onClick={() => setIsShowreelOpen(false)}

@@ -112,7 +112,7 @@ export function CareerMetricLine({ metric }: CareerMetricLineProps) {
     <div className="space-y-0.5">
       <div>{renderAnimatedText()}</div>
       {criteria && (
-        <div className="text-xs sm:text-[13px] text-[#8A8A93] flex items-center gap-1.5 font-mono">
+        <div className="text-[13px] text-[#8A8A93] flex items-center gap-1.5 font-mono">
           <span className="inline-block w-1 h-1 rounded-full bg-white/30" />
           <span>{criteria}</span>
         </div>

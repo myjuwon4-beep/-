@@ -214,17 +214,17 @@ export default function Portfolio({ items }: PortfolioProps) {
   };
 
   return (
-    <section id="portfolio" className="py-20 md:py-24 bg-[#0E0E10] relative">
+    <section id="portfolio" className="py-20 md:py-24 bg-[#131318] relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="mb-10 pb-6 border-b border-white/[0.07] flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div className="mb-10 pb-6 border-b border-white/[0.08] flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <div className="flex items-center space-x-3 mb-2">
-              <span className="font-headline text-sm text-[#8A8A93] font-bold tracking-widest uppercase">
+              <span className="font-headline text-[13px] sm:text-sm text-[#8A8A93] font-bold tracking-widest uppercase">
                 02 / SELECTED WORKS
               </span>
-              <span className="text-xs font-headline font-bold px-2 py-0.5 bg-[#1A1A1F] border border-white/[0.08] text-[#C9C9CF] rounded">
+              <span className="text-[13px] font-headline font-bold px-2 py-0.5 bg-[#202028] border border-white/[0.12] border-t-white/[0.16] text-[#C9C9CF] rounded">
                 FEATURED 6 + ARCHIVE ({items.length})
               </span>
             </div>
@@ -232,7 +232,7 @@ export default function Portfolio({ items }: PortfolioProps) {
               주요 영상 포트폴리오
             </h2>
           </div>
-          <p className="text-sm md:text-base text-[#8A8A93] font-medium max-w-md">
+          <p className="text-[13px] sm:text-base text-[#8A8A93] font-medium max-w-md">
             성과가 검증된 대표 프로젝트 6선 및 전체 제작 아카이브
           </p>
         </div>
@@ -243,18 +243,18 @@ export default function Portfolio({ items }: PortfolioProps) {
             href="https://youtube.com/@k_trailer?si=EPUoTm4DX4WhMCUP"
             target="_blank"
             rel="noopener noreferrer"
-            className="group block bg-[#1A1A1F] border border-white/[0.07] rounded-xl p-4 sm:p-5 transition-all duration-200 hover:bg-[#222228] hover:border-white/[0.14] cursor-pointer"
+            className="group block bg-[#202028] border border-white/[0.12] border-t-white/[0.16] rounded-xl p-4 sm:p-5 transition-all duration-200 hover:bg-[#2A2A34] hover:border-white/[0.18] cursor-pointer"
           >
             <div className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-3">
-                <div className="p-2.5 bg-[#16161A] border border-white/[0.06] text-white rounded-lg shrink-0">
+                <div className="p-2.5 bg-[#1A1A21] border border-white/[0.08] text-white rounded-lg shrink-0">
                   <Youtube size={20} />
                 </div>
                 <div>
-                  <span className="text-[11px] font-headline font-bold uppercase tracking-wider text-[#8A8A93] block">
+                  <span className="text-[13px] font-headline font-bold uppercase tracking-wider text-[#8A8A93] block">
                     YOUTUBE CHANNEL
                   </span>
-                  <h3 className="text-sm sm:text-base font-bold text-white group-hover:text-white transition-colors">
+                  <h3 className="text-[14px] sm:text-base font-bold text-white group-hover:text-white transition-colors">
                     인하우스 PD 유튜브 채널
                   </h3>
                 </div>
@@ -267,18 +267,18 @@ export default function Portfolio({ items }: PortfolioProps) {
             href="https://www.instagram.com/ktrailer1/reels/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group block bg-[#1A1A1F] border border-white/[0.07] rounded-xl p-4 sm:p-5 transition-all duration-200 hover:bg-[#222228] hover:border-white/[0.14] cursor-pointer"
+            className="group block bg-[#202028] border border-white/[0.12] border-t-white/[0.16] rounded-xl p-4 sm:p-5 transition-all duration-200 hover:bg-[#2A2A34] hover:border-white/[0.18] cursor-pointer"
           >
             <div className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-3">
-                <div className="p-2.5 bg-[#16161A] border border-white/[0.06] text-white rounded-lg shrink-0">
+                <div className="p-2.5 bg-[#1A1A21] border border-white/[0.08] text-white rounded-lg shrink-0">
                   <Instagram size={20} />
                 </div>
                 <div>
-                  <span className="text-[11px] font-headline font-bold uppercase tracking-wider text-[#8A8A93] block">
+                  <span className="text-[13px] font-headline font-bold uppercase tracking-wider text-[#8A8A93] block">
                     INSTAGRAM REELS
                   </span>
-                  <h3 className="text-sm sm:text-base font-bold text-white group-hover:text-white transition-colors">
+                  <h3 className="text-[14px] sm:text-base font-bold text-white group-hover:text-white transition-colors">
                     인하우스 PD 릴스 채널
                   </h3>
                 </div>
@@ -299,7 +299,7 @@ export default function Portfolio({ items }: PortfolioProps) {
                 대표 프로젝트 6
               </h3>
             </div>
-            <span className="text-xs font-headline font-bold text-[#8A8A93] tracking-widest uppercase">
+            <span className="text-[13px] font-headline font-bold text-[#8A8A93] tracking-widest uppercase">
               FEATURED 6 WORKS
             </span>
           </div>
@@ -313,17 +313,17 @@ export default function Portfolio({ items }: PortfolioProps) {
                 href={project.videoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block bg-[#1A1A1F] border border-white/[0.08] hover:border-white/[0.2] rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#222228] flex flex-col justify-between"
+                className="group block bg-[#202028] border border-white/[0.12] border-t-white/[0.16] hover:border-white/[0.22] rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#2A2A34] flex flex-col justify-between"
               >
                 {/* Large 16:9 Video Thumbnail */}
                 <div className="relative aspect-video w-full overflow-hidden bg-black select-none">
                   {/* Top Badges */}
                   <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-30 pointer-events-none">
-                    <span className="px-3 py-1.5 bg-black/85 backdrop-blur-md text-white text-xs sm:text-sm font-headline font-bold rounded-lg uppercase tracking-wider border border-white/15 shadow-md">
+                    <span className="px-3 py-1.5 bg-black/85 backdrop-blur-md text-white text-[13px] sm:text-sm font-headline font-bold rounded-lg uppercase tracking-wider border border-white/15 shadow-md">
                       {project.format}
                     </span>
                     {project.metricBadge ? (
-                      <span className="px-3.5 py-1.5 bg-black/90 backdrop-blur-md text-white text-sm sm:text-base font-headline font-extrabold rounded-lg tracking-tight border border-white/20 flex items-center space-x-2 shadow-xl ring-1 ring-white/10">
+                      <span className="px-3.5 py-1.5 bg-black/90 backdrop-blur-md text-white text-[13px] sm:text-base font-extrabold rounded-lg border border-white/20 flex items-center space-x-2 shadow-xl ring-1 ring-white/10">
                         <span className="w-2 h-2 rounded-full bg-primary-red shrink-0 shadow-[0_0_8px_#FF4D57]" />
                         <span className="text-white drop-shadow">{project.metricBadge}</span>
                       </span>
@@ -350,7 +350,7 @@ export default function Portfolio({ items }: PortfolioProps) {
                   <div className="absolute inset-0 flex items-center justify-center bg-black/55 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20">
                     <div className="flex items-center gap-2.5 px-5 py-2.5 bg-white text-black rounded-full shadow-2xl transition-transform duration-200 group-hover:scale-105">
                       <Play size={15} fill="currentColor" className="text-black ml-0.5" />
-                      <span className="text-xs sm:text-sm font-headline font-bold tracking-wider uppercase">새 탭에서 영상 보기</span>
+                      <span className="text-[13px] sm:text-sm font-bold">새 탭에서 영상 보기</span>
                     </div>
                   </div>
                 </div>
@@ -363,38 +363,38 @@ export default function Portfolio({ items }: PortfolioProps) {
                     </h4>
 
                     {/* Strict 4-Line Structure: Clean flat layout with no nested card borders */}
-                    <div className="mt-4 pt-3.5 border-t border-white/[0.07] space-y-2.5 text-sm leading-[1.7]">
+                    <div className="mt-4 pt-3.5 border-t border-white/[0.08] space-y-2.5 text-[13px] sm:text-sm leading-[1.7]">
                       <div className="flex items-start gap-2.5">
-                        <span className="font-headline font-bold text-[#C9C9CF] uppercase tracking-wider text-xs sm:text-[13px] shrink-0 w-16 pt-0.5">
+                        <span className="font-bold text-[#C9C9CF] text-[13px] shrink-0 w-16 pt-0.5">
                           과제
                         </span>
-                        <span className="text-[#C9C9CF] text-sm font-normal">{project.problem}</span>
+                        <span className="text-[#C9C9CF] text-[13px] sm:text-sm font-normal">{project.problem}</span>
                       </div>
 
                       <div className="flex items-start gap-2.5">
-                        <span className="font-headline font-bold text-[#8A8A93] uppercase tracking-wider text-xs sm:text-[13px] shrink-0 w-16 pt-0.5">
+                        <span className="font-bold text-[#8A8A93] text-[13px] shrink-0 w-16 pt-0.5">
                           접근
                         </span>
-                        <span className="text-[#C9C9CF] text-sm font-normal">{project.approach}</span>
+                        <span className="text-[#C9C9CF] text-[13px] sm:text-sm font-normal">{project.approach}</span>
                       </div>
 
                       <div className="flex items-start gap-2.5">
-                        <span className="font-headline font-bold text-white uppercase tracking-wider text-xs sm:text-[13px] shrink-0 w-16 pt-0.5">
+                        <span className="font-bold text-white text-[13px] shrink-0 w-16 pt-0.5">
                           결과
                         </span>
-                        <span className="text-white text-sm font-bold">{project.result}</span>
+                        <span className="text-white text-[13px] sm:text-sm font-bold">{project.result}</span>
                       </div>
 
                       <div className="flex items-start gap-2.5">
-                        <span className="font-headline font-bold text-[#8A8A93] uppercase tracking-wider text-xs sm:text-[13px] shrink-0 w-16 pt-0.5">
+                        <span className="font-bold text-[#8A8A93] text-[13px] shrink-0 w-16 pt-0.5">
                           담당 역할
                         </span>
-                        <span className="text-[#C9C9CF] text-sm font-medium">{project.role}</span>
+                        <span className="text-[#C9C9CF] text-[13px] sm:text-sm font-medium">{project.role}</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="mt-5 pt-3.5 border-t border-white/[0.07] flex items-center justify-between text-xs sm:text-[13px] text-[#8A8A93]">
+                  <div className="mt-5 pt-3.5 border-t border-white/[0.08] flex items-center justify-between text-[13px] text-[#8A8A93]">
                     <span className="font-medium">{project.client}</span>
                     <span className="font-headline font-bold tracking-wider text-[#C9C9CF] group-hover:text-white flex items-center gap-1 group-hover:underline">
                       <span>WATCH VIDEO</span>
@@ -411,14 +411,14 @@ export default function Portfolio({ items }: PortfolioProps) {
         {/* ======================================================== */}
         {/* [2] BOTTOM TIER: "전체 작업물 (30)" — Default Folded       */}
         {/* ======================================================== */}
-        <div className="pt-6 border-t border-white/[0.07]" id="portfolio-archive-section">
+        <div className="pt-6 border-t border-white/[0.08]" id="portfolio-archive-section">
           
           {/* Toggle Button for Full Archive */}
           <div className="flex flex-col items-center justify-center text-center">
             <button
               id="portfolio-archive-toggle-btn"
               onClick={() => setIsArchiveExpanded(!isArchiveExpanded)}
-              className="px-8 py-4 bg-[#1A1A1F] border border-white/[0.1] hover:border-white/[0.25] hover:bg-[#222228] text-white font-headline font-bold text-sm sm:text-base tracking-wider rounded-xl transition-all duration-200 flex items-center space-x-3 cursor-pointer shadow-lg"
+              className="px-8 py-4 bg-[#202028] border border-white/[0.12] border-t-white/[0.16] hover:border-white/[0.25] hover:bg-[#2A2A34] text-white font-bold text-[13px] sm:text-base rounded-xl transition-all duration-200 flex items-center space-x-3 cursor-pointer shadow-lg"
             >
               <span>
                 {isArchiveExpanded 
@@ -427,7 +427,7 @@ export default function Portfolio({ items }: PortfolioProps) {
               </span>
               {isArchiveExpanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
             </button>
-            <p className="text-xs text-[#8A8A93] mt-2 font-medium">
+            <p className="text-[13px] text-[#8A8A93] mt-2 font-medium">
               {isArchiveExpanded ? "클릭 시 전체 작업물 그리드를 접습니다." : "홍보·유튜브 롱폼·숏폼·인터뷰·라이브 전체 30여 개 프로젝트를 한눈에 확인하실 수 있습니다."}
             </p>
           </div>
@@ -443,10 +443,10 @@ export default function Portfolio({ items }: PortfolioProps) {
                     key={cat.code}
                     id={`archive-tab-${cat.code}`}
                     onClick={() => setSelectedCategory(cat.code)}
-                    className={`px-3.5 py-1.5 text-xs sm:text-sm font-headline font-bold tracking-wider uppercase rounded-lg transition-all duration-150 cursor-pointer ${
+                    className={`px-3.5 py-1.5 text-[13px] sm:text-sm font-bold rounded-lg transition-all duration-150 cursor-pointer ${
                       selectedCategory === cat.code
                         ? "bg-white text-black font-bold"
-                        : "bg-[#1A1A1F] border border-white/[0.07] text-[#8A8A93] hover:text-white hover:bg-[#222228]"
+                        : "bg-[#202028] border border-white/[0.12] border-t-white/[0.16] text-[#8A8A93] hover:text-white hover:bg-[#2A2A34]"
                     }`}
                   >
                     {cat.label}
@@ -463,12 +463,12 @@ export default function Portfolio({ items }: PortfolioProps) {
                     href={item.videoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group block bg-[#1A1A1F] border border-white/[0.07] hover:border-white/[0.18] rounded-xl overflow-hidden cursor-pointer transition-all duration-200 hover:bg-[#222228] flex flex-col justify-between"
+                    className="group block bg-[#202028] border border-white/[0.12] border-t-white/[0.16] hover:border-white/[0.22] rounded-xl overflow-hidden cursor-pointer transition-all duration-200 hover:bg-[#2A2A34] flex flex-col justify-between"
                   >
                     {/* Compact 16:9 Thumbnail */}
                     <div className="relative aspect-video w-full overflow-hidden bg-black select-none">
                       <div className="absolute top-2 left-2 z-20 pointer-events-none">
-                        <span className="px-2 py-0.5 bg-black/80 backdrop-blur-md text-white text-[10px] font-headline font-bold rounded uppercase tracking-wider border border-white/10">
+                        <span className="px-2 py-0.5 bg-black/80 backdrop-blur-md text-white text-[13px] font-headline font-bold rounded uppercase tracking-wider border border-white/10">
                           {item.format}
                         </span>
                       </div>
@@ -496,11 +496,11 @@ export default function Portfolio({ items }: PortfolioProps) {
 
                     {/* Card Title & Role Tag ONLY */}
                     <div className="p-3.5 flex-grow flex flex-col justify-between">
-                      <h4 className="text-sm font-bold text-white group-hover:text-[#C9C9CF] transition-colors line-clamp-2 leading-snug">
+                      <h4 className="text-[13px] sm:text-sm font-bold text-white group-hover:text-[#C9C9CF] transition-colors line-clamp-2 leading-snug">
                         {item.title}
                       </h4>
                       {item.role && (
-                        <div className="mt-2.5 pt-2 border-t border-white/[0.06] text-xs sm:text-[13px] text-[#8A8A93] truncate">
+                        <div className="mt-2.5 pt-2 border-t border-white/[0.08] text-[13px] text-[#8A8A93] truncate">
                           {item.role}
                         </div>
                       )}
@@ -520,13 +520,13 @@ export default function Portfolio({ items }: PortfolioProps) {
       {/* Pop-out Modal for Video Player & Full Details */}
       {activeItem && (
         <div id="portfolio-modal-overlay" className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center overflow-y-auto p-4 md:p-6">
-          <div className="relative bg-[#16161A] border border-white/[0.1] w-full max-w-4xl rounded-xl shadow-2xl overflow-hidden my-auto animate-fade-in">
+          <div className="relative bg-[#1A1A21] border border-white/[0.14] w-full max-w-4xl rounded-xl shadow-2xl overflow-hidden my-auto animate-fade-in">
             
             {/* Modal Close Button */}
             <button
               id="portfolio-modal-close"
               onClick={() => setActiveItem(null)}
-              className="absolute top-4 right-4 z-50 p-2 bg-[#1A1A1F]/90 hover:bg-[#222228] border border-white/10 text-white rounded-full transition-colors cursor-pointer"
+              className="absolute top-4 right-4 z-50 p-2 bg-[#202028]/95 hover:bg-[#2A2A34] border border-white/10 text-white rounded-full transition-colors cursor-pointer"
               title="닫기"
             >
               <X size={18} />
@@ -545,7 +545,7 @@ export default function Portfolio({ items }: PortfolioProps) {
                 />
               ) : (
                 <div className="w-full h-full flex flex-col items-center justify-center text-white/50 p-6">
-                  <p className="text-sm font-headline tracking-widest uppercase">등록된 영상 링크가 올바르지 않습니다.</p>
+                  <p className="text-[13px] text-white/50">등록된 영상 링크가 올바르지 않습니다.</p>
                 </div>
               )}
             </div>
@@ -556,7 +556,7 @@ export default function Portfolio({ items }: PortfolioProps) {
               {/* Left Column: Title & Description */}
               <div className="lg:col-span-2 space-y-4">
                 <div>
-                  <span className="px-2.5 py-1 bg-white/10 border border-white/10 text-white text-xs font-headline font-bold rounded uppercase">
+                  <span className="px-2.5 py-1 bg-white/10 border border-white/10 text-white text-[13px] font-headline font-bold rounded uppercase">
                     {activeItem.format}
                   </span>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mt-2.5">
@@ -565,17 +565,17 @@ export default function Portfolio({ items }: PortfolioProps) {
                 </div>
 
                 <div>
-                  <h4 className="text-xs font-headline font-bold text-[#8A8A93] uppercase tracking-widest mb-2">
+                  <h4 className="text-[13px] font-bold text-[#8A8A93] mb-2">
                     제작 의도 및 설명
                   </h4>
-                  <p className="text-[15px] md:text-base text-[#C9C9CF] leading-[1.7] font-normal whitespace-pre-line bg-[#1A1A1F] border border-white/[0.07] p-4 sm:p-5 rounded-xl">
+                  <p className="text-[15px] md:text-base text-[#C9C9CF] leading-[1.7] font-normal whitespace-pre-line bg-[#202028] border border-white/[0.12] border-t-white/[0.16] p-4 sm:p-5 rounded-xl">
                     {activeItem.description || "상세 설명이 등록되어 있지 않습니다."}
                   </p>
                 </div>
 
                 {"images" in activeItem && activeItem.images && activeItem.images.length > 0 && (
                   <div className="pt-4" id="portfolio-photo-gallery">
-                    <h4 className="text-xs font-headline font-bold text-[#8A8A93] uppercase tracking-widest mb-3">
+                    <h4 className="text-[13px] font-bold text-[#8A8A93] mb-3">
                       제작 현장 스냅샷 ({activeItem.images.length})
                     </h4>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -596,28 +596,28 @@ export default function Portfolio({ items }: PortfolioProps) {
               </div>
 
               {/* Right Column: Production Specs */}
-              <div className="bg-[#1A1A1F] border border-white/[0.07] p-5 sm:p-6 rounded-xl space-y-5 h-fit">
-                <h4 className="text-xs font-headline font-bold text-[#8A8A93] uppercase tracking-widest border-b border-white/[0.07] pb-2.5">
+              <div className="bg-[#202028] border border-white/[0.12] border-t-white/[0.16] p-5 sm:p-6 rounded-xl space-y-5 h-fit">
+                <h4 className="text-[13px] font-bold text-[#8A8A93] border-b border-white/[0.08] pb-2.5">
                   제작 정보
                 </h4>
 
                 <div className="space-y-4">
                   <div>
-                    <p className="text-xs sm:text-sm text-[#8A8A93] font-semibold uppercase">주요 역할</p>
-                    <p className="text-sm sm:text-base font-bold text-white mt-1">{activeItem.role}</p>
+                    <p className="text-[13px] sm:text-sm text-[#8A8A93] font-semibold uppercase">주요 역할</p>
+                    <p className="text-[13px] sm:text-base font-bold text-white mt-1">{activeItem.role}</p>
                   </div>
 
                   {activeItem.equipment && (
                     <div>
-                      <p className="text-xs sm:text-sm text-[#8A8A93] font-semibold uppercase">장비 및 툴</p>
-                      <p className="text-sm sm:text-[15px] font-medium text-[#C9C9CF] mt-1 leading-[1.7]">{activeItem.equipment}</p>
+                      <p className="text-[13px] sm:text-sm text-[#8A8A93] font-semibold uppercase">장비 및 툴</p>
+                      <p className="text-[13px] sm:text-[15px] font-medium text-[#C9C9CF] mt-1 leading-[1.7]">{activeItem.equipment}</p>
                     </div>
                   )}
 
                   {activeItem.client && (
                     <div>
-                      <p className="text-xs sm:text-sm text-[#8A8A93] font-semibold uppercase">클라이언트</p>
-                      <p className="text-sm sm:text-base font-medium text-[#C9C9CF] mt-1">{activeItem.client}</p>
+                      <p className="text-[13px] sm:text-sm text-[#8A8A93] font-semibold uppercase">클라이언트</p>
+                      <p className="text-[13px] sm:text-base font-medium text-[#C9C9CF] mt-1">{activeItem.client}</p>
                     </div>
                   )}
                 </div>
