@@ -6,6 +6,8 @@
 import React from "react";
 import { initialCareerItems } from "../data";
 import { CareerItem } from "../types";
+import { CareerMetricLine } from "./AnimatedMetric";
+import CareerProofGallery from "./CareerProofGallery";
 
 interface CareerProps {
   careerItems?: CareerItem[];
@@ -77,10 +79,10 @@ export default function Career({ careerItems = [] }: CareerProps) {
                         {item.achievements.map((ach, aIdx) => (
                           <div key={aIdx} className="p-4 bg-[#16161A] border border-white/[0.05] rounded-xl">
                             <span className="text-base font-bold text-white block mb-2">{ach.platform}</span>
-                            <ul className="space-y-1.5 pl-4 list-disc text-[#C9C9CF] text-sm md:text-[15px]">
+                            <ul className="space-y-2 pl-4 list-disc text-[#C9C9CF] text-sm md:text-[15px]">
                               {ach.metrics.map((met, mIdx) => (
                                 <li key={mIdx} className="leading-[1.7]">
-                                  {met}
+                                  <CareerMetricLine metric={met} />
                                 </li>
                               ))}
                             </ul>
@@ -88,6 +90,11 @@ export default function Career({ careerItems = [] }: CareerProps) {
                         ))}
                       </div>
                     </div>
+                  )}
+
+                  {/* Proof Images Gallery (e.g., YouTube Studio Analytics, Instagram Dashboard) */}
+                  {item.proofImages && item.proofImages.length > 0 && (
+                    <CareerProofGallery proofImages={item.proofImages} />
                   )}
 
                 </div>

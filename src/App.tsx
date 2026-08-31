@@ -14,6 +14,9 @@ import Skills from "./components/Skills";
 import Vision from "./components/Vision";
 import Footer from "./components/Footer";
 import AdminPanel from "./components/AdminPanel";
+import ScrollProgressBar from "./components/ScrollProgressBar";
+import SectionIndicator from "./components/SectionIndicator";
+import FloatingBottomBar from "./components/FloatingBottomBar";
 import { PortfolioItem, SiteTexts, CareerItem, SkillCategory } from "./types";
 import { getStoredPortfolioItems, getStoredSiteTexts, getStoredCareerItems, getStoredSkills } from "./data";
 
@@ -25,8 +28,10 @@ export default function App() {
   const [careerItems, setCareerItems] = useState<CareerItem[]>([]);
   const [skillsList, setSkillsList] = useState<SkillCategory[]>([]);
   const [siteTexts, setSiteTexts] = useState<SiteTexts>(getStoredSiteTexts);
+  const [activeSection, setActiveSection] = useState("hero");
+  const [showFloatingBar, setShowFloatingBar] = useState(false);
 
-  // Initial load
+  // Initial load and scroll trackers
   useEffect(() => {
     setPortfolioItems(getStoredPortfolioItems());
     setCareerItems(getStoredCareerItems());
@@ -39,9 +44,38 @@ export default function App() {
       if (savedAuth === "true") {
         setIsAdmin(true);
       }
-    } catch (e) {
-      // Browser blocks localStorage (e.g., inside an iframe)
-    }
+    } catch (e) {}
+
+    // Scroll listener for Section Indicator and Floating Bottom Bar (30% threshold)
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      
+      // Floating bar appears after 30% scroll
+      if (docHeight > 0) {
+        const scrollPct = (scrollTop / docHeight) * 100;
+        setShowFloatingBar(scrollPct >= 30);
+      }
+
+      // Active Section Calculation
+      const sectionIds = ["hero", "about", "portfolio", "career", "skills", "vision"];
+      let currentSec = "hero";
+
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 200) {
+            currentSec = id;
+          }
+        }
+      }
+      setActiveSection(currentSec);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleSettingsUpdate = () => {
@@ -88,8 +122,17 @@ export default function App() {
   };
 
   return (
-    <div className="bg-[#0E0E10] text-[#C9C9CF] min-h-screen selection:bg-primary-red selection:text-white antialiased">
+    <div className="bg-[#0E0E10] text-[#C9C9CF] min-h-screen selection:bg-primary-red selection:text-white antialiased pb-14 sm:pb-16">
       
+      {/* Top 3px Scroll Progress Bar */}
+      <ScrollProgressBar />
+
+      {/* Desktop Section Indicator (Dots) */}
+      <SectionIndicator
+        activeSection={activeSection}
+        onNavigate={(secId) => scrollToLayoutSection(secId)}
+      />
+
       {/* 0. Sticky Cinematic Nav */}
       <Navbar
         isAdmin={isAdmin}
@@ -109,10 +152,10 @@ export default function App() {
       {/* 2. Pitch About PD */}
       <About siteTexts={siteTexts} />
 
-      {/* 4. Portfolio Grid (Now fully reactive to Admin actions) */}
+      {/* 3. Portfolio Grid (Now fully reactive to Admin actions) */}
       <Portfolio items={portfolioItems} />
 
-      {/* 3. Metric-focused Career Chronology */}
+      {/* 4. Metric-focused Career Chronology */}
       <Career careerItems={careerItems} />
 
       {/* 5. Bento Skill Board */}
@@ -126,6 +169,13 @@ export default function App() {
         isAdmin={isAdmin}
         onAdminToggle={() => setIsAdminOpen(true)}
         onPdfClick={() => setIsPdfGuideOpen(true)}
+      />
+
+      {/* Sticky Floating Action Bar (30%+ scroll) */}
+      <FloatingBottomBar
+        isVisible={showFloatingBar}
+        onPdfClick={() => setIsPdfGuideOpen(true)}
+        profileEmail={siteTexts.profileEmail || "seoulpotato@naver.com"}
       />
 
       {/* Master Admin Portal overlay */}

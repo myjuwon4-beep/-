@@ -20,15 +20,25 @@ export interface PortfolioItem {
   order: number;
 }
 
+export interface CareerAchievementMetric {
+  text: string;
+  criteria?: string; // e.g. "2024.03 ~ 2025.02 / 전년 동기 대비 / 사내 CRM 기준"
+}
+
 export interface CareerItem {
   id: string;
   period: string; // e.g., "2024 ~ 2026"
   title: string; // e.g., "KTRAILER 인하우스 PD"
   role: string; // e.g., "콘텐츠 총괄 디렉터"
   description: string[];
+  proofImages?: {
+    title: string;
+    caption: string;
+    src: string;
+  }[];
   achievements?: {
     platform: string;
-    metrics: string[];
+    metrics: (string | CareerAchievementMetric)[];
     link?: string;
     linkName?: string;
   }[];

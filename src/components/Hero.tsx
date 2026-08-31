@@ -132,7 +132,7 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
 
         {/* Main Headline H1 */}
         <h1 
-          className="text-2xl min-[420px]:text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black tracking-tight text-white leading-[1.2] max-w-4xl" 
+          className="text-[30px] sm:text-4xl md:text-5xl lg:text-5xl font-black tracking-tight text-white leading-[1.2] max-w-4xl" 
           id="hero-title"
         >
           {siteTexts.heroTitle || "조회수를 매출 문의로 바꾸는 콘텐츠 PD"}
@@ -224,195 +224,15 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
           />
         </div>
 
-        {/* Core Career & Performance Summary Card */}
-        <div className="mt-8 w-full max-w-4xl bg-[#1A1A1F] border border-white/[0.07] p-6 sm:p-8 md:p-9 rounded-xl relative overflow-hidden text-left">
-          <div className="flex items-center justify-between border-b border-white/[0.07] pb-4 mb-6">
-            <h3 className="text-lg md:text-xl font-bold text-white tracking-tight">
-              핵심 역량 및 성과 요약
-            </h3>
-            <span className="text-xs font-headline text-[#8A8A93] font-bold tracking-widest uppercase hidden sm:inline-block">OVERVIEW</span>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
-            {/* Left Section: Corporate Leadership & Infrastructure */}
-            <div className="space-y-4 lg:border-r lg:border-white/[0.07] lg:pr-8">
-              <div className="flex items-center space-x-2 pb-1">
-                <span className="px-2.5 py-1 bg-[#16161A] border border-white/[0.07] text-[#C9C9CF] text-xs sm:text-sm font-semibold rounded-md whitespace-nowrap">
-                  조직 운영 &amp; 스튜디오 인프라
-                </span>
-                <span className="text-xs sm:text-sm font-medium text-[#8A8A93] truncate">중견기업 핵심 전문성</span>
-              </div>
-              <div className="space-y-3 pt-1">
-                <div className="p-3.5 rounded-xl bg-[#16161A] border border-white/[0.05]">
-                  <p className="text-sm md:text-base font-bold text-white">콘텐츠 제작 조직 운영</p>
-                  <p className="text-sm text-[#C9C9CF] font-normal mt-1 leading-[1.7]">촬영팀 아르바이트 및 파견직 관리, 제작 총괄</p>
-                </div>
-                <div className="p-3.5 rounded-xl bg-[#16161A] border border-white/[0.05]">
-                  <p className="text-sm md:text-base font-bold text-white">촬영팀 및 스튜디오 리딩</p>
-                  <p className="text-sm text-[#C9C9CF] font-normal mt-1 leading-[1.7]">자사 스튜디오 총 관리 및 리소스 운용 총괄</p>
-                </div>
-                <div className="p-3.5 rounded-xl bg-[#16161A] border border-white/[0.05]">
-                  <p className="text-sm md:text-base font-bold text-white">라이브 시스템 구축</p>
-                  <p className="text-sm text-[#C9C9CF] font-normal mt-1 leading-[1.7]">온라인 라이브 송출 가이드라인 수립 및 고도화</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Section: New Media Growth & Performance */}
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2 pb-1">
-                <span className="px-2.5 py-1 bg-[#16161A] border border-white/[0.07] text-[#C9C9CF] text-xs sm:text-sm font-semibold rounded-md whitespace-nowrap">
-                  채널 성장 &amp; 마케팅 성과
-                </span>
-                <span className="text-xs sm:text-sm font-medium text-[#8A8A93] truncate">기업 홍보 및 콘텐츠 성과</span>
-              </div>
-              <div className="space-y-3 pt-1">
-                <div className="p-3.5 rounded-xl bg-[#16161A] border border-white/[0.05]">
-                  <p className="text-sm md:text-base font-bold text-white">
-                    유튜브 최고 <span className="font-extrabold text-primary-red">54만 회</span> · 인스타 최고 <span className="font-extrabold text-primary-red">91만 회</span>
-                  </p>
-                  <p className="text-sm text-[#C9C9CF] font-normal mt-1 leading-[1.7]">고효율 릴스/쇼츠 및 기획 연출 전략으로 최고치 조회수 성과 달성</p>
-                </div>
-                <div className="p-3.5 rounded-xl bg-[#16161A] border border-white/[0.05]">
-                  <p className="text-sm md:text-base font-bold text-white">
-                    콘텐츠 기반 문의율 <span className="font-extrabold text-primary-red">48% 증가</span>
-                  </p>
-                  <p className="text-sm text-[#C9C9CF] font-normal mt-1 leading-[1.7]">고객 인바운드 문의율을 전년 동기 대비 대폭 성장 견인</p>
-                </div>
-                <div className="p-3.5 rounded-xl bg-[#16161A] border border-white/[0.05]">
-                  <p className="text-sm md:text-base font-bold text-white leading-snug">
-                    니치 마켓 상품(카라반·트레일러·견인장치) 가치 극대화
-                  </p>
-                  <p className="text-sm text-[#C9C9CF] font-normal mt-1 leading-[1.7]">
-                    유튜브(2,000 → 8,000명), 인스타(113 → 1,800명) 트래픽 성장 및 단기간 유입 확보
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8 pt-5 border-t border-white/[0.07] flex justify-center">
-            <div className="px-4 py-2 rounded-xl bg-[#16161A] border border-white/[0.06] text-center">
-              <span className="text-sm md:text-[15px] font-semibold text-[#C9C9CF]">
-                기획 · 촬영 · 편집 · 채널 운영 전 영역 올라운더 역량 보유
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* 주 경력 사항 (MAIN EXPERIENCE) */}
-        <div className="mt-8 w-full max-w-4xl relative z-20 text-left">
-          <div className="flex items-center space-x-2 mb-3.5">
-            <h4 className="text-sm md:text-base font-bold text-white">
-              주요 업무 분야 및 프로젝트
-            </h4>
-          </div>
-          
-          <div className="bg-[#1A1A1F] border border-white/[0.07] p-6 sm:p-8 rounded-xl relative overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-              
-              {/* 분야별 콘텐츠 */}
-              <div className="space-y-3">
-                <div className="border-b border-white/[0.07] pb-2">
-                  <span className="font-bold text-white text-sm md:text-base">분야별 콘텐츠</span>
-                </div>
-                <ul className="space-y-2">
-                  <li className="text-sm md:text-[15px] font-medium text-[#C9C9CF] flex items-center space-x-2">
-                    <span className="w-1.5 h-1.5 bg-primary-red rounded-full shrink-0" />
-                    <span>교육 콘텐츠</span>
-                  </li>
-                  <li className="text-sm md:text-[15px] font-medium text-[#C9C9CF] flex items-center space-x-2">
-                    <span className="w-1.5 h-1.5 bg-primary-red rounded-full shrink-0" />
-                    <span>자동차&amp;캠핑 콘텐츠</span>
-                  </li>
-                  <li className="text-sm md:text-[15px] font-medium text-[#C9C9CF] flex items-center space-x-2">
-                    <span className="w-1.5 h-1.5 bg-primary-red rounded-full shrink-0" />
-                    <span>브랜디드 콘텐츠</span>
-                  </li>
-                </ul>
-              </div>
- 
-              {/* 1인 제작 */}
-              <div className="space-y-3">
-                <div className="border-b border-white/[0.07] pb-2">
-                  <span className="font-bold text-white text-sm md:text-base">1인 제작 역량</span>
-                </div>
-                <div className="flex flex-wrap gap-1.5 pt-1">
-                  {["기획", "촬영", "편집", "채널 운영", "프로젝트 리딩"].map((skill) => (
-                    <span key={skill} className="px-2.5 py-1 bg-[#16161A] border border-white/[0.06] text-[#C9C9CF] text-xs sm:text-sm font-semibold rounded-lg">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
- 
-              {/* 팀 프로젝트 */}
-              <div className="space-y-3">
-                <div className="border-b border-white/[0.07] pb-2">
-                  <span className="font-bold text-white text-sm md:text-base">조직 및 인프라 리딩</span>
-                </div>
-                <ul className="space-y-2 text-sm md:text-[15px] font-normal text-[#C9C9CF]">
-                  <li className="leading-snug">
-                    • 중견기업 8년 근속, 촬영 팀 관리
-                  </li>
-                  <li className="leading-snug">
-                    • 스튜디오 관리 &amp; 라이브 송출
-                  </li>
-                  <li className="leading-snug">
-                    • 대형 입시 설명회 &amp; 온라인 강좌 운영
-                  </li>
-                  <li className="leading-snug">
-                    • 기획영상 및 1타 강사 촬영 전담
-                  </li>
-                </ul>
-              </div>
- 
-            </div>
- 
-            {/* 인하우스PD 전문 */}
-            <div className="mt-6 pt-5 border-t border-white/[0.07] flex items-center">
-              <div className="bg-[#16161A] border border-white/[0.06] px-4 py-2.5 rounded-xl w-full text-center">
-                <span className="text-sm md:text-[15px] font-semibold text-[#C9C9CF]">
-                  인하우스PD 전문 역량 기반 콘텐츠 마케팅 총괄
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* 인적 사항 (Personal Profile) Section */}
-        <div className="mt-8 w-full max-w-4xl relative z-20 text-left">
-          <div className="flex items-center space-x-2 mb-3.5">
-            <h4 className="text-sm md:text-base font-bold text-white">
-              인적 사항
-            </h4>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 bg-[#1A1A1F] border border-white/[0.07] p-5 rounded-xl">
-            <div className="p-4 bg-[#16161A] border border-white/[0.05] rounded-xl flex flex-col justify-between">
-              <span className="text-xs font-semibold text-[#8A8A93] uppercase tracking-wider">이름</span>
-              <span className="text-base md:text-lg font-bold text-white mt-1">{siteTexts.profileName}</span>
-            </div>
-            <div className="p-4 bg-[#16161A] border border-white/[0.05] rounded-xl flex flex-col justify-between">
-              <span className="text-xs font-semibold text-[#8A8A93] uppercase tracking-wider">나이</span>
-              <span className="text-base md:text-lg font-bold text-white mt-1">{siteTexts.profileAge}</span>
-            </div>
-            <div className="p-4 bg-[#16161A] border border-white/[0.05] rounded-xl flex flex-col justify-between overflow-hidden">
-              <span className="text-xs font-semibold text-[#8A8A93] uppercase tracking-wider">이메일 문의</span>
-              <a href={`mailto:${siteTexts.profileEmail}`} className="text-sm md:text-base font-bold text-white hover:text-primary-red transition-colors mt-1 truncate block" title={siteTexts.profileEmail}>{siteTexts.profileEmail}</a>
-            </div>
-          </div>
-        </div>
-
         {/* Action Button */}
-        <div className="mt-9 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full sm:w-auto">
+        <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full sm:w-auto">
           <button
             id="hero-portfolio-btn"
             onClick={onPortfolioCall}
-            className="group px-8 py-3.5 bg-primary-red hover:bg-[#c21c26] text-white text-sm sm:text-base font-headline font-bold tracking-wider uppercase rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 cursor-pointer"
+            className="group px-8 py-3.5 bg-primary-red hover:bg-[#c21c26] text-white text-sm sm:text-base font-headline font-bold tracking-wider uppercase rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 cursor-pointer shadow-lg shadow-primary-red/20"
           >
             <Play size={14} fill="currentColor" className="text-white group-hover:translate-x-0.5 transition-transform" />
-            <span>PORTFOLIO 작업물 보러가기</span>
+            <span>대표 포트폴리오 작업물 보러가기</span>
           </button>
         </div>
 

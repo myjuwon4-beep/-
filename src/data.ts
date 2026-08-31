@@ -539,13 +539,34 @@ export const initialCareerItems: CareerItem[] = [
     description: [
       "유튜브 및 인스타그램 채널의 카라반/트레일러/캠핑 레저 용품 전문 브랜디드\n영상 기획, 촬영, 편집 전담 제작 및 전반적인 브랜드 마케팅 전략 수립"
     ],
+    proofImages: [
+      {
+        title: "YouTube 스튜디오 애널리틱스",
+        caption: "구독자 4배 성장 및 최고 조회수 45만 회 실측 통계",
+        src: "/proof-youtube.jpg"
+      },
+      {
+        title: "Instagram 프로페셔널 대시보드",
+        caption: "릴스 최고 91만 조회 및 팔로워 1,800명 유입 지표",
+        src: "/proof-instagram.jpg"
+      }
+    ],
     achievements: [
       {
         platform: "YouTube 콘텐츠 부문",
         metrics: [
-          "운영 1년 만에 유튜브 채널 구독자 2,000명 → 8,000명 증가",
-          "최고 조회수 롱폼 45만 회 · 쇼츠 54만 회 (10만 회 이상 콘텐츠 다수 제작)",
-          "콘텐츠 기반 고객 문의율 전년 동기 대비 약 48% 증가"
+          {
+            text: "운영 1년 만에 유튜브 채널 구독자 2,000명 → 8,000명 증가",
+            criteria: "2024.03 ~ 2025.02 / YouTube 스튜디오 애널리틱스 실측 기준"
+          },
+          {
+            text: "최고 조회수 롱폼 45만 회 · 쇼츠 54만 회 (10만 회 이상 콘텐츠 다수 제작)",
+            criteria: "채널 개설 이래 롱폼·숏폼 역대 최고 트래픽 / 단일 영상 기준"
+          },
+          {
+            text: "콘텐츠 기반 고객 문의율 전년 동기 대비 약 48% 증가",
+            criteria: "2024.03 ~ 2025.02 / 전년 동기 대비 / 유입 경로 설문 및 사내 인바운드 CRM 기준"
+          }
         ],
         link: "https://www.youtube.com/@k_trailer",
         linkName: "@k_trailer 유튜브 바로가기"
@@ -553,10 +574,22 @@ export const initialCareerItems: CareerItem[] = [
       {
         platform: "Instagram 릴스 채널 운영",
         metrics: [
-          "독립적인 숏폼 콘텐츠 전략 수립 및 주도적 채널 운영",
-          "인스타그램 팔로워 113명 → 단기간 내 1,800명으로 증가",
-          "릴스 최고 조회수 극적 성장 (입사 전 1,000회 미만 → 입사 후 최고 91만 회 달성)",
-          "트렌드 분석 및 연출 최적화를 통한 릴스 평균 조회수 지속 성장 견인"
+          {
+            text: "독립적인 숏폼 콘텐츠 전략 수립 및 주도적 채널 운영",
+            criteria: "자체 기획·촬영·편집 1인 제작 파이프라인"
+          },
+          {
+            text: "인스타그램 팔로워 113명 → 단기간 내 1,800명으로 증가",
+            criteria: "릴스 바이럴 유입 기반 순수 오가닉 팔로워 성장치"
+          },
+          {
+            text: "릴스 최고 조회수 극적 성장 (입사 전 1,000회 미만 → 입사 후 최고 91만 회 달성)",
+            criteria: "Instagram 프로페셔널 대시보드 인사이트 기준"
+          },
+          {
+            text: "트렌드 분석 및 연출 최적화를 통한 릴스 평균 조회수 지속 성장 견인",
+            criteria: "주요 타깃 맞춤형 훅(Hook) 설계 및 숏폼 알고리즘 최적화"
+          }
         ],
         link: "https://www.instagram.com/ktrailer1/",
         linkName: "@ktrailer1 인스타그램 바로가기"
@@ -750,6 +783,8 @@ export const getStoredCareerItems = (): CareerItem[] => {
     if (
       !stored || 
       !stored.includes("career-4") || 
+      !stored.includes("proofImages") ||
+      !stored.includes("criteria") ||
       stored.includes("인하우스 영상기획총괄 PD") ||
       stored.includes("영상제작팀 팀장 및 APM") ||
       stored.includes("캠핑 시장이 죽어 가면서") ||
@@ -870,7 +905,7 @@ export const defaultSiteTexts: SiteTexts = {
   aboutTitle: "안녕하세요.\n브랜드 콘텐츠 프로듀서\n이주원 PD 입니다.",
   aboutDescription: "단순한 영상 제작을 넘어 전략적인 마케팅과 브랜딩을 전개하여,\n브랜드의 신뢰도와 본연의 가치를 극대화하겠습니다.",
   profileName: "이주원",
-  profileAge: "41세",
+  profileAge: "14년 (인하우스 10년)",
   profilePhone: "010-4820-0441",
   profileEmail: "seoulpotato@naver.com",
   aboutImage: "/profile.jpg",
@@ -889,9 +924,9 @@ export const getStoredSiteTexts = (): SiteTexts => {
     }
     const parsed = JSON.parse(stored);
     
-    // Migration: update profileAge to "41세" if "14년" or empty
-    if (parsed && (parsed.profileAge === "14년" || !parsed.profileAge || parsed.profileAge.includes("년"))) {
-      parsed.profileAge = "41세";
+    // Migration: update profileAge to "14년 (인하우스 10년)"
+    if (parsed && (parsed.profileAge === "41세" || !parsed.profileAge || parsed.profileAge === "14년")) {
+      parsed.profileAge = "14년 (인하우스 10년)";
       try {
         localStorage.setItem("site_texts", JSON.stringify(parsed));
       } catch (inner) {}

@@ -59,29 +59,12 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
       )
     },
     {
-      title: "마케팅 지표 성장 증명",
+      title: "데이터 기반 콘텐츠 기획 및 성장",
       description: (
         <>
-          니치 마켓의 제품군을 다루는{" "}
-          <strong className="text-white font-bold">
-            유튜브 채널을 성장시키며 브랜드 인지도 확대
-          </strong>
-          에 기여했습니다.
-          <br className="hidden sm:inline" />
-          핵심 기획 영상으로{" "}
-          <strong className="text-white font-bold">
-            유튜브 최고 조회수 롱폼 45만 회, 쇼츠 54만 회
-          </strong>
-          , 인스타그램{" "}
-          <strong className="text-white font-bold">
-            릴스 최고 조회수 91만 회
-          </strong>
-          를 달성하여{" "}
-          <br className="hidden sm:inline" />
-          <strong className="text-white font-bold">
-            채널과 기업 가치를 상승
-          </strong>{" "}
-          시켰습니다.
+          단순 감에 의존하지 않고 타겟 시청자의 검색 키워드와 시청 지속 시간 데이터를 분석하여,{" "}
+          <strong className="text-white font-bold">브랜드 인지도와 실질적인 고객 문의 전환</strong>을{" "}
+          이끌어내는 고효율 콘텐츠를 설계하고 운영합니다.
         </>
       )
     }
