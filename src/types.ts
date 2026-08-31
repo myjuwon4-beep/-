@@ -9,6 +9,7 @@ export interface PortfolioItem {
   client: string;
   role: string;
   format: string; // "PROMOTION" | "YOUTUBE LONG" | "SHORTS" | "AI" | "INTERVIEW" | "LIVE"
+  isPersonal?: boolean; // whether this is a personal project/spec ad
   description: string;
   videoUrl: string; // YT embed or clean URL
   imageUrl: string; // cover image

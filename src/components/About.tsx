@@ -3,19 +3,82 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { Camera, Upload, Check } from "lucide-react";
 import { SiteTexts } from "../types";
 import { defaultSiteTexts } from "../data";
+import { compressImage } from "../lib/imageCompressor";
 
 interface AboutProps {
   siteTexts?: SiteTexts;
+  onSettingsUpdate?: () => void;
 }
 
-export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
+export default function About({ siteTexts = defaultSiteTexts, onSettingsUpdate }: AboutProps) {
   const [imageError, setImageError] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
+  const [uploadSuccess, setUploadSuccess] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
   const profileSrc = siteTexts.aboutImage && !siteTexts.aboutImage.includes("unsplash.com") 
     ? siteTexts.aboutImage 
-    : "/profile.jpg";
+    : "/profile.svg";
+
+  const handleFileUpload = async (file: File) => {
+    if (!file || !file.type.startsWith("image/")) return;
+    try {
+      setIsUploading(true);
+      const compressed = await compressImage(file, 900, 1125, 0.85);
+      
+      const stored = localStorage.getItem("site_texts");
+      const currentTexts = stored ? JSON.parse(stored) : { ...defaultSiteTexts };
+      const updatedTexts = {
+        ...currentTexts,
+        aboutImage: compressed,
+        profileImage: compressed
+      };
+      
+      localStorage.setItem("site_texts", JSON.stringify(updatedTexts));
+      setImageError(false);
+      setUploadSuccess(true);
+      setTimeout(() => setUploadSuccess(false), 2500);
+      
+      if (onSettingsUpdate) {
+        onSettingsUpdate();
+      }
+    } catch (err) {
+      console.error("Failed to upload profile image:", err);
+      alert("이미지를 처리하는 중 오류가 발생했습니다. 다시 시도해 주세요.");
+    } finally {
+      setIsUploading(false);
+    }
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      handleFileUpload(file);
+    }
+  };
+
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setIsDragging(false);
+    const file = e.dataTransfer.files?.[0];
+    if (file) {
+      handleFileUpload(file);
+    }
+  };
+
+  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = () => {
+    setIsDragging(false);
+  };
 
   const values = [
     {

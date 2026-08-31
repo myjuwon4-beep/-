@@ -127,6 +127,7 @@ export default function Portfolio({ items }: PortfolioProps) {
     { code: "YOUTUBE LONG", label: "유튜브 롱폼" },
     { code: "SHORTS", label: "쇼츠 / 릴스" },
     { code: "AI", label: "AI" },
+    { code: "PERSONAL", label: "PERSONAL / 개인 연습작" },
     { code: "INTERVIEW", label: "인터뷰" },
     { code: "LIVE", label: "라이브" }
   ];
@@ -134,7 +135,9 @@ export default function Portfolio({ items }: PortfolioProps) {
   // Filter items matching selected category for the archive
   const filteredItems = selectedCategory === "ALL" 
     ? [...items].sort((a, b) => a.order - b.order)
-    : [...items].filter(item => item.format === selectedCategory).sort((a, b) => a.order - b.order);
+    : selectedCategory === "PERSONAL"
+      ? [...items].filter(item => item.isPersonal || item.id.includes("portfolio-ai-1") || item.role?.includes("개인 연습작")).sort((a, b) => a.order - b.order)
+      : [...items].filter(item => item.format === selectedCategory).sort((a, b) => a.order - b.order);
 
   const getYoutubeId = (url: string): string => {
     if (!url) return "";
@@ -468,10 +471,15 @@ export default function Portfolio({ items }: PortfolioProps) {
                   >
                     {/* Compact 16:9 Thumbnail */}
                     <div className="relative aspect-video w-full overflow-hidden bg-black select-none">
-                      <div className="absolute top-2 left-2 z-20 pointer-events-none">
+                      <div className="absolute top-2 left-2 z-20 pointer-events-none flex flex-col items-start gap-1">
                         <span className="px-2 py-0.5 bg-black/80 backdrop-blur-md text-white text-[13px] font-headline font-bold rounded uppercase tracking-wider border border-white/10">
                           {item.format}
                         </span>
+                        {(item.isPersonal || item.id.includes("portfolio-ai-1") || item.role?.includes("개인 연습작")) && (
+                          <span className="px-1.5 py-0.5 bg-black/80 backdrop-blur-md text-white text-[12px] font-headline font-semibold rounded uppercase tracking-wider border border-dashed border-white/40">
+                            PERSONAL WORK
+                          </span>
+                        )}
                       </div>
 
                       <img

@@ -55,14 +55,24 @@ export default function Skills({ skills = [] }: SkillsProps) {
 
                 {/* Skills Bullet Items */}
                 <div className="space-y-2">
-                  {section.skills.map((skill, skIdx) => (
-                    <div
-                       key={skIdx}
-                       className="px-3.5 py-2.5 bg-[#1A1A21] border border-white/[0.08] rounded-lg text-sm sm:text-[15px] text-[#C9C9CF] font-medium"
-                    >
-                      {skill}
-                    </div>
-                  ))}
+                  {section.skills.map((skill, skIdx) => {
+                    const isLearning = skill.includes("[학습 중]") || skill.includes("(학습 중)");
+                    const cleanName = skill.replace(/\[학습 중\]|\(학습 중\)/g, "").trim();
+
+                    return (
+                      <div
+                        key={skIdx}
+                        className="px-3.5 py-2.5 bg-[#1A1A21] border border-white/[0.08] rounded-lg text-sm sm:text-[15px] text-[#C9C9CF] font-medium flex items-center justify-between gap-2"
+                      >
+                        <span>{cleanName}</span>
+                        {isLearning && (
+                          <span className="px-2 py-0.5 bg-[#2A2A36] border border-white/20 text-[#E0E0E6] text-[11px] sm:text-xs font-semibold rounded shrink-0 tracking-tight">
+                            학습 중
+                          </span>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
 

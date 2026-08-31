@@ -456,11 +456,12 @@ export const initialPortfolioItems: PortfolioItem[] = [
   // AI (AI 영상 제작) - 1 item
   {
     id: "portfolio-ai-1",
-    title: "[AI] 아사이 맥주 광고",
-    client: "브레인 힐링",
-    role: "AI 영상 생성, 프롬프트 엔지니어링, 연출, 편집",
+    title: "[AI] 아사히 컨셉 광고 — Spec Ad",
+    client: "브레인 힐링 (개인 작업)",
+    role: "개인 연습작 · AI 영상 생성, 프롬프트 설계, 연출, 편집",
     format: "AI",
-    description: "생성형 AI 툴을 활용한 콘셉트 비주얼 연출 및 프롬프트 엔지니어링 기반의 아사이 맥주 광고 영상입니다. AI 비디오 제너레이션과 사운드·컬러 믹싱을 결합해 브랜드의 청량감과 감각적인 무드를 제작했습니다.",
+    isPersonal: true,
+    description: "생성형 AI 툴을 활용한 콘셉트 비주얼 연출 및 프롬프트 엔지니어링 기반의 아사히 맥주 Spec Ad(개인 연습작) 영상입니다. AI 비디오 제너레이션과 사운드·컬러 믹싱을 결합해 브랜드의 청량감과 감각적인 무드를 제작했습니다.",
     videoUrl: "https://youtu.be/DKSVNU1PYbc",
     imageUrl: "https://img.youtube.com/vi/DKSVNU1PYbc/maxresdefault.jpg",
     previewVideoUrl: "",
@@ -658,7 +659,14 @@ export const initialSkills: SkillCategory[] = [
   },
   {
     category: "콘텐츠 제작 역량",
-    skills: ["Premiere", "After Effects", "Photoshop"]
+    skills: [
+      "Premiere",
+      "After Effects",
+      "Photoshop",
+      "AI 영상 생성 (텍스트→영상, 이미지→영상) [학습 중]",
+      "프롬프트 설계 및 컷 연출 [학습 중]",
+      "AI 소재 + 실사 푸티지 하이브리드 편집 [학습 중]"
+    ]
   },
   {
     category: "운영 및 시스템 기술",
@@ -743,13 +751,15 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
             item.description !== defaultItem.description ||
             item.videoUrl !== defaultItem.videoUrl ||
             item.role !== defaultItem.role ||
-            item.equipment !== defaultItem.equipment
+            item.equipment !== defaultItem.equipment ||
+            item.isPersonal !== defaultItem.isPersonal
           ) {
             item.title = defaultItem.title;
             item.description = defaultItem.description;
             item.videoUrl = defaultItem.videoUrl;
             item.role = defaultItem.role;
             item.equipment = defaultItem.equipment;
+            item.isPersonal = defaultItem.isPersonal;
             updated = true;
           }
         }
@@ -887,7 +897,9 @@ export const getStoredSkills = (): SkillCategory[] => {
       !stored.includes("전략 및 기획 역량") ||
       !stored.includes("콘텐츠 제작 역량") ||
       !stored.includes("운영 및 시스템 기술") ||
-      !stored.includes("다양한 촬영 기술 보유")
+      !stored.includes("다양한 촬영 기술 보유") ||
+      !stored.includes("AI 영상 생성") ||
+      !stored.includes("학습 중")
     ) {
       try {
         localStorage.setItem("skill_categories", JSON.stringify(initialSkills));
