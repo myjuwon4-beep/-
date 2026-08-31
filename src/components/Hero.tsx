@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect, useRef } from "react";
-import { Play, ArrowDown, X } from "lucide-react";
+import { Play, ArrowDown, X, Users, Radio, Layers } from "lucide-react";
 import { motion, AnimatePresence, useInView } from "motion/react";
 import { defaultSiteTexts } from "../data";
 import { SiteTexts } from "../types";
@@ -142,8 +142,8 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
         </h1>
 
         {/* Sub Headline */}
-        <p className="mt-3.5 sm:mt-4 text-[15px] sm:text-base md:text-lg font-medium text-[#C9C9CF] max-w-3xl leading-[1.7] break-keep">
-          {siteTexts.heroSlogan || "기획·촬영·편집·채널 운영까지, 브랜드 성장에 책임지는 인하우스 프로듀서"}
+        <p className="mt-3.5 sm:mt-4 text-[15px] sm:text-base md:text-lg font-medium text-[#C9C9CF] max-w-3xl leading-[1.7] whitespace-pre-line break-keep">
+          {siteTexts.heroSlogan || "채널을 키우는 사람이자, 제작 조직을 세우는 사람입니다.\n교육기업 8년 · 인하우스 10년 · 영상 경력 14년"}
         </p>
 
         {/* 16:9 Showreel Area */}
@@ -214,6 +214,56 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
             description="기획·촬영·편집 올라운더"
             isRedHighlight={false}
           />
+        </div>
+
+        {/* Organizational Leadership & Infrastructure Pillars (Second Axis) */}
+        <div className="mt-4 pt-4 border-t border-white/[0.08] w-full max-w-4xl" id="hero-org-pillars">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-left">
+            {/* Pillar 1 */}
+            <div className="flex items-start gap-3 p-3 rounded-lg bg-transparent border border-white/[0.06] sm:border-transparent">
+              <div className="p-2 rounded-lg bg-[#202028] border border-white/[0.08] text-[#C9C9CF] shrink-0 mt-0.5">
+                <Users size={16} />
+              </div>
+              <div className="min-w-0">
+                <h4 className="text-sm sm:text-[15px] font-bold text-white tracking-tight">
+                  스튜디오 · 촬영팀 운영
+                </h4>
+                <p className="text-[13px] text-[#8A8A93] font-medium mt-0.5">
+                  교육기업 8년 · 조직 총괄
+                </p>
+              </div>
+            </div>
+
+            {/* Pillar 2 */}
+            <div className="flex items-start gap-3 p-3 rounded-lg bg-transparent border border-white/[0.06] sm:border-transparent">
+              <div className="p-2 rounded-lg bg-[#202028] border border-white/[0.08] text-[#C9C9CF] shrink-0 mt-0.5">
+                <Radio size={16} />
+              </div>
+              <div className="min-w-0">
+                <h4 className="text-sm sm:text-[15px] font-bold text-white tracking-tight">
+                  라이브 방송 인프라 구축
+                </h4>
+                <p className="text-[13px] text-[#8A8A93] font-medium mt-0.5">
+                  다원 생중계 시스템 설계
+                </p>
+              </div>
+            </div>
+
+            {/* Pillar 3 */}
+            <div className="flex items-start gap-3 p-3 rounded-lg bg-transparent border border-white/[0.06] sm:border-transparent">
+              <div className="p-2 rounded-lg bg-[#202028] border border-white/[0.08] text-[#C9C9CF] shrink-0 mt-0.5">
+                <Layers size={16} />
+              </div>
+              <div className="min-w-0">
+                <h4 className="text-sm sm:text-[15px] font-bold text-white tracking-tight">
+                  제작 프로세스 표준화
+                </h4>
+                <p className="text-[13px] text-[#8A8A93] font-medium mt-0.5">
+                  외주 인력 운영 체계 수립
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Action Button */}

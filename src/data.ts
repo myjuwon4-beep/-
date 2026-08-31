@@ -614,12 +614,11 @@ export const initialCareerItems: CareerItem[] = [
     title: "이투스 (ETOOS) 교육",
     role: "기획 영상 촬영 & 스튜디오 관리 &\n촬영 팀 관리 & 라이브",
     description: [
-      "스튜디오 운영 총괄",
-      "촬영 장비 유지보수 체계 구축",
-      "라이브 송출 가이드라인 수립",
-      "촬영팀 운영 및 외주 인력 관리",
-      "대형 프로젝트 촬영 총괄",
-      "교육 콘텐츠 제작 프로세스 표준화"
+      "스튜디오 운영 총괄 — 장비 유지보수 체계 및 예약·운용 프로세스 구축",
+      "촬영팀 및 외주·파견 인력 운영 — 인력 스케줄링과 품질 관리 체계 수립",
+      "라이브 송출 인프라 설계 — 코로나 시기 비대면 강의 대응, 지점 간 다원 생중계 구축",
+      "제작 프로세스 표준화 — 기획·촬영·편집 단계별 가이드라인 문서화",
+      "대형 프로젝트 총괄 — 입시 설명회, 1타 강사 기획 영상 촬영 전담"
     ]
   },
   {
@@ -822,12 +821,8 @@ export const getStoredCareerItems = (): CareerItem[] => {
       !stored.includes("촬영 팀 관리") ||
       stored.includes("1,500명으로 증가") ||
       !stored.includes("1,800명으로 증가") ||
-      !stored.includes("스튜디오 운영 총괄") ||
-      !stored.includes("촬영 장비 유지보수 체계 구축") ||
-      !stored.includes("라이브 송출 가이드라인 수립") ||
-      !stored.includes("촬영팀 운영 및 외주 인력 관리") ||
-      !stored.includes("대형 프로젝트 촬영 총괄") ||
-      !stored.includes("교육 콘텐츠 제작 프로세스 표준화")
+      !stored.includes("스튜디오 운영 총괄 — 장비 유지보수 체계") ||
+      !stored.includes("라이브 송출 인프라 설계")
     ) {
       try {
         localStorage.setItem("career_items", JSON.stringify(initialCareerItems));
@@ -839,7 +834,8 @@ export const getStoredCareerItems = (): CareerItem[] => {
     if (
       etoosItem &&
       etoosItem.description &&
-      etoosItem.description[1] !== "촬영 장비 유지보수 체계 구축"
+      (!etoosItem.description[0].includes("장비 유지보수 체계 및 예약·운용 프로세스 구축") ||
+       !etoosItem.description[2].includes("라이브 송출 인프라 설계"))
     ) {
       try {
         localStorage.setItem("career_items", JSON.stringify(initialCareerItems));
@@ -898,7 +894,7 @@ export const defaultSiteTexts: SiteTexts = {
   heroTagline: "",
   heroTitle: "조회수를 매출 문의로 바꾸는 콘텐츠 PD",
   heroSubtitle: "",
-  heroSlogan: "기획·촬영·편집·채널 운영까지, 브랜드 성장에 책임지는 인하우스 프로듀서",
+  heroSlogan: "채널을 키우는 사람이자, 제작 조직을 세우는 사람입니다.\n교육기업 8년 · 인하우스 10년 · 영상 경력 14년",
   heroCompetence1: "홍보 · 유튜브 · 쇼츠/릴스 영상 전문",
   heroCompetence2: "기획 · 촬영 · 편집 · 브랜디드 콘텐츠 총괄",
   aboutTagline: "",
@@ -967,10 +963,12 @@ export const getStoredSiteTexts = (): SiteTexts => {
       } catch (inner) {}
     }
 
-    // Migration: If user has local storage with the old default slogan variants, migrate it automatically to the upgraded professional Korean slogan
+    // Migration: If user has local storage with old slogan variants, migrate it automatically to the upgraded slogan
     if (
       parsed &&
-      (parsed.heroSlogan !== "기획·촬영·편집·채널 운영까지, 브랜드 성장에 책임지는 인하우스 프로듀서" ||
+      (parsed.heroSlogan !== "채널을 키우는 사람이자, 제작 조직을 세우는 사람입니다.\n교육기업 8년 · 인하우스 10년 · 영상 경력 14년" ||
+       parsed.heroSlogan === "기획·촬영·편집·채널 운영까지, 브랜드 성장에 책임지는 인하우스 프로듀서" ||
+       parsed.heroSlogan?.includes("기획·촬영·편집·채널") ||
        parsed.heroSlogan === "1인 제작부터 중견기업 장기근속까지, 책임감 있는 브랜드 콘텐츠 PD" ||
        parsed.heroSlogan === "1인 제작부터 중견기업 장기근속까지, 책임감 있는 콘텐츠 크리에이터" ||
        parsed.heroSlogan === "콘텐츠 제작, 조직 운영, 채널 성장으로 비즈니스 성과를 만들어온 크리에이터" ||

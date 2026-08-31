@@ -33,28 +33,13 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
       )
     },
     {
-      title: "올인원 책임 프로듀서",
+      title: "올인원 책임 프로듀서 & 조직 빌딩",
       description: (
         <>
-          8년이라는 오랜 기간 동안 몸 담았던 회사에서{" "}
-          <strong className="text-white font-bold">
-            스튜디오 관리와 아르바이트, 파견직원 에스코팅 관리
-          </strong>
-          까지 전문적으로 수행했기 때문에{" "}
-          <strong className="text-white font-bold">
-            팀워크 활동에 능숙
-          </strong>
-          합니다.{" "}
+          <strong className="text-white font-bold">이투스교육에서 8년간</strong> 스튜디오 운영과 촬영팀·외주 인력 관리를 총괄했습니다.{" "}
+          장비 유지보수 체계, 라이브 송출 가이드라인, 제작 프로세스 표준화까지 없던 시스템을 직접 세웠습니다.{" "}
           <br className="hidden sm:inline" />
-          이에 더하여 전략적 기획안 도출, 1인 촬영 시 고성능 멀티캠(최대 4cam){" "}
-          <br className="hidden sm:inline" />
-          동시 제어·운영 노하우 그리고 정확하고 깔끔한 최종 컷 편집까지{" "}
-          <br className="hidden sm:inline" />
-          완성도 높은{" "}
-          <strong className="text-white font-bold">
-            1인 책임 제작
-          </strong>
-          이 가능합니다.
+          <strong className="text-white font-bold">영상 담당이 없는 조직에 들어가도 혼자 체계를 만들 수 있습니다.</strong>
         </>
       )
     },
