@@ -150,7 +150,7 @@ export default function App() {
       />
 
       {/* 2. Pitch About PD */}
-      <About siteTexts={siteTexts} />
+      <About siteTexts={siteTexts} onSettingsUpdate={handleSettingsUpdate} />
 
       {/* 3. Portfolio Grid (Now fully reactive to Admin actions) */}
       <Portfolio items={portfolioItems} />

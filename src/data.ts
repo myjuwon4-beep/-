@@ -362,7 +362,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "SHORTS",
-    description: "현대백화점 오프라인 팝업에 방문하지 못하는 고객에게 신차 공간을 신속히 소개하기 위해 기획했습니다. 차량의 내부 공간 구조와 특화 기능을 1분 이내 숏폼 포맷으로 1인 제작했습니다. 전시 기간 3일 만에 조회수 60만 회를 달성했습니다.",
+    description: "현대백화점 오프라인 팝업에 방문하지 못하는 고객에게 신차 공간을 신속히 소개하기 위해 기획했습니다. 차량의 내부 공간 구조와 특화 기능을 1분 이내 숏폼 포맷으로 1인 제작했습니다. 전시 기간 3일 만에 조회수 81만 회를 달성했습니다.",
     videoUrl: "https://youtube.com/shorts/hj6aLYEcVeY?si=9U6Cae0QG00QWCsP",
     imageUrl: "https://img.youtube.com/vi/hj6aLYEcVeY/hqdefault.jpg",
     duration: "00:38",
@@ -453,22 +453,67 @@ export const initialPortfolioItems: PortfolioItem[] = [
     order: 11.9
   },
 
-  // AI (AI 영상 제작) - 1 item
+  // AI (AI 영상 제작) - 4 items
   {
     id: "portfolio-ai-1",
-    title: "[AI] 아사히 컨셉 광고 — Spec Ad",
-    client: "브레인 힐링 (개인 작업)",
-    role: "개인 연습작 · AI 영상 생성, 프롬프트 설계, 연출, 편집",
+    title: "[AI] 밤한잔 홍보용 쇼츠영상",
+    client: "밤한잔",
+    role: "AI 영상 생성, 프롬프트 엔지니어링, 모션 연출, 편집 1인 제작",
+    format: "AI",
+    description: "전통주 브랜드 '밤한잔'의 매력과 감성적인 무드를 짧은 숏폼 형태로 전달하기 위해 기획했습니다. 생성형 AI 비디오 툴을 활용하여 시각적 질감과 제품 디테일을 극대화하고, 빠른 호흡의 모션 연출을 더해 1인 제작했습니다.",
+    videoUrl: "https://youtube.com/shorts/e3Q3ufumrys",
+    imageUrl: "https://img.youtube.com/vi/e3Q3ufumrys/hqdefault.jpg",
+    previewVideoUrl: "",
+    equipment: "Generative AI, Midjourney, Runway / Kling | Premiere Pro, After Effects",
+    duration: "00:30",
+    date: "2024-11",
+    order: 17.1
+  },
+  {
+    id: "portfolio-ai-2",
+    title: "[AI] 브랜딩 영상",
+    client: "브랜드 비주얼 (AI 콘텐츠)",
+    role: "기획, AI 영상 생성, 프롬프트 설계, 시네마틱 연출, 종합 편집",
+    format: "AI",
+    description: "생성형 AI 기술을 활용하여 브랜드의 정체성과 독창적인 비주얼 스토리라인을 영화 같은 시네마틱 톤으로 연출한 브랜딩 영상입니다. 프롬프트 엔지니어링을 통한 일관된 톤앤매너 유지와 감각적인 사운드 디자인을 적용해 1인 제작했습니다.",
+    videoUrl: "https://youtu.be/KIQ3vrMdlNQ",
+    imageUrl: "https://img.youtube.com/vi/KIQ3vrMdlNQ/hqdefault.jpg",
+    previewVideoUrl: "",
+    equipment: "Generative AI, Midjourney, Runway / Kling | Premiere Pro, After Effects",
+    duration: "01:05",
+    date: "2024-11",
+    order: 17.2
+  },
+  {
+    id: "portfolio-ai-3",
+    title: "[AI] 홈쇼핑 CTA 영상",
+    client: "홈쇼핑 / 이커머스",
+    role: "기획, AI 영상 생성, CTA 모션 그래픽, 프롬프트 연출, 종합 편집",
+    format: "AI",
+    description: "홈쇼핑 및 이커머스 방송 환경에서 소비자의 즉각적인 구매 전환(Call To Action)을 유도하기 위해 기획했습니다. 생성형 AI로 감각적인 제품 연출 컷과 주목도 높은 모션 그래픽을 결합하여 강렬한 시각적 몰입감을 주는 CTA 영상으로 1인 제작했습니다.",
+    videoUrl: "https://youtu.be/D9LcfNHN-7E",
+    imageUrl: "https://img.youtube.com/vi/D9LcfNHN-7E/hqdefault.jpg",
+    previewVideoUrl: "",
+    equipment: "Generative AI, Midjourney, Runway / Kling | Premiere Pro, After Effects",
+    duration: "00:45",
+    date: "2024-12",
+    order: 17.3
+  },
+  {
+    id: "portfolio-ai-4",
+    title: "[AI] 맥주 광고 영상_포폴용",
+    client: "맥주 브랜드 (포트폴리오)",
+    role: "개인 연습작 · AI 영상 생성, 프롬프트 엔지니어링, 사운드 믹싱, 연출, 편집",
     format: "AI",
     isPersonal: true,
-    description: "생성형 AI 툴을 활용한 콘셉트 비주얼 연출 및 프롬프트 엔지니어링 기반의 아사히 맥주 Spec Ad(개인 연습작) 영상입니다. AI 비디오 제너레이션과 사운드·컬러 믹싱을 결합해 브랜드의 청량감과 감각적인 무드를 제작했습니다.",
+    description: "생성형 AI 툴을 활용한 콘셉트 비주얼 연출 및 프롬프트 엔지니어링 기반의 맥주 광고 포트폴리오 영상입니다. AI 비디오 제너레이션과 사운드·컬러 믹싱을 결합해 브랜드의 청량감과 감각적인 무드를 1인 제작했습니다.",
     videoUrl: "https://youtu.be/DKSVNU1PYbc",
     imageUrl: "https://img.youtube.com/vi/DKSVNU1PYbc/maxresdefault.jpg",
     previewVideoUrl: "",
-    equipment: "Generative AI, Midjourney, Runway / Kling, Premiere Pro, After Effects",
+    equipment: "Generative AI, Midjourney, Runway / Kling | Premiere Pro, After Effects",
     duration: "00:45",
     date: "2024-10",
-    order: 17.5
+    order: 17.4
   },
 
   // INTERVIEW (인터뷰) - 4 items
@@ -560,7 +605,7 @@ export const initialCareerItems: CareerItem[] = [
     proofImages: [
       {
         title: "YouTube 스튜디오 애널리틱스",
-        caption: "구독자 4배 성장 및 최고 조회수 45만 회 실측 통계",
+        caption: "구독자 4배 성장 및 최고 조회수 47만 회 실측 통계",
         src: "/proof-youtube.jpg"
       },
       {
@@ -578,7 +623,7 @@ export const initialCareerItems: CareerItem[] = [
             criteria: "2024.03 ~ 2025.02 / YouTube 스튜디오 애널리틱스 실측 기준"
           },
           {
-            text: "최고 조회수 롱폼 45만 회 · 쇼츠 54만 회 (10만 회 이상 콘텐츠 다수 제작)",
+            text: "최고 조회수 롱폼 47만 회 · 쇼츠 81만 회 (10만 회 이상 콘텐츠 다수 제작)",
             criteria: "채널 개설 이래 롱폼·숏폼 역대 최고 트래픽 / 단일 영상 기준"
           },
           {
@@ -726,7 +771,14 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
       !stored.includes("J4W7tFXb36I") ||
       !stored.includes("새마을 금고 중앙회_홍보 및 인터뷰") ||
       !stored.includes("SiXkOaMNdio") ||
-      !stored.includes("DKSVNU1PYbc")
+      !stored.includes("DKSVNU1PYbc") ||
+      !stored.includes("portfolio-ai-4") ||
+      !stored.includes("e3Q3ufumrys") ||
+      !stored.includes("KIQ3vrMdlNQ") ||
+      !stored.includes("D9LcfNHN-7E") ||
+      !stored.includes("[AI] 홈쇼핑 CTA 영상") ||
+      !stored.includes("[AI] 밤한잔 홍보용 쇼츠영상") ||
+      !stored.includes("조회수 81만 회를 달성했습니다.")
     ) {
       // Force migrate to show the updated crisp descriptions instantly
       try {
@@ -745,7 +797,7 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
        const defaultItem = initialPortfolioItems.find(x => x.id === item.id);
        if (defaultItem) {
         // Force-sync specific content updates to bypass browser local storage caching
-        if (["portfolio-ai-1", "portfolio-shorts-1", "portfolio-shorts-2", "portfolio-shorts-3", "portfolio-shorts-4", "portfolio-shorts-5", "portfolio-shorts-6", "portfolio-shorts-7", "portfolio-shorts-8", "portfolio-interview-1", "portfolio-interview-2", "portfolio-interview-3", "portfolio-interview-4", "portfolio-live-1", "portfolio-promo-1", "portfolio-promo-2", "portfolio-promo-4", "portfolio-promo-5", "portfolio-promo-6", "portfolio-promo-7", "portfolio-promo-8", "portfolio-long-1", "portfolio-long-2", "portfolio-long-3", "portfolio-long-4", "portfolio-long-7", "portfolio-long-8", "portfolio-long-9", "portfolio-long-10", "portfolio-long-11", "portfolio-long-12", "portfolio-long-13", "portfolio-long-14", "portfolio-long-15"].includes(item.id)) {
+        if (["portfolio-ai-1", "portfolio-ai-2", "portfolio-ai-3", "portfolio-ai-4", "portfolio-shorts-1", "portfolio-shorts-2", "portfolio-shorts-3", "portfolio-shorts-4", "portfolio-shorts-5", "portfolio-shorts-6", "portfolio-shorts-7", "portfolio-shorts-8", "portfolio-interview-1", "portfolio-interview-2", "portfolio-interview-3", "portfolio-interview-4", "portfolio-live-1", "portfolio-promo-1", "portfolio-promo-2", "portfolio-promo-4", "portfolio-promo-5", "portfolio-promo-6", "portfolio-promo-7", "portfolio-promo-8", "portfolio-long-1", "portfolio-long-2", "portfolio-long-3", "portfolio-long-4", "portfolio-long-7", "portfolio-long-8", "portfolio-long-9", "portfolio-long-10", "portfolio-long-11", "portfolio-long-12", "portfolio-long-13", "portfolio-long-14", "portfolio-long-15"].includes(item.id)) {
           if (
             item.title !== defaultItem.title ||
             item.description !== defaultItem.description ||
@@ -828,11 +880,13 @@ export const getStoredCareerItems = (): CareerItem[] => {
       !stored.includes("2,000명 → 8,000명 증가") ||
       stored.includes("쇼츠 36만") ||
       stored.includes("쇼츠 48만") ||
-      !stored.includes("쇼츠 54만 회") ||
+      stored.includes("쇼츠 54만 회") ||
+      !stored.includes("쇼츠 81만 회") ||
+      !stored.includes("47만 회") ||
       !stored.includes("10만 회 이상 콘텐츠 다수 제작") ||
       !stored.includes("콘텐츠 기반 고객 문의율 전년 동기 대비 약 48% 증가") ||
       stored.includes("42만 회") ||
-      !stored.includes("45만 회") ||
+      stored.includes("45만 회") ||
       stored.includes(" (@k_trailer)") ||
       stored.includes(" (@ktrailer1)") ||
       stored.includes("이투스 (ETOOS) 교육 미디어 스튜디오") ||
@@ -934,8 +988,8 @@ export const defaultSiteTexts: SiteTexts = {
   profileAge: "14년 (인하우스 10년)",
   profilePhone: "010-4820-0441",
   profileEmail: "seoulpotato@naver.com",
-  aboutImage: "/profile.jpg",
-  profileImage: "/profile.jpg"
+  aboutImage: "/profile.svg",
+  profileImage: "/profile.svg"
 };
 
 export const getStoredSiteTexts = (): SiteTexts => {
@@ -958,11 +1012,12 @@ export const getStoredSiteTexts = (): SiteTexts => {
       } catch (inner) {}
     }
     
-    // Migration: Update aboutImage to /profile.jpg if empty or using Unsplash stock photos
+    // Migration: Update aboutImage to /profile.svg if empty, using Unsplash stock photos, or using non-existent /profile.jpg
     if (
       parsed &&
       (!parsed.aboutImage || 
        parsed.aboutImage === "" || 
+       parsed.aboutImage === "/profile.jpg" ||
        parsed.aboutImage.includes("unsplash.com") ||
        parsed.aboutImage.includes("photo-1542038784456") ||
        parsed.aboutImage.includes("photo-1551288049-bebda4e38f71") ||
@@ -970,21 +1025,21 @@ export const getStoredSiteTexts = (): SiteTexts => {
        parsed.aboutImage.includes("photo-1626544827763") ||
        parsed.aboutImage.includes("photo-1616440347437"))
     ) {
-      parsed.aboutImage = "/profile.jpg";
+      parsed.aboutImage = "/profile.svg";
       try {
         localStorage.setItem("site_texts", JSON.stringify(parsed));
       } catch (inner) {}
     }
 
-    // Migration: Prevent showing any foreigner or old placeholder image of a face that does not match the real face of Lee Ju Won
+    // Migration: Prevent showing any foreigner or old placeholder image
     if (
       parsed && 
       (!parsed.profileImage ||
        parsed.profileImage === "" ||
+       parsed.profileImage === "/profile.jpg" ||
        parsed.profileImage.includes("photo-1574717024653-61fd2cf4d44d") ||
        parsed.profileImage.includes("photo-1519085360753-af0119f7cbe7") ||
        parsed.profileImage.includes("photo-1536440136628") ||
-       parsed.profileImage.includes("svg") ||
        parsed.profileImage.includes("photo-1516035069371-29a1b244cc32"))
     ) {
       parsed.profileImage = defaultSiteTexts.profileImage;

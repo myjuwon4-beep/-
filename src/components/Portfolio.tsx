@@ -46,17 +46,17 @@ const FEATURED_PROJECTS: FeaturedProject[] = [
   {
     id: "portfolio-shorts-2",
     title: "PV5 큐브밴 단기 전시 홍보",
-    metricBadge: "조회수 60만",
+    metricBadge: "조회수 81만",
     format: "SHORTS",
     videoUrl: "https://youtube.com/shorts/hj6aLYEcVeY?si=9U6Cae0QG00QWCsP",
     imageUrl: "https://img.youtube.com/vi/hj6aLYEcVeY/hqdefault.jpg",
     problem: "현대백화점 오프라인 단기 팝업 전시에 직접 방문하지 못하는 가망 고객 대상 신속한 신차 공간감 전달",
     approach: "차량의 내부 구조와 핵심 특화 공간을 1분 이내 숏폼 포맷 및 직관적인 앵글로 1인 전담 제작",
-    result: "전시 기간 3일 만에 유튜브 숏폼 조회수 60만 회 달성 및 팝업 현장 유입 극대화",
+    result: "전시 기간 3일 만에 유튜브 숏폼 조회수 81만 회 달성 및 팝업 현장 유입 극대화",
     role: "기획, 촬영, 편집 (1인 총괄 제작)",
     equipment: "오즈모 포켓3, a7c2 | Premiere Pro",
     client: "K-TRAILER",
-    description: "현대백화점 오프라인 팝업에 방문하지 못하는 고객에게 신차 공간을 신속히 소개하기 위해 기획했습니다. 차량의 내부 공간 구조와 특화 기능을 1분 이내 숏폼 포맷으로 1인 제작했습니다. 전시 기간 3일 만에 조회수 60만 회를 달성했습니다."
+    description: "현대백화점 오프라인 팝업에 방문하지 못하는 고객에게 신차 공간을 신속히 소개하기 위해 기획했습니다. 차량의 내부 공간 구조와 특화 기능을 1분 이내 숏폼 포맷으로 1인 제작했습니다. 전시 기간 3일 만에 조회수 81만 회를 달성했습니다."
   },
   {
     id: "portfolio-promo-1",
@@ -71,6 +71,21 @@ const FEATURED_PROJECTS: FeaturedProject[] = [
     equipment: "Sony a7m3, DJI Mini 4 Pro | Premiere Pro, After Effects",
     client: "K-TRAILER",
     description: "사내 공식 브랜딩 영상의 부재를 해결하고 견인장치 장착 기술력에 대한 기업 신뢰도를 높이기 위해 기획했습니다. 견인장치 제조사 큐브렉과의 협업으로 정밀 장착 공정을 1인 제작(기획·촬영·편집)하여 담아냈습니다."
+  },
+  {
+    id: "portfolio-ai-3",
+    title: "[AI] 홈쇼핑 CTA 영상",
+    metricBadge: "AI 영상 제작",
+    format: "AI",
+    videoUrl: "https://youtu.be/D9LcfNHN-7E",
+    imageUrl: "https://img.youtube.com/vi/D9LcfNHN-7E/hqdefault.jpg",
+    problem: "홈쇼핑 및 이커머스 방송 중 시청자의 구매 전환(CTA)을 극대화하기 위한 임팩트 있는 시각 연출 필요",
+    approach: "생성형 AI 기술을 활용해 제품의 핵심 소구 포인트와 역동적인 모션 비주얼을 감각적으로 프롬프트 엔지니어링 및 컷 편집",
+    result: "기존 실사 촬영 대비 제작 공정 대폭 단축 및 시청자 주목도 극대화를 통한 구매 전환율 제고",
+    role: "기획, AI 영상 생성, 프롬프트 엔지니어링, CTA 모션 그래픽, 종합 편집 (1인 제작)",
+    equipment: "Generative AI, Midjourney, Runway / Kling | Premiere Pro, After Effects",
+    client: "홈쇼핑 / 이커머스",
+    description: "홈쇼핑 및 이커머스 환경에서 소비자의 구매 전환(CTA)을 유도하기 위해 기획된 영상입니다. 생성형 AI 툴과 모션 그래픽을 결합하여 제품의 매력 포인트를 직관적이고 역동적인 컷으로 완성도 높게 1인 제작했습니다."
   },
   {
     id: "portfolio-promo-2",
@@ -99,20 +114,6 @@ const FEATURED_PROJECTS: FeaturedProject[] = [
     equipment: "a7c2, 오즈모 포켓3, DJI Mini 4 Pro | Premiere Pro",
     client: "K-TRAILER",
     description: "전기 픽업 실주행 연비와 진텍 캐노피 장착 후 내구성에 대한 예비 구매자의 궁금증을 해소하기 위해 기획했습니다. 2만km를 주행한 실오너를 인터뷰하여 소음과 누수 여부를 사실 그대로 1인 제작했습니다."
-  },
-  {
-    id: "portfolio-live-1",
-    title: "[LIVE] 이투스교육 라이브 시스템 구축",
-    format: "LIVE",
-    videoUrl: "https://youtu.be/XVEqu1hdato",
-    imageUrl: "https://img.youtube.com/vi/S6L6kCVd8F4/maxresdefault.jpg",
-    problem: "비대면 온라인 전환 시기 무중단 고화질 실시간 생중계 및 방송 송출 인프라 구축",
-    approach: "스튜디오와 현장을 잇는 다원 생중계 송출 프로세스 및 1타 강사 라이브 시스템 설계",
-    result: "전국 수험생 대상 대형 라이브 무장애 송출 및 방송 가이드라인 표준화",
-    role: "라이브 중계 전송 및 방송 시스템 총괄 구축 · 방송 인프라",
-    equipment: "Live Streaming Engine, OBS Studio, DeckLink Capture, CANON Cameras",
-    client: "이투스교육",
-    description: "코로나19 시기 비대면 온라인 강의 전환과 안정적인 생중계 인프라 구축을 위해 추진되었습니다. 최태성 강사 라이브를 비롯해 스튜디오와 야외 현장을 잇는 다원 생중계 송출 프로세스를 설계하고 시스템을 구축했습니다."
   }
 ];
 
@@ -126,7 +127,7 @@ export default function Portfolio({ items }: PortfolioProps) {
     { code: "PROMOTION", label: "홍보" },
     { code: "YOUTUBE LONG", label: "유튜브 롱폼" },
     { code: "SHORTS", label: "쇼츠 / 릴스" },
-    { code: "AI", label: "AI" },
+    { code: "AI", label: "AI 영상 제작" },
     { code: "PERSONAL", label: "PERSONAL / 개인 연습작" },
     { code: "INTERVIEW", label: "인터뷰" },
     { code: "LIVE", label: "라이브" }
@@ -136,8 +137,8 @@ export default function Portfolio({ items }: PortfolioProps) {
   const filteredItems = selectedCategory === "ALL" 
     ? [...items].sort((a, b) => a.order - b.order)
     : selectedCategory === "PERSONAL"
-      ? [...items].filter(item => item.isPersonal || item.id.includes("portfolio-ai-1") || item.role?.includes("개인 연습작")).sort((a, b) => a.order - b.order)
-      : [...items].filter(item => item.format === selectedCategory).sort((a, b) => a.order - b.order);
+      ? [...items].filter(item => item.isPersonal || item.role?.includes("개인 연습작")).sort((a, b) => a.order - b.order)
+      : [...items].filter(item => item.format === selectedCategory || (selectedCategory === "AI" && (item.format === "AI" || item.format === "AI 영상 제작"))).sort((a, b) => a.order - b.order);
 
   const getYoutubeId = (url: string): string => {
     if (!url) return "";
@@ -324,7 +325,7 @@ export default function Portfolio({ items }: PortfolioProps) {
                   {/* Top Badges */}
                   <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-30 pointer-events-none">
                     <span className="px-3 py-1.5 bg-black/85 backdrop-blur-md text-white text-[13px] sm:text-sm font-headline font-bold rounded-lg uppercase tracking-wider border border-white/15 shadow-md">
-                      {project.format}
+                      {project.format === "AI" ? "AI 영상 제작" : project.format}
                     </span>
                     {project.metricBadge ? (
                       <span className="px-3.5 py-1.5 bg-black/90 backdrop-blur-md text-white text-[13px] sm:text-base font-extrabold rounded-lg border border-white/20 flex items-center space-x-2 shadow-xl ring-1 ring-white/10">
@@ -473,9 +474,9 @@ export default function Portfolio({ items }: PortfolioProps) {
                     <div className="relative aspect-video w-full overflow-hidden bg-black select-none">
                       <div className="absolute top-2 left-2 z-20 pointer-events-none flex flex-col items-start gap-1">
                         <span className="px-2 py-0.5 bg-black/80 backdrop-blur-md text-white text-[13px] font-headline font-bold rounded uppercase tracking-wider border border-white/10">
-                          {item.format}
+                          {item.format === "AI" ? "AI 영상 제작" : item.format}
                         </span>
-                        {(item.isPersonal || item.id.includes("portfolio-ai-1") || item.role?.includes("개인 연습작")) && (
+                        {(item.isPersonal || item.role?.includes("개인 연습작")) && (
                           <span className="px-1.5 py-0.5 bg-black/80 backdrop-blur-md text-white text-[12px] font-headline font-semibold rounded uppercase tracking-wider border border-dashed border-white/40">
                             PERSONAL WORK
                           </span>
@@ -566,7 +567,7 @@ export default function Portfolio({ items }: PortfolioProps) {
               <div className="lg:col-span-2 space-y-4">
                 <div>
                   <span className="px-2.5 py-1 bg-white/10 border border-white/10 text-white text-[13px] font-headline font-bold rounded uppercase">
-                    {activeItem.format}
+                    {activeItem.format === "AI" ? "AI 영상 제작" : activeItem.format}
                   </span>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mt-2.5">
                     {activeItem.title}

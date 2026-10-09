@@ -3,85 +3,20 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useRef } from "react";
-import { Camera, Upload, Check } from "lucide-react";
+import React from "react";
+import { Sparkles, Video, Layers, BarChart3, CheckCircle2 } from "lucide-react";
 import { SiteTexts } from "../types";
 import { defaultSiteTexts } from "../data";
-import { compressImage } from "../lib/imageCompressor";
 
 interface AboutProps {
   siteTexts?: SiteTexts;
   onSettingsUpdate?: () => void;
 }
 
-export default function About({ siteTexts = defaultSiteTexts, onSettingsUpdate }: AboutProps) {
-  const [imageError, setImageError] = useState(false);
-  const [isUploading, setIsUploading] = useState(false);
-  const [uploadSuccess, setUploadSuccess] = useState(false);
-  const [isDragging, setIsDragging] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const profileSrc = siteTexts.aboutImage && !siteTexts.aboutImage.includes("unsplash.com") 
-    ? siteTexts.aboutImage 
-    : "/profile.svg";
-
-  const handleFileUpload = async (file: File) => {
-    if (!file || !file.type.startsWith("image/")) return;
-    try {
-      setIsUploading(true);
-      const compressed = await compressImage(file, 900, 1125, 0.85);
-      
-      const stored = localStorage.getItem("site_texts");
-      const currentTexts = stored ? JSON.parse(stored) : { ...defaultSiteTexts };
-      const updatedTexts = {
-        ...currentTexts,
-        aboutImage: compressed,
-        profileImage: compressed
-      };
-      
-      localStorage.setItem("site_texts", JSON.stringify(updatedTexts));
-      setImageError(false);
-      setUploadSuccess(true);
-      setTimeout(() => setUploadSuccess(false), 2500);
-      
-      if (onSettingsUpdate) {
-        onSettingsUpdate();
-      }
-    } catch (err) {
-      console.error("Failed to upload profile image:", err);
-      alert("이미지를 처리하는 중 오류가 발생했습니다. 다시 시도해 주세요.");
-    } finally {
-      setIsUploading(false);
-    }
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      handleFileUpload(file);
-    }
-  };
-
-  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    setIsDragging(false);
-    const file = e.dataTransfer.files?.[0];
-    if (file) {
-      handleFileUpload(file);
-    }
-  };
-
-  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    setIsDragging(true);
-  };
-
-  const handleDragLeave = () => {
-    setIsDragging(false);
-  };
-
+export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
   const values = [
     {
+      icon: Video,
       title: "시청층 맞춤형 스토리 설계",
       description: (
         <>
@@ -96,6 +31,7 @@ export default function About({ siteTexts = defaultSiteTexts, onSettingsUpdate }
       )
     },
     {
+      icon: Layers,
       title: "올인원 책임 프로듀서 & 조직 빌딩",
       description: (
         <>
@@ -107,6 +43,7 @@ export default function About({ siteTexts = defaultSiteTexts, onSettingsUpdate }
       )
     },
     {
+      icon: BarChart3,
       title: "데이터 기반 콘텐츠 기획 및 성장",
       description: (
         <>
@@ -115,6 +52,25 @@ export default function About({ siteTexts = defaultSiteTexts, onSettingsUpdate }
           이끌어내는 고효율 콘텐츠를 설계하고 운영합니다.
         </>
       )
+    }
+  ];
+
+  const highlights = [
+    {
+      title: "1인 완결 파이프라인",
+      desc: "기획 · 연출 · 시네마틱 촬영 · 정밀 편집"
+    },
+    {
+      title: "조직 시스템 구축",
+      desc: "이투스교육 8년 스튜디오 관리 & 촬영팀 총괄"
+    },
+    {
+      title: "실측 트래픽 증명",
+      desc: "최고 조회수 롱폼 47만 회 · 쇼츠 81만 회 달성"
+    },
+    {
+      title: "차세대 AI 워크플로우",
+      desc: "생성형 AI 영상 제작 및 커머스 모션 그래픽"
     }
   ];
 
@@ -137,81 +93,109 @@ export default function About({ siteTexts = defaultSiteTexts, onSettingsUpdate }
           </p>
         </div>
 
-        {/* Content Box Grid split */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+        {/* Content Box Grid split - Redesigned without photo box */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           
-          {/* Left Block: Profile Portrait (4:5 ratio) with graceful JW fallback */}
-          <div className="lg:col-span-5 relative" id="about-photo-wrapper">
-            <div className="relative aspect-[4/5] w-full bg-[#202028] border border-white/[0.12] border-t-white/[0.16] rounded-2xl overflow-hidden flex items-center justify-center shadow-xl">
-              {!imageError ? (
-                <>
-                  <img
-                    src={profileSrc}
-                    alt="이주원 PD 프로필 사진 (/public/profile.jpg)"
-                    referrerPolicy="no-referrer"
-                    onError={() => setImageError(true)}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-                </>
-              ) : (
-                <div className="w-full h-full bg-[#202028] flex flex-col items-center justify-center p-8 text-center select-none">
-                  <div className="w-24 h-24 rounded-2xl bg-[#2A2A34] border border-white/10 flex items-center justify-center mb-5 shadow-lg">
-                    <span className="font-headline text-3xl sm:text-4xl font-black text-white tracking-wider">JW</span>
-                  </div>
-                  <div className="space-y-1.5">
-                    <span className="text-[13px] sm:text-sm font-headline font-bold text-white tracking-widest uppercase block">
-                      LEE JU WON
-                    </span>
-                    <span className="text-[13px] text-[#8A8A93] font-medium tracking-tight block">
-                      BRAND CONTENT PRODUCER
-                    </span>
-                  </div>
-                </div>
-              )}
-              
-              {/* Studio Card overlay */}
-              <div className="absolute bottom-4 left-4 right-4 p-4 bg-[#202028]/95 backdrop-blur-md border border-white/[0.12] border-t-white/[0.16] rounded-xl flex items-center justify-between shadow-md">
-                <div>
-                  <h4 className="text-base font-bold text-white">이주원</h4>
-                  <p className="text-[13px] text-[#8A8A93] font-medium mt-0.5">브랜드 콘텐츠 프로듀서</p>
-                </div>
-                <span className="text-[13px] font-headline font-bold px-2.5 py-0.5 bg-white/10 border border-white/10 text-white rounded">
-                  PD
+          {/* Left Block: Executive Director Identity Card */}
+          <div className="lg:col-span-5 flex flex-col justify-between p-7 sm:p-9 bg-[#202028] border border-white/[0.12] border-t-white/[0.16] rounded-2xl shadow-xl space-y-6">
+            <div>
+              {/* Badges */}
+              <div className="flex items-center gap-2 mb-6 flex-wrap">
+                <span className="px-3 py-1 bg-primary-red/15 text-primary-red border border-primary-red/30 rounded-lg text-xs font-mono font-bold tracking-wider uppercase">
+                  DIRECTOR & PRODUCER
+                </span>
+                <span className="px-2.5 py-1 bg-white/10 text-white/90 border border-white/10 rounded-lg text-xs font-mono font-medium">
+                  14 YEARS EXP.
                 </span>
               </div>
+
+              {/* Name & Title */}
+              <div className="space-y-1 mb-6">
+                <h3 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                  이주원
+                </h3>
+                <p className="text-base sm:text-lg text-[#C9C9CF] font-semibold">
+                  브랜드 콘텐츠 총괄 프로듀서 · 인하우스 PD
+                </p>
+              </div>
+
+              <div className="h-px w-full bg-white/[0.08] my-6" />
+
+              {/* Key Competencies Highlights */}
+              <div className="space-y-4">
+                <h4 className="text-xs font-mono text-[#8A8A93] font-bold tracking-wider uppercase">
+                  KEY COMPETENCIES
+                </h4>
+                
+                <div className="space-y-3">
+                  {highlights.map((h, i) => (
+                    <div key={i} className="flex items-start gap-3 p-3 bg-[#1A1A21] rounded-xl border border-white/[0.06]">
+                      <CheckCircle2 size={18} className="text-primary-red shrink-0 mt-0.5" />
+                      <div>
+                        <p className="text-[14px] sm:text-[15px] font-bold text-white leading-snug">
+                          {h.title}
+                        </p>
+                        <p className="text-[13px] text-[#A0A0AA] mt-0.5 leading-snug">
+                          {h.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Philosophy Quote */}
+            <div className="p-5 bg-[#17171C] border border-white/[0.08] rounded-xl mt-6">
+              <div className="flex items-center gap-1.5 text-xs font-mono text-[#8A8A93] uppercase tracking-wider mb-2">
+                <Sparkles size={13} className="text-primary-red" />
+                <span>PRODUCTION PHILOSOPHY</span>
+              </div>
+              <p className="text-sm text-white/90 italic font-medium leading-relaxed">
+                “단순히 화려한 영상이 아닌, 브랜드의 신뢰를 구축하고 실질적인 비즈니스 문의와 매출 전환을 이끌어냅니다.”
+              </p>
             </div>
           </div>
 
           {/* Right Block: Pitch Copy & Core Pillars */}
-          <div className="lg:col-span-7 flex flex-col justify-start">
-            {siteTexts.aboutTagline && (
-              <span className="text-[#C9C9CF] text-[13px] sm:text-sm font-bold tracking-wide mb-2 uppercase block">
-                {siteTexts.aboutTagline}
-              </span>
-            )}
-            <h3 className="text-2xl sm:text-3xl font-bold text-white leading-snug whitespace-pre-line tracking-tight">
-              {siteTexts.aboutTitle}
-            </h3>
-            
-            <p className="mt-5 text-[15px] sm:text-base text-[#C9C9CF] leading-[1.7] font-normal whitespace-pre-line bg-[#202028] border border-white/[0.12] border-t-white/[0.16] p-6 rounded-xl">
-              {siteTexts.aboutDescription}
-            </p>
+          <div className="lg:col-span-7 flex flex-col justify-between space-y-6">
+            <div>
+              {siteTexts.aboutTagline && (
+                <span className="text-[#C9C9CF] text-[13px] sm:text-sm font-bold tracking-wide mb-2 uppercase block">
+                  {siteTexts.aboutTagline}
+                </span>
+              )}
+              <h3 className="text-2xl sm:text-3xl font-bold text-white leading-snug whitespace-pre-line tracking-tight">
+                {siteTexts.aboutTitle}
+              </h3>
+              
+              <p className="mt-5 text-[15px] sm:text-base text-[#C9C9CF] leading-[1.7] font-normal whitespace-pre-line bg-[#202028] border border-white/[0.12] border-t-white/[0.16] p-6 rounded-xl">
+                {siteTexts.aboutDescription}
+              </p>
+            </div>
 
             {/* Core Value Pillars - "Why Me" */}
-            <div className="mt-8 space-y-3.5">
-              <h4 className="text-[13px] font-bold text-[#8A8A93] mb-3">핵심 강점</h4>
+            <div className="space-y-3.5">
+              <h4 className="text-[13px] font-bold text-[#8A8A93] mb-1">핵심 강점</h4>
               
-              {values.map((v, idx) => (
-                <div 
-                  key={idx}
-                  className="p-5 sm:p-6 bg-[#202028] border border-white/[0.12] border-t-white/[0.16] hover:bg-[#2A2A34] hover:border-white/[0.18] rounded-xl transition-all duration-200"
-                  id={`about-pillar-${idx}`}
-                >
-                  <h5 className="text-base sm:text-lg font-bold text-white">{v.title}</h5>
-                  <p className="text-[15px] md:text-base text-[#C9C9CF] mt-2 leading-[1.7] font-normal">{v.description}</p>
-                </div>
-              ))}
+              {values.map((v, idx) => {
+                const IconComponent = v.icon;
+                return (
+                  <div 
+                    key={idx}
+                    className="p-5 sm:p-6 bg-[#202028] border border-white/[0.12] border-t-white/[0.16] hover:bg-[#2A2A34] hover:border-white/[0.18] rounded-xl transition-all duration-200"
+                    id={`about-pillar-${idx}`}
+                  >
+                    <div className="flex items-center gap-2.5 mb-2">
+                      <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                        <IconComponent size={15} className="text-white/90" />
+                      </div>
+                      <h5 className="text-base sm:text-lg font-bold text-white">{v.title}</h5>
+                    </div>
+                    <p className="text-[15px] md:text-base text-[#C9C9CF] leading-[1.7] font-normal">{v.description}</p>
+                  </div>
+                );
+              })}
             </div>
 
           </div>

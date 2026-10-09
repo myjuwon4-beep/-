@@ -73,10 +73,10 @@ export function CareerMetricLine({ metric }: CareerMetricLineProps) {
       );
     }
 
-    if (text.includes("롱폼 45만 회 · 쇼츠 54만 회")) {
+    if (text.includes("롱폼 47만 회 · 쇼츠 81만 회") || text.includes("롱폼 45만 회 · 쇼츠 54만 회")) {
       return (
         <span className="leading-[1.7]">
-          최고 조회수 롱폼 <AnimatedMetricNumber target={45} suffix="만 회" /> · 쇼츠 <AnimatedMetricNumber target={54} suffix="만 회" /> (10만 회 이상 콘텐츠 다수 제작)
+          최고 조회수 롱폼 <AnimatedMetricNumber target={47} suffix="만 회" /> · 쇼츠 <AnimatedMetricNumber target={81} suffix="만 회" /> (10만 회 이상 콘텐츠 다수 제작)
         </span>
       );
     }
