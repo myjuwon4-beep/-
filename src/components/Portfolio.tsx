@@ -88,6 +88,21 @@ const FEATURED_PROJECTS: FeaturedProject[] = [
     description: "홈쇼핑 및 이커머스 환경에서 소비자의 구매 전환(CTA)을 유도하기 위해 기획된 영상입니다. 생성형 AI 툴과 모션 그래픽을 결합하여 제품의 매력 포인트를 직관적이고 역동적인 컷으로 완성도 높게 1인 제작했습니다."
   },
   {
+    id: "portfolio-ai-1",
+    title: "[AI] 밤한잔 홍보용 쇼츠영상",
+    metricBadge: "AI 숏폼",
+    format: "AI",
+    videoUrl: "https://youtube.com/shorts/e3Q3ufumrys",
+    imageUrl: "https://img.youtube.com/vi/e3Q3ufumrys/hqdefault.jpg",
+    problem: "전통주 브랜드 '밤한잔'의 고유한 감성과 풍미를 짧은 모바일 숏폼 환경에서 강렬하게 각인시키기 위한 비주얼 연출 필요",
+    approach: "생성형 AI 비디오 툴을 활용해 제품의 시각적 텍스처와 감각적인 컷을 프롬프트 엔지니어링으로 생성하고, 빠른 모션 템포와 리듬감 있는 컷 편집 적용",
+    result: "기존 실사 스튜디오 촬영 대비 제작 공정 획기적 단축 및 모바일 환경에 최적화된 고감도 숏폼 비주얼 구현",
+    role: "기획, AI 영상 생성, 프롬프트 엔지니어링, 모션 연출, 편집 (1인 제작)",
+    equipment: "Generative AI, Midjourney, Runway / Kling | Premiere Pro, After Effects",
+    client: "밤한잔",
+    description: "전통주 브랜드 '밤한잔'의 매력과 감성적인 무드를 짧은 숏폼 형태로 전달하기 위해 기획했습니다. 생성형 AI 비디오 툴을 활용하여 시각적 질감과 제품 디테일을 극대화하고, 빠른 호흡의 모션 연출을 더해 1인 제작했습니다."
+  },
+  {
     id: "portfolio-promo-2",
     title: "한국관광공사 유니크베뉴 | 왕의지밀 홍보 영상",
     format: "PROMOTION",
@@ -100,20 +115,6 @@ const FEATURED_PROJECTS: FeaturedProject[] = [
     equipment: "Sony a7m3, DJI Mavic 2 | Premiere Pro, After Effects",
     client: "왕의지밀",
     description: "한국관광공사 프로젝트 현장 지원 중 한옥 호텔 고유의 공간적 가치를 대외에 알릴 영상 자산의 필요성을 느껴 기획했습니다. 호텔 전경 및 한옥 건축미를 항공 드론과 실내 다각도 앵글로 촬영해 1인 제작했습니다."
-  },
-  {
-    id: "portfolio-interview-1",
-    title: "무쏘EV 2만km 주행 후기 | 진텍 캐노피",
-    format: "INTERVIEW",
-    videoUrl: "https://www.youtube.com/watch?v=LleqHF6Zmcs",
-    imageUrl: "https://img.youtube.com/vi/LleqHF6Zmcs/hqdefault.jpg",
-    problem: "전기 픽업 실주행 전비와 사제 캐노피(진텍) 장착 후 소음·누수 내구성에 대한 구매 의구심 해소",
-    approach: "2만km를 실주행한 실제 오너의 가감 없는 솔직한 인터뷰와 디테일 실측 촬영",
-    result: "장착 예약 및 제품 문의 전월 대비 30% 이상 증가",
-    role: "기획, 섭외, 촬영, 편집 (1인 총괄 제작) · 실오너 인터뷰",
-    equipment: "a7c2, 오즈모 포켓3, DJI Mini 4 Pro | Premiere Pro",
-    client: "K-TRAILER",
-    description: "전기 픽업 실주행 연비와 진텍 캐노피 장착 후 내구성에 대한 예비 구매자의 궁금증을 해소하기 위해 기획했습니다. 2만km를 주행한 실오너를 인터뷰하여 소음과 누수 여부를 사실 그대로 1인 제작했습니다."
   }
 ];
 
