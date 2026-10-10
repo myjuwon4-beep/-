@@ -503,9 +503,8 @@ export const initialPortfolioItems: PortfolioItem[] = [
     id: "portfolio-ai-4",
     title: "[AI] 맥주 광고 영상_포폴용",
     client: "맥주 브랜드 (포트폴리오)",
-    role: "개인 연습작 · AI 영상 생성, 프롬프트 엔지니어링, 사운드 믹싱, 연출, 편집",
+    role: "AI 영상 생성, 프롬프트 엔지니어링, 사운드 믹싱, 연출, 종합 편집 (1인 제작)",
     format: "AI",
-    isPersonal: true,
     description: "생성형 AI 툴을 활용한 콘셉트 비주얼 연출 및 프롬프트 엔지니어링 기반의 맥주 광고 포트폴리오 영상입니다. AI 비디오 제너레이션과 사운드·컬러 믹싱을 결합해 브랜드의 청량감과 감각적인 무드를 1인 제작했습니다.",
     videoUrl: "https://youtu.be/DKSVNU1PYbc",
     imageUrl: "https://img.youtube.com/vi/DKSVNU1PYbc/maxresdefault.jpg",
@@ -708,9 +707,8 @@ export const initialSkills: SkillCategory[] = [
       "Premiere",
       "After Effects",
       "Photoshop",
-      "AI 영상 생성 (텍스트→영상, 이미지→영상) [학습 중]",
-      "프롬프트 설계 및 컷 연출 [학습 중]",
-      "AI 소재 + 실사 푸티지 하이브리드 편집 [학습 중]"
+      "AI 영상 생성 (텍스트→영상, 이미지→영상)",
+      "프롬프트 설계 및 컷 연출"
     ]
   },
   {
@@ -778,7 +776,8 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
       !stored.includes("D9LcfNHN-7E") ||
       !stored.includes("[AI] 홈쇼핑 CTA 영상") ||
       !stored.includes("[AI] 밤한잔 홍보용 쇼츠영상") ||
-      !stored.includes("조회수 81만 회를 달성했습니다.")
+      !stored.includes("조회수 81만 회를 달성했습니다.") ||
+      stored.includes("개인 연습작")
     ) {
       // Force migrate to show the updated crisp descriptions instantly
       try {
@@ -948,12 +947,13 @@ export const getStoredSkills = (): SkillCategory[] => {
       stored.includes("촬영") || 
       stored.includes("영상편집") ||
       stored.includes("Strategic Skills") ||
+      stored.includes("학습 중") ||
+      stored.includes("하이브리드 편집") ||
       !stored.includes("전략 및 기획 역량") ||
       !stored.includes("콘텐츠 제작 역량") ||
       !stored.includes("운영 및 시스템 기술") ||
       !stored.includes("다양한 촬영 기술 보유") ||
-      !stored.includes("AI 영상 생성") ||
-      !stored.includes("학습 중")
+      !stored.includes("AI 영상 생성")
     ) {
       try {
         localStorage.setItem("skill_categories", JSON.stringify(initialSkills));

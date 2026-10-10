@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect, useRef } from "react";
-import { Play, ArrowDown, X, Users, Radio, Layers } from "lucide-react";
+import { Play, ArrowDown, X, Users, Radio, Layers, Sparkles } from "lucide-react";
 import { motion, AnimatePresence, useInView } from "motion/react";
 import { defaultSiteTexts } from "../data";
 import { SiteTexts } from "../types";
@@ -127,12 +127,6 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
       {/* Hero Content Wrapper */}
       <div className="relative z-20 max-w-5xl mx-auto px-5 sm:px-8 md:px-12 w-full flex flex-col justify-start items-center text-center">
         
-        {/* Editorial Role Tag */}
-        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 bg-[#202028] border border-white/[0.12] border-t-white/[0.16] text-[#C9C9CF] rounded-full text-[13px] font-headline font-bold tracking-widest uppercase mb-5">
-          <span className="w-1.5 h-1.5 rounded-full bg-white/60 animate-pulse" />
-          <span>IN-HOUSE CONTENT PRODUCER &amp; MARKETER</span>
-        </div>
-
         {/* Main Headline H1 */}
         <h1 
           className="text-[30px] sm:text-4xl md:text-5xl lg:text-5xl font-black tracking-tight text-white leading-[1.2] max-w-4xl" 
@@ -252,14 +246,14 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
             {/* Pillar 3 */}
             <div className="flex items-start gap-3 p-3 rounded-lg bg-transparent border border-white/[0.06] sm:border-transparent">
               <div className="p-2 rounded-lg bg-[#202028] border border-white/[0.08] text-[#C9C9CF] shrink-0 mt-0.5">
-                <Layers size={16} />
+                <Sparkles size={16} />
               </div>
               <div className="min-w-0">
                 <h4 className="text-sm sm:text-[15px] font-bold text-white tracking-tight">
-                  제작 프로세스 표준화
+                  AI 영상제작
                 </h4>
                 <p className="text-[13px] text-[#8A8A93] font-medium mt-0.5">
-                  외주 인력 운영 체계 수립
+                  생성형 AI 비주얼 워크플로우
                 </p>
               </div>
             </div>

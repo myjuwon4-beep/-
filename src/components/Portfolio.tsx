@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from "react";
-import { Play, X, Instagram, ExternalLink, Youtube, ChevronDown, ChevronUp } from "lucide-react";
+import { Play, X, Instagram, ExternalLink, Youtube } from "lucide-react";
 import { PortfolioItem } from "../types";
 
 interface PortfolioProps {
@@ -120,7 +120,6 @@ const FEATURED_PROJECTS: FeaturedProject[] = [
 
 export default function Portfolio({ items }: PortfolioProps) {
   const [selectedCategory, setSelectedCategory] = useState("ALL");
-  const [isArchiveExpanded, setIsArchiveExpanded] = useState(false);
   const [activeItem, setActiveItem] = useState<PortfolioItem | FeaturedProject | null>(null);
 
   const categories = [
@@ -129,7 +128,6 @@ export default function Portfolio({ items }: PortfolioProps) {
     { code: "YOUTUBE LONG", label: "유튜브 롱폼" },
     { code: "SHORTS", label: "쇼츠 / 릴스" },
     { code: "AI", label: "AI 영상 제작" },
-    { code: "PERSONAL", label: "PERSONAL / 개인 연습작" },
     { code: "INTERVIEW", label: "인터뷰" },
     { code: "LIVE", label: "라이브" }
   ];
@@ -137,9 +135,7 @@ export default function Portfolio({ items }: PortfolioProps) {
   // Filter items matching selected category for the archive
   const filteredItems = selectedCategory === "ALL" 
     ? [...items].sort((a, b) => a.order - b.order)
-    : selectedCategory === "PERSONAL"
-      ? [...items].filter(item => item.isPersonal || item.role?.includes("개인 연습작")).sort((a, b) => a.order - b.order)
-      : [...items].filter(item => item.format === selectedCategory || (selectedCategory === "AI" && (item.format === "AI" || item.format === "AI 영상 제작"))).sort((a, b) => a.order - b.order);
+    : [...items].filter(item => item.format === selectedCategory || (selectedCategory === "AI" && (item.format === "AI" || item.format === "AI 영상 제작"))).sort((a, b) => a.order - b.order);
 
   const getYoutubeId = (url: string): string => {
     if (!url) return "";
@@ -417,112 +413,100 @@ export default function Portfolio({ items }: PortfolioProps) {
         {/* ======================================================== */}
         {/* [2] BOTTOM TIER: "전체 작업물 (30)" — Default Folded       */}
         {/* ======================================================== */}
-        <div className="pt-6 border-t border-white/[0.08]" id="portfolio-archive-section">
+        {/* ======================================================== */}
+        {/* [2] BOTTOM TIER: "전체 작업물 아카이브" — Always Open      */}
+        {/* ======================================================== */}
+        <div className="pt-10 border-t border-white/[0.08]" id="portfolio-archive-section">
           
-          {/* Toggle Button for Full Archive */}
-          <div className="flex flex-col items-center justify-center text-center">
-            <button
-              id="portfolio-archive-toggle-btn"
-              onClick={() => setIsArchiveExpanded(!isArchiveExpanded)}
-              className="px-8 py-4 bg-[#202028] border border-white/[0.12] border-t-white/[0.16] hover:border-white/[0.25] hover:bg-[#2A2A34] text-white font-bold text-[13px] sm:text-base rounded-xl transition-all duration-200 flex items-center space-x-3 cursor-pointer shadow-lg"
-            >
-              <span>
-                {isArchiveExpanded 
-                  ? `전체 작업물 접기 (${items.length}건)` 
-                  : `전체 작업물 ${items.length}건 더보기 (아카이브 열기)`}
-              </span>
-              {isArchiveExpanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
-            </button>
-            <p className="text-[13px] text-[#8A8A93] mt-2 font-medium">
-              {isArchiveExpanded ? "클릭 시 전체 작업물 그리드를 접습니다." : "홍보·유튜브 롱폼·숏폼·AI·인터뷰·라이브 전체 30여 개 프로젝트를 한눈에 확인하실 수 있습니다."}
-            </p>
+          {/* Section Header */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
+            <div className="flex items-center space-x-2.5">
+              <span className="w-2.5 h-2.5 rounded-full bg-white/60" />
+              <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
+                전체 작업물 아카이브 ({items.length}건)
+              </h3>
+            </div>
+            <span className="text-[13px] font-headline font-bold text-[#8A8A93] tracking-widest uppercase">
+              FULL ARCHIVE · {items.length} PROJECTS
+            </span>
           </div>
 
-          {/* Expanded Archive View */}
-          {isArchiveExpanded && (
-            <div className="mt-10 animate-fade-in space-y-6">
-              
-              {/* Category Filter Tabs */}
-              <div className="flex flex-wrap items-center justify-center gap-2 pb-2">
-                {categories.map((cat) => (
-                  <button
-                    key={cat.code}
-                    id={`archive-tab-${cat.code}`}
-                    onClick={() => setSelectedCategory(cat.code)}
-                    className={`px-3.5 py-1.5 text-[13px] sm:text-sm font-bold rounded-lg transition-all duration-150 cursor-pointer ${
-                      selectedCategory === cat.code
-                        ? "bg-white text-black font-bold"
-                        : "bg-[#202028] border border-white/[0.12] border-t-white/[0.16] text-[#8A8A93] hover:text-white hover:bg-[#2A2A34]"
-                    }`}
-                  >
-                    {cat.label}
-                  </button>
-                ))}
-              </div>
-
-              {/* Compact Archive Grid: 3 or 4 Columns (Thumbnail + Title + Role Tag ONLY) */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5" id="archive-grid">
-                {filteredItems.map((item) => (
-                  <a
-                    key={item.id}
-                    id={`archive-item-${item.id}`}
-                    href={item.videoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group block bg-[#202028] border border-white/[0.12] border-t-white/[0.16] hover:border-white/[0.22] rounded-xl overflow-hidden cursor-pointer transition-all duration-200 hover:bg-[#2A2A34] flex flex-col justify-between"
-                  >
-                    {/* Compact 16:9 Thumbnail */}
-                    <div className="relative aspect-video w-full overflow-hidden bg-black select-none">
-                      <div className="absolute top-2 left-2 z-20 pointer-events-none flex flex-col items-start gap-1">
-                        <span className="px-2 py-0.5 bg-black/80 backdrop-blur-md text-white text-[13px] font-headline font-bold rounded uppercase tracking-wider border border-white/10">
-                          {item.format === "AI" ? "AI 영상 제작" : item.format}
-                        </span>
-                        {(item.isPersonal || item.role?.includes("개인 연습작")) && (
-                          <span className="px-1.5 py-0.5 bg-black/80 backdrop-blur-md text-white text-[12px] font-headline font-semibold rounded uppercase tracking-wider border border-dashed border-white/40">
-                            PERSONAL WORK
-                          </span>
-                        )}
-                      </div>
-
-                      <img
-                        src={getYoutubeThumbnailUrl(item.videoUrl, item.imageUrl)}
-                        alt={item.title}
-                        referrerPolicy="no-referrer"
-                        onError={(e) => {
-                          const id = getYoutubeId(item.videoUrl);
-                          if (id && e.currentTarget.src.includes("maxresdefault.jpg")) {
-                            e.currentTarget.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
-                          }
-                        }}
-                        className="w-full h-full object-cover brightness-95 group-hover:brightness-105 group-hover:scale-[1.03] transition-all duration-300"
-                      />
-
-                      {/* Hover play icon */}
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-10">
-                        <div className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center">
-                          <Play size={14} fill="currentColor" className="text-black ml-0.5" />
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Card Title & Role Tag ONLY */}
-                    <div className="p-3.5 flex-grow flex flex-col justify-between">
-                      <h4 className="text-[13px] sm:text-sm font-bold text-white group-hover:text-[#C9C9CF] transition-colors line-clamp-2 leading-snug">
-                        {item.title}
-                      </h4>
-                      {item.role && (
-                        <div className="mt-2.5 pt-2 border-t border-white/[0.08] text-[13px] text-[#8A8A93] truncate">
-                          {item.role}
-                        </div>
-                      )}
-                    </div>
-
-                  </a>
-                ))}
-              </div>
-
+          <div className="space-y-6">
+            {/* Category Filter Tabs */}
+            <div className="flex flex-wrap items-center justify-center gap-2 pb-2">
+              {categories.map((cat) => (
+                <button
+                  key={cat.code}
+                  id={`archive-tab-${cat.code}`}
+                  onClick={() => setSelectedCategory(cat.code)}
+                  className={`px-3.5 py-1.5 text-[13px] sm:text-sm font-bold rounded-lg transition-all duration-150 cursor-pointer ${
+                    selectedCategory === cat.code
+                      ? "bg-white text-black font-bold"
+                      : "bg-[#202028] border border-white/[0.12] border-t-white/[0.16] text-[#8A8A93] hover:text-white hover:bg-[#2A2A34]"
+                  }`}
+                >
+                  {cat.label}
+                </button>
+              ))}
             </div>
-          )}
+
+            {/* Compact Archive Grid: 3 or 4 Columns (Thumbnail + Title + Role Tag ONLY) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5" id="archive-grid">
+              {filteredItems.map((item) => (
+                <a
+                  key={item.id}
+                  id={`archive-item-${item.id}`}
+                  href={item.videoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block bg-[#202028] border border-white/[0.12] border-t-white/[0.16] hover:border-white/[0.22] rounded-xl overflow-hidden cursor-pointer transition-all duration-200 hover:bg-[#2A2A34] flex flex-col justify-between"
+                >
+                  {/* Compact 16:9 Thumbnail */}
+                  <div className="relative aspect-video w-full overflow-hidden bg-black select-none">
+                    <div className="absolute top-2 left-2 z-20 pointer-events-none flex flex-col items-start gap-1">
+                      <span className="px-2 py-0.5 bg-black/80 backdrop-blur-md text-white text-[13px] font-headline font-bold rounded uppercase tracking-wider border border-white/10">
+                        {item.format === "AI" ? "AI 영상 제작" : item.format}
+                      </span>
+                    </div>
+
+                    <img
+                      src={getYoutubeThumbnailUrl(item.videoUrl, item.imageUrl)}
+                      alt={item.title}
+                      referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        const id = getYoutubeId(item.videoUrl);
+                        if (id && e.currentTarget.src.includes("maxresdefault.jpg")) {
+                          e.currentTarget.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+                        }
+                      }}
+                      className="w-full h-full object-cover brightness-95 group-hover:brightness-105 group-hover:scale-[1.03] transition-all duration-300"
+                    />
+
+                    {/* Hover play icon */}
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-10">
+                      <div className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center">
+                        <Play size={14} fill="currentColor" className="text-black ml-0.5" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Card Title & Role Tag ONLY */}
+                  <div className="p-3.5 flex-grow flex flex-col justify-between">
+                    <h4 className="text-[13px] sm:text-sm font-bold text-white group-hover:text-[#C9C9CF] transition-colors line-clamp-2 leading-snug">
+                      {item.title}
+                    </h4>
+                    {item.role && (
+                      <div className="mt-2.5 pt-2 border-t border-white/[0.08] text-[13px] text-[#8A8A93] truncate">
+                        {item.role}
+                      </div>
+                    )}
+                  </div>
+
+                </a>
+              ))}
+            </div>
+
+          </div>
 
         </div>
 
