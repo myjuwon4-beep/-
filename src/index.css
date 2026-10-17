@@ -6,53 +6,53 @@
   --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
   --font-headline: "Barlow Condensed", "Oswald", "Space Grotesk", sans-serif;
   --font-display: "Space Grotesk", "Barlow Condensed", sans-serif;
-  --color-primary-red: #FF4D57;
-  --color-accent-orange: #EA580C;
-  --color-dark-base: #131318;
-  --color-dark-surface: #1A1A21;
-  --color-dark-card: #202028;
-  --color-dark-card-hover: #2A2A34;
-  --color-text-body: #C9C9CF;
-  --color-text-muted: #8A8A93;
+  --color-primary-red: #C72C21;
+  --color-accent-orange: #D9531E;
+  --color-dark-base: #F7F6F2;
+  --color-dark-surface: #FFFFFF;
+  --color-dark-card: #FFFFFF;
+  --color-dark-card-hover: #FAF9F5;
+  --color-text-body: #373D48;
+  --color-text-muted: #6B7280;
 }
 
-/* Base custom definitions */
+/* Base custom definitions - warm, glare-free comfortable reading tone */
 html {
   scroll-behavior: smooth;
-  background-color: #131318;
-  color: #C9C9CF;
+  background-color: #F7F6F2;
+  color: #373D48;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background-color: #131318;
-  color: #C9C9CF;
+  background-color: #F7F6F2;
+  color: #373D48;
 }
 
-/* Clean, dark precision scrollbar */
+/* Clean, warm comfortable scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #131318;
+  background: #EFECE6;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2A2A34;
+  background: #D5D2C8;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3E3E4D;
+  background: #B6B2A5;
 }
 
 /* Text selection */
 ::selection {
-  background-color: #D9232E;
+  background-color: #C72C21;
   color: #FFFFFF;
 }
 

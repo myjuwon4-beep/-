@@ -42,7 +42,7 @@ export default function SectionIndicator({ activeSection, onNavigate }: SectionI
           >
             {/* Tooltip on hover */}
             <div
-              className={`absolute right-7 px-3 py-1 bg-[#202028] border border-white/[0.12] border-t-white/[0.16] rounded-lg text-[13px] font-bold text-white shadow-xl whitespace-nowrap transition-all duration-200 pointer-events-none ${
+              className={`absolute right-7 px-3 py-1 bg-slate-900 border border-slate-800 rounded-lg text-[13px] font-bold text-white shadow-xl whitespace-nowrap transition-all duration-200 pointer-events-none ${
                 isHovered ? "opacity-100 translate-x-0" : "opacity-0 translate-x-2"
               }`}
             >
@@ -58,17 +58,17 @@ export default function SectionIndicator({ activeSection, onNavigate }: SectionI
             >
               {/* Outer ring for active */}
               {isActive && (
-                <span className="absolute inset-0 rounded-full border border-primary-red/60 animate-ping opacity-50" />
+                <span className="absolute inset-0 rounded-full border border-rose-500/30" />
               )}
               
               {/* Center Dot */}
               <span
                 className={`rounded-full transition-all duration-300 ${
                   isActive
-                    ? "w-2.5 h-2.5 bg-primary-red shadow-sm shadow-primary-red"
+                    ? "w-2.5 h-2.5 bg-rose-600 shadow-xs"
                     : isHovered
-                    ? "w-2 h-2 bg-white"
-                    : "w-1.5 h-1.5 bg-white/30"
+                    ? "w-2 h-2 bg-slate-900"
+                    : "w-1.5 h-1.5 bg-slate-300"
                 }`}
               />
             </button>

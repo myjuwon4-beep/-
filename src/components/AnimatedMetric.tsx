@@ -48,7 +48,7 @@ export function AnimatedMetricNumber({
   }, [isInView, target, duration]);
 
   return (
-    <span ref={ref} className="font-bold text-white font-mono">
+    <span ref={ref} className="font-bold text-slate-950 font-mono">
       {prefix}
       {value.toLocaleString()}
       {suffix}
@@ -112,8 +112,8 @@ export function CareerMetricLine({ metric }: CareerMetricLineProps) {
     <div className="space-y-0.5">
       <div>{renderAnimatedText()}</div>
       {criteria && (
-        <div className="text-[13px] text-[#8A8A93] flex items-center gap-1.5 font-mono">
-          <span className="inline-block w-1 h-1 rounded-full bg-white/30" />
+        <div className="text-[13px] text-slate-500 flex items-center gap-1.5 font-mono">
+          <span className="inline-block w-1 h-1 rounded-full bg-slate-300" />
           <span>{criteria}</span>
         </div>
       )}

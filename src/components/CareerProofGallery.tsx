@@ -55,13 +55,13 @@ export default function CareerProofGallery({ proofImages = [] }: CareerProofGall
   if (availableImages.length === 0) return null;
 
   return (
-    <div className="pt-5 border-t border-white/[0.08]" id="career-proof-gallery">
+    <div className="pt-5 border-t border-[#E6E4DC]" id="career-proof-gallery">
       <div className="flex items-center justify-between mb-3">
-        <h4 className="text-[13px] font-bold text-[#8A8A93] flex items-center gap-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-white/60" />
+        <h4 className="text-[13px] font-bold text-slate-500 flex items-center gap-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-slate-400" />
           <span>성과 실측 증빙 (애널리틱스 통계)</span>
         </h4>
-        <span className="text-[13px] font-mono text-[#8A8A93]">CLICK TO ENLARGE</span>
+        <span className="text-[13px] font-mono text-slate-500">CLICK TO ENLARGE</span>
       </div>
 
       {/* Proof Images Grid */}
@@ -71,29 +71,29 @@ export default function CareerProofGallery({ proofImages = [] }: CareerProofGall
             key={pIdx}
             id={`proof-image-card-${pIdx + 1}`}
             onClick={() => setSelectedProof(proof)}
-            className="group relative bg-[#1A1A21] border border-white/[0.12] border-t-white/[0.16] hover:border-white/[0.25] rounded-xl overflow-hidden cursor-pointer transition-all duration-200"
+            className="group relative bg-white border border-[#E6E4DC] hover:border-[#D5D2C7] rounded-xl overflow-hidden cursor-pointer transition-all duration-200 shadow-2xs hover:shadow-xs"
           >
             {/* Image Preview Container */}
-            <div className="relative aspect-[16/9] w-full overflow-hidden bg-black/60">
+            <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#FAF9F5]">
               <img
                 src={proof.src}
                 alt={proof.title}
-                className="w-full h-full object-cover brightness-90 group-hover:brightness-105 group-hover:scale-[1.03] transition-all duration-200"
+                className="w-full h-full object-cover brightness-95 group-hover:brightness-105 group-hover:scale-[1.02] transition-all duration-200"
               />
               
               {/* Hover Overlay with Zoom Icon */}
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-150 flex items-center justify-center gap-1.5 text-white text-[13px] font-bold">
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-150 flex items-center justify-center gap-1.5 text-white text-[13px] font-bold">
                 <ZoomIn size={16} className="text-white" />
                 <span>통계 원본 확대보기</span>
               </div>
             </div>
 
             {/* Proof Card Caption */}
-            <div className="p-3 bg-[#1A1A21] border-t border-white/[0.08]">
-              <p className="text-[13px] font-bold text-white truncate group-hover:text-white transition-colors">
+            <div className="p-3 bg-white border-t border-[#E6E4DC]/60">
+              <p className="text-[13px] font-bold text-slate-900 truncate group-hover:text-rose-600 transition-colors">
                 {proof.title}
               </p>
-              <p className="text-[13px] text-[#8A8A93] truncate mt-0.5 font-normal">
+              <p className="text-[13px] text-slate-500 truncate mt-0.5 font-normal">
                 {proof.caption}
               </p>
             </div>
@@ -106,25 +106,25 @@ export default function CareerProofGallery({ proofImages = [] }: CareerProofGall
         <div
           id="proof-lightbox-overlay"
           onClick={() => setSelectedProof(null)}
-          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-8 animate-fade-in cursor-zoom-out"
+          className="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-8 animate-fade-in cursor-zoom-out"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-4xl w-full bg-[#1A1A21] border border-white/[0.14] rounded-2xl overflow-hidden shadow-2xl cursor-default"
+            className="relative max-w-4xl w-full bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-2xl cursor-default"
           >
             {/* Header */}
-            <div className="px-5 py-3.5 border-b border-white/[0.08] flex items-center justify-between bg-[#202028]">
+            <div className="px-5 py-3.5 border-b border-slate-200 flex items-center justify-between bg-slate-50">
               <div>
-                <h3 className="text-[14px] sm:text-base font-bold text-white">
+                <h3 className="text-[14px] sm:text-base font-bold text-slate-900">
                   {selectedProof.title}
                 </h3>
-                <p className="text-[13px] text-[#8A8A93] mt-0.5 font-normal">
+                <p className="text-[13px] text-slate-500 mt-0.5 font-normal">
                   {selectedProof.caption}
                 </p>
               </div>
               <button
                 onClick={() => setSelectedProof(null)}
-                className="p-1.5 rounded-lg bg-[#1A1A21] hover:bg-[#2A2A34] border border-white/[0.1] text-white transition-colors cursor-pointer"
+                className="p-1.5 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 transition-colors cursor-pointer shadow-2xs"
                 title="닫기"
               >
                 <X size={18} />
@@ -132,7 +132,7 @@ export default function CareerProofGallery({ proofImages = [] }: CareerProofGall
             </div>
 
             {/* Expanded Proof Image */}
-            <div className="p-3 bg-black flex items-center justify-center max-h-[75vh] overflow-auto">
+            <div className="p-3 bg-slate-950 flex items-center justify-center max-h-[75vh] overflow-auto">
               <img
                 src={selectedProof.src}
                 alt={selectedProof.title}

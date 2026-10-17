@@ -122,7 +122,7 @@ export default function App() {
   };
 
   return (
-    <div className="bg-[#131318] text-[#C9C9CF] min-h-screen selection:bg-primary-red selection:text-white antialiased pb-14 sm:pb-16">
+    <div className="bg-[#F7F6F2] text-[#373D48] min-h-screen selection:bg-rose-600 selection:text-white antialiased pb-14 sm:pb-16">
       
       {/* Top 3px Scroll Progress Bar */}
       <ScrollProgressBar />
@@ -193,26 +193,26 @@ export default function App() {
 
       {/* PDF Export Guidance Modal */}
       {isPdfGuideOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm no-print">
-          <div className="bg-[#202028] border border-white/[0.12] border-t-white/[0.16] rounded-xl w-full max-w-lg p-6 md:p-8 text-left shadow-2xl relative animate-fade-in text-[#C9C9CF]">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm no-print">
+          <div className="bg-white border border-slate-200 rounded-2xl w-full max-w-lg p-6 md:p-8 text-left shadow-2xl relative animate-fade-in text-slate-700">
             {/* Close Button */}
             <button
               onClick={() => setIsPdfGuideOpen(false)}
-              className="absolute top-4 right-4 text-[#8A8A93] hover:text-white hover:bg-white/10 p-1.5 rounded-full transition-all cursor-pointer"
+              className="absolute top-4 right-4 text-slate-400 hover:text-slate-700 hover:bg-slate-100 p-1.5 rounded-full transition-all cursor-pointer"
             >
               <X size={18} />
             </button>
 
             {/* Header */}
             <div className="flex items-center space-x-3 mb-6">
-              <div className="p-2.5 bg-[#1A1A21] border border-white/[0.12] rounded-lg text-white">
+              <div className="p-2.5 bg-slate-100 border border-slate-200 rounded-xl text-slate-800">
                 <Printer size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-bold tracking-tight text-white leading-tight">
+                <h3 className="text-lg font-bold tracking-tight text-slate-900 leading-tight">
                   포트폴리오 PDF 저장 및 인쇄 가이드
                 </h3>
-                <p className="text-xs text-[#8A8A93] mt-0.5">
+                <p className="text-xs text-slate-500 mt-0.5">
                   이주원 PD님의 온라인 포트폴리오를 파일(PDF) 또는 종이 인쇄물로 저장하세요.
                 </p>
               </div>
@@ -220,48 +220,48 @@ export default function App() {
 
             {/* Step-by-Step Instructions */}
             <div className="space-y-3 mb-6">
-              <div className="flex gap-3.5 items-start p-3.5 bg-[#1A1A21] border border-white/[0.08] rounded-xl">
-                <div className="w-5 h-5 rounded-full bg-white/10 text-white font-headline text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 border border-white/10">
+              <div className="flex gap-3.5 items-start p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl">
+                <div className="w-5 h-5 rounded-full bg-slate-900 text-white font-headline text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
                   1
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-white">대상(Destination)에서 PDF 저장 선택</h4>
-                  <p className="text-xs text-[#8A8A93] mt-1">
-                    인쇄 창이 실행되면 대상 목록에서 <strong className="text-white">[PDF로 저장]</strong> (또는 Save as PDF)을 지정하세요.
+                  <h4 className="text-sm font-semibold text-slate-900">대상(Destination)에서 PDF 저장 선택</h4>
+                  <p className="text-xs text-slate-600 mt-1">
+                    인쇄 창이 실행되면 대상 목록에서 <strong className="text-slate-900 font-bold">[PDF로 저장]</strong> (또는 Save as PDF)을 지정하세요.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-3.5 items-start p-3.5 bg-[#1A1A21] border border-white/[0.08] rounded-xl">
-                <div className="w-5 h-5 rounded-full bg-white/10 text-white font-headline text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 border border-white/10">
+              <div className="flex gap-3.5 items-start p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl">
+                <div className="w-5 h-5 rounded-full bg-slate-900 text-white font-headline text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
                   2
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-white">배경 그래픽 인쇄 체크 <span className="text-white font-bold text-[10px] ml-1 bg-white/10 px-1.5 py-0.5 rounded border border-white/10">★ 필수</span></h4>
-                  <p className="text-xs text-[#8A8A93] mt-1">
-                    [설정 더보기]를 눌러 <strong className="text-white">[배경 그래픽] (Background graphics)</strong> 옵션을 활성화해야 포트폴리오 최적화 서식과 컬러가 누락없이 반영됩니다!
+                  <h4 className="text-sm font-semibold text-slate-900">배경 그래픽 인쇄 체크 <span className="text-rose-600 font-bold text-[10px] ml-1 bg-rose-50 px-1.5 py-0.5 rounded border border-rose-200">★ 필수</span></h4>
+                  <p className="text-xs text-slate-600 mt-1">
+                    [설정 더보기]를 눌러 <strong className="text-slate-900 font-bold">[배경 그래픽] (Background graphics)</strong> 옵션을 활성화해야 포트폴리오 최적화 서식과 컬러가 누락없이 반영됩니다!
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-3.5 items-start p-3.5 bg-[#1A1A21] border border-white/[0.08] rounded-xl">
-                <div className="w-5 h-5 rounded-full bg-white/10 text-white font-headline text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 border border-white/10">
+              <div className="flex gap-3.5 items-start p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl">
+                <div className="w-5 h-5 rounded-full bg-slate-900 text-white font-headline text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
                   3
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-white">크기 및 방향 규격 맞추기</h4>
-                  <p className="text-xs text-[#8A8A93] mt-1">
-                    용지 크기는 <strong className="text-white">[A4]</strong>, 방향은 <strong className="text-white">[세로]</strong>, 여백은 <strong className="text-white">[최소]</strong> 또는 <strong className="text-white">[기본]</strong>으로 설정하시면 가장 완성도 높은 문서가 완성됩니다.
+                  <h4 className="text-sm font-semibold text-slate-900">크기 및 방향 규격 맞추기</h4>
+                  <p className="text-xs text-slate-600 mt-1">
+                    용지 크기는 <strong className="text-slate-900 font-bold">[A4]</strong>, 방향은 <strong className="text-slate-900 font-bold">[세로]</strong>, 여백은 <strong className="text-slate-900 font-bold">[최소]</strong> 또는 <strong className="text-slate-900 font-bold">[기본]</strong>으로 설정하시면 가장 완성도 높은 문서가 완성됩니다.
                   </p>
                 </div>
               </div>
             </div>
 
             {/* Sandbox Iframe Caution */}
-            <div className="p-3 bg-[#1A1A21] border border-amber-500/30 text-[#C9C9CF] rounded-xl text-xs flex gap-2.5 mb-6">
-              <AlertTriangle size={16} className="shrink-0 mt-0.5 text-amber-400" />
+            <div className="p-3 bg-amber-50/80 border border-amber-200 text-amber-900 rounded-xl text-xs flex gap-2.5 mb-6">
+              <AlertTriangle size={16} className="shrink-0 mt-0.5 text-amber-600" />
               <div>
-                <span className="font-bold text-white">내장 뷰어(iFrame) 사용시 주의:</span> 브라우저 보안 규정상 이 내장된 미리보기 창에서는 인쇄 팝업이 차단될 수 있습니다. 정상적으로 인쇄되지 않을 경우, 상단의 <strong className="text-white">새 창으로 열기 (Open in New Tab)</strong> 또는 공유 받으신 링크로 브라우저에서 직접 페이지를 연 다음 [PDF 저장]을 다시 눌러주시길 바랍니다.
+                <span className="font-bold text-amber-950">내장 뷰어(iFrame) 사용시 주의:</span> 브라우저 보안 규정상 이 내장된 미리보기 창에서는 인쇄 팝업이 차단될 수 있습니다. 정상적으로 인쇄되지 않을 경우, 상단의 <strong className="text-amber-950 font-bold">새 창으로 열기 (Open in New Tab)</strong> 또는 공유 받으신 링크로 브라우저에서 직접 페이지를 연 다음 [PDF 저장]을 다시 눌러주시길 바랍니다.
               </div>
             </div>
 
@@ -274,14 +274,14 @@ export default function App() {
                     window.print();
                   }, 150);
                 }}
-                className="flex-1 py-3 bg-primary-red hover:bg-rose-600 text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2 cursor-pointer transition-colors"
+                className="flex-1 py-3 bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2 cursor-pointer transition-colors shadow-sm"
               >
                 <Printer size={16} />
                 <span>인쇄 창 열기 / PDF 저장</span>
               </button>
               <button
                 onClick={() => setIsPdfGuideOpen(false)}
-                className="px-5 py-3 bg-[#1A1A21] border border-white/[0.12] hover:bg-[#2A2A34] text-[#C9C9CF] hover:text-white font-medium text-sm rounded-xl cursor-pointer transition-colors"
+                className="px-5 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 font-medium text-sm rounded-xl cursor-pointer transition-colors"
               >
                 취소
               </button>

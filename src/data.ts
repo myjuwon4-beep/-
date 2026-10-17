@@ -457,7 +457,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
   {
     id: "portfolio-ai-1",
     title: "[AI] 밤한잔 홍보용 쇼츠영상",
-    client: "밤한잔",
+    client: "AI브릿지 / 자사 판매 제품 (AI 숏폼 홍보)",
     role: "AI 영상 생성, 프롬프트 엔지니어링, 모션 연출, 편집 1인 제작",
     format: "AI",
     description: "전통주 브랜드 '밤한잔'의 매력과 감성적인 무드를 짧은 숏폼 형태로 전달하기 위해 기획했습니다. 생성형 AI 비디오 툴을 활용하여 시각적 질감과 제품 디테일을 극대화하고, 빠른 호흡의 모션 연출을 더해 1인 제작했습니다.",
@@ -472,7 +472,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
   {
     id: "portfolio-ai-2",
     title: "[AI] 브랜딩 영상",
-    client: "브랜드 비주얼 (AI 콘텐츠)",
+    client: "AI브릿지 / 브랜드 홍보 영상 (촬영+AI+편집)",
     role: "기획, AI 영상 생성, 프롬프트 설계, 시네마틱 연출, 종합 편집",
     format: "AI",
     description: "생성형 AI 기술을 활용하여 브랜드의 정체성과 독창적인 비주얼 스토리라인을 영화 같은 시네마틱 톤으로 연출한 브랜딩 영상입니다. 프롬프트 엔지니어링을 통한 일관된 톤앤매너 유지와 감각적인 사운드 디자인을 적용해 1인 제작했습니다.",
@@ -486,11 +486,11 @@ export const initialPortfolioItems: PortfolioItem[] = [
   },
   {
     id: "portfolio-ai-3",
-    title: "[AI] 홈쇼핑 CTA 영상",
-    client: "홈쇼핑 / 이커머스",
+    title: "[AI] 의류 홈쇼핑 CTA 영상",
+    client: "AI브릿지 / 의류 홈쇼핑 CTA",
     role: "기획, AI 영상 생성, CTA 모션 그래픽, 프롬프트 연출, 종합 편집",
     format: "AI",
-    description: "홈쇼핑 및 이커머스 방송 환경에서 소비자의 즉각적인 구매 전환(Call To Action)을 유도하기 위해 기획했습니다. 생성형 AI로 감각적인 제품 연출 컷과 주목도 높은 모션 그래픽을 결합하여 강렬한 시각적 몰입감을 주는 CTA 영상으로 1인 제작했습니다.",
+    description: "홈쇼핑 및 이커머스 방송 환경에서 소비자의 즉각적인 구매 전환(Call To Action)을 유도하기 위해 기획된 의류 홈쇼핑 CTA AI 영상입니다. 생성형 AI로 감각적인 패션 비주얼 연출 컷과 주목도 높은 모션 그래픽을 결합하여 강렬한 시각적 몰입감을 주는 CTA 영상으로 1인 제작했습니다.",
     videoUrl: "https://youtu.be/D9LcfNHN-7E",
     imageUrl: "https://img.youtube.com/vi/D9LcfNHN-7E/hqdefault.jpg",
     previewVideoUrl: "",
@@ -594,6 +594,35 @@ export const initialPortfolioItems: PortfolioItem[] = [
 
 export const initialCareerItems: CareerItem[] = [
   {
+    id: "career-ai-bridge",
+    period: "2026 ~ 재직중",
+    title: "AI브릿지",
+    role: "AI 영상 제작 & 브랜드 숏폼 PD",
+    description: [
+      "홈쇼핑 CTA [AI] 영상제작",
+      "AI 브랜드 숏폼 홍보영상 제작"
+    ],
+    achievements: [
+      {
+        platform: "주요 프로젝트 및 상세 성과 지표",
+        metrics: [
+          {
+            text: "의류 홈쇼핑 CTA AI 영상제작",
+            criteria: "생성형 AI 비주얼 연출 및 전환 유도 CTA 모션 그래픽 설계"
+          },
+          {
+            text: "자사 판매 제품 AI 홍보영상(숏폼)",
+            criteria: "생성형 AI 워크플로우 활용 제품 바이럴 숏폼 제작"
+          },
+          {
+            text: "브랜드 홍보 영상 제작 (촬영+AI+편집)",
+            criteria: "실사 촬영 소스 + 생성형 AI 비주얼 에셋 + 정밀 편집 올인원 파이프라인 결합"
+          }
+        ]
+      }
+    ]
+  },
+  {
     id: "career-1",
     period: "2024 ~ 2026",
     title: "K트레일러",
@@ -677,9 +706,8 @@ export const initialCareerItems: CareerItem[] = [
     role: "기획 영상 촬영 & 스튜디오 관리 &\n촬영 팀 관리 & 라이브",
     description: [
       "스튜디오 운영 총괄 — 장비 유지보수 체계 및 예약·운용 프로세스 구축",
-      "촬영팀 및 외주·파견 인력 운영 — 인력 스케줄링과 품질 관리 체계 수립",
       "라이브 송출 인프라 설계 — 코로나 시기 비대면 강의 대응, 지점 간 다원 생중계 구축",
-      "제작 프로세스 표준화 — 기획·촬영·편집 단계별 가이드라인 문서화",
+      "AI 영상제작 — 최신 생성형 영상 기술 학습 및 실무 워크플로우 접목",
       "대형 프로젝트 총괄 — 입시 설명회, 1타 강사 기획 영상 촬영 전담"
     ]
   },
@@ -707,7 +735,7 @@ export const initialSkills: SkillCategory[] = [
       "Premiere",
       "After Effects",
       "Photoshop",
-      "AI 영상 생성 (텍스트→영상, 이미지→영상)",
+      "AI 영상제작 (생성형 AI 툴 활용 및 실무 접목)",
       "프롬프트 설계 및 컷 연출"
     ]
   },
@@ -802,6 +830,7 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
             item.description !== defaultItem.description ||
             item.videoUrl !== defaultItem.videoUrl ||
             item.role !== defaultItem.role ||
+            item.client !== defaultItem.client ||
             item.equipment !== defaultItem.equipment ||
             item.isPersonal !== defaultItem.isPersonal
           ) {
@@ -809,6 +838,7 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
             item.description = defaultItem.description;
             item.videoUrl = defaultItem.videoUrl;
             item.role = defaultItem.role;
+            item.client = defaultItem.client;
             item.equipment = defaultItem.equipment;
             item.isPersonal = defaultItem.isPersonal;
             updated = true;
@@ -903,7 +933,12 @@ export const getStoredCareerItems = (): CareerItem[] => {
       stored.includes("1,500명으로 증가") ||
       !stored.includes("1,800명으로 증가") ||
       !stored.includes("스튜디오 운영 총괄 — 장비 유지보수 체계") ||
-      !stored.includes("라이브 송출 인프라 설계")
+      !stored.includes("라이브 송출 인프라 설계") ||
+      stored.includes("제작 프로세스 표준화") ||
+      stored.includes("외주 인력 운영") ||
+      !stored.includes("AI 영상제작 — 최신 생성형 영상 기술 학습") ||
+      !stored.includes("AI브릿지") ||
+      !stored.includes("의류 홈쇼핑 CTA AI 영상제작")
     ) {
       try {
         localStorage.setItem("career_items", JSON.stringify(initialCareerItems));
@@ -915,8 +950,9 @@ export const getStoredCareerItems = (): CareerItem[] => {
     if (
       etoosItem &&
       etoosItem.description &&
-      (!etoosItem.description[0].includes("장비 유지보수 체계 및 예약·운용 프로세스 구축") ||
-       !etoosItem.description[2].includes("라이브 송출 인프라 설계"))
+      (!etoosItem.description[0].includes("장비 유지보수 체계") ||
+       etoosItem.description.some(d => d.includes("제작 프로세스") || d.includes("외주 인력")) ||
+       !etoosItem.description.some(d => d.includes("AI 영상제작")))
     ) {
       try {
         localStorage.setItem("career_items", JSON.stringify(initialCareerItems));
@@ -944,8 +980,6 @@ export const getStoredSkills = (): SkillCategory[] => {
     if (
       !stored || 
       stored.includes("Automotive Production") || 
-      stored.includes("촬영") || 
-      stored.includes("영상편집") ||
       stored.includes("Strategic Skills") ||
       stored.includes("학습 중") ||
       stored.includes("하이브리드 편집") ||
@@ -953,7 +987,7 @@ export const getStoredSkills = (): SkillCategory[] => {
       !stored.includes("콘텐츠 제작 역량") ||
       !stored.includes("운영 및 시스템 기술") ||
       !stored.includes("다양한 촬영 기술 보유") ||
-      !stored.includes("AI 영상 생성")
+      !stored.includes("AI 영상제작 (생성형 AI 툴 활용 및 실무 접목)")
     ) {
       try {
         localStorage.setItem("skill_categories", JSON.stringify(initialSkills));

@@ -216,25 +216,25 @@ export default function Portfolio({ items }: PortfolioProps) {
   };
 
   return (
-    <section id="portfolio" className="py-20 md:py-24 bg-[#131318] relative">
+    <section id="portfolio" className="py-20 md:py-24 bg-[#F7F6F2] relative border-t border-[#E6E4DC]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="mb-10 pb-6 border-b border-white/[0.08] flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div className="mb-10 pb-6 border-b border-[#E6E4DC] flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <div className="flex items-center space-x-3 mb-2">
-              <span className="font-headline text-[13px] sm:text-sm text-[#8A8A93] font-bold tracking-widest uppercase">
+              <span className="font-headline text-[13px] sm:text-sm text-slate-500 font-bold tracking-widest uppercase">
                 02 / SELECTED WORKS
               </span>
-              <span className="text-[13px] font-headline font-bold px-2 py-0.5 bg-[#202028] border border-white/[0.12] border-t-white/[0.16] text-[#C9C9CF] rounded">
+              <span className="text-[13px] font-headline font-bold px-2 py-0.5 bg-white border border-[#E6E4DC] text-slate-700 rounded-md">
                 FEATURED 6 + ARCHIVE ({items.length})
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
               주요 영상 포트폴리오
             </h2>
           </div>
-          <p className="text-[13px] sm:text-base text-[#8A8A93] font-medium max-w-md">
+          <p className="text-[13px] sm:text-base text-slate-600 font-medium max-w-md">
             성과가 검증된 대표 프로젝트 6선 및 전체 제작 아카이브
           </p>
         </div>
@@ -245,23 +245,23 @@ export default function Portfolio({ items }: PortfolioProps) {
             href="https://youtube.com/@k_trailer?si=EPUoTm4DX4WhMCUP"
             target="_blank"
             rel="noopener noreferrer"
-            className="group block bg-[#202028] border border-white/[0.12] border-t-white/[0.16] rounded-xl p-4 sm:p-5 transition-all duration-200 hover:bg-[#2A2A34] hover:border-white/[0.18] cursor-pointer"
+            className="group block bg-white border border-[#E6E4DC] rounded-2xl p-4 sm:p-5 transition-all duration-200 hover:border-[#D5D2C7] hover:shadow-xs cursor-pointer shadow-2xs"
           >
             <div className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-3">
-                <div className="p-2.5 bg-[#1A1A21] border border-white/[0.08] text-white rounded-lg shrink-0">
+                <div className="p-2.5 bg-rose-50 border border-rose-100 text-rose-600 rounded-xl shrink-0">
                   <Youtube size={20} />
                 </div>
                 <div>
-                  <span className="text-[13px] font-headline font-bold uppercase tracking-wider text-[#8A8A93] block">
+                  <span className="text-[13px] font-headline font-bold uppercase tracking-wider text-slate-500 block">
                     YOUTUBE CHANNEL
                   </span>
-                  <h3 className="text-[14px] sm:text-base font-bold text-white group-hover:text-white transition-colors">
+                  <h3 className="text-[14px] sm:text-base font-bold text-slate-900 group-hover:text-rose-600 transition-colors">
                     인하우스 PD 유튜브 채널
                   </h3>
                 </div>
               </div>
-              <ExternalLink size={14} className="text-[#8A8A93] group-hover:text-white transition-colors shrink-0" />
+              <ExternalLink size={14} className="text-slate-400 group-hover:text-slate-900 transition-colors shrink-0" />
             </div>
           </a>
 
@@ -269,23 +269,23 @@ export default function Portfolio({ items }: PortfolioProps) {
             href="https://www.instagram.com/ktrailer1/reels/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group block bg-[#202028] border border-white/[0.12] border-t-white/[0.16] rounded-xl p-4 sm:p-5 transition-all duration-200 hover:bg-[#2A2A34] hover:border-white/[0.18] cursor-pointer"
+            className="group block bg-white border border-[#E6E4DC] rounded-2xl p-4 sm:p-5 transition-all duration-200 hover:border-[#D5D2C7] hover:shadow-xs cursor-pointer shadow-2xs"
           >
             <div className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-3">
-                <div className="p-2.5 bg-[#1A1A21] border border-white/[0.08] text-white rounded-lg shrink-0">
+                <div className="p-2.5 bg-pink-50 border border-pink-100 text-pink-600 rounded-xl shrink-0">
                   <Instagram size={20} />
                 </div>
                 <div>
-                  <span className="text-[13px] font-headline font-bold uppercase tracking-wider text-[#8A8A93] block">
+                  <span className="text-[13px] font-headline font-bold uppercase tracking-wider text-slate-500 block">
                     INSTAGRAM REELS
                   </span>
-                  <h3 className="text-[14px] sm:text-base font-bold text-white group-hover:text-white transition-colors">
+                  <h3 className="text-[14px] sm:text-base font-bold text-slate-900 group-hover:text-rose-600 transition-colors">
                     인하우스 PD 릴스 채널
                   </h3>
                 </div>
               </div>
-              <ExternalLink size={14} className="text-[#8A8A93] group-hover:text-white transition-colors shrink-0" />
+              <ExternalLink size={14} className="text-slate-400 group-hover:text-slate-900 transition-colors shrink-0" />
             </div>
           </a>
         </div>
@@ -294,14 +294,14 @@ export default function Portfolio({ items }: PortfolioProps) {
         {/* [1] TOP TIER: "대표 프로젝트 6" (2-Column Large Cards)     */}
         {/* ======================================================== */}
         <div className="mb-14" id="featured-projects-section">
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center justify-between mb-6 pb-2 border-b border-[#E6E4DC]">
             <div className="flex items-center space-x-2.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-white/60" />
-              <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
+              <span className="w-2.5 h-2.5 rounded-full bg-rose-600" />
+              <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900">
                 대표 프로젝트 6
               </h3>
             </div>
-            <span className="text-[13px] font-headline font-bold text-[#8A8A93] tracking-widest uppercase">
+            <span className="text-[13px] font-headline font-bold text-slate-500 tracking-widest uppercase">
               FEATURED 6 WORKS
             </span>
           </div>
@@ -315,18 +315,18 @@ export default function Portfolio({ items }: PortfolioProps) {
                 href={project.videoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block bg-[#202028] border border-white/[0.12] border-t-white/[0.16] hover:border-white/[0.22] rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#2A2A34] flex flex-col justify-between"
+                className="group block bg-white border border-[#E6E4DC] hover:border-[#D5D2C7] rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-md flex flex-col justify-between shadow-2xs"
               >
                 {/* Large 16:9 Video Thumbnail */}
                 <div className="relative aspect-video w-full overflow-hidden bg-black select-none">
                   {/* Top Badges */}
                   <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-30 pointer-events-none">
-                    <span className="px-3 py-1.5 bg-black/85 backdrop-blur-md text-white text-[13px] sm:text-sm font-headline font-bold rounded-lg uppercase tracking-wider border border-white/15 shadow-md">
+                    <span className="px-3 py-1.5 bg-black/80 backdrop-blur-md text-white text-[13px] sm:text-sm font-headline font-bold rounded-lg uppercase tracking-wider border border-white/15 shadow-md">
                       {project.format === "AI" ? "AI 영상 제작" : project.format}
                     </span>
                     {project.metricBadge ? (
-                      <span className="px-3.5 py-1.5 bg-black/90 backdrop-blur-md text-white text-[13px] sm:text-base font-extrabold rounded-lg border border-white/20 flex items-center space-x-2 shadow-xl ring-1 ring-white/10">
-                        <span className="w-2 h-2 rounded-full bg-primary-red shrink-0 shadow-[0_0_8px_#FF4D57]" />
+                      <span className="px-3.5 py-1.5 bg-black/85 backdrop-blur-md text-white text-[13px] sm:text-base font-extrabold rounded-lg border border-white/20 flex items-center space-x-2 shadow-xl">
+                        <span className="w-2 h-2 rounded-full bg-rose-500 shrink-0" />
                         <span className="text-white drop-shadow">{project.metricBadge}</span>
                       </span>
                     ) : (
@@ -345,13 +345,13 @@ export default function Portfolio({ items }: PortfolioProps) {
                         e.currentTarget.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
                       }
                     }}
-                    className="w-full h-full object-cover brightness-95 group-hover:brightness-105 group-hover:scale-[1.03] transition-all duration-300 ease-out"
+                    className="w-full h-full object-cover brightness-95 group-hover:brightness-105 group-hover:scale-[1.02] transition-all duration-300 ease-out"
                   />
 
                   {/* Hover Overlay with Large Play Button */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/55 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20">
-                    <div className="flex items-center gap-2.5 px-5 py-2.5 bg-white text-black rounded-full shadow-2xl transition-transform duration-200 group-hover:scale-105">
-                      <Play size={15} fill="currentColor" className="text-black ml-0.5" />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/45 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20">
+                    <div className="flex items-center gap-2.5 px-5 py-2.5 bg-white text-slate-900 rounded-full shadow-2xl transition-transform duration-200 group-hover:scale-105">
+                      <Play size={15} fill="currentColor" className="text-slate-900 ml-0.5" />
                       <span className="text-[13px] sm:text-sm font-bold">새 탭에서 영상 보기</span>
                     </div>
                   </div>
@@ -360,45 +360,45 @@ export default function Portfolio({ items }: PortfolioProps) {
                 {/* Card Content: Title + Clean 4-Line Structured Metadata */}
                 <div className="p-5 sm:p-6 flex-grow flex flex-col justify-between">
                   <div>
-                    <h4 className="text-lg sm:text-xl font-bold text-white group-hover:text-white transition-colors duration-150 leading-snug line-clamp-1">
+                    <h4 className="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-rose-600 transition-colors duration-150 leading-snug line-clamp-1">
                       {project.title}
                     </h4>
 
                     {/* Strict 4-Line Structure: Clean flat layout with no nested card borders */}
-                    <div className="mt-4 pt-3.5 border-t border-white/[0.08] space-y-2.5 text-[13px] sm:text-sm leading-[1.7]">
+                    <div className="mt-4 pt-3.5 border-t border-[#E6E4DC] space-y-2.5 text-[13px] sm:text-sm leading-[1.7]">
                       <div className="flex items-start gap-2.5">
-                        <span className="font-bold text-[#C9C9CF] text-[13px] shrink-0 w-16 pt-0.5">
+                        <span className="font-bold text-slate-500 text-[13px] shrink-0 w-16 pt-0.5">
                           과제
                         </span>
-                        <span className="text-[#C9C9CF] text-[13px] sm:text-sm font-normal">{project.problem}</span>
+                        <span className="text-slate-700 text-[13px] sm:text-sm font-normal">{project.problem}</span>
                       </div>
 
                       <div className="flex items-start gap-2.5">
-                        <span className="font-bold text-[#8A8A93] text-[13px] shrink-0 w-16 pt-0.5">
+                        <span className="font-bold text-slate-500 text-[13px] shrink-0 w-16 pt-0.5">
                           접근
                         </span>
-                        <span className="text-[#C9C9CF] text-[13px] sm:text-sm font-normal">{project.approach}</span>
+                        <span className="text-slate-700 text-[13px] sm:text-sm font-normal">{project.approach}</span>
                       </div>
 
                       <div className="flex items-start gap-2.5">
-                        <span className="font-bold text-white text-[13px] shrink-0 w-16 pt-0.5">
+                        <span className="font-bold text-slate-900 text-[13px] shrink-0 w-16 pt-0.5">
                           결과
                         </span>
-                        <span className="text-white text-[13px] sm:text-sm font-bold">{project.result}</span>
+                        <span className="text-slate-950 text-[13px] sm:text-sm font-bold bg-[#FAF9F5] px-2 py-0.5 rounded-md border border-[#E6E4DC]">{project.result}</span>
                       </div>
 
                       <div className="flex items-start gap-2.5">
-                        <span className="font-bold text-[#8A8A93] text-[13px] shrink-0 w-16 pt-0.5">
+                        <span className="font-bold text-slate-500 text-[13px] shrink-0 w-16 pt-0.5">
                           담당 역할
                         </span>
-                        <span className="text-[#C9C9CF] text-[13px] sm:text-sm font-medium">{project.role}</span>
+                        <span className="text-slate-700 text-[13px] sm:text-sm font-medium">{project.role}</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="mt-5 pt-3.5 border-t border-white/[0.08] flex items-center justify-between text-[13px] text-[#8A8A93]">
+                  <div className="mt-5 pt-3.5 border-t border-[#E6E4DC] flex items-center justify-between text-[13px] text-slate-500">
                     <span className="font-medium">{project.client}</span>
-                    <span className="font-headline font-bold tracking-wider text-[#C9C9CF] group-hover:text-white flex items-center gap-1 group-hover:underline">
+                    <span className="font-headline font-bold tracking-wider text-slate-700 group-hover:text-rose-600 flex items-center gap-1 group-hover:underline">
                       <span>WATCH VIDEO</span>
                       <ExternalLink size={13} />
                     </span>
@@ -411,22 +411,19 @@ export default function Portfolio({ items }: PortfolioProps) {
         </div>
 
         {/* ======================================================== */}
-        {/* [2] BOTTOM TIER: "전체 작업물 (30)" — Default Folded       */}
-        {/* ======================================================== */}
-        {/* ======================================================== */}
         {/* [2] BOTTOM TIER: "전체 작업물 아카이브" — Always Open      */}
         {/* ======================================================== */}
-        <div className="pt-10 border-t border-white/[0.08]" id="portfolio-archive-section">
+        <div className="pt-10 border-t border-[#E6E4DC]" id="portfolio-archive-section">
           
           {/* Section Header */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
             <div className="flex items-center space-x-2.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-white/60" />
-              <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
+              <span className="w-2.5 h-2.5 rounded-full bg-slate-900" />
+              <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900">
                 전체 작업물 아카이브 ({items.length}건)
               </h3>
             </div>
-            <span className="text-[13px] font-headline font-bold text-[#8A8A93] tracking-widest uppercase">
+            <span className="text-[13px] font-headline font-bold text-slate-500 tracking-widest uppercase">
               FULL ARCHIVE · {items.length} PROJECTS
             </span>
           </div>
@@ -441,14 +438,23 @@ export default function Portfolio({ items }: PortfolioProps) {
                   onClick={() => setSelectedCategory(cat.code)}
                   className={`px-3.5 py-1.5 text-[13px] sm:text-sm font-bold rounded-lg transition-all duration-150 cursor-pointer ${
                     selectedCategory === cat.code
-                      ? "bg-white text-black font-bold"
-                      : "bg-[#202028] border border-white/[0.12] border-t-white/[0.16] text-[#8A8A93] hover:text-white hover:bg-[#2A2A34]"
+                      ? "bg-slate-900 text-white font-bold shadow-xs"
+                      : "bg-white border border-[#E6E4DC] text-slate-700 hover:text-slate-950 hover:bg-[#FAF9F5] shadow-2xs"
                   }`}
                 >
                   {cat.label}
                 </button>
               ))}
             </div>
+
+            {/* AI Category Context Banner - Realistic, Learning & Adapting */}
+            {selectedCategory === "AI" && (
+              <div className="p-4 bg-amber-50/80 border border-amber-200/80 rounded-xl text-center max-w-2xl mx-auto shadow-2xs">
+                <p className="text-[13px] sm:text-sm text-slate-700 font-medium leading-relaxed">
+                  💡 <strong className="text-amber-950 font-bold">시대 흐름에 맞춘 AI 영상제작 탐구:</strong> 최신 생성형 AI 툴(Midjourney, Kling, Runway 등)을 지속적으로 학습하고 연구하며, 프롬프트 엔지니어링 및 컷 연출을 접목해 제작한 쇼츠 및 시각화 프로젝트입니다.
+                </p>
+              </div>
+            )}
 
             {/* Compact Archive Grid: 3 or 4 Columns (Thumbnail + Title + Role Tag ONLY) */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5" id="archive-grid">
@@ -459,12 +465,12 @@ export default function Portfolio({ items }: PortfolioProps) {
                   href={item.videoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block bg-[#202028] border border-white/[0.12] border-t-white/[0.16] hover:border-white/[0.22] rounded-xl overflow-hidden cursor-pointer transition-all duration-200 hover:bg-[#2A2A34] flex flex-col justify-between"
+                  className="group block bg-white border border-[#E6E4DC] hover:border-[#D5D2C7] rounded-xl overflow-hidden cursor-pointer transition-all duration-200 hover:shadow-md flex flex-col justify-between shadow-2xs"
                 >
                   {/* Compact 16:9 Thumbnail */}
                   <div className="relative aspect-video w-full overflow-hidden bg-black select-none">
                     <div className="absolute top-2 left-2 z-20 pointer-events-none flex flex-col items-start gap-1">
-                      <span className="px-2 py-0.5 bg-black/80 backdrop-blur-md text-white text-[13px] font-headline font-bold rounded uppercase tracking-wider border border-white/10">
+                      <span className="px-2 py-0.5 bg-black/80 backdrop-blur-md text-white text-[12px] font-headline font-bold rounded uppercase tracking-wider border border-white/10">
                         {item.format === "AI" ? "AI 영상 제작" : item.format}
                       </span>
                     </div>
@@ -479,24 +485,24 @@ export default function Portfolio({ items }: PortfolioProps) {
                           e.currentTarget.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
                         }
                       }}
-                      className="w-full h-full object-cover brightness-95 group-hover:brightness-105 group-hover:scale-[1.03] transition-all duration-300"
+                      className="w-full h-full object-cover brightness-95 group-hover:brightness-105 group-hover:scale-[1.02] transition-all duration-300"
                     />
 
                     {/* Hover play icon */}
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-10">
-                      <div className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center">
-                        <Play size={14} fill="currentColor" className="text-black ml-0.5" />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-10">
+                      <div className="w-10 h-10 rounded-full bg-white text-slate-900 flex items-center justify-center shadow-lg">
+                        <Play size={14} fill="currentColor" className="text-slate-900 ml-0.5" />
                       </div>
                     </div>
                   </div>
 
                   {/* Card Title & Role Tag ONLY */}
                   <div className="p-3.5 flex-grow flex flex-col justify-between">
-                    <h4 className="text-[13px] sm:text-sm font-bold text-white group-hover:text-[#C9C9CF] transition-colors line-clamp-2 leading-snug">
+                    <h4 className="text-[13px] sm:text-sm font-bold text-slate-900 group-hover:text-rose-600 transition-colors line-clamp-2 leading-snug">
                       {item.title}
                     </h4>
                     {item.role && (
-                      <div className="mt-2.5 pt-2 border-t border-white/[0.08] text-[13px] text-[#8A8A93] truncate">
+                      <div className="mt-2.5 pt-2 border-t border-slate-100 text-[13px] text-slate-500 truncate">
                         {item.role}
                       </div>
                     )}
@@ -514,14 +520,14 @@ export default function Portfolio({ items }: PortfolioProps) {
 
       {/* Pop-out Modal for Video Player & Full Details */}
       {activeItem && (
-        <div id="portfolio-modal-overlay" className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center overflow-y-auto p-4 md:p-6">
-          <div className="relative bg-[#1A1A21] border border-white/[0.14] w-full max-w-4xl rounded-xl shadow-2xl overflow-hidden my-auto animate-fade-in">
+        <div id="portfolio-modal-overlay" className="fixed inset-0 z-50 bg-slate-900/75 backdrop-blur-sm flex items-center justify-center overflow-y-auto p-4 md:p-6">
+          <div className="relative bg-white border border-slate-200 w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden my-auto animate-fade-in text-slate-700">
             
             {/* Modal Close Button */}
             <button
               id="portfolio-modal-close"
               onClick={() => setActiveItem(null)}
-              className="absolute top-4 right-4 z-50 p-2 bg-[#202028]/95 hover:bg-[#2A2A34] border border-white/10 text-white rounded-full transition-colors cursor-pointer"
+              className="absolute top-4 right-4 z-50 p-2 bg-white/90 hover:bg-slate-100 border border-slate-200 text-slate-700 rounded-full transition-colors cursor-pointer shadow-md"
               title="닫기"
             >
               <X size={18} />
@@ -539,47 +545,47 @@ export default function Portfolio({ items }: PortfolioProps) {
                   allowFullScreen
                 />
               ) : (
-                <div className="w-full h-full flex flex-col items-center justify-center text-white/50 p-6">
-                  <p className="text-[13px] text-white/50">등록된 영상 링크가 올바르지 않습니다.</p>
+                <div className="w-full h-full flex flex-col items-center justify-center text-slate-400 p-6">
+                  <p className="text-[13px]">등록된 영상 링크가 올바르지 않습니다.</p>
                 </div>
               )}
             </div>
 
             {/* Modal Details Section */}
-            <div className="p-6 md:p-8 grid grid-cols-1 lg:grid-cols-3 gap-6 border-t border-white/[0.08]">
+            <div className="p-6 md:p-8 grid grid-cols-1 lg:grid-cols-3 gap-6 border-t border-slate-100">
               
               {/* Left Column: Title & Description */}
               <div className="lg:col-span-2 space-y-4">
                 <div>
-                  <span className="px-2.5 py-1 bg-white/10 border border-white/10 text-white text-[13px] font-headline font-bold rounded uppercase">
+                  <span className="px-2.5 py-1 bg-slate-100 border border-slate-200 text-slate-700 text-[13px] font-headline font-bold rounded uppercase">
                     {activeItem.format === "AI" ? "AI 영상 제작" : activeItem.format}
                   </span>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mt-2.5">
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-950 mt-2.5">
                     {activeItem.title}
                   </h3>
                 </div>
 
                 <div>
-                  <h4 className="text-[13px] font-bold text-[#8A8A93] mb-2">
+                  <h4 className="text-[13px] font-bold text-slate-500 mb-2">
                     제작 의도 및 설명
                   </h4>
-                  <p className="text-[15px] md:text-base text-[#C9C9CF] leading-[1.7] font-normal whitespace-pre-line bg-[#202028] border border-white/[0.12] border-t-white/[0.16] p-4 sm:p-5 rounded-xl">
+                  <p className="text-[15px] md:text-base text-slate-700 leading-[1.7] font-normal whitespace-pre-line bg-slate-50 border border-slate-200/80 p-4 sm:p-5 rounded-xl">
                     {activeItem.description || "상세 설명이 등록되어 있지 않습니다."}
                   </p>
                 </div>
 
                 {"images" in activeItem && activeItem.images && activeItem.images.length > 0 && (
                   <div className="pt-4" id="portfolio-photo-gallery">
-                    <h4 className="text-[13px] font-bold text-[#8A8A93] mb-3">
+                    <h4 className="text-[13px] font-bold text-slate-500 mb-3">
                       제작 현장 스냅샷 ({activeItem.images.length})
                     </h4>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                       {activeItem.images.map((img, idx) => (
-                        <div key={idx} className="relative aspect-[16/9] rounded-xl overflow-hidden group bg-black border border-white/[0.08]">
+                        <div key={idx} className="relative aspect-[16/9] rounded-xl overflow-hidden group bg-slate-100 border border-slate-200">
                           <img
                             src={img}
                             alt={`${activeItem.title} screenshot ${idx + 1}`}
-                            className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105 cursor-zoom-in brightness-90 group-hover:brightness-105"
+                            className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105 cursor-zoom-in"
                             referrerPolicy="no-referrer"
                             onClick={() => window.open(img, "_blank")}
                           />
@@ -591,28 +597,28 @@ export default function Portfolio({ items }: PortfolioProps) {
               </div>
 
               {/* Right Column: Production Specs */}
-              <div className="bg-[#202028] border border-white/[0.12] border-t-white/[0.16] p-5 sm:p-6 rounded-xl space-y-5 h-fit">
-                <h4 className="text-[13px] font-bold text-[#8A8A93] border-b border-white/[0.08] pb-2.5">
+              <div className="bg-slate-50 border border-slate-200/80 p-5 sm:p-6 rounded-xl space-y-5 h-fit">
+                <h4 className="text-[13px] font-bold text-slate-500 border-b border-slate-200 pb-2.5">
                   제작 정보
                 </h4>
 
                 <div className="space-y-4">
                   <div>
-                    <p className="text-[13px] sm:text-sm text-[#8A8A93] font-semibold uppercase">주요 역할</p>
-                    <p className="text-[13px] sm:text-base font-bold text-white mt-1">{activeItem.role}</p>
+                    <p className="text-[13px] sm:text-sm text-slate-400 font-semibold uppercase">주요 역할</p>
+                    <p className="text-[13px] sm:text-base font-bold text-slate-900 mt-1">{activeItem.role}</p>
                   </div>
 
                   {activeItem.equipment && (
                     <div>
-                      <p className="text-[13px] sm:text-sm text-[#8A8A93] font-semibold uppercase">장비 및 툴</p>
-                      <p className="text-[13px] sm:text-[15px] font-medium text-[#C9C9CF] mt-1 leading-[1.7]">{activeItem.equipment}</p>
+                      <p className="text-[13px] sm:text-sm text-slate-400 font-semibold uppercase">장비 및 툴</p>
+                      <p className="text-[13px] sm:text-[15px] font-medium text-slate-700 mt-1 leading-[1.7]">{activeItem.equipment}</p>
                     </div>
                   )}
 
                   {activeItem.client && (
                     <div>
-                      <p className="text-[13px] sm:text-sm text-[#8A8A93] font-semibold uppercase">클라이언트</p>
-                      <p className="text-[13px] sm:text-base font-medium text-[#C9C9CF] mt-1">{activeItem.client}</p>
+                      <p className="text-[13px] sm:text-sm text-slate-400 font-semibold uppercase">클라이언트</p>
+                      <p className="text-[13px] sm:text-base font-medium text-slate-700 mt-1">{activeItem.client}</p>
                     </div>
                   )}
                 </div>

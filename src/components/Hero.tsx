@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect, useRef } from "react";
-import { Play, ArrowDown, X, Users, Radio, Layers, Sparkles } from "lucide-react";
+import { Play, ArrowDown, X, Users, Radio, Layers, Sparkles, TrendingUp } from "lucide-react";
 import { motion, AnimatePresence, useInView } from "motion/react";
 import { defaultSiteTexts } from "../data";
 import { SiteTexts } from "../types";
@@ -65,22 +65,22 @@ function AnimatedStatCard({
   return (
     <div 
       ref={ref}
-      className="bg-[#202028] border border-white/[0.12] border-t-white/[0.16] p-5 rounded-xl transition-all duration-200 hover:bg-[#2A2A34] hover:border-white/[0.18] flex flex-col justify-between"
+      className="bg-white border border-[#E6E4DC] p-5 rounded-2xl transition-all duration-200 hover:border-[#D5D2C7] hover:shadow-md flex flex-col justify-between shadow-2xs"
     >
       <div>
-        <span className="text-[13px] sm:text-sm font-semibold text-[#8A8A93] tracking-tight block">
+        <span className="text-[13px] sm:text-sm font-semibold text-slate-500 tracking-tight block">
           {label}
         </span>
         <div className="mt-1.5 flex items-baseline">
-          <span className={`font-headline text-[36px] sm:text-[42px] md:text-[48px] font-black leading-none ${isRedHighlight ? "text-primary-red" : "text-white"}`}>
+          <span className={`font-headline text-[36px] sm:text-[42px] md:text-[48px] font-black leading-none ${isRedHighlight ? "text-rose-600" : "text-slate-950"}`}>
             {prefix}{count}
           </span>
-          <span className="font-sans text-[22px] sm:text-[26px] md:text-[30px] font-bold text-[#C9C9CF] leading-none ml-1">
+          <span className="font-sans text-[22px] sm:text-[26px] md:text-[30px] font-bold text-slate-700 leading-none ml-1">
             {suffix}
           </span>
         </div>
       </div>
-      <p className="mt-2 text-[13px] sm:text-sm text-[#8A8A93] font-normal leading-normal">
+      <p className="mt-2 text-[13px] sm:text-sm text-slate-500 font-normal leading-normal">
         {description}
       </p>
     </div>
@@ -117,11 +117,11 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
   return (
     <section
       id="home"
-      className="relative min-h-screen w-full flex flex-col items-center justify-start overflow-hidden bg-[#131318] pt-24 pb-20 lg:pt-28 lg:pb-28"
+      className="relative min-h-screen w-full flex flex-col items-center justify-start overflow-hidden bg-[#F7F6F2] pt-24 pb-20 lg:pt-28 lg:pb-28"
     >
-      {/* Subtle Atmospheric Spotlight */}
+      {/* Subtle Atmospheric Spotlight - Warm paper glow */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-b from-white/[0.04] via-transparent to-transparent blur-3xl opacity-70" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-b from-[#EDE9DF]/80 via-[#F7F6F2]/30 to-transparent blur-3xl opacity-80" />
       </div>
 
       {/* Hero Content Wrapper */}
@@ -129,14 +129,14 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
         
         {/* Main Headline H1 */}
         <h1 
-          className="text-[30px] sm:text-4xl md:text-5xl lg:text-5xl font-black tracking-tight text-white leading-[1.2] max-w-4xl" 
+          className="text-[30px] sm:text-4xl md:text-5xl lg:text-5xl font-black tracking-tight text-slate-950 leading-[1.2] max-w-4xl" 
           id="hero-title"
         >
           {siteTexts.heroTitle || "조회수를 매출 문의로 바꾸는 콘텐츠 PD"}
         </h1>
 
         {/* Sub Headline */}
-        <p className="mt-3.5 sm:mt-4 text-[15px] sm:text-base md:text-lg font-medium text-[#C9C9CF] max-w-3xl leading-[1.7] whitespace-pre-line break-keep">
+        <p className="mt-3.5 sm:mt-4 text-[15px] sm:text-base md:text-lg font-medium text-slate-600 max-w-3xl leading-[1.7] whitespace-pre-line break-keep">
           {siteTexts.heroSlogan || "채널을 키우는 사람이자, 제작 조직을 세우는 사람입니다.\n교육기업 8년 · 인하우스 10년 · 영상 경력 14년"}
         </p>
 
@@ -144,7 +144,7 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
         <div className="mt-8 w-full max-w-4xl relative group" id="hero-showreel-container">
           <div 
             onClick={() => setIsShowreelOpen(true)}
-            className="relative aspect-video w-full rounded-xl overflow-hidden bg-black border border-white/[0.08] transition-all duration-300 cursor-pointer select-none"
+            className="relative aspect-video w-full rounded-2xl overflow-hidden bg-black border border-[#E6E4DC] shadow-md transition-all duration-300 cursor-pointer select-none"
           >
             {/* Showreel Poster Image */}
             <img
@@ -152,27 +152,27 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
               alt="이주원 PD 쇼릴 포스터"
               referrerPolicy="no-referrer"
               onError={() => setPosterError(true)}
-              className="w-full h-full object-cover brightness-90 group-hover:scale-[1.03] group-hover:brightness-105 transition-all duration-500 ease-out"
+              className="w-full h-full object-cover brightness-95 group-hover:scale-[1.02] group-hover:brightness-105 transition-all duration-500 ease-out"
             />
 
             {/* Subtle Gradient Overlays */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/30 pointer-events-none" />
 
             {/* Center Play Action Button & "1인 제작 홍보 영상" Label */}
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 z-10">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/95 text-black flex items-center justify-center backdrop-blur-xs group-hover:scale-110 group-hover:bg-white transition-all duration-300">
-                <Play size={24} fill="currentColor" className="text-black ml-1" />
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white text-slate-900 flex items-center justify-center shadow-xl group-hover:scale-110 transition-all duration-300">
+                <Play size={24} fill="currentColor" className="text-slate-900 ml-1" />
               </div>
               
-              <div className="inline-flex items-center space-x-1.5 px-4.5 py-2 bg-black/85 backdrop-blur-md rounded-full text-white text-[13px] sm:text-base font-bold border border-white/15 shadow-xl">
+              <div className="inline-flex items-center space-x-1.5 px-4.5 py-2 bg-black/80 backdrop-blur-md rounded-full text-white text-[13px] sm:text-base font-bold border border-white/20 shadow-xl">
                 <span>1인 제작 홍보 영상</span>
               </div>
             </div>
 
             {/* Bottom Tag inside Showreel */}
-            <div className="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white/90 text-[13px] sm:text-sm font-medium pointer-events-none z-10">
-              <span className="truncate text-[#C9C9CF] font-semibold">브랜디드 홍보</span>
-              <span className="hidden sm:inline-block font-mono text-[13px] bg-black/70 text-[#8A8A93] px-2.5 py-0.5 rounded border border-white/10">CLICK TO PLAY</span>
+            <div className="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white text-[13px] sm:text-sm font-medium pointer-events-none z-10">
+              <span className="truncate text-white font-semibold">브랜디드 홍보</span>
+              <span className="hidden sm:inline-block font-mono text-[13px] bg-black/70 text-slate-200 px-2.5 py-0.5 rounded border border-white/10">CLICK TO PLAY</span>
             </div>
           </div>
         </div>
@@ -210,50 +210,70 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
           />
         </div>
 
-        {/* Organizational Leadership & Infrastructure Pillars (Second Axis) */}
-        <div className="mt-4 pt-4 border-t border-white/[0.08] w-full max-w-4xl" id="hero-org-pillars">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-left">
-            {/* Pillar 1 */}
-            <div className="flex items-start gap-3 p-3 rounded-lg bg-transparent border border-white/[0.06] sm:border-transparent">
-              <div className="p-2 rounded-lg bg-[#202028] border border-white/[0.08] text-[#C9C9CF] shrink-0 mt-0.5">
+        {/* Organizational Leadership & Key Competency Pillars */}
+        <div className="mt-5 pt-5 border-t border-[#E6E4DC] w-full max-w-4xl" id="hero-org-pillars">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-left">
+            {/* Pillar 1: SNS 콘텐츠 마케팅 */}
+            <div className="flex items-start gap-3 p-3 rounded-xl bg-white border border-[#E6E4DC] hover:border-[#D5D2C7] transition-all shadow-2xs">
+              <div className="p-2 rounded-lg bg-rose-50 border border-rose-200/70 text-rose-600 shrink-0 mt-0.5 shadow-2xs">
+                <TrendingUp size={16} />
+              </div>
+              <div className="min-w-0">
+                <h4 className="text-[13.5px] sm:text-sm font-bold text-slate-900 tracking-tight truncate">
+                  SNS 콘텐츠 마케팅
+                </h4>
+                <p className="text-[12px] text-slate-500 font-medium mt-0.5 truncate">
+                  91만 조회 · 전환 300%
+                </p>
+              </div>
+            </div>
+
+            {/* Pillar 2: 스튜디오 · 촬영팀 운영 */}
+            <div className="flex items-start gap-3 p-3 rounded-xl bg-white border border-[#E6E4DC] hover:border-[#D5D2C7] transition-all shadow-2xs">
+              <div className="p-2 rounded-lg bg-[#FAF9F5] border border-[#E6E4DC] text-slate-700 shrink-0 mt-0.5 shadow-2xs">
                 <Users size={16} />
               </div>
               <div className="min-w-0">
-                <h4 className="text-sm sm:text-[15px] font-bold text-white tracking-tight">
+                <h4 className="text-[13.5px] sm:text-sm font-bold text-slate-900 tracking-tight truncate">
                   스튜디오 · 촬영팀 운영
                 </h4>
-                <p className="text-[13px] text-[#8A8A93] font-medium mt-0.5">
+                <p className="text-[12px] text-slate-500 font-medium mt-0.5 truncate">
                   교육기업 8년 · 조직 총괄
                 </p>
               </div>
             </div>
 
-            {/* Pillar 2 */}
-            <div className="flex items-start gap-3 p-3 rounded-lg bg-transparent border border-white/[0.06] sm:border-transparent">
-              <div className="p-2 rounded-lg bg-[#202028] border border-white/[0.08] text-[#C9C9CF] shrink-0 mt-0.5">
+            {/* Pillar 3: 라이브 방송 인프라 */}
+            <div className="flex items-start gap-3 p-3 rounded-xl bg-white border border-[#E6E4DC] hover:border-[#D5D2C7] transition-all shadow-2xs">
+              <div className="p-2 rounded-lg bg-[#FAF9F5] border border-[#E6E4DC] text-slate-700 shrink-0 mt-0.5 shadow-2xs">
                 <Radio size={16} />
               </div>
               <div className="min-w-0">
-                <h4 className="text-sm sm:text-[15px] font-bold text-white tracking-tight">
-                  라이브 방송 인프라 구축
+                <h4 className="text-[13.5px] sm:text-sm font-bold text-slate-900 tracking-tight truncate">
+                  라이브 방송 인프라
                 </h4>
-                <p className="text-[13px] text-[#8A8A93] font-medium mt-0.5">
+                <p className="text-[12px] text-slate-500 font-medium mt-0.5 truncate">
                   다원 생중계 시스템 설계
                 </p>
               </div>
             </div>
 
-            {/* Pillar 3 */}
-            <div className="flex items-start gap-3 p-3 rounded-lg bg-transparent border border-white/[0.06] sm:border-transparent">
-              <div className="p-2 rounded-lg bg-[#202028] border border-white/[0.08] text-[#C9C9CF] shrink-0 mt-0.5">
+            {/* Pillar 4: AI 영상제작 실무 */}
+            <div className="flex items-start gap-3 p-3 rounded-xl bg-white border border-[#E6E4DC] hover:border-[#D5D2C7] transition-all shadow-2xs">
+              <div className="p-2 rounded-lg bg-amber-50/80 border border-amber-200/70 text-amber-700 shrink-0 mt-0.5 shadow-2xs">
                 <Sparkles size={16} />
               </div>
               <div className="min-w-0">
-                <h4 className="text-sm sm:text-[15px] font-bold text-white tracking-tight">
-                  AI 영상제작
-                </h4>
-                <p className="text-[13px] text-[#8A8A93] font-medium mt-0.5">
-                  생성형 AI 비주얼 워크플로우
+                <div className="flex items-center gap-1">
+                  <h4 className="text-[13.5px] sm:text-sm font-bold text-slate-900 tracking-tight truncate">
+                    AI 영상제작 실무
+                  </h4>
+                  <span className="text-[9px] font-semibold bg-rose-100/90 text-rose-800 px-1 py-0.2 rounded border border-rose-200/80 shrink-0">
+                    AI브릿지 재직
+                  </span>
+                </div>
+                <p className="text-[12px] text-slate-600 font-medium mt-0.5 truncate">
+                  홈쇼핑 CTA &amp; 브랜드 숏폼
                 </p>
               </div>
             </div>
@@ -265,7 +285,7 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
           <button
             id="hero-portfolio-btn"
             onClick={onPortfolioCall}
-            className="group px-8 py-3.5 bg-primary-red hover:bg-[#c21c26] text-white text-sm sm:text-base font-bold rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 cursor-pointer shadow-lg shadow-primary-red/20"
+            className="group px-8 py-3.5 bg-rose-600 hover:bg-rose-700 text-white text-sm sm:text-base font-bold rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 cursor-pointer shadow-sm hover:shadow-md"
           >
             <Play size={14} fill="currentColor" className="text-white group-hover:translate-x-0.5 transition-transform" />
             <span>대표 포트폴리오 작업물 보러가기</span>
@@ -276,12 +296,12 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
 
       {/* Right Scroll Indicator */}
       <div className="absolute right-6 md:right-12 bottom-12 z-20 hidden md:flex flex-col items-center space-y-3">
-        <span className="font-headline text-[13px] tracking-widest uppercase font-bold text-[#8A8A93] rotate-90 origin-bottom translate-y-[-16px]">
+        <span className="font-headline text-[13px] tracking-widest uppercase font-bold text-slate-400 rotate-90 origin-bottom translate-y-[-16px]">
           SCROLL
         </span>
         <button
           onClick={onPortfolioCall}
-          className="p-2.5 bg-[#202028] border border-white/[0.12] border-t-white/[0.16] hover:bg-[#2A2A34] text-[#C9C9CF] hover:text-white rounded-full transition-colors cursor-pointer"
+          className="p-2.5 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 hover:text-slate-900 rounded-full transition-colors cursor-pointer shadow-xs"
           title="밑으로 스크롤"
         >
           <ArrowDown size={14} />
