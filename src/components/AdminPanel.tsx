@@ -854,14 +854,15 @@ export default function AdminPanel({
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                           <div className="space-y-2">
-                            <label className="text-xs sm:text-sm font-semibold tracking-wide text-white/90 uppercase">메인 대형 타이틀 - 윗줄 (Title Line 1)</label>
-                            <input
+                            <label className="text-xs sm:text-sm font-semibold tracking-wide text-white/90 uppercase">메인 대형 타이틀 (줄바꿈 지원)</label>
+                            <textarea
+                              rows={2}
                               required
-                              type="text"
                               value={editableSiteTexts.heroTitle}
                               onChange={(e) => setEditableSiteTexts({ ...editableSiteTexts, heroTitle: e.target.value })}
-                              className="w-full bg-neutral-950 border border-white/15 focus:border-primary-red focus:bg-black outline-none px-4 py-3 text-sm sm:text-base text-white rounded-md transition-all font-medium placeholder:text-white/30"
+                              className="w-full bg-neutral-950 border border-white/15 focus:border-primary-red focus:bg-black outline-none px-4 py-2.5 text-sm sm:text-base text-white rounded-md transition-all font-medium placeholder:text-white/30 resize-none"
                             />
+                            <p className="text-[11px] text-white/40">Enter 키로 줄을 바꾸면 메인 화면에서도 2줄로 정돈되어 출력됩니다.</p>
                           </div>
 
                           <div className="space-y-2">

@@ -152,7 +152,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "YOUTUBE LONG",
-    description: "전기 PBV(PV5) 구매를 고려하는 소비자들이 가장 우려하는 1박 캠핑 시 전력 소비량을 검증하기 위해 기획했습니다. 혹한기 환경에서 23시간 동안 히터와 전자기기를 동시 가동하는 실전 필드 테스트로 1인 제작했습니다. 구독자 2,000명 시점에 최고 조회수 46만 회를 기록했습니다.",
+    description: "전기 PBV(PV5) 구매를 고려하는 소비자들이 가장 우려하는 1박 캠핑 시 전력 소비량을 검증하기 위해 기획했습니다. 혹한기 환경에서 23시간 동안 히터와 전자기기를 동시 가동하는 실전 필드 테스트로 1인 제작했습니다. 구독자 2,000명 시점에 최고 조회수 48만 회를 기록했습니다.",
     videoUrl: "https://www.youtube.com/watch?v=5Vhtzdd1Pyw",
     imageUrl: "",
     equipment: "오즈모 포켓3, DJI Mini 4 Pro | Premiere Pro",
@@ -362,7 +362,7 @@ export const initialPortfolioItems: PortfolioItem[] = [
     client: "K-TRAILER",
     role: "기획, 촬영, 편집 (1인제작)",
     format: "SHORTS",
-    description: "현대백화점 오프라인 팝업에 방문하지 못하는 고객에게 신차 공간을 신속히 소개하기 위해 기획했습니다. 차량의 내부 공간 구조와 특화 기능을 1분 이내 숏폼 포맷으로 1인 제작했습니다. 전시 기간 3일 만에 조회수 81만 회를 달성했습니다.",
+    description: "현대백화점 오프라인 팝업에 방문하지 못하는 고객에게 신차 공간을 신속히 소개하기 위해 기획했습니다. 차량의 내부 공간 구조와 특화 기능을 1분 이내 숏폼 포맷으로 1인 제작했습니다. 전시 기간 3일 만에 조회수 84만 회를 달성했습니다.",
     videoUrl: "https://youtube.com/shorts/hj6aLYEcVeY?si=9U6Cae0QG00QWCsP",
     imageUrl: "https://img.youtube.com/vi/hj6aLYEcVeY/hqdefault.jpg",
     duration: "00:38",
@@ -633,7 +633,7 @@ export const initialCareerItems: CareerItem[] = [
     proofImages: [
       {
         title: "YouTube 스튜디오 애널리틱스",
-        caption: "구독자 4배 성장 및 최고 조회수 47만 회 실측 통계",
+        caption: "구독자 4배 성장 및 최고 조회수 48만 회 실측 통계",
         src: "/proof-youtube.jpg"
       },
       {
@@ -651,7 +651,7 @@ export const initialCareerItems: CareerItem[] = [
             criteria: "2024.03 ~ 2025.02 / YouTube 스튜디오 애널리틱스 실측 기준"
           },
           {
-            text: "최고 조회수 롱폼 47만 회 · 쇼츠 81만 회 (10만 회 이상 콘텐츠 다수 제작)",
+            text: "최고 조회수 롱폼 48만 회 · 숏폼 84만 회 (10만 회 이상 콘텐츠 다수 제작)",
             criteria: "채널 개설 이래 롱폼·숏폼 역대 최고 트래픽 / 단일 영상 기준"
           },
           {
@@ -691,24 +691,59 @@ export const initialCareerItems: CareerItem[] = [
     id: "career-2",
     period: "2021 ~ 2024",
     title: "루씨드 드림",
-    role: "영상제작팀 팀장 및 (어시스턴트 PM)",
+    role: "영상제작팀 팀장 & 프로젝트 PM\n(제작팀 리딩 및 대외 협력 프로젝트)",
     description: [
-      "국제 바이어 유치용 8K 및 360VR 관광 콘텐츠 제작 총괄",
-      "유니크베뉴 홍보 영상 제작",
-      "프로젝트 PM 및 촬영 총괄"
+      "영상제작팀 팀장 리딩 — 촬영 및 기술팀 인력 스케줄링, 현장 디렉팅 및 제작 퀄리티 총괄",
+      "공공기관 및 기업 간 협력 프로젝트 총괄 — 지자체 및 한국관광공사 유니크베뉴 협업 프로젝트 PM",
+      "국제 바이어 유치용 8K 및 360VR 고화질 관광 콘텐츠 제작 총괄",
+      "복합 촬영 파이프라인 관리 — 시네마 카메라, 드론, VR 특수 촬영팀 조율 및 안전 관리"
     ],
-    achievements: []
+    achievements: [
+      {
+        platform: "프로젝트 PM 및 팀 리딩 주요 성과",
+        metrics: [
+          {
+            text: "공공 및 대외 협력 프로젝트 PM 총괄",
+            criteria: "다양한 외부 발주처 및 파트너사 요구사항 조율 및 납기 준수율 100%"
+          },
+          {
+            text: "8K 및 VR 특수 영상 제작팀 현장 리딩",
+            criteria: "고난도 시네마틱·VR 영상 제작 공정 표준화 및 팀원 디렉팅"
+          }
+        ]
+      }
+    ]
   },
   {
     id: "career-3",
     period: "2013 ~ 2021",
     title: "이투스 (ETOOS) 교육",
-    role: "기획 영상 촬영 & 스튜디오 관리 &\n촬영 팀 관리 & 라이브",
+    role: "인하우스 영상제작팀 총괄 PD & 스튜디오 총괄\n(중견기업 8년 장기 근속)",
     description: [
-      "스튜디오 운영 총괄 — 장비 유지보수 체계 및 예약·운용 프로세스 구축",
-      "라이브 송출 인프라 설계 — 코로나 시기 비대면 강의 대응, 지점 간 다원 생중계 구축",
-      "AI 영상제작 — 최신 생성형 영상 기술 학습 및 실무 워크플로우 접목",
-      "대형 프로젝트 총괄 — 입시 설명회, 1타 강사 기획 영상 촬영 전담"
+      "중견기업 인하우스 8년 장기 근속 — 교육 콘텐츠 및 스튜디오 총괄 리딩",
+      "자체 촬영팀 리딩 및 조직 관리 — 상주 촬영/음향/조명 팀원 관리, 직무 코칭 및 스튜디오 운용 프로세스 구축",
+      "사내 다부서 협력 프로젝트 총괄 — 마케팅·교육기획·IT개발·1타 강사진 협업 기반 대형 입시 설명회 및 브랜드 영상 전담",
+      "다원 라이브 송출 인프라 설계 — 지점 간 실시간 다원 생중계 시스템 설계 및 비대면 온라인 전환 인프라 구축",
+      "방송 장비 및 스튜디오 인프라 자산 관리 — 장비 유지보수 체계 및 스튜디오 예약·운용 프로세스 표준화"
+    ],
+    achievements: [
+      {
+        platform: "중견기업 8년 근속 & 팀 리딩·협업 주요 성과",
+        metrics: [
+          {
+            text: "자체 촬영팀 팀원 관리 및 스튜디오 전담 리딩",
+            criteria: "8년간 스튜디오 및 촬영팀 총괄 운영 / 무사고 안정 운영 달성"
+          },
+          {
+            text: "마케팅·기획·사업부 협력 대형 프로젝트 완결",
+            criteria: "1타 강사 브랜딩 영상, 대형 입시 설명회 온·오프라인 동시 송출 전담"
+          },
+          {
+            text: "전국 지점 다원 라이브 생중계 인프라 설계",
+            criteria: "비대면 온라인 강의 전환 및 원격 다원 생중계 시스템 완결"
+          }
+        ]
+      }
     ]
   },
   {
@@ -726,26 +761,31 @@ export const initialCareerItems: CareerItem[] = [
 
 export const initialSkills: SkillCategory[] = [
   {
-    category: "전략 및 기획 역량",
-    skills: ["콘텐츠 전략", "채널 운영", "프로젝트 리딩", "브랜디드 콘텐츠"]
+    category: "조직 리딩 및 기획 역량",
+    skills: [
+      "중견기업 8년 근속 & 팀 리딩",
+      "사내외 다부서 협력 프로젝트 총괄",
+      "콘텐츠 전략 및 브랜디드 마케팅",
+      "스튜디오 인프라 구축 & 운영 프로세스 표준화"
+    ]
   },
   {
     category: "콘텐츠 제작 역량",
     skills: [
-      "Premiere",
+      "Premiere Pro",
       "After Effects",
       "Photoshop",
-      "AI 영상제작 (생성형 AI 툴 활용 및 실무 접목)",
+      "AI 영상제작 (AI브릿지 재직 실무 / CTA & 숏폼)",
       "프롬프트 설계 및 컷 연출"
     ]
   },
   {
     category: "운영 및 시스템 기술",
     skills: [
-      "미러리스, DSLR, 짐벌, 드론 등 다양한 촬영 기술 보유",
-      "Live Streaming",
-      "스튜디오 관리 및 개선",
-      "영상 제작팀 빌딩 및 조직 매니지먼트"
+      "영상 제작팀 빌딩 및 조직 매니지먼트",
+      "Live Streaming 다원 생중계 시스템 설계",
+      "미러리스, DSLR, 짐벌, 드론 등 다양한 촬영 기술",
+      "스튜디오 방송 장비 유지보수 및 자산 관리"
     ]
   }
 ];
@@ -804,7 +844,10 @@ export const getStoredPortfolioItems = (): PortfolioItem[] => {
       !stored.includes("D9LcfNHN-7E") ||
       !stored.includes("[AI] 홈쇼핑 CTA 영상") ||
       !stored.includes("[AI] 밤한잔 홍보용 쇼츠영상") ||
-      !stored.includes("조회수 81만 회를 달성했습니다.") ||
+      !stored.includes("조회수 84만 회를 달성했습니다.") ||
+      stored.includes("조회수 81만") ||
+      stored.includes("조회수 46만") ||
+      !stored.includes("최고 조회수 48만 회를 기록했습니다.") ||
       stored.includes("개인 연습작")
     ) {
       // Force migrate to show the updated crisp descriptions instantly
@@ -908,10 +951,11 @@ export const getStoredCareerItems = (): CareerItem[] => {
       stored.includes("2,000명 → 7,900명 증가") ||
       !stored.includes("2,000명 → 8,000명 증가") ||
       stored.includes("쇼츠 36만") ||
-      stored.includes("쇼츠 48만") ||
       stored.includes("쇼츠 54만 회") ||
-      !stored.includes("쇼츠 81만 회") ||
-      !stored.includes("47만 회") ||
+      stored.includes("쇼츠 81만 회") ||
+      stored.includes("47만 회") ||
+      !stored.includes("숏폼 84만 회") ||
+      !stored.includes("48만 회") ||
       !stored.includes("10만 회 이상 콘텐츠 다수 제작") ||
       !stored.includes("콘텐츠 기반 고객 문의율 전년 동기 대비 약 48% 증가") ||
       stored.includes("42만 회") ||
@@ -938,7 +982,9 @@ export const getStoredCareerItems = (): CareerItem[] => {
       stored.includes("외주 인력 운영") ||
       !stored.includes("AI 영상제작 — 최신 생성형 영상 기술 학습") ||
       !stored.includes("AI브릿지") ||
-      !stored.includes("의류 홈쇼핑 CTA AI 영상제작")
+      !stored.includes("의류 홈쇼핑 CTA AI 영상제작") ||
+      !stored.includes("중견기업 인하우스 8년 장기 근속") ||
+      !stored.includes("사내 다부서 협력 프로젝트 총괄")
     ) {
       try {
         localStorage.setItem("career_items", JSON.stringify(initialCareerItems));
@@ -950,9 +996,9 @@ export const getStoredCareerItems = (): CareerItem[] => {
     if (
       etoosItem &&
       etoosItem.description &&
-      (!etoosItem.description[0].includes("장비 유지보수 체계") ||
-       etoosItem.description.some(d => d.includes("제작 프로세스") || d.includes("외주 인력")) ||
-       !etoosItem.description.some(d => d.includes("AI 영상제작")))
+      (!etoosItem.description[0].includes("중견기업 인하우스 8년") ||
+       etoosItem.description.some(d => d.includes("제작 프로세스 표준화") || d.includes("외주 인력 운영")) ||
+       !etoosItem.description.some(d => d.includes("사내 다부서 협력 프로젝트")))
     ) {
       try {
         localStorage.setItem("career_items", JSON.stringify(initialCareerItems));
@@ -983,11 +1029,11 @@ export const getStoredSkills = (): SkillCategory[] => {
       stored.includes("Strategic Skills") ||
       stored.includes("학습 중") ||
       stored.includes("하이브리드 편집") ||
-      !stored.includes("전략 및 기획 역량") ||
+      !stored.includes("조직 리딩 및 기획 역량") ||
+      !stored.includes("중견기업 8년 근속 & 팀 리딩") ||
+      !stored.includes("사내외 다부서 협력 프로젝트 총괄") ||
       !stored.includes("콘텐츠 제작 역량") ||
-      !stored.includes("운영 및 시스템 기술") ||
-      !stored.includes("다양한 촬영 기술 보유") ||
-      !stored.includes("AI 영상제작 (생성형 AI 툴 활용 및 실무 접목)")
+      !stored.includes("운영 및 시스템 기술")
     ) {
       try {
         localStorage.setItem("skill_categories", JSON.stringify(initialSkills));
@@ -1009,17 +1055,17 @@ export const saveStoredSkills = (items: SkillCategory[]) => {
 };
 
 export const defaultSiteTexts: SiteTexts = {
-  heroTagline: "",
-  heroTitle: "조회수를 매출 문의로 바꾸는 콘텐츠 PD",
+  heroTagline: "IN-HOUSE SENIOR VIDEO PD",
+  heroTitle: "제작 조직을 이끌고 비즈니스 성과를 만드는\n인하우스 PD",
   heroSubtitle: "",
-  heroSlogan: "채널을 키우는 사람이자, 제작 조직을 세우는 사람입니다.\n교육기업 8년 · 인하우스 10년 · 영상 경력 14년",
-  heroCompetence1: "홍보 · 유튜브 · 쇼츠/릴스 영상 전문",
-  heroCompetence2: "기획 · 촬영 · 편집 · 브랜디드 콘텐츠 총괄",
+  heroSlogan: "중견기업 8년 근속 제작팀 리딩과 다부서 협업 프로젝트를 완수한 영상 디렉터입니다.\n스튜디오 인프라 구축부터 1인 올인원 제작, AI 실무까지 전 과정을 책임집니다.",
+  heroCompetence1: "중견기업 8년 근속 · 팀 리딩 & 스튜디오 총괄",
+  heroCompetence2: "사내외 다부서 협업 프로젝트 & 올인원 제작",
   aboutTagline: "",
-  aboutTitle: "안녕하세요.\n브랜드 콘텐츠 프로듀서\n이주원 PD 입니다.",
-  aboutDescription: "단순한 영상 제작을 넘어 전략적인 마케팅과 브랜딩을 전개하여,\n브랜드의 신뢰도와 본연의 가치를 극대화하겠습니다.",
+  aboutTitle: "안녕하세요.\n중견기업 8년 근속 인하우스 영상 PD\n이주원 입니다.",
+  aboutDescription: "중견기업에서 8년간 스튜디오 및 제작 조직을 이끌며 다양한 사내외 협력 프로젝트를 완수했습니다.\n단순한 영상 제작을 넘어 조직의 시스템을 구축하고, 비즈니스 성과와 매출 전환으로 이어지는 콘텐츠를 만듭니다.",
   profileName: "이주원",
-  profileAge: "14년 (인하우스 10년)",
+  profileAge: "14년 (중견기업 8년·인하우스 10년)",
   profilePhone: "010-4820-0441",
   profileEmail: "seoulpotato@naver.com",
   aboutImage: "/profile.svg",
@@ -1038,9 +1084,9 @@ export const getStoredSiteTexts = (): SiteTexts => {
     }
     const parsed = JSON.parse(stored);
     
-    // Migration: update profileAge to "14년 (인하우스 10년)"
-    if (parsed && (parsed.profileAge === "41세" || !parsed.profileAge || parsed.profileAge === "14년")) {
-      parsed.profileAge = "14년 (인하우스 10년)";
+    // Migration: update profileAge to "14년 (중견기업 8년·인하우스 10년)"
+    if (parsed && (!parsed.profileAge || !parsed.profileAge.includes("중견기업 8년"))) {
+      parsed.profileAge = defaultSiteTexts.profileAge;
       try {
         localStorage.setItem("site_texts", JSON.stringify(parsed));
       } catch (inner) {}
@@ -1085,55 +1131,16 @@ export const getStoredSiteTexts = (): SiteTexts => {
     // Migration: If user has local storage with old slogan variants, migrate it automatically to the upgraded slogan
     if (
       parsed &&
-      (parsed.heroSlogan !== "채널을 키우는 사람이자, 제작 조직을 세우는 사람입니다.\n교육기업 8년 · 인하우스 10년 · 영상 경력 14년" ||
-       parsed.heroSlogan === "기획·촬영·편집·채널 운영까지, 브랜드 성장에 책임지는 인하우스 프로듀서" ||
-       parsed.heroSlogan?.includes("기획·촬영·편집·채널") ||
-       parsed.heroSlogan === "1인 제작부터 중견기업 장기근속까지, 책임감 있는 브랜드 콘텐츠 PD" ||
-       parsed.heroSlogan === "1인 제작부터 중견기업 장기근속까지, 책임감 있는 콘텐츠 크리에이터" ||
-       parsed.heroSlogan === "콘텐츠 제작, 조직 운영, 채널 성장으로 비즈니스 성과를 만들어온 크리에이터" ||
-       parsed.heroSlogan === "기획부터 촬영, 완벽한 편집까지 브랜드 가치를 관통하는 1인 제작" ||
-       parsed.heroSlogan === "콘텐츠 제작, 조직 운영, 채널 성장을 통해 비즈니스 성과를 만들어 온 콘텐츠 리더" ||
-       parsed.heroSlogan?.includes("기획부터 촬영") ||
-       parsed.heroSlogan?.includes("장기 비즈니스 파트너십") ||
-       parsed.heroSlogan?.includes("견고한 신뢰성") ||
-       parsed.heroSlogan?.includes("콘텐츠 제작을 넘어") ||
-       parsed.heroSlogan?.includes("비즈니스 성과를 만들어온") ||
-       parsed.heroSlogan?.includes("책임감 있는 콘텐츠 크리에이터") ||
-       parsed.heroCompetence1?.includes("쇼츠/숏폼") ||
-       !parsed.heroCompetence1?.includes("홍보"))
+      (!parsed.heroSlogan?.includes("중견기업 8년 근속") ||
+       !parsed.heroTitle?.includes("\n") ||
+       !parsed.heroTitle?.includes("제작 조직을 이끌고") ||
+       parsed.heroTitle?.includes("조회수를 매출 문의로"))
     ) {
+      parsed.heroTitle = defaultSiteTexts.heroTitle;
       parsed.heroSlogan = defaultSiteTexts.heroSlogan;
       parsed.heroCompetence1 = defaultSiteTexts.heroCompetence1;
-      try {
-        localStorage.setItem("site_texts", JSON.stringify(parsed));
-      } catch (inner) {}
-    }
-    if (parsed && (parsed.heroCompetence2 === "기획 · 촬영 · 편집 · 브랜디드 콘텐츠 총괄 프로덕션" || parsed.heroCompetence2?.includes("프로덕션"))) {
       parsed.heroCompetence2 = defaultSiteTexts.heroCompetence2;
-      try {
-        localStorage.setItem("site_texts", JSON.stringify(parsed));
-      } catch (inner) {}
-    }
-    if (parsed && (parsed.heroTagline === "HIGH-END VIDEO PRODUCER" || parsed.heroTitle === "VIDEO MARKETING" || parsed.heroTitle === "CONTENT PRODUCER" || parsed.heroSubtitle === "DIRECTOR" || parsed.heroTitle === "Content Marketer" || parsed.heroTitle === "Content Marketer & PD" || !parsed.heroTitle?.includes("조회수를 매출 문의로"))) {
-      parsed.heroTagline = "";
-      parsed.heroTitle = "조회수를 매출 문의로 바꾸는 콘텐츠 PD";
-      parsed.heroSubtitle = "";
-      try {
-        localStorage.setItem("site_texts", JSON.stringify(parsed));
-      } catch (inner) {}
-    }
-    if (parsed && (
-      parsed.aboutTitle === "안녕하세요, 비디오 마케팅 디렉터 이주원 PD 입니다." || 
-      parsed.aboutTitle === "안녕하세요. 브랜드 콘텐츠 프로듀서\n이주원 PD 입니다." || 
-      parsed.aboutTitle?.includes("비디오 마케팅 디렉터") || 
-      parsed.aboutTagline?.includes("브랜드 가치를 주행시키는 시네마 크리에이터") ||
-      !parsed.aboutTitle?.includes("\n") || 
-      parsed.aboutDescription?.includes("코어 메시지") || 
-      parsed.aboutDescription?.includes("도구적 대행") ||
-      !parsed.aboutDescription?.includes("\n")
-    )) {
       parsed.aboutTitle = defaultSiteTexts.aboutTitle;
-      parsed.aboutTagline = defaultSiteTexts.aboutTagline;
       parsed.aboutDescription = defaultSiteTexts.aboutDescription;
       try {
         localStorage.setItem("site_texts", JSON.stringify(parsed));

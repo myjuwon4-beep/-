@@ -4,7 +4,7 @@
  */
 
 import React from "react";
-import { Sparkles, Video, Layers, BarChart3, CheckCircle2 } from "lucide-react";
+import { Sparkles, Video, Layers, BarChart3, CheckCircle2, Users, Building2 } from "lucide-react";
 import { SiteTexts } from "../types";
 import { defaultSiteTexts } from "../data";
 
@@ -16,40 +16,34 @@ interface AboutProps {
 export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
   const values = [
     {
-      icon: Video,
-      title: "시청층 맞춤형 스토리 설계",
+      icon: Building2,
+      title: "중견기업 8년 근속 & 스튜디오 조직 빌딩",
       description: (
         <>
-          단순히 예쁜 영상이 아닙니다.{" "}
-          <strong className="text-slate-900 font-bold">주 타겟층</strong>이 가장
-          궁금해하고 <strong className="text-slate-900 font-bold">몰입하는 지점</strong>과{" "}
+          <strong className="text-slate-900 font-bold">이투스교육(중견기업)에서 8년간 장기 근속</strong>하며 사내 스튜디오 운영과 촬영팀 관리를 총괄했습니다.{" "}
+          장비 유지보수 시스템과 다원 라이브 송출 가이드라인까지 없던 체계를 직접 구축하고 표준화했습니다.{" "}
           <br className="hidden sm:inline" />
-          <strong className="text-slate-900 font-bold">숨은 소구 포인트</strong>를
-          파악하여 자연스러운{" "}
-          <strong className="text-slate-900 font-bold">브랜드 신뢰</strong>로 연결합니다.
+          <strong className="text-slate-900 font-bold">영상 전담 인력이 없는 조직에 합류해도 주도적으로 제작 환경과 인프라를 완성합니다.</strong>
         </>
       )
     },
     {
-      icon: Layers,
-      title: "올인원 책임 프로듀서 & 조직 빌딩",
+      icon: Users,
+      title: "팀 리딩 & 크로스 펑셔널 협업 프로젝트 총괄",
       description: (
         <>
-          <strong className="text-slate-900 font-bold">이투스교육에서 8년간</strong> 스튜디오 운영과 촬영팀 관리를 총괄했습니다.{" "}
-          장비 유지보수 체계와 라이브 송출 가이드라인까지 없던 시스템을 직접 세웠습니다.{" "}
-          <br className="hidden sm:inline" />
-          <strong className="text-slate-900 font-bold">영상 담당이 없는 조직에 들어가도 혼자 체계를 만들 수 있습니다.</strong>
+          단순 단독 제작을 넘어, <strong className="text-slate-900 font-bold">상주 촬영·음향·조명 팀원들을 리딩</strong>하고 기획·마케팅·강사진·IT개발 부서와의 긴밀한 사내외 협업을 조율했습니다.{" "}
+          대형 입시 설명회 중계부터 1타 강사 브랜딩 영상, 지자체 및 공공기관 대외 프로젝트까지 다자간 협력으로 일정과 완성도를 완결했습니다.
         </>
       )
     },
     {
       icon: BarChart3,
-      title: "데이터 기반 콘텐츠 기획 및 성장",
+      title: "인하우스 PD 마인드셋 & 실질적 비즈니스 전환",
       description: (
         <>
-          단순 감에 의존하지 않고 타겟 시청자의 검색 키워드와 시청 지속 시간 데이터를 분석하여,{" "}
-          <strong className="text-slate-900 font-bold">브랜드 인지도와 실질적인 고객 문의 전환</strong>을{" "}
-          이끌어내는 고효율 콘텐츠를 설계하고 운영합니다.
+          외주 프로덕션의 일회성 납품에 그치지 않고, <strong className="text-slate-900 font-bold">인하우스 담당자로서 회사의 비즈니스 지표와 매출 전환</strong>을 최우선으로 고민합니다.{" "}
+          타겟층 맞춤 스토리텔링과 데이터 기반 콘텐츠 설계로 실제 사내 고객 문의 전환율 48% 상승과 91만 바이럴 성과를 견인했습니다.
         </>
       )
     }
@@ -57,20 +51,20 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
 
   const highlights = [
     {
-      title: "SNS 콘텐츠 마케팅",
-      desc: "최고 조회수 91만 회 · 문의 전환율 300% 달성"
+      title: "중견기업 8년 근속 & 인하우스 10년",
+      desc: "이투스교육 8년 장기 근속 · 스튜디오 및 제작 조직 총괄"
     },
     {
-      title: "스튜디오 · 촬영팀 운영",
-      desc: "이투스교육 8년 스튜디오 관리 & 촬영팀 총괄"
+      title: "팀 리딩 & 다부서 협업 프로젝트",
+      desc: "촬영팀 관리, 강사진·마케팅 협업, 대형 라이브 인프라 완수"
     },
     {
-      title: "1인 완결 파이프라인",
-      desc: "기획 · 연출 · 시네마틱 촬영 · 정밀 편집"
+      title: "1인 올인원 제작 & 비즈니스 전환",
+      desc: "기획·촬영·편집 전담 및 사내 고객 문의율 48% 증대"
     },
     {
-      title: "AI 영상 제작 실무",
-      desc: "AI브릿지 재직 — 홈쇼핑 CTA 및 브랜드 숏폼 제작"
+      title: "AI 영상 제작 실무 파이프라인",
+      desc: "AI브릿지 재직 — 홈쇼핑 CTA 및 브랜드 숏폼 실무 제작"
     }
   ];
 
@@ -102,10 +96,10 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
               {/* Badges */}
               <div className="flex items-center gap-2 mb-6 flex-wrap">
                 <span className="px-3 py-1 bg-rose-50 text-rose-800 border border-rose-200/80 rounded-lg text-xs font-mono font-bold tracking-wider uppercase">
-                  DIRECTOR &amp; PRODUCER
+                  IN-HOUSE SENIOR PD
                 </span>
                 <span className="px-2.5 py-1 bg-[#FAF9F5] text-slate-700 border border-[#E6E4DC] rounded-lg text-xs font-mono font-medium">
-                  14 YEARS EXP.
+                  14 YEARS (중견기업 8년)
                 </span>
               </div>
 
@@ -115,7 +109,7 @@ export default function About({ siteTexts = defaultSiteTexts }: AboutProps) {
                   이주원
                 </h3>
                 <p className="text-base sm:text-lg text-slate-600 font-semibold">
-                  브랜드 콘텐츠 총괄 프로듀서 · 인하우스 PD
+                  중견기업 8년 근속 · 인하우스 영상 총괄 PD
                 </p>
               </div>
 

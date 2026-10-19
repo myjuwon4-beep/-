@@ -94,7 +94,7 @@ export default function Skills({ skills = [] }: SkillsProps) {
         {/* Realistic, Humble AI Learning Note */}
         <div className="mt-8 p-4.5 bg-white border border-[#E6E4DC] rounded-xl flex items-center justify-between gap-4 max-w-3xl mx-auto shadow-2xs">
           <p className="text-[13px] sm:text-sm text-slate-600 font-medium leading-relaxed">
-            💡 <strong className="text-slate-900 font-bold">시대 흐름에 맞춘 지속적 역량 확장:</strong> 14년의 탄탄한 영상 기획·촬영·편집 내공에 머무르지 않고, 최신 생성형 AI 툴을 꾸준히 연구하고 학습하며 실무 워크플로우에 적극 도입하고 있습니다.
+            💡 <strong className="text-slate-900 font-bold">중견기업 8년 근속의 안정성과 전방위 실무 역량:</strong> 14년간 다져온 제작 조직 빌딩·팀 리딩·다부서 협업 내공을 기반으로, 1인 올인원 제작부터 최신 생성형 AI 실무 파이프라인까지 비즈니스 성과를 창출하는 검증된 실행력을 갖추고 있습니다.
           </p>
         </div>
 

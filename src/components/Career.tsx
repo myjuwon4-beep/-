@@ -34,21 +34,21 @@ export default function Career({ careerItems = [] }: CareerProps) {
   // Helper to determine tenure duration badge
   const getTenureInfo = (item: CareerItem) => {
     if (item.id === "career-ai-bridge" || item.title.includes("AI브릿지") || item.period.includes("재직중")) {
-      return { years: "재직중", isHighlight: true, isCurrent: true };
+      return { years: "재직중", isHighlight: true, isCurrent: true, isMidEnterprise: false };
     }
     if (item.id === "career-1" || item.title.includes("K트레일러") || item.period.includes("2024 ~ 2026")) {
-      return { years: "2년", isHighlight: false, isCurrent: false };
+      return { years: "2년", isHighlight: false, isCurrent: false, isMidEnterprise: false };
     }
     if (item.id === "career-2" || item.title.includes("루씨드") || item.period.includes("2021 ~ 2024")) {
-      return { years: "3년", isHighlight: false, isCurrent: false };
+      return { years: "3년 (팀장·PM)", isHighlight: false, isCurrent: false, isMidEnterprise: false };
     }
     if (item.id === "career-3" || item.title.includes("이투스") || item.title.includes("ETOOS") || item.period.includes("2013 ~ 2021")) {
-      return { years: "8년", isHighlight: true, isCurrent: false };
+      return { years: "중견기업 8년 근속", isHighlight: true, isCurrent: false, isMidEnterprise: true };
     }
     if (item.id === "career-4" || item.title.includes("한국영상") || item.period.includes("2012 ~ 2013")) {
-      return { years: "1년", isHighlight: false, isCurrent: false };
+      return { years: "1년", isHighlight: false, isCurrent: false, isMidEnterprise: false };
     }
-    return { years: "", isHighlight: false, isCurrent: false };
+    return { years: "", isHighlight: false, isCurrent: false, isMidEnterprise: false };
   };
 
   return (
@@ -66,7 +66,7 @@ export default function Career({ careerItems = [] }: CareerProps) {
             </h2>
           </div>
           <p className="text-[13px] sm:text-base text-slate-600 font-medium max-w-md">
-            14년간 축적된 실무 제작 경력과 채널 성장 지표 기록
+            중견기업 8년 근속 제작팀 리딩과 14년간의 사내외 프로젝트 성과 기록
           </p>
         </div>
 
@@ -103,9 +103,14 @@ export default function Career({ careerItems = [] }: CareerProps) {
                             <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                             <span>재직중</span>
                           </span>
+                        ) : tenure.isMidEnterprise ? (
+                          <span className="px-2.5 py-0.5 bg-slate-900 text-white font-extrabold text-xs sm:text-[13px] rounded-md tracking-tight shadow-xs flex items-center gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                            <span>{tenure.years}</span>
+                          </span>
                         ) : tenure.isHighlight ? (
                           <span className="px-2.5 py-0.5 bg-slate-900 text-white font-extrabold text-xs sm:text-[13px] rounded-md tracking-tight shadow-xs flex items-center gap-1">
-                            <span>{tenure.years} 근속</span>
+                            <span>{tenure.years}</span>
                           </span>
                         ) : (
                           <span className="px-2 py-0.5 bg-white border border-[#E6E4DC] text-slate-700 font-bold text-xs rounded-md">

@@ -129,15 +129,22 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
         
         {/* Main Headline H1 */}
         <h1 
-          className="text-[30px] sm:text-4xl md:text-5xl lg:text-5xl font-black tracking-tight text-slate-950 leading-[1.2] max-w-4xl" 
+          className="text-[28px] sm:text-4xl md:text-5xl font-black tracking-tight text-slate-950 leading-[1.3] max-w-4xl break-keep" 
           id="hero-title"
         >
-          {siteTexts.heroTitle || "조회수를 매출 문의로 바꾸는 콘텐츠 PD"}
+          {(siteTexts.heroTitle || "제작 조직을 이끌고 비즈니스 성과를 만드는\n인하우스 PD")
+            .replace("제작 조직을 이끌고 비즈니스 성과를 만드는 인하우스 PD", "제작 조직을 이끌고 비즈니스 성과를 만드는\n인하우스 PD")
+            .split("\n")
+            .map((line, idx) => (
+              <span key={idx} className="block">
+                {line}
+              </span>
+            ))}
         </h1>
 
         {/* Sub Headline */}
         <p className="mt-3.5 sm:mt-4 text-[15px] sm:text-base md:text-lg font-medium text-slate-600 max-w-3xl leading-[1.7] whitespace-pre-line break-keep">
-          {siteTexts.heroSlogan || "채널을 키우는 사람이자, 제작 조직을 세우는 사람입니다.\n교육기업 8년 · 인하우스 10년 · 영상 경력 14년"}
+          {siteTexts.heroSlogan || "중견기업 8년 근속 제작팀 리딩과 다부서 협업 프로젝트를 완수한 영상 디렉터입니다.\n스튜디오 인프라 구축부터 1인 올인원 제작, AI 실무까지 전 과정을 책임집니다."}
         </p>
 
         {/* 16:9 Showreel Area */}
@@ -180,17 +187,24 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
         {/* 4 Key Performance Metrics Bar (Count-up Animation) */}
         <div className="mt-5 sm:mt-6 w-full max-w-4xl grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-left" id="hero-metrics-bar">
           <AnimatedStatCard
-            label="최고 조회수"
-            targetNumber={91}
-            suffix="만"
-            description="릴스/쇼츠 단일 영상 기준"
+            label="중견기업 근속"
+            targetNumber={8}
+            suffix="년 근속"
+            description="이투스교육 제작팀 리딩 &amp; 총괄"
             isRedHighlight={true}
           />
           <AnimatedStatCard
-            label="구독자 성장"
-            targetNumber={4}
-            suffix="배 성장"
-            description="유튜브 2,000 → 8,000명"
+            label="영상 총 경력"
+            targetNumber={14}
+            suffix="년"
+            description="인하우스 10년 · 올라운더"
+            isRedHighlight={false}
+          />
+          <AnimatedStatCard
+            label="유튜브 최고 조회수"
+            targetNumber={84}
+            suffix="만"
+            description="숏폼 84만 · 롱폼 48만"
             isRedHighlight={false}
           />
           <AnimatedStatCard
@@ -201,21 +215,29 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
             description="콘텐츠 기반 인바운드 전환"
             isRedHighlight={true}
           />
-          <AnimatedStatCard
-            label="영상 경력"
-            targetNumber={14}
-            suffix="년"
-            description="기획·촬영·편집 올라운더"
-            isRedHighlight={false}
-          />
         </div>
 
         {/* Organizational Leadership & Key Competency Pillars */}
         <div className="mt-5 pt-5 border-t border-[#E6E4DC] w-full max-w-4xl" id="hero-org-pillars">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-left">
-            {/* Pillar 1: SNS 콘텐츠 마케팅 */}
+            {/* Pillar 1: 팀 리딩 & 협업 총괄 */}
             <div className="flex items-start gap-3 p-3 rounded-xl bg-white border border-[#E6E4DC] hover:border-[#D5D2C7] transition-all shadow-2xs">
               <div className="p-2 rounded-lg bg-rose-50 border border-rose-200/70 text-rose-600 shrink-0 mt-0.5 shadow-2xs">
+                <Users size={16} />
+              </div>
+              <div className="min-w-0">
+                <h4 className="text-[13.5px] sm:text-sm font-bold text-slate-900 tracking-tight truncate">
+                  팀 리딩 &amp; 협업 총괄
+                </h4>
+                <p className="text-[12px] text-slate-500 font-medium mt-0.5 truncate">
+                  중견기업 8년 · 다부서 협력
+                </p>
+              </div>
+            </div>
+
+            {/* Pillar 2: SNS 콘텐츠 마케팅 (스튜디오·촬영팀 운영 앞에 배치) */}
+            <div className="flex items-start gap-3 p-3 rounded-xl bg-white border border-[#E6E4DC] hover:border-[#D5D2C7] transition-all shadow-2xs">
+              <div className="p-2 rounded-lg bg-[#FAF9F5] border border-[#E6E4DC] text-slate-700 shrink-0 mt-0.5 shadow-2xs">
                 <TrendingUp size={16} />
               </div>
               <div className="min-w-0">
@@ -223,37 +245,22 @@ export default function Hero({ onPortfolioCall, siteTexts = defaultSiteTexts }: 
                   SNS 콘텐츠 마케팅
                 </h4>
                 <p className="text-[12px] text-slate-500 font-medium mt-0.5 truncate">
-                  91만 조회 · 전환 300%
+                  숏폼 84만 · 롱폼 48만
                 </p>
               </div>
             </div>
 
-            {/* Pillar 2: 스튜디오 · 촬영팀 운영 */}
-            <div className="flex items-start gap-3 p-3 rounded-xl bg-white border border-[#E6E4DC] hover:border-[#D5D2C7] transition-all shadow-2xs">
-              <div className="p-2 rounded-lg bg-[#FAF9F5] border border-[#E6E4DC] text-slate-700 shrink-0 mt-0.5 shadow-2xs">
-                <Users size={16} />
-              </div>
-              <div className="min-w-0">
-                <h4 className="text-[13.5px] sm:text-sm font-bold text-slate-900 tracking-tight truncate">
-                  스튜디오 · 촬영팀 운영
-                </h4>
-                <p className="text-[12px] text-slate-500 font-medium mt-0.5 truncate">
-                  교육기업 8년 · 조직 총괄
-                </p>
-              </div>
-            </div>
-
-            {/* Pillar 3: 라이브 방송 인프라 */}
+            {/* Pillar 3: 스튜디오 · 촬영팀 운영 */}
             <div className="flex items-start gap-3 p-3 rounded-xl bg-white border border-[#E6E4DC] hover:border-[#D5D2C7] transition-all shadow-2xs">
               <div className="p-2 rounded-lg bg-[#FAF9F5] border border-[#E6E4DC] text-slate-700 shrink-0 mt-0.5 shadow-2xs">
                 <Radio size={16} />
               </div>
               <div className="min-w-0">
                 <h4 className="text-[13.5px] sm:text-sm font-bold text-slate-900 tracking-tight truncate">
-                  라이브 방송 인프라
+                  스튜디오 · 촬영팀 운영
                 </h4>
                 <p className="text-[12px] text-slate-500 font-medium mt-0.5 truncate">
-                  다원 생중계 시스템 설계
+                  인프라 구축 · 송출 표준화
                 </p>
               </div>
             </div>

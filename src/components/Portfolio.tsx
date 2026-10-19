@@ -31,32 +31,32 @@ const FEATURED_PROJECTS: FeaturedProject[] = [
   {
     id: "portfolio-long-1",
     title: "PV5 전기차 23시간 전기 테스트",
-    metricBadge: "조회수 46만",
+    metricBadge: "조회수 48만",
     format: "YOUTUBE LONG",
     videoUrl: "https://www.youtube.com/watch?v=5Vhtzdd1Pyw",
     imageUrl: "https://img.youtube.com/vi/5Vhtzdd1Pyw/maxresdefault.jpg",
     problem: "신차 전기 PBV(PV5) 1박 혹한기 차박 시 배터리 방전 및 난방 지속성에 대한 예비 구매자 불안 해소",
     approach: "영하 기온 노지에서 23시간 동안 히터 및 전자기기 연속 가동 실측 필드 테스트 진행",
-    result: "유튜브 조회수 46만 회 달성 (구독자 2,000명 시점 대비 채널 최고 롱폼 기록)",
+    result: "유튜브 조회수 48만 회 달성 (구독자 2,000명 시점 대비 채널 최고 롱폼 기록)",
     role: "기획, 촬영, 편집 (1인 총괄 제작)",
     equipment: "오즈모 포켓3, DJI Mini 4 Pro | Premiere Pro",
     client: "K-TRAILER",
-    description: "전기 PBV(PV5) 구매를 고려하는 소비자들이 가장 우려하는 1박 캠핑 시 전력 소비량을 검증하기 위해 기획했습니다. 혹한기 환경에서 23시간 동안 히터와 전자기기를 동시 가동하는 실전 필드 테스트로 1인 제작했습니다. 구독자 2,000명 시점에 최고 조회수 46만 회를 기록했습니다."
+    description: "전기 PBV(PV5) 구매를 고려하는 소비자들이 가장 우려하는 1박 캠핑 시 전력 소비량을 검증하기 위해 기획했습니다. 혹한기 환경에서 23시간 동안 히터와 전자기기를 동시 가동하는 실전 필드 테스트로 1인 제작했습니다. 구독자 2,000명 시점에 최고 조회수 48만 회를 기록했습니다."
   },
   {
     id: "portfolio-shorts-2",
     title: "PV5 큐브밴 단기 전시 홍보",
-    metricBadge: "조회수 81만",
+    metricBadge: "조회수 84만",
     format: "SHORTS",
     videoUrl: "https://youtube.com/shorts/hj6aLYEcVeY?si=9U6Cae0QG00QWCsP",
     imageUrl: "https://img.youtube.com/vi/hj6aLYEcVeY/hqdefault.jpg",
     problem: "현대백화점 오프라인 단기 팝업 전시에 직접 방문하지 못하는 가망 고객 대상 신속한 신차 공간감 전달",
     approach: "차량의 내부 구조와 핵심 특화 공간을 1분 이내 숏폼 포맷 및 직관적인 앵글로 1인 전담 제작",
-    result: "전시 기간 3일 만에 유튜브 숏폼 조회수 81만 회 달성 및 팝업 현장 유입 극대화",
+    result: "전시 기간 3일 만에 유튜브 숏폼 조회수 84만 회 달성 및 팝업 현장 유입 극대화",
     role: "기획, 촬영, 편집 (1인 총괄 제작)",
     equipment: "오즈모 포켓3, a7c2 | Premiere Pro",
     client: "K-TRAILER",
-    description: "현대백화점 오프라인 팝업에 방문하지 못하는 고객에게 신차 공간을 신속히 소개하기 위해 기획했습니다. 차량의 내부 공간 구조와 특화 기능을 1분 이내 숏폼 포맷으로 1인 제작했습니다. 전시 기간 3일 만에 조회수 81만 회를 달성했습니다."
+    description: "현대백화점 오프라인 팝업에 방문하지 못하는 고객에게 신차 공간을 신속히 소개하기 위해 기획했습니다. 차량의 내부 공간 구조와 특화 기능을 1분 이내 숏폼 포맷으로 1인 제작했습니다. 전시 기간 3일 만에 조회수 84만 회를 달성했습니다."
   },
   {
     id: "portfolio-promo-1",
